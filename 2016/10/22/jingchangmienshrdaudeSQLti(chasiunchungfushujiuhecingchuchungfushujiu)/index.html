@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>經常面試到的SQL題(查詢重複數據和清除重複數據) | auhanjie&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="sql查詢消除重複數據 如數據庫有一名為biau的表： 字段與數據例如下如：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="經常面試到的SQL題(查詢重複數據和清除重複數據)">
+<meta property="og:url" content="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/index.html">
+<meta property="og:site_name" content="auhanjie&#39;s Blog">
+<meta property="og:description" content="sql查詢消除重複數據 如數據庫有一名為biau的表： 字段與數據例如下如：">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="/css/gallery/little-girl.jpg">
+<meta property="og:updated_time" content="2017-03-08T04:10:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="經常面試到的SQL題(查詢重複數據和清除重複數據)">
+<meta name="twitter:description" content="sql查詢消除重複數據 如數據庫有一名為biau的表： 字段與數據例如下如：">
+<meta name="twitter:image" content="/css/gallery/little-girl.jpg">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="auhanjie&#39;s Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">auhanjie&#39;s Blog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/about">About</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/logo.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜尋" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: 'Pages',
+            CATEGORIES: '分類',
+            TAGS: '標籤',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">About</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜尋" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/logo.png" />
+            <h2 id="name">auhanjie</h2>
+            <h3 id="title">Web Developer &amp; Designer</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>zhuhai, China</span>
+            <a id="follow" target="_blank" href="https://github.com/auhanjie/">關注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                287
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                17
+                <span>標籤</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/auhanjie/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="facebook" class=tooltip>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/atom.xml" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<img src="/css/gallery/little-girl.jpg" class="article-banner" />
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            經常面試到的SQL題(查詢重複數據和清除重複數據)
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/">
+            <time datetime="2016-10-22T09:47:11.000Z" itemprop="datePublished">2016-10-22</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/面試/">面試</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>sql查詢消除重複數據</p>
+<p>如數據庫有一名為biau的表：</p>
+<p>字段與數據例如下如：<br><a id="more"></a><br>biau</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">小王</td>
+<td style="text-align:center">重慶</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">小張</td>
+<td style="text-align:center">北京</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">小明</td>
+<td style="text-align:center">上海</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">小紅</td>
+<td style="text-align:center">重慶</td>
+</tr>
+</tbody>
+</table>
+<p>要求用sql查詢出按不同address（地址）的排列的所有數據(即地址不能重複，如有重複只選取一次，其他列數據可以重複)</p>
+<p>查询SQL如下</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">小紅</td>
+<td style="text-align:center">重慶</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">小明</td>
+<td style="text-align:center">上海</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">小張</td>
+<td style="text-align:center">北京</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> biau <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">max</span>(<span class="keyword">id</span>) <span class="keyword">from</span> biau <span class="keyword">group</span> <span class="keyword">by</span> address) <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">desc</span></span><br></pre></td></tr></table></figure>
+<p>常見的SQL問題：<br>◆選擇重複，消除重複和選擇出序列<br>有例表：emp<br>| emp_no | name  | age |<br>|:————-:|:————-:|:————-:|<br>| 001 | Tom | 17 |<br>| 002 | Sun | 14 |<br>| 003 | Tom | 15 |<br>| 004 | Tom | 16 |</p>
+<p>要求：<br>列出所有名字重複的人的記錄<br>(1)最直觀的思路：要知道所有名字有重複人資料，首先必須知道哪個名字重複了：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">name</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>所有名字重複人的記錄是:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">name</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
+<p>(2)稍微再聰明一點，就會想到，如果對每個名字都和原表進行比較，大於2個人名字與這條記錄相同的就是合格的 ，就有<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> (<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> emp e <span class="keyword">where</span> e.name=emp.name)&gt;<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>–注意一下這個&gt;1，想下如果是 =1，如果是 =2 如果是&gt;2 如果 e 是另外一張表 而且是=0那結果 就更好玩了:)<br>這個過程是 在判斷工號為001的人的時候先取得 001的名字（emp.name） 然後和原表的名字進行比較 e.name<br>注意e是emp的一個別名。<br>再稍微想得多一點，就會想到，如果有另外一個名字相同的人工號不與她他相同那麼這條記錄符合要求：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> <span class="keyword">exists</span> (<span class="keyword">select</span> * <span class="keyword">from</span> emp e <span class="keyword">where</span> e.name=emp.name <span class="keyword">and</span> e.emp_no&lt;&gt;emp.emp_no)</span><br></pre></td></tr></table></figure></p>
+<p>此思路的join寫法：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> emp.* <span class="keyword">from</span> emp,emp e <span class="keyword">where</span> emp.name=e.name <span class="keyword">and</span> emp.emp_no&lt;&gt;e.emp_no</span><br></pre></td></tr></table></figure></p>
+<p>/* 這個語句較規範的join寫法是<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> emp.* <span class="keyword">from</span> emp <span class="keyword">inner</span> <span class="keyword">join</span> emp e <span class="keyword">on</span> emp.name=e.name <span class="keyword">and</span> emp.emp_no&lt;&gt;e.emp_no</span><br></pre></td></tr></table></figure></p>
+<p>但個人比較傾向於前一種寫法，關鍵是更清晰 */<br>b、有例表：emp</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">name</th>
+<th style="text-align:center">age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:center">Sun</td>
+<td style="text-align:center">14</td>
+</tr>
+<tr>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">16</td>
+</tr>
+</tbody>
+</table>
+<p>—————————————————-清除重複—————————————————-<br>過濾掉所有多餘的重複記錄<br>(1)我們知道distinct、group by 可以過濾重複，於是就有最直觀的<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> * <span class="keyword">from</span> emp 或 <span class="keyword">select</span> <span class="keyword">name</span>,age <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">name</span>,age</span><br></pre></td></tr></table></figure></p>
+<p>獲得需要的數據，如果可以使用臨時表就有解法：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> * <span class="keyword">into</span> #tmp <span class="keyword">from</span> emp <span class="keyword">delete</span> <span class="keyword">from</span> emp <span class="keyword">insert</span> <span class="keyword">into</span> emp <span class="keyword">select</span> * <span class="keyword">from</span> #tmp</span><br></pre></td></tr></table></figure></p>
+<p>(2)但是如果不可以使用臨時表，那該怎麼辦？<br>我們觀察到我們沒辦法區分數據（物理位置不一樣，對 SQL Server來說沒有任<br>何區別），思路自然是想辦法把數據區分出來了，既然現在的所有的列都沒辦法區分數據，唯一的辦法就是再加個列讓它區分出來，加什麼列好？最佳選擇是identity列：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> emp <span class="keyword">add</span> chk <span class="built_in">int</span> <span class="keyword">identity</span>(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
+<p>表示例：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">name</th>
+<th style="text-align:center">age</th>
+<th style="text-align:center">chk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">Sun</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<p>重複記錄可以表示為：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> (<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> emp e <span class="keyword">where</span> e.name=emp.name)&gt;<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>要刪除的是：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> emp <span class="keyword">where</span> (<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> emp e <span class="keyword">where</span> e.name=emp.name <span class="keyword">and</span> e.chk&gt;=emp.chk)&gt;<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>再把添加的列刪掉，出現結果。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> emp <span class="keyword">drop</span> <span class="keyword">column</span> chk</span><br></pre></td></tr></table></figure></p>
+<p>(3)另一個思路：<br>視圖<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">min</span>(chk) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">name</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>獲得有重複的記錄chk最小的值,於是可以<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> emp <span class="keyword">where</span> chk <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">min</span>(chk) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">name</span>)</span><br></pre></td></tr></table></figure></p>
+<p>寫成join的形式也可以:<br>(1)有例表：emp</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">emp_no</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">001</td>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">17</td>
+</tr>
+<tr>
+<td style="text-align:center">002</td>
+<td style="text-align:center">Sun</td>
+<td style="text-align:center">14</td>
+</tr>
+<tr>
+<td style="text-align:center">003</td>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">15</td>
+</tr>
+<tr>
+<td style="text-align:center">004</td>
+<td style="text-align:center">Tom</td>
+<td style="text-align:center">16</td>
+</tr>
+</tbody>
+</table>
+<p>◆要求生成序列號<br>(1)最簡單的方法，根據b問題的解法：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> emp <span class="keyword">add</span> chk <span class="built_in">int</span> <span class="keyword">identity</span>(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">或 <span class="keyword">select</span> *,<span class="keyword">identity</span>(<span class="built_in">int</span>,<span class="number">1</span>,<span class="number">1</span>) chk <span class="keyword">into</span> #tmp <span class="keyword">from</span> emp</span><br></pre></td></tr></table></figure></p>
+<p>◆如果需要控制順序怎麼辦？<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> top <span class="number">100000</span> *,<span class="keyword">identity</span>(<span class="built_in">int</span>,<span class="number">1</span>,<span class="number">1</span>) chk <span class="keyword">into</span> #tmp <span class="keyword">from</span> emp <span class="keyword">order</span> <span class="keyword">by</span> age</span><br></pre></td></tr></table></figure></p>
+<p>(2) 假如不可以更改表結構，怎麼辦？<br>如果不可以唯一區分每條記錄是沒有辦法的，在可以唯一區分每條記錄的時候,可以使用a 中的count的思路解決這個問題<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> emp.*,(<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> emp e <span class="keyword">where</span> e.emp_no&lt;=emp.emp_no) <span class="keyword">from</span> emp <span class="keyword">order</span> <span class="keyword">by</span> (<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> emp e <span class="keyword">where</span> e.emp_no&lt;=emp.emp_no)</span><br></pre></td></tr></table></figure></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/" data-id="cjd3z2svr000yitworur42lur" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    深圳縱覽
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/10/22/huashrsiauzhau/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">華師校招</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/02/01/siti8-2/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a></p>
+                            <p class="item-title"><a href="/2018/02/01/siti8-2/" class="title">习题8-2 在数组中查找指定元素（15 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-01T02:26:00.000Z" itemprop="datePublished">2018-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/02/01/siti8-1/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a></p>
+                            <p class="item-title"><a href="/2018/02/01/siti8-1/" class="title">习题8-1 拆分实数的整数与小数部分（15 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-01T01:49:00.000Z" itemprop="datePublished">2018-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/24/liensi8-8/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a></p>
+                            <p class="item-title"><a href="/2018/01/24/liensi8-8/" class="title">练习8-8 移动字母（10 分）</a></p>
+                            <p class="item-date"><time datetime="2018-01-24T10:42:00.000Z" itemprop="datePublished">2018-01-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/24/liensi8-2/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a></p>
+                            <p class="item-title"><a href="/2018/01/24/liensi8-2/" class="title">练习8-2 计算两数的和与差（10 分）</a></p>
+                            <p class="item-date"><time datetime="2018-01-24T10:40:00.000Z" itemprop="datePublished">2018-01-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/24/siti7-8/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a></p>
+                            <p class="item-title"><a href="/2018/01/24/siti7-8/" class="title">习题7-8 字符串转换成十进制整数（15 分）</a></p>
+                            <p class="item-date"><time datetime="2018-01-24T10:38:00.000Z" itemprop="datePublished">2018-01-24</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分類</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MinGW/">MinGW</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/findbugs/">findbugs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-page/">github page</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中二/">中二</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="category-list-count">203</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="category-list-count">61</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/簡歷/">簡歷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/編譯原理/">編譯原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/華語拼音公式改/">華語拼音公式改</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面試/">面試</a><span class="category-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">歸檔</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">標籤</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MinGW/">MinGW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bugs/">bugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/findbugs/">findbugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中二/">中二</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/個人簡歷/">個人簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="tag-list-count">203</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="tag-list-count">61</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/簡歷/">簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/編譯原理/">編譯原理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/華語拼音公式改/">華語拼音公式改</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">標籤雲</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 13.33px;">oracle</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/個人簡歷/" style="font-size: 10px;">個人簡歷</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 16.67px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">連結</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 auhanjie<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
