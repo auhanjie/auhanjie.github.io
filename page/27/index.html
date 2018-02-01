@@ -269,7 +269,7 @@
 
 </div>
 
-    <a data-url="/2017/10/19/shryen1-4/" data-id="cjd403lmn0062ziwofdi4xid5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/19/shryen1-4/" data-id="cjd407yif005ze5worlb5jnie" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -402,7 +402,7 @@
 
 </div>
 
-    <a data-url="/2017/10/19/shryen1-3/" data-id="cjd403lmm005yziwotuishywy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/19/shryen1-3/" data-id="cjd407yie005we5woourn5vma" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -535,7 +535,7 @@
 
 </div>
 
-    <a data-url="/2017/10/19/shryen1-2/" data-id="cjd403lml005uziwophxeavqq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/19/shryen1-2/" data-id="cjd407yid005se5wopx43sil5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -668,7 +668,7 @@
 
 </div>
 
-    <a data-url="/2017/10/19/shryen1-1/" data-id="cjd403lmk005qziwod0rgyumq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/19/shryen1-1/" data-id="cjd407yic005pe5woz4493nxw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -804,7 +804,7 @@
 
 </div>
 
-    <a data-url="/2017/04/23/meinshr1/" data-id="cjd403lm5004yziwoy3gksx92" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/04/23/meinshr1/" data-id="cjd407yi3004xe5wo6xguzyyz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -946,7 +946,7 @@
 
 </div>
 
-    <a data-url="/2017/03/24/Web\307\260\266\313\263\314\320\362\324\261\274\362\300\372\304\243\260\345/" data-id="cjd403lkf000fziwo4z0a1bb0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/03/24/Web\307\260\266\313\263\314\320\362\324\261\274\362\300\372\304\243\260\345/" data-id="cjd407yg0000ee5wo41ixjq96" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1090,287 +1090,7 @@
 
 </div>
 
-    <a data-url="/2017/03/08/hello-world/" data-id="cjd403lkj000rziwowwr4fu96" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-shenzhenautungping" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2016/12/21/shenzhenautungping/" itemprop="url">
-            <img src="/css/gallery/salt-lake.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/12/21/shenzhenautungping/">深圳奥統平</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/12/21/shenzhenautungping/">
-            <time datetime="2016-12-21T13:47:11.000Z" itemprop="datePublished">2016-12-21</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/面試/">面試</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>單例模式</p>
-<p>GIT和SVN區別</p>
-<p>編程題</p>
-<p>用string 相加，不能用lib<br></p>
-            <p class="article-more-link">
-                <a href="/2016/12/21/shenzhenautungping/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2016/12/21/shenzhenautungping/" data-id="cjd403lmf005eziwojxpdzr53" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2016/12/21/markdown/" itemprop="url">
-            <img src="/css/gallery/markdown.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/12/21/markdown/">markdown</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/12/21/markdown/">
-            <time datetime="2016-12-21T13:47:11.000Z" itemprop="datePublished">2016-12-21</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/markdown/">markdown</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/markdown/">markdown</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><p>A markdown example shows how to write a markdown file. This document integrates core syntax and extensions (GMF).<br></p>
-            <p class="article-more-link">
-                <a href="/2016/12/21/markdown/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2016/12/21/markdown/" data-id="cjd403lm3004uziwo9w2wdodc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/03/08/hello-world/" data-id="cjd407yg6000pe5wobid5yrv5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1514,7 +1234,292 @@
 
 </div>
 
-    <a data-url="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/" data-id="cjd403lmi005mziwon2l4ie6n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/" data-id="cjd407yib005le5woptvgqb9u" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-fengleishueihuotu" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2016/12/21/fengleishueihuotu/" itemprop="url">
+            <img src="/css/gallery/home-bg2.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/12/21/fengleishueihuotu/">風雷水火土</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/12/21/fengleishueihuotu/">
+            <time datetime="2016-12-21T13:47:11.000Z" itemprop="datePublished">2016-12-21</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/中二/">中二</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/中二/">中二</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>转自 <a href="http://www.kanshu.com/files/article/html/24390/792399.html" target="_blank" rel="noopener">http://www.kanshu.com/files/article/html/24390/792399.html</a><br><a href="http://blog.sina.com.cn/s/blog_6246a9190101ukyg.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_6246a9190101ukyg.html</a></p>
+<pre><code>金木水火土五行之说，
+</code></pre><p>　　 相信对于大家而言是再熟悉不过了，</p>
+<p>　　 相生：水生木、木生火、火生土、土生金、金生水，</p>
+<p>　　 相克：金克木、木克土、土克水、水克火、火克金，</p>
+<p>　　 无可争议。<br></p>
+            <p class="article-more-link">
+                <a href="/2016/12/21/fengleishueihuotu/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2016/12/21/fengleishueihuotu/" data-id="cjd407yg4000je5wok9gmuxjh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-shenzhenautungping" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2016/12/21/shenzhenautungping/" itemprop="url">
+            <img src="/css/gallery/salt-lake.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/12/21/shenzhenautungping/">深圳奥統平</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/12/21/shenzhenautungping/">
+            <time datetime="2016-12-21T13:47:11.000Z" itemprop="datePublished">2016-12-21</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/面試/">面試</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>單例模式</p>
+<p>GIT和SVN區別</p>
+<p>編程題</p>
+<p>用string 相加，不能用lib<br></p>
+            <p class="article-more-link">
+                <a href="/2016/12/21/shenzhenautungping/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2016/12/21/shenzhenautungping/" data-id="cjd407yi9005de5wo6t7fa72b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
