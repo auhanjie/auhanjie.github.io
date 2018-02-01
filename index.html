@@ -208,6 +208,141 @@
 
             
             <section id="main">
+    <article id="post-siti8-3" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/02/01/siti8-3/">习题8-3 数组循环右移（20 分）</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/02/01/siti8-3/">
+            <time datetime="2018-02-01T06:15:00.000Z" itemprop="datePublished">2018-02-01</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="习题8-3-数组循环右移（20-分）"><a href="#习题8-3-数组循环右移（20-分）" class="headerlink" title="习题8-3 数组循环右移（20 分）"></a>习题8-3 数组循环右移（20 分）</h2><p>本题要求实现一个对数组进行循环右移的简单函数：一个数组a中存有n（&gt;0）个整数，将每个整数循环向右移m（≥0）个位置，即将a中的数据由（a​0​​ a​1​​ ⋯a​n−1​​ ）变换为（a​n−m​​ ⋯a​n−1​​ a​0​​ a​1​​ ⋯a​n−m−1​​ ）（最后m个数循环移至最前面的m个位置）。</p>
+<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int ArrayShift( int a[], int n, int m );<br>其中a[]是用户传入的数组；n是数组的大小；m是右移的位数。函数ArrayShift须将循环右移后的数组仍然存在a[]中。</p>
+<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ArrayShift</span><span class="params">( <span class="keyword">int</span> a[], <span class="keyword">int</span> n, <span class="keyword">int</span> m )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> a[MAXN], n, m;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">ArrayShift(a, n, m);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (i != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>6 2<br>1 2 3 4 5 6</p>
+<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>5 6 1 2 3 4<br></p>
+            <p class="article-more-link">
+                <a href="/2018/02/01/siti8-3/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2018/02/01/siti8-3/" data-id="cjd444zpt00p4zbwodh858co9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-siti8-2" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -270,7 +405,7 @@
 
 </div>
 
-    <a data-url="/2018/02/01/siti8-2/" data-id="cjd4408d100oklzwoji4f7uh5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/01/siti8-2/" data-id="cjd444zpr00p1zbwo66o358r5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -405,142 +540,7 @@
 
 </div>
 
-    <a data-url="/2018/02/01/siti8-1/" data-id="cjd4408d000ohlzwo68ge0g6c" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-siti8-3" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/02/01/siti8-3/">习题8-3 数组循环右移（20 分）</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/01/siti8-3/">
-            <time datetime="2018-01-31T17:15:00.000Z" itemprop="datePublished">2018-02-01</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="习题8-3-数组循环右移（20-分）"><a href="#习题8-3-数组循环右移（20-分）" class="headerlink" title="习题8-3 数组循环右移（20 分）"></a>习题8-3 数组循环右移（20 分）</h2><p>本题要求实现一个对数组进行循环右移的简单函数：一个数组a中存有n（&gt;0）个整数，将每个整数循环向右移m（≥0）个位置，即将a中的数据由（a​0​​ a​1​​ ⋯a​n−1​​ ）变换为（a​n−m​​ ⋯a​n−1​​ a​0​​ a​1​​ ⋯a​n−m−1​​ ）（最后m个数循环移至最前面的m个位置）。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int ArrayShift( int a[], int n, int m );<br>其中a[]是用户传入的数组；n是数组的大小；m是右移的位数。函数ArrayShift须将循环右移后的数组仍然存在a[]中。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ArrayShift</span><span class="params">( <span class="keyword">int</span> a[], <span class="keyword">int</span> n, <span class="keyword">int</span> m )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> a[MAXN], n, m;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">ArrayShift(a, n, m);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (i != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>6 2<br>1 2 3 4 5 6</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>5 6 1 2 3 4<br></p>
-            <p class="article-more-link">
-                <a href="/2018/02/01/siti8-3/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2018/02/01/siti8-3/" data-id="cjd4408cx00oclzwonndc7hp7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/01/siti8-1/" data-id="cjd444zpm00okzbwojh5bxdzb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -675,7 +675,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi8-8/" data-id="cjd4408500052lzwo5a9a15m6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi8-8/" data-id="cjd444zhi004pzbwo4x8oeb76" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -810,7 +810,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi8-2/" data-id="cjd44084n004ilzwortyw5fm9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi8-2/" data-id="cjd444zhg004kzbwom8a7nwmh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -945,7 +945,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-8/" data-id="cjd4408cv00o6lzwoqemma1sg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-8/" data-id="cjd444zpq00oyzbwoswblwxhy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1080,7 +1080,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-7/" data-id="cjd4408cu00o3lzwojcr14nsz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-7/" data-id="cjd444zpp00ovzbwoyk6trv8c" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1215,7 +1215,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-6/" data-id="cjd4408ct00o0lzwohv91cu9k" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-6/" data-id="cjd444zpo00oqzbwok0fs0gsk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1352,7 +1352,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-5/" data-id="cjd4408cs00nxlzwogfyz7dkz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-5/" data-id="cjd444zpk00ohzbwotxcrtig5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1487,7 +1487,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-4/" data-id="cjd4408cr00nulzwoole8td8f" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-4/" data-id="cjd444zpj00oezbwoiva97kgz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1580,6 +1580,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/02/01/siti8-3/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
+                            <p class="item-title"><a href="/2018/02/01/siti8-3/" class="title">习题8-3 数组循环右移（20 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-01T06:15:00.000Z" itemprop="datePublished">2018-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/02/01/siti8-2/" class="thumbnail">
     
     
@@ -1612,25 +1631,6 @@
                             <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a></p>
                             <p class="item-title"><a href="/2018/02/01/siti8-1/" class="title">习题8-1 拆分实数的整数与小数部分（15 分）</a></p>
                             <p class="item-date"><time datetime="2018-02-01T01:49:00.000Z" itemprop="datePublished">2018-02-01</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/02/01/siti8-3/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
-                            <p class="item-title"><a href="/2018/02/01/siti8-3/" class="title">习题8-3 数组循环右移（20 分）</a></p>
-                            <p class="item-date"><time datetime="2018-01-31T17:15:00.000Z" itemprop="datePublished">2018-02-01</time></p>
                         </div>
                     </li>
                 

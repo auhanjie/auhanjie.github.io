@@ -208,7 +208,7 @@
 
             
             <section id="main">
-    <article id="post-shryen5-8" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shryen5-6" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -216,7 +216,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/11/28/shryen5-8/">实验5-8 使用函数统计指定数字的个数（15 分）</a>
+            <a class="article-title" href="/2017/11/28/shryen5-6/">实验5-6 使用函数判断完全平方数（10 分）</a>
         </h1>
     
 
@@ -225,7 +225,7 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/11/28/shryen5-8/">
+        <a href="/2017/11/28/shryen5-6/">
             <time datetime="2017-11-28T08:30:00.000Z" itemprop="datePublished">2017-11-28</time>
         </a>
     </div>
@@ -250,17 +250,15 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验5-8-使用函数统计指定数字的个数（15-分）"><a href="#实验5-8-使用函数统计指定数字的个数（15-分）" class="headerlink" title="实验5-8 使用函数统计指定数字的个数（15 分）"></a>实验5-8 使用函数统计指定数字的个数（15 分）</h2><p>本题要求实现一个统计整数中指定数字的个数的简单函数。</p>
-<p>##　函数接口定义：</p>
-<p>int CountDigit( int number, int digit );<br>其中number是不超过长整型的整数，digit为[0, 9]区间内的整数。函数CountDigit应返回number中digit出现的次数。</p>
-<p>##　裁判测试程序样例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">CountDigit</span><span class="params">( <span class="keyword">int</span> number, <span class="keyword">int</span> digit )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> number, digit;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;number, &amp;digit);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Number of digit %d in %d: %d\n"</span>, digit, number, CountDigit(number, digit));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<p>##　输入样例：</p>
-<p>-21252 2</p>
-<p>##　输出样例：</p>
-<p>Number of digit 2 in -21252: 3<br></p>
+            <p><h2 id="实验5-6-使用函数判断完全平方数（10-分）"><a href="#实验5-6-使用函数判断完全平方数（10-分）" class="headerlink" title="实验5-6 使用函数判断完全平方数（10 分）"></a>实验5-6 使用函数判断完全平方数（10 分）</h2><p>本题要求实现一个判断整数是否为完全平方数的简单函数。</p>
+<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int IsSquare( int n );<br>其中n是用户传入的参数，在长整型范围内。如果n是完全平方数，则函数IsSquare必须返回1，否则返回0。</p>
+<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsSquare</span><span class="params">( <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">if</span> ( IsSquare(n) ) <span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>10</p>
+<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><p>NO</p>
+<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>100</p>
+<h2 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h2><p>YES<br></p>
             <p class="article-more-link">
-                <a href="/2017/11/28/shryen5-8/#more">繼續閱讀</a>
+                <a href="/2017/11/28/shryen5-6/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -271,7 +269,7 @@
 
 </div>
 
-    <a data-url="/2017/11/28/shryen5-8/" data-id="cjd44088v00eflzwougivsfwa" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/28/shryen5-6/" data-id="cjd444zlv00etzbwoyu363403" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -406,7 +404,7 @@
 
 </div>
 
-    <a data-url="/2017/11/28/shryen5-5/" data-id="cjd44088s00e6lzwowafy1me2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/28/shryen5-5/" data-id="cjd444zlu00eqzbwo2thsh5md" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -541,7 +539,7 @@
 
 </div>
 
-    <a data-url="/2017/11/28/shryen5-4/" data-id="cjd44088r00e3lzwo2r3aydnv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/28/shryen5-4/" data-id="cjd444zlt00enzbwosvr2tvta" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -676,7 +674,7 @@
 
 </div>
 
-    <a data-url="/2017/11/28/shryen5-3/" data-id="cjd44088q00e0lzwo67m33ags" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/28/shryen5-3/" data-id="cjd444zlt00ekzbwos2vsr2i0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -811,7 +809,7 @@
 
 </div>
 
-    <a data-url="/2017/11/28/shryen5-2/" data-id="cjd44088p00dxlzwol99ivcat" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/28/shryen5-2/" data-id="cjd444zls00ehzbwoyuh72955" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -946,7 +944,7 @@
 
 </div>
 
-    <a data-url="/2017/11/28/shryen5-1/" data-id="cjd44088m00dolzwo3bkxxjda" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/28/shryen5-1/" data-id="cjd444zlp00e8zbwoj771fb7u" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1081,7 +1079,7 @@
 
 </div>
 
-    <a data-url="/2017/11/06/shryen4-2-9/" data-id="cjd44088l00dllzwoic2snkmm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/06/shryen4-2-9/" data-id="cjd444zlo00e5zbwo2gqrg4az" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1216,7 +1214,7 @@
 
 </div>
 
-    <a data-url="/2017/11/06/shryen4-2-8/" data-id="cjd44088k00dilzwo0l90g2qg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/06/shryen4-2-8/" data-id="cjd444zlm00dzzbwou87a00nc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1351,7 +1349,7 @@
 
 </div>
 
-    <a data-url="/2017/11/06/shryen4-2-7/" data-id="cjd44088j00dflzwo8xgz7bm4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/06/shryen4-2-7/" data-id="cjd444zln00e2zbwosnys960r" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1486,7 +1484,7 @@
 
 </div>
 
-    <a data-url="/2017/11/06/shryen4-2-6/" data-id="cjd44088h00dclzwo5phdqyzx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/06/shryen4-2-6/" data-id="cjd444zlk00dtzbwo1hk55jtk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1579,6 +1577,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/02/01/siti8-3/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
+                            <p class="item-title"><a href="/2018/02/01/siti8-3/" class="title">习题8-3 数组循环右移（20 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-01T06:15:00.000Z" itemprop="datePublished">2018-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/02/01/siti8-2/" class="thumbnail">
     
     
@@ -1611,25 +1628,6 @@
                             <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a></p>
                             <p class="item-title"><a href="/2018/02/01/siti8-1/" class="title">习题8-1 拆分实数的整数与小数部分（15 分）</a></p>
                             <p class="item-date"><time datetime="2018-02-01T01:49:00.000Z" itemprop="datePublished">2018-02-01</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/02/01/siti8-3/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
-                            <p class="item-title"><a href="/2018/02/01/siti8-3/" class="title">习题8-3 数组循环右移（20 分）</a></p>
-                            <p class="item-date"><time datetime="2018-01-31T17:15:00.000Z" itemprop="datePublished">2018-02-01</time></p>
                         </div>
                     </li>
                 
