@@ -269,7 +269,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-5/" data-id="cjd8ab0yd00oh0lwoauswpfhd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-5/" data-id="cjd8atlak00oe3fwo9wb7vzq9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -404,7 +404,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-4/" data-id="cjd8ab0ya00ob0lwox969ztx5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-4/" data-id="cjd8atlah00o83fwor770zyji" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -539,142 +539,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-3/" data-id="cjd8ab0yc00oe0lwosuejfk6x" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-siti7-2" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/24/siti7-2/">习题7-2 求一批整数中出现最多的个位数字（20 分）</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/24/siti7-2/">
-            <time datetime="2018-01-24T10:26:00.000Z" itemprop="datePublished">2018-01-24</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="习题7-2-求一批整数中出现最多的个位数字（20-分）"><a href="#习题7-2-求一批整数中出现最多的个位数字（20-分）" class="headerlink" title="习题7-2 求一批整数中出现最多的个位数字（20 分）"></a>习题7-2 求一批整数中出现最多的个位数字（20 分）</h2><p>给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的正整数，数字间以空格分隔。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>在一行中按格式“M: n1 n2 …”输出，其中M是最大次数，n1、n2、……为出现次数最多的个位数字，按从小到大的顺序排列。数字间以空格分隔，但末尾不得有多余空格。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>3<br>1234 2345 3456</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>3: 3 4<br></p>
-            <p class="article-more-link">
-                <a href="/2018/01/24/siti7-2/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2018/01/24/siti7-2/" data-id="cjd8ab0y900o80lwo9ejk2ro1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-3/" data-id="cjd8atlaf00o23fwocad3j8tl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -809,7 +674,142 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-1/" data-id="cjd8ab0y500nz0lwo32h35lyl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-1/" data-id="cjd8atlad00nw3fwojnji7z4d" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-siti7-2" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/01/24/siti7-2/">习题7-2 求一批整数中出现最多的个位数字（20 分）</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/01/24/siti7-2/">
+            <time datetime="2018-01-24T10:26:00.000Z" itemprop="datePublished">2018-01-24</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="习题7-2-求一批整数中出现最多的个位数字（20-分）"><a href="#习题7-2-求一批整数中出现最多的个位数字（20-分）" class="headerlink" title="习题7-2 求一批整数中出现最多的个位数字（20 分）"></a>习题7-2 求一批整数中出现最多的个位数字（20 分）</h2><p>给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。</p>
+<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的正整数，数字间以空格分隔。</p>
+<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>在一行中按格式“M: n1 n2 …”输出，其中M是最大次数，n1、n2、……为出现次数最多的个位数字，按从小到大的顺序排列。数字间以空格分隔，但末尾不得有多余空格。</p>
+<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>3<br>1234 2345 3456</p>
+<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>3: 3 4<br></p>
+            <p class="article-more-link">
+                <a href="/2018/01/24/siti7-2/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2018/01/24/siti7-2/" data-id="cjd8atlag00o53fwobbpggpu3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -944,7 +944,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi7-11/" data-id="cjd8ab0q8003t0lwo2v2rwrjn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi7-11/" data-id="cjd8atl2b003v3fwovct7yho8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1081,7 +1081,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi7-10/" data-id="cjd8ab0q5003o0lwol2v7hnn0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi7-10/" data-id="cjd8atl27003n3fwo5lidq51z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1218,7 +1218,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi7-9/" data-id="cjd8ab0qi004h0lwoyv1q3iu3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi7-9/" data-id="cjd8atl2p004j3fwosl8ajgs8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1353,7 +1353,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi7-8/" data-id="cjd8ab0qg004c0lwof4yl69ub" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi7-8/" data-id="cjd8atl2h004b3fwoj1p6owqr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1488,7 +1488,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi7-7/" data-id="cjd8ab0qf00490lwo838hkiqu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi7-7/" data-id="cjd8atl2i004e3fwov1ubom95" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
