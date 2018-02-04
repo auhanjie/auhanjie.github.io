@@ -273,7 +273,290 @@
 
 </div>
 
-    <a data-url="/2016/12/21/markdown/" data-id="cjd8b8ytz004s87woow1us148" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/12/21/markdown/" data-id="cjd8bfrxs004taqwoidoj8n64" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-shenzhenshrlanzhungkejigufenyousiengungsr" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/" itemprop="url">
+            <img src="/css/gallery/shoes.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/">深圳縱覽</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/">
+            <time datetime="2016-12-21T13:47:11.000Z" itemprop="datePublished">2016-12-21</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/面試/">面試</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>單例模式和工廠模式</p>
+<p>springmvc的理解</p>
+<p>servlet的生命週期和方法有哪些</p>
+<p>構造函數和重載</p>
+<p>jquery異步</p>
+<p>轉發請求forward和Redirect</p>
+<p>JSP的運行機制</p>
+<p>JSP的內置對象及其用途</p>
+<p>spring的理解，依賴注入控制反轉</p>
+<p>如何用jquery來進行異步表單提交</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/" data-id="cjd8bfrxy005faqwoyjja00v3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-shenzhenautungping" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2016/12/21/shenzhenautungping/" itemprop="url">
+            <img src="/css/gallery/salt-lake.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/12/21/shenzhenautungping/">深圳奥統平</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/12/21/shenzhenautungping/">
+            <time datetime="2016-12-21T13:47:11.000Z" itemprop="datePublished">2016-12-21</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/面試/">面試</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>單例模式</p>
+<p>GIT和SVN區別</p>
+<p>編程題</p>
+<p>用string 相加，不能用lib<br></p>
+            <p class="article-more-link">
+                <a href="/2016/12/21/shenzhenautungping/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2016/12/21/shenzhenautungping/" data-id="cjd8bfrxv0054aqwo2ckhm9pj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -419,290 +702,7 @@
 
 </div>
 
-    <a data-url="/2016/12/21/fengleishueihuotu/" data-id="cjd8b8ysm000p87wojvu3wjdt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-shenzhenautungping" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2016/12/21/shenzhenautungping/" itemprop="url">
-            <img src="/css/gallery/salt-lake.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/12/21/shenzhenautungping/">深圳奥統平</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/12/21/shenzhenautungping/">
-            <time datetime="2016-12-21T13:47:11.000Z" itemprop="datePublished">2016-12-21</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/面試/">面試</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>單例模式</p>
-<p>GIT和SVN區別</p>
-<p>編程題</p>
-<p>用string 相加，不能用lib<br></p>
-            <p class="article-more-link">
-                <a href="/2016/12/21/shenzhenautungping/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2016/12/21/shenzhenautungping/" data-id="cjd8b8yu5005c87wo9hag8kfm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-shenzhenshrlanzhungkejigufenyousiengungsr" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/" itemprop="url">
-            <img src="/css/gallery/shoes.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/">深圳縱覽</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/">
-            <time datetime="2016-12-21T13:47:11.000Z" itemprop="datePublished">2016-12-21</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/面試/">面試</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>單例模式和工廠模式</p>
-<p>springmvc的理解</p>
-<p>servlet的生命週期和方法有哪些</p>
-<p>構造函數和重載</p>
-<p>jquery異步</p>
-<p>轉發請求forward和Redirect</p>
-<p>JSP的運行機制</p>
-<p>JSP的內置對象及其用途</p>
-<p>spring的理解，依賴注入控制反轉</p>
-<p>如何用jquery來進行異步表單提交</p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2016/12/21/shenzhenshrlanzhungkejigufenyousiengungsr/" data-id="cjd8b8yu7005k87wom8pgzapr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/12/21/fengleishueihuotu/" data-id="cjd8bfrw6000laqwog9w4gn13" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -886,7 +886,7 @@
 
 </div>
 
-    <a data-url="/2016/10/22/huashrsiauzhau/" data-id="cjd8b8yso000v87wo9fzte99n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/10/22/huashrsiauzhau/" data-id="cjd8bfrw9000vaqwoqz2yem2h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1024,7 +1024,7 @@
 
 </div>
 
-    <a data-url="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/" data-id="cjd8b8yso000x87woy0yqpz42" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/" data-id="cjd8bfrwa000xaqwopc9ntem4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1214,7 +1214,7 @@
 
 </div>
 
-    <a data-url="/2016/10/14/shenzhenfaben/" data-id="cjd8b8yu6005g87wowpxl4747" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/10/14/shenzhenfaben/" data-id="cjd8bfrxx005caqwo6et5jqds" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1345,7 +1345,7 @@
 
 </div>
 
-    <a data-url="/2016/09/25/HibernateCache/" data-id="cjd8b8yse000987wodm5a7l83" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/09/25/HibernateCache/" data-id="cjd8bfrvx0007aqwobvhgssyk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1471,7 +1471,7 @@
 
 </div>
 
-    <a data-url="/2016/05/28/ORA-28001-the-password-has-expired/" data-id="cjd8b8ysg000a87wo4mvlk3lf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/28/ORA-28001-the-password-has-expired/" data-id="cjd8bfrvz0009aqwogjyb116q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1595,7 +1595,7 @@
 
 </div>
 
-    <a data-url="/2016/05/28/Picked-up-JAVA-TOOL-OPTIONS-agentlib-jvmhook/" data-id="cjd8b8ysh000e87wo0i7qdke2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/28/Picked-up-JAVA-TOOL-OPTIONS-agentlib-jvmhook/" data-id="cjd8bfrw2000eaqwohi2tr39y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1789,7 +1789,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分類</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MinGW/">MinGW</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/findbugs/">findbugs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-page/">github page</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中二/">中二</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="category-list-count">189</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="category-list-count">78</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/簡歷/">簡歷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/編譯原理/">編譯原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/華語拼音公式改/">華語拼音公式改</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面試/">面試</a><span class="category-list-count">6</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MinGW/">MinGW</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/findbugs/">findbugs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-page/">github page</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中二/">中二</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="category-list-count">179</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="category-list-count">88</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/簡歷/">簡歷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/編譯原理/">編譯原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/華語拼音公式改/">華語拼音公式改</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面試/">面試</a><span class="category-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -1807,7 +1807,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">標籤</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MinGW/">MinGW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bugs/">bugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/findbugs/">findbugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中二/">中二</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/個人簡歷/">個人簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="tag-list-count">189</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="tag-list-count">78</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/簡歷/">簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/編譯原理/">編譯原理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/華語拼音公式改/">華語拼音公式改</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MinGW/">MinGW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bugs/">bugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/findbugs/">findbugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中二/">中二</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/個人簡歷/">個人簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="tag-list-count">179</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="tag-list-count">88</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/簡歷/">簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/編譯原理/">編譯原理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/華語拼音公式改/">華語拼音公式改</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
