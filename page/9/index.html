@@ -170,7 +170,7 @@
                     
                     
                     <td>
-                        <a href="http://github.com/auhanjie/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                        <a href="http://github.com/auhanjie/auhanjie.github.io" target="_blank" title="github" class=tooltip>
                             <i class="fa fa-github"></i>
                         </a>
                     </td>
@@ -208,7 +208,7 @@
 
             
             <section id="main">
-    <article id="post-liensi2-10" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-9" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -216,7 +216,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/14/liensi2-10/">练习2-10 计算分段函数[1]（10 分）</a>
+            <a class="article-title" href="/2018/01/14/liensi2-9/">练习2-9 整数四则运算（10 分）</a>
         </h1>
     
 
@@ -225,7 +225,7 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/14/liensi2-10/">
+        <a href="/2018/01/14/liensi2-9/">
             <time datetime="2018-01-14T11:11:00.000Z" itemprop="datePublished">2018-01-14</time>
         </a>
     </div>
@@ -250,15 +250,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="练习2-10-计算分段函数-1-（10-分）"><a href="#练习2-10-计算分段函数-1-（10-分）" class="headerlink" title="练习2-10 计算分段函数[1]（10 分）"></a>练习2-10 计算分段函数[1]（10 分）</h2><p>本题目要求计算下列分段函数f(x)的值：<br>公式<br><img src="http://7xs2s7.com1.z0.glb.clouddn.com/shryen2-2-1.png" alt="liensi2-10"></p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出实数x。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中按“f(x) = result”的格式输出，其中x与result都保留一位小数。</p>
-<h2 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h2><p>10</p>
-<h2 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h2><p>f(10.0) = 0.1</p>
-<h2 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h2><p>0</p>
-<h2 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h2><p>f(0.0) = 0.0<br></p>
+            <p><h2 id="练习2-9-整数四则运算（10-分）"><a href="#练习2-9-整数四则运算（10-分）" class="headerlink" title="练习2-9 整数四则运算（10 分）"></a>练习2-9 整数四则运算（10 分）</h2><p>本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出2个正整数A和B。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>3 2</p>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>3 + 2 = 5<br>3 - 2 = 1<br>3 * 2 = 6<br>3 / 2 = 1<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/14/liensi2-10/#more">繼續閱讀</a>
+                <a href="/2018/01/14/liensi2-9/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -269,7 +267,140 @@
 
 </div>
 
-    <a data-url="/2018/01/14/liensi2-10/" data-id="cjd8bw0dj0014d2wo11c8gwdv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-9/" data-id="cjd8c2z7q0027e8woipx5orn7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-liensi2-4" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/01/14/liensi2-4/">练习2-4 温度转换（5 分）</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/01/14/liensi2-4/">
+            <time datetime="2018-01-14T10:56:00.000Z" itemprop="datePublished">2018-01-14</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="练习2-4-温度转换（5-分）"><a href="#练习2-4-温度转换（5-分）" class="headerlink" title="练习2-4 温度转换（5 分）"></a>练习2-4 温度转换（5 分）</h2><p>本题要求编写程序，计算华氏温度150°F对应的摄氏温度。计算公式：C=5×(F−32)/9，式中：C表示摄氏温度，F表示华氏温度，输出数据要求为整型。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>本题目没有输入。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>按照下列格式输出<br>fahr = 150, celsius = 计算所得摄氏温度的整数值<br></p>
+            <p class="article-more-link">
+                <a href="/2018/01/14/liensi2-4/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2018/01/14/liensi2-4/" data-id="cjd8c2z7j001te8wojjla0u0g" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -404,140 +535,7 @@
 
 </div>
 
-    <a data-url="/2018/01/14/liensi2-8/" data-id="cjd8bw0e0001zd2wod238ce7q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-liensi2-4" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/14/liensi2-4/">练习2-4 温度转换（5 分）</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/14/liensi2-4/">
-            <time datetime="2018-01-14T10:56:00.000Z" itemprop="datePublished">2018-01-14</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="练习2-4-温度转换（5-分）"><a href="#练习2-4-温度转换（5-分）" class="headerlink" title="练习2-4 温度转换（5 分）"></a>练习2-4 温度转换（5 分）</h2><p>本题要求编写程序，计算华氏温度150°F对应的摄氏温度。计算公式：C=5×(F−32)/9，式中：C表示摄氏温度，F表示华氏温度，输出数据要求为整型。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>本题目没有输入。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>按照下列格式输出<br>fahr = 150, celsius = 计算所得摄氏温度的整数值<br></p>
-            <p class="article-more-link">
-                <a href="/2018/01/14/liensi2-4/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2018/01/14/liensi2-4/" data-id="cjd8bw0dx001td2wo0ijeg9cq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-8/" data-id="cjd8c2z7n001ze8womrhxmogq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -670,7 +668,7 @@
 
 </div>
 
-    <a data-url="/2018/01/14/liensi2-6/" data-id="cjd8bw0dy001xd2wo51whaskb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-6/" data-id="cjd8c2z7m001xe8wo9jyxih1t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -808,7 +806,7 @@
 
 </div>
 
-    <a data-url="/2018/01/14/liensi2-3/" data-id="cjd8bw0dw001sd2woyymvqsts" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-3/" data-id="cjd8c2z7i001se8woopomyyc1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -941,7 +939,7 @@
 
 </div>
 
-    <a data-url="/2018/01/14/liensi2-1/" data-id="cjd8bw0di0013d2woo1bf45tq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-1/" data-id="cjd8c2z76000xe8wohg16hg2a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1076,7 +1074,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-9/" data-id="cjd8bw0h1008pd2woi3ejgoe8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-9/" data-id="cjd8c2za7008me8wolz6i1dx4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1211,7 +1209,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-8/" data-id="cjd8bw0h0008md2woh9pa60ix" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-8/" data-id="cjd8c2za6008je8wo76fj7f8s" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1346,7 +1344,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-7/" data-id="cjd8bw0gz008jd2wo5z8q3i0x" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-7/" data-id="cjd8c2za5008ge8wo44c2rx0m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1481,7 +1479,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-6/" data-id="cjd8bw0gy008gd2wojvi13gxs" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-6/" data-id="cjd8c2za4008de8wo5mbcurwb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
