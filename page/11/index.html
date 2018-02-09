@@ -155,7 +155,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                290
+                318
                 <span>文章</span>
             </div>
             <div class="article-info-block">
@@ -208,7 +208,7 @@
 
             
             <section id="main">
-    <article id="post-shryen11-1-4" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-18" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -216,7 +216,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/11/shryen11-1-4/">实验11-1-4 计算最长的字符串长度（15 分）</a>
+            <a class="article-title" href="/2018/01/16/liensi2-18/">练习2-18 生成3的乘方表（15 分）</a>
         </h1>
     
 
@@ -225,8 +225,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/11/shryen11-1-4/">
-            <time datetime="2018-01-11T10:27:00.000Z" itemprop="datePublished">2018-01-11</time>
+        <a href="/2018/01/16/liensi2-18/">
+            <time datetime="2018-01-16T03:54:00.000Z" itemprop="datePublished">2018-01-16</time>
         </a>
     </div>
 
@@ -234,13 +234,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -250,13 +250,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验11-1-4-计算最长的字符串长度（15-分）"><a href="#实验11-1-4-计算最长的字符串长度（15-分）" class="headerlink" title="实验11-1-4 计算最长的字符串长度（15 分）"></a>实验11-1-4 计算最长的字符串长度（15 分）</h2><p>本题要求实现一个函数，用于计算有n个元素的指针数组s中最长的字符串的长度。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int max_len( char *s[], int n );<br>其中n个字符串存储在s[]中，函数max_len应返回其中最长字符串的长度。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXS 20</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max_len</span><span class="params">( <span class="keyword">char</span> *s[], <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, n;</span><br><span class="line">    <span class="keyword">char</span> *<span class="built_in">string</span>[MAXN] = &#123;<span class="literal">NULL</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">string</span>[i] = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>)*MAXS);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>, <span class="built_in">string</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, max_len(<span class="built_in">string</span>, n));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>4<br>blue<br>yellow<br>red<br>green</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>6<br></p>
+            <p><h2 id="练习2-18-求组合数（15-分）"><a href="#练习2-18-求组合数（15-分）" class="headerlink" title="练习2-18 求组合数（15 分）"></a>练习2-18 求组合数（15 分）</h2><p>本题要求编写程序，根据公式C​n​m​​ =​m!(n−m)!​n!​​ 算出从n个不同元素中取出m个元素（m≤n）的组合数。<br>建议定义和调用函数fact(n)计算n!，其中n的类型是int，函数类型是double。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出两个正整数m和n（m≤n），以空格分隔。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>按照格式“result = 组合数计算结果”输出。题目保证结果在double类型范围内。</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>2 7</p>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>result = 21<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/11/shryen11-1-4/#more">繼續閱讀</a>
+                <a href="/2018/01/16/liensi2-18/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -267,7 +267,7 @@
 
 </div>
 
-    <a data-url="/2018/01/11/shryen11-1-4/" data-id="cjd8c2z9r007de8wog4q8a8md" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/16/liensi2-18/" data-id="cjdfqyung001s4owoqk499ayc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -343,7 +343,7 @@
 
 
 
-    <article id="post-shryen11-1-3" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-17" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -351,7 +351,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/11/shryen11-1-3/">实验11-1-3 查找星期（15 分）</a>
+            <a class="article-title" href="/2018/01/16/liensi2-17/">练习2-17 生成3的乘方表（15 分）</a>
         </h1>
     
 
@@ -360,8 +360,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/11/shryen11-1-3/">
-            <time datetime="2018-01-11T10:19:00.000Z" itemprop="datePublished">2018-01-11</time>
+        <a href="/2018/01/16/liensi2-17/">
+            <time datetime="2018-01-16T03:50:00.000Z" itemprop="datePublished">2018-01-16</time>
         </a>
     </div>
 
@@ -369,13 +369,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -385,15 +385,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验11-1-3-查找星期（15-分）"><a href="#实验11-1-3-查找星期（15-分）" class="headerlink" title="实验11-1-3 查找星期（15 分）"></a>实验11-1-3 查找星期（15 分）</h2><p>本题要求实现函数，可以根据下表查找到星期，返回对应的序号。<br>序号    星期<br>0    Sunday<br>1    Monday<br>2    Tuesday<br>3    Wednesday<br>4    Thursday<br>5    Friday<br>6    Saturday</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int getindex( char *s );<br>函数getindex应返回字符串s序号。如果传入的参数s不是一个代表星期的字符串，则返回-1。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXS 80</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getindex</span><span class="params">( <span class="keyword">char</span> *s )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> s[MAXS];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>, s);</span><br><span class="line">    n = getindex(s);</span><br><span class="line">    <span class="keyword">if</span> ( n==<span class="number">-1</span> ) <span class="built_in">printf</span>(<span class="string">"wrong input!\n"</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>Tuesday</p>
-<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><p>2</p>
-<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>today</p>
-<h2 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h2><p>wrong input!<br></p>
+            <p><h2 id="练习2-17-生成3的乘方表（15-分）"><a href="#练习2-17-生成3的乘方表（15-分）" class="headerlink" title="练习2-17 生成3的乘方表（15 分）"></a>练习2-17 生成3的乘方表（15 分）</h2><p>输入一个非负整数n，生成一张3的乘方表，输出3^​0​​ ~3^​n<br>​​ 的值。可调用幂函数计算3的乘方。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出一个非负整数n。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>3</p>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>pow(3,0) = 1<br>pow(3,1) = 3<br>pow(3,2) = 9<br>pow(3,3) = 27<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/11/shryen11-1-3/#more">繼續閱讀</a>
+                <a href="/2018/01/16/liensi2-17/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -404,7 +402,7 @@
 
 </div>
 
-    <a data-url="/2018/01/11/shryen11-1-3/" data-id="cjd8c2z9s007ge8wo6lc6rzoc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/16/liensi2-17/" data-id="cjdfqyund001m4owokdcarrt9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -480,7 +478,7 @@
 
 
 
-    <article id="post-shryen11-1-2" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-15" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -488,7 +486,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/11/shryen11-1-2/">实验11-1-2 输出月份英文名（15 分）</a>
+            <a class="article-title" href="/2018/01/16/liensi2-15/">练习2-15 求简单交错序列前N项和（15 分）</a>
         </h1>
     
 
@@ -497,8 +495,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/11/shryen11-1-2/">
-            <time datetime="2018-01-11T10:12:00.000Z" itemprop="datePublished">2018-01-11</time>
+        <a href="/2018/01/16/liensi2-15/">
+            <time datetime="2018-01-16T03:49:00.000Z" itemprop="datePublished">2018-01-16</time>
         </a>
     </div>
 
@@ -506,13 +504,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -522,15 +520,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验11-1-2-输出月份英文名（15-分）"><a href="#实验11-1-2-输出月份英文名（15-分）" class="headerlink" title="实验11-1-2 输出月份英文名（15 分）"></a>实验11-1-2 输出月份英文名（15 分）</h2><p>本题要求实现函数，可以返回一个给定月份的英文名称。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>char *getmonth( int n );<br>函数getmonth应返回存储了n对应的月份英文名称的字符串头指针。如果传入的参数n不是一个代表月份的数字，则返回空指针NULL。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">getmonth</span><span class="params">( <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> *s;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    s = getmonth(n);</span><br><span class="line">    <span class="keyword">if</span> ( s==<span class="literal">NULL</span> ) <span class="built_in">printf</span>(<span class="string">"wrong input!\n"</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, s);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>5</p>
-<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><p>May</p>
-<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>15</p>
-<h2 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h2><p>wrong input!<br></p>
+            <p><h2 id="练习2-15-求简单交错序列前N项和（15-分）"><a href="#练习2-15-求简单交错序列前N项和（15-分）" class="headerlink" title="练习2-15 求简单交错序列前N项和（15 分）"></a>练习2-15 求简单交错序列前N项和（15 分）</h2><p>本题要求编写程序,计算序列 1 - 1/4 + 1/7 - 1/10 + … 的前N项之和。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出一个正整数N。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后三位。题目保证计算结果不超过双精度范围。</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>10</p>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>sum = 0.819<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/11/shryen11-1-2/#more">繼續閱讀</a>
+                <a href="/2018/01/16/liensi2-15/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -541,7 +537,7 @@
 
 </div>
 
-    <a data-url="/2018/01/11/shryen11-1-2/" data-id="cjd8c2z9p0077e8wo9hktossn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/16/liensi2-15/" data-id="cjdfqyune001o4owoz19u3luj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -617,7 +613,7 @@
 
 
 
-    <article id="post-shryen11-1-1" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-14" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -625,7 +621,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/10/shryen11-1-1/">实验11-1-1 英文单词排序（25 分）</a>
+            <a class="article-title" href="/2018/01/16/liensi2-14/">练习2-14 求奇数分之一序列前N项和（15 分）</a>
         </h1>
     
 
@@ -634,8 +630,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/10/shryen11-1-1/">
-            <time datetime="2018-01-10T11:41:00.000Z" itemprop="datePublished">2018-01-10</time>
+        <a href="/2018/01/16/liensi2-14/">
+            <time datetime="2018-01-16T03:28:00.000Z" itemprop="datePublished">2018-01-16</time>
         </a>
     </div>
 
@@ -643,13 +639,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -659,13 +655,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验11-1-1-英文单词排序（25-分）"><a href="#实验11-1-1-英文单词排序（25-分）" class="headerlink" title="实验11-1-1 英文单词排序（25 分）"></a>实验11-1-1 英文单词排序（25 分）</h2><p>本题要求编写程序，输入若干英文单词，对这些单词按长度从小到大排序后输出。如果长度相同，按照输入的顺序不变。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入为若干英文单词，每行一个，以#作为输入结束标志。其中英文单词总数不超过20个，英文单词为长度小于10的仅由小写英文字母组成的字符串。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出为排序后的结果，每个单词后面都额外输出一个空格。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>blue<br>red<br>yellow<br>green<br>purple<br>#</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>red blue green yellow purple<br></p>
+            <p><h2 id="练习2-14-求奇数分之一序列前N项和（15-分）"><a href="#练习2-14-求奇数分之一序列前N项和（15-分）" class="headerlink" title="练习2-14 求奇数分之一序列前N项和（15 分）"></a>练习2-14 求奇数分之一序列前N项和（15 分）</h2><p>本题要求编写程序，计算序列 1 + 1/3 + 1/5 + … 的前N项之和。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出一个正整数N。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>23</p>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>sum = 2.549541<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/10/shryen11-1-1/#more">繼續閱讀</a>
+                <a href="/2018/01/16/liensi2-14/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -676,7 +672,7 @@
 
 </div>
 
-    <a data-url="/2018/01/10/shryen11-1-1/" data-id="cjd8c2z9q007ae8wo4sd72cz1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/16/liensi2-14/" data-id="cjdfqyunc001k4owojyir61go" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -752,7 +748,7 @@
 
 
 
-    <article id="post-shryen10-10" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-13" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -760,7 +756,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/10/shryen10-10/">实验10-10 递归实现顺序输出整数（15 分）</a>
+            <a class="article-title" href="/2018/01/16/liensi2-13/">练习2-13 求N分之一序列前N项和（15 分）</a>
         </h1>
     
 
@@ -769,8 +765,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/10/shryen10-10/">
-            <time datetime="2018-01-10T11:06:00.000Z" itemprop="datePublished">2018-01-10</time>
+        <a href="/2018/01/16/liensi2-13/">
+            <time datetime="2018-01-16T03:28:00.000Z" itemprop="datePublished">2018-01-16</time>
         </a>
     </div>
 
@@ -778,13 +774,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -794,13 +790,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验10-10-递归实现顺序输出整数（15-分）"><a href="#实验10-10-递归实现顺序输出整数（15-分）" class="headerlink" title="实验10-10 递归实现顺序输出整数（15 分）"></a>实验10-10 递归实现顺序输出整数（15 分）</h2><p>本题要求实现一个函数，对一个整数进行按位顺序输出。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>void printdigits( int n );<br>函数printdigits应将n的每一位数字从高位到低位顺序打印出来，每位数字占一行。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printdigits</span><span class="params">( <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">	</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    printdigits(n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>12345</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>1<br>2<br>3<br>4<br>5<br></p>
+            <p><h2 id="练习2-13-求N分之一序列前N项和（15-分）"><a href="#练习2-13-求N分之一序列前N项和（15-分）" class="headerlink" title="练习2-13 求N分之一序列前N项和（15 分）"></a>练习2-13 求N分之一序列前N项和（15 分）</h2><p>本题要求编写程序，计算序列 1 + 1/2 + 1/3 + … 的前N项之和。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出一个正整数N。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>6</p>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>sum = 2.450000<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/10/shryen10-10/#more">繼續閱讀</a>
+                <a href="/2018/01/16/liensi2-13/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -811,7 +807,7 @@
 
 </div>
 
-    <a data-url="/2018/01/10/shryen10-10/" data-id="cjd8c2z9g006ge8woqozwb0ji" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/16/liensi2-13/" data-id="cjdfqyuna001e4owoeuy5arl9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -887,7 +883,7 @@
 
 
 
-    <article id="post-shryen10-9" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-12" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -895,7 +891,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/10/shryen10-9/">实验10-9 十进制转换二进制（15 分）</a>
+            <a class="article-title" href="/2018/01/14/liensi2-12/">练习2-12 输出华氏-摄氏温度转换表（15 分）</a>
         </h1>
     
 
@@ -904,8 +900,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/10/shryen10-9/">
-            <time datetime="2018-01-10T11:03:00.000Z" itemprop="datePublished">2018-01-10</time>
+        <a href="/2018/01/14/liensi2-12/">
+            <time datetime="2018-01-14T11:24:00.000Z" itemprop="datePublished">2018-01-14</time>
         </a>
     </div>
 
@@ -913,13 +909,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -929,13 +925,15 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><p>##　实验10-9 十进制转换二进制（15 分）<br>本题要求实现一个函数，将正整数n转换为二进制后输出。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>void dectobin( int n );<br>函数dectobin应在一行中打印出二进制的n。建议用递归实现。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dectobin</span><span class="params">( <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    dectobin(n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>10</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>1010<br></p>
+            <p><h2 id="练习2-12-输出华氏-摄氏温度转换表（15-分）"><a href="#练习2-12-输出华氏-摄氏温度转换表（15-分）" class="headerlink" title="练习2-12 输出华氏-摄氏温度转换表（15 分）"></a>练习2-12 输出华氏-摄氏温度转换表（15 分）</h2><p>输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。<br>温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>第一行输出：”fahr celsius”<br>接着每行输出一个华氏温度fahr（整型）与一个摄氏温度celsius（占据6个字符宽度，靠右对齐，保留1位小数）。<br>若输入的范围不合法，则输出”Invalid.”。</p>
+<h2 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h2><p>32 35</p>
+<h2 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h2><p>fahr celsius<br>32   0.0<br>34   1.1</p>
+<h2 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h2><p>40 30</p>
+<h2 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h2><p>Invalid.<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/10/shryen10-9/#more">繼續閱讀</a>
+                <a href="/2018/01/14/liensi2-12/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -946,7 +944,7 @@
 
 </div>
 
-    <a data-url="/2018/01/10/shryen10-9/" data-id="cjd8c2z9n0074e8woc5vz31is" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-12/" data-id="cjdfqyun8001a4owomz4qm4zq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1022,7 +1020,7 @@
 
 
 
-    <article id="post-shryen10-7" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-11" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1030,7 +1028,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/10/shryen10-7/">实验10-7 递归求Fabonacci数列（10 分）</a>
+            <a class="article-title" href="/2018/01/14/liensi2-11/">练习2-11 计算分段函数[2]（10 分）</a>
         </h1>
     
 
@@ -1039,8 +1037,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/10/shryen10-7/">
-            <time datetime="2018-01-10T10:55:00.000Z" itemprop="datePublished">2018-01-10</time>
+        <a href="/2018/01/14/liensi2-11/">
+            <time datetime="2018-01-14T11:14:00.000Z" itemprop="datePublished">2018-01-14</time>
         </a>
     </div>
 
@@ -1048,13 +1046,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -1064,13 +1062,15 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验10-7-递归求Fabonacci数列（10-分）"><a href="#实验10-7-递归求Fabonacci数列（10-分）" class="headerlink" title="实验10-7 递归求Fabonacci数列（10 分）"></a>实验10-7 递归求Fabonacci数列（10 分）</h2><p>本题要求实现求Fabonacci数列项的函数。Fabonacci数列的定义如下：<br>f(n)=f(n−2)+f(n−1) (n≥2)，其中f(0)=0，f(1)=1。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int f( int n );<br>函数f应返回第n个Fabonacci数。题目保证输入输出在长整型范围内。建议用递归实现。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">( <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, f(n));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>6</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>8<br></p>
+            <p><h2 id="练习2-11-计算分段函数-2-（10-分）"><a href="#练习2-11-计算分段函数-2-（10-分）" class="headerlink" title="练习2-11 计算分段函数[2]（10 分）"></a>练习2-11 计算分段函数[2]（10 分）</h2><p>本题目要求计算下列分段函数f(x)的值：<br><img src="http://7xs2s7.com1.z0.glb.clouddn.com/shryen2-2-4.png" alt="liensi2-11"><br>注：可在头文件中包含math.h，并调用sqrt函数求平方根，调用pow函数求幂。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出实数x。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中按“f(x) = result”的格式输出，其中x与result都保留两位小数。</p>
+<h2 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h2><p>10</p>
+<h2 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h2><p>f(10.00) = 3.16</p>
+<h2 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h2><p>-0.5</p>
+<h2 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h2><p>f(-0.50) = -2.75<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/10/shryen10-7/#more">繼續閱讀</a>
+                <a href="/2018/01/14/liensi2-11/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -1081,7 +1081,7 @@
 
 </div>
 
-    <a data-url="/2018/01/10/shryen10-7/" data-id="cjd8c2z9m006ye8worhrcro9t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-11/" data-id="cjdfqyun700184owonktrgnin" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1157,7 +1157,7 @@
 
 
 
-    <article id="post-shryen10-8" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-10" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1165,7 +1165,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/10/shryen10-8/">实验10-8 递归计算P函数（15 分）</a>
+            <a class="article-title" href="/2018/01/14/liensi2-10/">练习2-10 计算分段函数[1]（10 分）</a>
         </h1>
     
 
@@ -1174,8 +1174,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/10/shryen10-8/">
-            <time datetime="2018-01-10T10:55:00.000Z" itemprop="datePublished">2018-01-10</time>
+        <a href="/2018/01/14/liensi2-10/">
+            <time datetime="2018-01-14T11:11:00.000Z" itemprop="datePublished">2018-01-14</time>
         </a>
     </div>
 
@@ -1183,13 +1183,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -1199,13 +1199,15 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验10-8-递归计算P函数（15-分）"><a href="#实验10-8-递归计算P函数（15-分）" class="headerlink" title="实验10-8 递归计算P函数（15 分）"></a>实验10-8 递归计算P函数（15 分）</h2><p>本题要求实现下列函数P(n,x)的计算，其函数定义如下：<br>P(n,x) = {1 (n=0)}<br>         {x (n=1)}<br>         { (2n-1)P(n-1,x)-(n-1)P(n-2,x) /n  (n&gt;1)}</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>double P( int n, double x );<br>其中n是用户传入的非负整数，x是双精度浮点数。函数P返回P(n,x)函数的相应值。题目保证输入输出都在双精度范围内。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">P</span><span class="params">( <span class="keyword">int</span> n, <span class="keyword">double</span> x )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">double</span> x;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %lf"</span>, &amp;n, &amp;x);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>, P(n,x));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>10 1.7</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>3.05<br></p>
+            <p><h2 id="练习2-10-计算分段函数-1-（10-分）"><a href="#练习2-10-计算分段函数-1-（10-分）" class="headerlink" title="练习2-10 计算分段函数[1]（10 分）"></a>练习2-10 计算分段函数[1]（10 分）</h2><p>本题目要求计算下列分段函数f(x)的值：<br>公式<br><img src="http://7xs2s7.com1.z0.glb.clouddn.com/shryen2-2-1.png" alt="liensi2-10"></p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出实数x。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中按“f(x) = result”的格式输出，其中x与result都保留一位小数。</p>
+<h2 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h2><p>10</p>
+<h2 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h2><p>f(10.0) = 0.1</p>
+<h2 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h2><p>0</p>
+<h2 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h2><p>f(0.0) = 0.0<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/10/shryen10-8/#more">繼續閱讀</a>
+                <a href="/2018/01/14/liensi2-10/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -1216,7 +1218,7 @@
 
 </div>
 
-    <a data-url="/2018/01/10/shryen10-8/" data-id="cjd8c2z9n0071e8wod5yeqa0o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-10/" data-id="cjdfqyun500134owocxvu8gg0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1292,7 +1294,7 @@
 
 
 
-    <article id="post-shryen10-6" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-9" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1300,7 +1302,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/10/shryen10-6/">实验10-5 递归求简单交错幂级数的部分和（15 分）</a>
+            <a class="article-title" href="/2018/01/14/liensi2-9/">练习2-9 整数四则运算（10 分）</a>
         </h1>
     
 
@@ -1309,8 +1311,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/10/shryen10-6/">
-            <time datetime="2018-01-10T10:45:00.000Z" itemprop="datePublished">2018-01-10</time>
+        <a href="/2018/01/14/liensi2-9/">
+            <time datetime="2018-01-14T11:11:00.000Z" itemprop="datePublished">2018-01-14</time>
         </a>
     </div>
 
@@ -1318,13 +1320,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -1334,13 +1336,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验10-6-递归计算Ackermenn函数（15-分）"><a href="#实验10-6-递归计算Ackermenn函数（15-分）" class="headerlink" title="实验10-6 递归计算Ackermenn函数（15 分）"></a>实验10-6 递归计算Ackermenn函数（15 分）</h2><p>本题要求实现Ackermenn函数的计算，其函数定义如下：<br>ack （m, n）= {n+1 m=0}<br>              {ack(m-1,1) n=0&amp;&amp;m&gt;0}<br>              {ack(m-1,ack(m,n-1) m&gt;0&amp;&amp;n&gt;0}    </p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int Ack( int m, int n );<br>其中m和n是用户传入的非负整数。函数Ack返回Ackermenn函数的相应值。题目保证输入输出都在长整型<br>范围内。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Ack</span><span class="params">( <span class="keyword">int</span> m, <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m, n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, Ack(m, n));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>2 3</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>9<br></p>
+            <p><h2 id="练习2-9-整数四则运算（10-分）"><a href="#练习2-9-整数四则运算（10-分）" class="headerlink" title="练习2-9 整数四则运算（10 分）"></a>练习2-9 整数四则运算（10 分）</h2><p>本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出2个正整数A和B。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>3 2</p>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>3 + 2 = 5<br>3 - 2 = 1<br>3 * 2 = 6<br>3 / 2 = 1<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/10/shryen10-6/#more">繼續閱讀</a>
+                <a href="/2018/01/14/liensi2-9/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -1351,7 +1353,7 @@
 
 </div>
 
-    <a data-url="/2018/01/10/shryen10-6/" data-id="cjd8c2z9l006ve8wo107gxb4b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-9/" data-id="cjdfqyunm00264owotm8153zi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1427,7 +1429,7 @@
 
 
 
-    <article id="post-shryen10-5" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-liensi2-8" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1435,7 +1437,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/10/shryen10-5/">实验10-5 递归求简单交错幂级数的部分和（15 分）</a>
+            <a class="article-title" href="/2018/01/14/liensi2-8/">练习2-8 计算摄氏温度（10 分）</a>
         </h1>
     
 
@@ -1444,8 +1446,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/10/shryen10-5/">
-            <time datetime="2018-01-10T10:45:00.000Z" itemprop="datePublished">2018-01-10</time>
+        <a href="/2018/01/14/liensi2-8/">
+            <time datetime="2018-01-14T10:56:00.000Z" itemprop="datePublished">2018-01-14</time>
         </a>
     </div>
 
@@ -1453,13 +1455,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
     </div>
 
                     </div>
@@ -1469,13 +1471,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验10-5-递归求简单交错幂级数的部分和（15-分）"><a href="#实验10-5-递归求简单交错幂级数的部分和（15-分）" class="headerlink" title="实验10-5 递归求简单交错幂级数的部分和（15 分）"></a>实验10-5 递归求简单交错幂级数的部分和（15 分）</h2><p>本题要求实现一个函数，计算下列简单交错幂级数的部分和：<br>f(x,n)=x−x^​2​​ +x^​3​​ −x^​4​​ +⋯+(−1)^n−1*x^​n<br>​​ </p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>double fn( double x, int n );<br>其中题目保证传入的n是正整数，并且输入输出都在双精度范围内。函数fn应返回上述级数的部分和。建议尝试用递归实现。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">fn</span><span class="params">( <span class="keyword">double</span> x, <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>, fn(x,n));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>0.5 12</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>0.33<br></p>
+            <p><h2 id="练习2-8-计算摄氏温度（10-分）"><a href="#练习2-8-计算摄氏温度（10-分）" class="headerlink" title="练习2-8 计算摄氏温度（10 分）"></a>练习2-8 计算摄氏温度（10 分）</h2><p>给定一个华氏温度F，本题要求编写程序，计算对应的摄氏温度C。计算公式：C=5×(F−32)/9。题目保证输入与输出均在整型范围内。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出一个华氏温度。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中按照格式“Celsius = C”输出对应的摄氏温度C的整数值。</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>150</p>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>Celsius = 65<br></p>
             <p class="article-more-link">
-                <a href="/2018/01/10/shryen10-5/#more">繼續閱讀</a>
+                <a href="/2018/01/14/liensi2-8/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -1486,7 +1488,7 @@
 
 </div>
 
-    <a data-url="/2018/01/10/shryen10-5/" data-id="cjd8c2z9k006se8woohv2udg3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-8/" data-id="cjdfqyunj001z4owoaxnzg0mo" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1563,7 +1565,7 @@
 
 
     <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/10/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/12/">下一頁 &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/10/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><a class="extend next" rel="next" href="/page/12/">下一頁 &raquo;</a>
     </nav>
 </section>
             
@@ -1579,7 +1581,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/02/04/siti8-5/" class="thumbnail">
+                            <a href="/2018/02/09/siti11-8/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1590,15 +1592,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
-                            <p class="item-title"><a href="/2018/02/04/siti8-5/" class="title">习题8-5 使用函数实现字符串部分复制（20 分）</a></p>
-                            <p class="item-date"><time datetime="2018-02-04T04:19:00.000Z" itemprop="datePublished">2018-02-04</time></p>
+                            <p class="item-title"><a href="/2018/02/09/siti11-8/" class="title">习题11-8 单链表结点删除（20 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-08T21:40:00.000Z" itemprop="datePublished">2018-02-09</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/02/04/siti8-4/" class="thumbnail">
+                            <a href="/2018/02/09/siti11-7/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1609,15 +1611,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
-                            <p class="item-title"><a href="/2018/02/04/siti8-4/" class="title">习题8-4 报数（20 分）</a></p>
-                            <p class="item-date"><time datetime="2018-02-04T03:50:00.000Z" itemprop="datePublished">2018-02-04</time></p>
+                            <p class="item-title"><a href="/2018/02/09/siti11-7/" class="title">习题11-7 奇数值结点链表（20 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-08T21:39:00.000Z" itemprop="datePublished">2018-02-09</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/02/01/siti8-3/" class="thumbnail">
+                            <a href="/2018/02/09/siti11-6/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1628,15 +1630,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
-                            <p class="item-title"><a href="/2018/02/01/siti8-3/" class="title">习题8-3 数组循环右移（20 分）</a></p>
-                            <p class="item-date"><time datetime="2018-02-01T06:23:00.000Z" itemprop="datePublished">2018-02-01</time></p>
+                            <p class="item-title"><a href="/2018/02/09/siti11-6/" class="title">习题11-6 查找子串（20 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-08T21:38:00.000Z" itemprop="datePublished">2018-02-09</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/02/01/siti8-2/" class="thumbnail">
+                            <a href="/2018/02/09/siti11-5/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1647,15 +1649,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
-                            <p class="item-title"><a href="/2018/02/01/siti8-2/" class="title">习题8-2 在数组中查找指定元素（15 分）</a></p>
-                            <p class="item-date"><time datetime="2018-02-01T02:26:00.000Z" itemprop="datePublished">2018-02-01</time></p>
+                            <p class="item-title"><a href="/2018/02/09/siti11-5/" class="title">习题11-5 指定位置输出字符串（20 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-08T21:36:00.000Z" itemprop="datePublished">2018-02-09</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/02/01/siti8-1/" class="thumbnail">
+                            <a href="/2018/02/09/siti11-4/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1666,8 +1668,8 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a></p>
-                            <p class="item-title"><a href="/2018/02/01/siti8-1/" class="title">习题8-1 拆分实数的整数与小数部分（15 分）</a></p>
-                            <p class="item-date"><time datetime="2018-02-01T01:49:00.000Z" itemprop="datePublished">2018-02-01</time></p>
+                            <p class="item-title"><a href="/2018/02/09/siti11-4/" class="title">习题11-4 字符串的连接（15 分）</a></p>
+                            <p class="item-date"><time datetime="2018-02-08T21:35:00.000Z" itemprop="datePublished">2018-02-09</time></p>
                         </div>
                     </li>
                 
@@ -1680,7 +1682,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分類</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MinGW/">MinGW</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/findbugs/">findbugs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-page/">github page</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中二/">中二</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="category-list-count">179</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="category-list-count">88</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/簡歷/">簡歷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/編譯原理/">編譯原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/華語拼音公式改/">華語拼音公式改</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面試/">面試</a><span class="category-list-count">6</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MinGW/">MinGW</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/findbugs/">findbugs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-page/">github page</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中二/">中二</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="category-list-count">179</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="category-list-count">116</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/簡歷/">簡歷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/編譯原理/">編譯原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/華語拼音公式改/">華語拼音公式改</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面試/">面試</a><span class="category-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -1689,7 +1691,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">歸檔</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -1698,7 +1700,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">標籤</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MinGW/">MinGW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bugs/">bugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/findbugs/">findbugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中二/">中二</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/個人簡歷/">個人簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="tag-list-count">179</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="tag-list-count">88</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/簡歷/">簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/編譯原理/">編譯原理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/華語拼音公式改/">華語拼音公式改</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MinGW/">MinGW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bugs/">bugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/findbugs/">findbugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中二/">中二</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/個人簡歷/">個人簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="tag-list-count">179</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="tag-list-count">116</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/簡歷/">簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/編譯原理/">編譯原理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/華語拼音公式改/">華語拼音公式改</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
