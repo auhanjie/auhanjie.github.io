@@ -5,18 +5,18 @@
     
     <title>实验2-1-7 整数152的各位数字（10 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="实验2-1-7 整数152的各位数字（10 分）本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。 输入格式：本题无输入。 输出格式：按照以下格式输出：152 = 个位数字 + 十位数字10 + 百位数字100">
+    <meta name="description" content="实验2-1-7 整数152的各位数字（10 分）本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。 输入格式：本题无输入。 输出格式：按照以下格式输出： 1152 = 个位数字 + 十位数字*10 + 百位数字*100">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验2-1-7 整数152的各位数字（10 分）">
 <meta property="og:url" content="/2017/10/19/shryen2-1-7/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验2-1-7 整数152的各位数字（10 分）本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。 输入格式：本题无输入。 输出格式：按照以下格式输出：152 = 个位数字 + 十位数字10 + 百位数字100">
+<meta property="og:description" content="实验2-1-7 整数152的各位数字（10 分）本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。 输入格式：本题无输入。 输出格式：按照以下格式输出： 1152 = 个位数字 + 十位数字*10 + 百位数字*100">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:06:30.000Z">
+<meta property="og:updated_time" content="2018-02-27T10:20:53.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验2-1-7 整数152的各位数字（10 分）">
-<meta name="twitter:description" content="实验2-1-7 整数152的各位数字（10 分）本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。 输入格式：本题无输入。 输出格式：按照以下格式输出：152 = 个位数字 + 十位数字10 + 百位数字100">
+<meta name="twitter:description" content="实验2-1-7 整数152的各位数字（10 分）本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。 输入格式：本题无输入。 输出格式：按照以下格式输出： 1152 = 个位数字 + 十位数字*10 + 百位数字*100">
     
 
     
@@ -252,10 +252,12 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验2-1-7-整数152的各位数字（10-分）"><a href="#实验2-1-7-整数152的各位数字（10-分）" class="headerlink" title="实验2-1-7 整数152的各位数字（10 分）"></a>实验2-1-7 整数152的各位数字（10 分）</h2><p>本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。</p>
-<h1 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h1><p>本题无输入。</p>
-<h1 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h1><p>按照以下格式输出：<br>152 = 个位数字 + 十位数字<em>10 + 百位数字</em>100<br><a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">152</span>;  <span class="keyword">int</span> gewei,shiwei,baiwei; </span><br><span class="line">	gewei=c%<span class="number">10</span>; </span><br><span class="line">	shiwei=c/<span class="number">10</span>%<span class="number">10</span>; </span><br><span class="line">	baiwei=c/<span class="number">100</span>%<span class="number">10</span>;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"152 = %d + %d*10 + %d*100"</span>,gewei,shiwei,baiwei);  </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+            <h4 id="实验2-1-7-整数152的各位数字（10-分）"><a href="#实验2-1-7-整数152的各位数字（10-分）" class="headerlink" title="实验2-1-7 整数152的各位数字（10 分）"></a>实验2-1-7 整数152的各位数字（10 分）</h4><p>本题要求编写程序，输出整数152的个位数字、十位数字和百位数字的值。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照以下格式输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">152 = 个位数字 + 十位数字*10 + 百位数字*100</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">152</span>;  <span class="keyword">int</span> gewei,shiwei,baiwei; </span><br><span class="line">	gewei=c%<span class="number">10</span>; </span><br><span class="line">	shiwei=c/<span class="number">10</span>%<span class="number">10</span>; </span><br><span class="line">	baiwei=c/<span class="number">100</span>%<span class="number">10</span>;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"152 = %d + %d*10 + %d*100"</span>,gewei,shiwei,baiwei);  </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -265,7 +267,7 @@
 
 </div>
 
-    <a data-url="/2017/10/19/shryen2-1-7/" data-id="cjdfqyuqf009d4owogdqyueev" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/19/shryen2-1-7/" data-id="cje6t3oa8009041wodbbaxcw6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

@@ -5,18 +5,18 @@
     
     <title>实验2-3-1 求1到100的和（10 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="实验2-3-1 求1到100的和（10 分）本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。 输入格式：本题无输入。 输出格式：按照以下格式输出：sum = 累加和">
+    <meta name="description" content="实验2-3-1 求1到100的和（10 分）本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。 输入格式：本题无输入。 输出格式：按照以下格式输出： 1sum = 累加和">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验2-3-1 求1到100的和（10 分）">
 <meta property="og:url" content="/2017/10/22/shryen2-3-1/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验2-3-1 求1到100的和（10 分）本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。 输入格式：本题无输入。 输出格式：按照以下格式输出：sum = 累加和">
+<meta property="og:description" content="实验2-3-1 求1到100的和（10 分）本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。 输入格式：本题无输入。 输出格式：按照以下格式输出： 1sum = 累加和">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:07:40.000Z">
+<meta property="og:updated_time" content="2018-03-02T09:18:18.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验2-3-1 求1到100的和（10 分）">
-<meta name="twitter:description" content="实验2-3-1 求1到100的和（10 分）本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。 输入格式：本题无输入。 输出格式：按照以下格式输出：sum = 累加和">
+<meta name="twitter:description" content="实验2-3-1 求1到100的和（10 分）本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。 输入格式：本题无输入。 输出格式：按照以下格式输出： 1sum = 累加和">
     
 
     
@@ -252,10 +252,12 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验2-3-1-求1到100的和（10-分）"><a href="#实验2-3-1-求1到100的和（10-分）" class="headerlink" title="实验2-3-1 求1到100的和（10 分）"></a>实验2-3-1 求1到100的和（10 分）</h2><p>本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。</p>
-<h1 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h1><p>本题无输入。</p>
-<h1 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h1><h1 id="按照以下格式输出："><a href="#按照以下格式输出：" class="headerlink" title="按照以下格式输出："></a>按照以下格式输出：</h1><p>sum = 累加和<br><a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,s=<span class="number">0</span>;  </span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;i++) &#123;</span><br><span class="line">		s=s+i; </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"sum = %d"</span>,s); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+            <h4 id="实验2-3-1-求1到100的和（10-分）"><a href="#实验2-3-1-求1到100的和（10-分）" class="headerlink" title="实验2-3-1 求1到100的和（10 分）"></a>实验2-3-1 求1到100的和（10 分）</h4><p>本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照以下格式输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum = 累加和</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,s=<span class="number">0</span>;  </span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;i++) &#123;</span><br><span class="line">		s=s+i; </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"sum = %d"</span>,s); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -265,7 +267,7 @@
 
 </div>
 
-    <a data-url="/2017/10/22/shryen2-3-1/" data-id="cjdfqyuqp00a74owocbzzla86" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/22/shryen2-3-1/" data-id="cje6t3oby00at41wo1onplod8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -340,19 +342,19 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/10/22/shryen2-3-2/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/10/23/shryen2-3-3/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
             <div class="article-nav-title">
                 
-                    实验2-3-2 求N分之一序列前N项和（15 分）
+                    实验2-3-3 求奇数分之一序列前N项和（15 分）
                 
             </div>
         </a>
     
     
-        <a href="/2017/10/22/shryen2-2-9/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/10/22/shryen2-3-2/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">实验2-2-9 计算火车运行时间（15 分）</div>
+            <div class="article-nav-title">实验2-3-2 求N分之一序列前N项和（15 分）</div>
         </a>
     
 </nav>

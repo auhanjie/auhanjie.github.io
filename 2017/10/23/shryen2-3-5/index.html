@@ -5,18 +5,18 @@
     
     <title>实验2-3-5 输出华氏-摄氏温度转换表（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="实验2-3-5 输出华氏-摄氏温度转换表（15 分）输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。 输入格式:在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。 输出格式:第一">
+    <meta name="description" content="实验2-3-5 输出华氏-摄氏温度转换表（15 分）输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。 温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。 输入格式:在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。 输出格式:第">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验2-3-5 输出华氏-摄氏温度转换表（15 分）">
 <meta property="og:url" content="/2017/10/23/shryen2-3-5/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验2-3-5 输出华氏-摄氏温度转换表（15 分）输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。 输入格式:在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。 输出格式:第一">
+<meta property="og:description" content="实验2-3-5 输出华氏-摄氏温度转换表（15 分）输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。 温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。 输入格式:在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。 输出格式:第">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:08:10.000Z">
+<meta property="og:updated_time" content="2018-03-02T09:28:35.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验2-3-5 输出华氏-摄氏温度转换表（15 分）">
-<meta name="twitter:description" content="实验2-3-5 输出华氏-摄氏温度转换表（15 分）输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。 输入格式:在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。 输出格式:第一">
+<meta name="twitter:description" content="实验2-3-5 输出华氏-摄氏温度转换表（15 分）输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。 温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。 输入格式:在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。 输出格式:第">
     
 
     
@@ -252,14 +252,18 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验2-3-5-输出华氏-摄氏温度转换表（15-分）"><a href="#实验2-3-5-输出华氏-摄氏温度转换表（15-分）" class="headerlink" title="实验2-3-5 输出华氏-摄氏温度转换表（15 分）"></a>实验2-3-5 输出华氏-摄氏温度转换表（15 分）</h2><p>输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。<br>温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。</p>
-<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h1><p>在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。</p>
-<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h1><p>第一行输出：”fahr celsius”<br>接着每行输出一个华氏温度fahr（整型）与一个摄氏温度celsius（占据6个字符宽度，靠右对齐，保留1位小数）。<br>若输入的范围不合法，则输出”Invalid.”。</p>
-<h1 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h1><p>32 35</p>
-<h1 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h1><p>fahr celsius<br>32   0.0<br>34   1.1</p>
-<h1 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h1><p>40 30</p>
-<h1 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h1><p>Invalid.<br><a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fahr,lower,upper;</span><br><span class="line">	<span class="keyword">double</span> celsius;  </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;lower,&amp;upper); </span><br><span class="line">		<span class="keyword">if</span>(lower&lt;=upper &amp;&amp; upper&lt;=<span class="number">100</span>)&#123;  </span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"fahr celsius\n"</span>);  </span><br><span class="line">			<span class="keyword">for</span> (fahr = lower;fahr&lt;= upper;fahr=fahr+<span class="number">2</span>)&#123;  </span><br><span class="line">				celsius = (<span class="number">5.0</span>/<span class="number">9.0</span>)*(fahr<span class="number">-32</span>);   </span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d%6.1f\n"</span> ,fahr,celsius);  </span><br><span class="line">			&#125; </span><br><span class="line">		&#125;<span class="keyword">else</span>  </span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"Invalid.\n"</span>);   </span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+            <h4 id="实验2-3-5-输出华氏-摄氏温度转换表（15-分）"><a href="#实验2-3-5-输出华氏-摄氏温度转换表（15-分）" class="headerlink" title="实验2-3-5 输出华氏-摄氏温度转换表（15 分）"></a>实验2-3-5 输出华氏-摄氏温度转换表（15 分）</h4><p>输入2个正整数<code>lower</code>和<code>upper</code>（<code>lower</code>≤<code>upper</code>≤100），请输出一张取值范围为[<code>lower</code>，<code>upper</code>]、且每次增加2华氏度的华氏-摄氏温度转换表。</p>
+<p>温度转换的计算公式：C=5×(F−32)/9，其中：C表示摄氏温度，F表示华氏温度。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>在一行中输入2个整数，分别表示<code>lower</code>和<code>upper</code>的值，中间用空格分开。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>第一行输出：”fahr celsius”</p>
+<p>接着每行输出一个华氏温度fahr（整型）与一个摄氏温度celsius（占据6个字符宽度，靠右对齐，保留1位小数）。</p>
+<p>若输入的范围不合法，则输出”Invalid.”。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">32 35</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fahr celsius</span><br><span class="line">32   0.0</span><br><span class="line">34   1.1</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">40 30</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Invalid.</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fahr,lower,upper;</span><br><span class="line">	<span class="keyword">double</span> celsius;  </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;lower,&amp;upper); </span><br><span class="line">		<span class="keyword">if</span>(lower&lt;=upper &amp;&amp; upper&lt;=<span class="number">100</span>)&#123;  </span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"fahr celsius\n"</span>);  </span><br><span class="line">			<span class="keyword">for</span> (fahr = lower;fahr&lt;= upper;fahr=fahr+<span class="number">2</span>)&#123;  </span><br><span class="line">				celsius = (<span class="number">5.0</span>/<span class="number">9.0</span>)*(fahr<span class="number">-32</span>);   </span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d%6.1f\n"</span> ,fahr,celsius);  </span><br><span class="line">			&#125; </span><br><span class="line">		&#125;<span class="keyword">else</span>  </span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"Invalid.\n"</span>);   </span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -269,7 +273,7 @@
 
 </div>
 
-    <a data-url="/2017/10/23/shryen2-3-5/" data-id="cjdfqyuqt00aj4owo0sk70nzd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/23/shryen2-3-5/" data-id="cje6t3oc100b241wo0gohg86f" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

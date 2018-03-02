@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
 <meta property="og:description" content="实验2-2-9 计算火车运行时间（15 分）本题要求根据火车的出发时间和达到时间，编写程序计算整个旅途所用的时间。 输入格式：输入在一行中给出2个4位正整数，其间以空格分隔，分别表示火车的出发时间和到达时间。每个时间的格式为2位小时数（00-23）和2位分钟数（00-59），假设出发和到达在同一天内。 输出格式：在一行输出该旅途所用的时间，格式为“hh:mm”，其中hh为2位小时数、mm为2位分钟">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:07:34.000Z">
+<meta property="og:updated_time" content="2018-02-28T08:31:24.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验2-2-9 计算火车运行时间（15 分）">
 <meta name="twitter:description" content="实验2-2-9 计算火车运行时间（15 分）本题要求根据火车的出发时间和达到时间，编写程序计算整个旅途所用的时间。 输入格式：输入在一行中给出2个4位正整数，其间以空格分隔，分别表示火车的出发时间和到达时间。每个时间的格式为2位小时数（00-23）和2位分钟数（00-59），假设出发和到达在同一天内。 输出格式：在一行输出该旅途所用的时间，格式为“hh:mm”，其中hh为2位小时数、mm为2位分钟">
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验2-2-9-计算火车运行时间（15-分）"><a href="#实验2-2-9-计算火车运行时间（15-分）" class="headerlink" title="实验2-2-9 计算火车运行时间（15 分）"></a>实验2-2-9 计算火车运行时间（15 分）</h2><p>本题要求根据火车的出发时间和达到时间，编写程序计算整个旅途所用的时间。</p>
-<h1 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h1><p>输入在一行中给出2个4位正整数，其间以空格分隔，分别表示火车的出发时间和到达时间。每个时间的格式为2位小时数（00-23）和2位分钟数（00-59），假设出发和到达在同一天内。</p>
-<h1 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h1><p>在一行输出该旅途所用的时间，格式为“hh:mm”，其中hh为2位小时数、mm为2位分钟数。</p>
-<h1 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h1><p>1201 1530</p>
-<h1 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h1><p>03:29<br><a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> start,arrive,s,a,m,hh,mm; </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;start,&amp;arrive); </span><br><span class="line">	s=start/<span class="number">100</span>*<span class="number">60</span>+start%<span class="number">100</span>; </span><br><span class="line">	a=arrive/<span class="number">100</span>*<span class="number">60</span>+arrive%<span class="number">100</span>; </span><br><span class="line">	m=a-s; </span><br><span class="line">	hh=m/<span class="number">60</span>; </span><br><span class="line">	mm=m%<span class="number">60</span>;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%02d:%02d"</span>,hh,mm); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+            <h4 id="实验2-2-9-计算火车运行时间（15-分）"><a href="#实验2-2-9-计算火车运行时间（15-分）" class="headerlink" title="实验2-2-9 计算火车运行时间（15 分）"></a>实验2-2-9 计算火车运行时间（15 分）</h4><p>本题要求根据火车的出发时间和达到时间，编写程序计算整个旅途所用的时间。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出2个4位正整数，其间以空格分隔，分别表示火车的出发时间和到达时间。每个时间的格式为2位小时数（00-23）和2位分钟数（00-59），假设出发和到达在同一天内。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行输出该旅途所用的时间，格式为“hh:mm”，其中hh为2位小时数、mm为2位分钟数。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1201 1530</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">03:29</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> start,arrive,s,a,m,hh,mm; </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;start,&amp;arrive); </span><br><span class="line">	s=start/<span class="number">100</span>*<span class="number">60</span>+start%<span class="number">100</span>; </span><br><span class="line">	a=arrive/<span class="number">100</span>*<span class="number">60</span>+arrive%<span class="number">100</span>; </span><br><span class="line">	m=a-s; </span><br><span class="line">	hh=m/<span class="number">60</span>; </span><br><span class="line">	mm=m%<span class="number">60</span>;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%02d:%02d"</span>,hh,mm); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2017/10/22/shryen2-2-9/" data-id="cjdfqyuqo00a44owofp5n2o1v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/22/shryen2-2-9/" data-id="cje6t3obu00aj41wod8cigfys" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -342,11 +343,11 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/10/22/shryen2-3-1/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/10/22/shryen2-3-2/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
             <div class="article-nav-title">
                 
-                    实验2-3-1 求1到100的和（10 分）
+                    实验2-3-2 求N分之一序列前N项和（15 分）
                 
             </div>
         </a>
