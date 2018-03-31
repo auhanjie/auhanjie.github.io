@@ -5,18 +5,18 @@
     
     <title>实验4-1-4 求整数的位数及各位数字之和（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="实验4-1-4 求整数的位数及各位数字之和（15 分）对于给定的正整数N，求它的位数及其各位数字之和。输入格式： 输入在一行中给出一个不超过10​9​​ 的正整数N。 输出格式：在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。 输入样例：321 输出样例：3 6">
+    <meta name="description" content="实验4-1-4 求整数的位数及各位数字之和（15 分）对于给定的正整数N，求它的位数及其各位数字之和。 输入格式：输入在一行中给出一个不超过109的正整数N。 输出格式：在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。 输入样例：1321 输出样例：13 6">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验4-1-4 求整数的位数及各位数字之和（15 分）">
 <meta property="og:url" content="/2017/10/29/shryen4-1-4/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验4-1-4 求整数的位数及各位数字之和（15 分）对于给定的正整数N，求它的位数及其各位数字之和。输入格式： 输入在一行中给出一个不超过10​9​​ 的正整数N。 输出格式：在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。 输入样例：321 输出样例：3 6">
+<meta property="og:description" content="实验4-1-4 求整数的位数及各位数字之和（15 分）对于给定的正整数N，求它的位数及其各位数字之和。 输入格式：输入在一行中给出一个不超过109的正整数N。 输出格式：在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。 输入样例：1321 输出样例：13 6">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:11:54.000Z">
+<meta property="og:updated_time" content="2018-03-27T09:59:34.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验4-1-4 求整数的位数及各位数字之和（15 分）">
-<meta name="twitter:description" content="实验4-1-4 求整数的位数及各位数字之和（15 分）对于给定的正整数N，求它的位数及其各位数字之和。输入格式： 输入在一行中给出一个不超过10​9​​ 的正整数N。 输出格式：在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。 输入样例：321 输出样例：3 6">
+<meta name="twitter:description" content="实验4-1-4 求整数的位数及各位数字之和（15 分）对于给定的正整数N，求它的位数及其各位数字之和。 输入格式：输入在一行中给出一个不超过109的正整数N。 输出格式：在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。 输入样例：1321 输出样例：13 6">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验4-1-4-求整数的位数及各位数字之和（15-分）"><a href="#实验4-1-4-求整数的位数及各位数字之和（15-分）" class="headerlink" title="实验4-1-4 求整数的位数及各位数字之和（15 分）"></a>实验4-1-4 求整数的位数及各位数字之和（15 分）</h2><p>对于给定的正整数N，求它的位数及其各位数字之和。<br>输入格式：</p>
-<p>输入在一行中给出一个不超过10<br>​9<br>​​ 的正整数N。</p>
-<h1 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h1><p>在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。</p>
-<h1 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h1><p>321</p>
-<h1 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h1><p>3 6<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span>&#123;      </span><br><span class="line"><span class="keyword">int</span> count=<span class="number">0</span>,number,i;   </span><br><span class="line"><span class="keyword">int</span> sum=<span class="number">0</span>;       </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;number);   </span><br><span class="line">	<span class="keyword">do</span>  &#123;       </span><br><span class="line">		i=number%<span class="number">10</span>;      </span><br><span class="line">		number=number/<span class="number">10</span>;      </span><br><span class="line">		sum=sum+i;         </span><br><span class="line">		count++;   </span><br><span class="line">	&#125;       </span><br><span class="line">	<span class="keyword">while</span>(number!=<span class="number">0</span>);     </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,count,sum);   </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="实验4-1-4-求整数的位数及各位数字之和（15-分）"><a href="#实验4-1-4-求整数的位数及各位数字之和（15-分）" class="headerlink" title="实验4-1-4 求整数的位数及各位数字之和（15 分）"></a>实验4-1-4 求整数的位数及各位数字之和（15 分）</h4><p>对于给定的正整数N，求它的位数及其各位数字之和。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个不超过109的正整数N。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">321</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 6</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span>&#123;      </span><br><span class="line"><span class="keyword">int</span> count=<span class="number">0</span>,number,i;   </span><br><span class="line"><span class="keyword">int</span> sum=<span class="number">0</span>;       </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;number);   </span><br><span class="line">	<span class="keyword">do</span>  &#123;       </span><br><span class="line">		i=number%<span class="number">10</span>;      </span><br><span class="line">		number=number/<span class="number">10</span>;      </span><br><span class="line">		sum=sum+i;         </span><br><span class="line">		count++;   </span><br><span class="line">	&#125;       </span><br><span class="line">	<span class="keyword">while</span>(number!=<span class="number">0</span>);     </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,count,sum);   </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2017/10/29/shryen4-1-4/" data-id="cje6t3odm00de41wojyzhe0tu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/29/shryen4-1-4/" data-id="cjfeslyq900ct2pwoav3r1ox6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
 <meta property="og:description" content="实验4-2-4 换硬币（20 分）将一笔零钱换成5分、2分和1分的硬币，要求每种硬币至少有一枚，有几种不同的换法？ 输入格式:输入在一行中给出待换的零钱数额x∈(8,100)。 输出格式:要求按5分、2分和1分硬币的数量依次从大到小的顺序，输出各种换法。每行输出一种换法，格式为：“fen5:5分硬币数量, fen2:2分硬币数量, fen1:1分硬币数量, total:硬币总数量”。最后一行输出“">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:13:28.000Z">
+<meta property="og:updated_time" content="2018-03-27T10:01:08.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验4-2-4 换硬币（20 分）">
 <meta name="twitter:description" content="实验4-2-4 换硬币（20 分）将一笔零钱换成5分、2分和1分的硬币，要求每种硬币至少有一枚，有几种不同的换法？ 输入格式:输入在一行中给出待换的零钱数额x∈(8,100)。 输出格式:要求按5分、2分和1分硬币的数量依次从大到小的顺序，输出各种换法。每行输出一种换法，格式为：“fen5:5分硬币数量, fen2:2分硬币数量, fen1:1分硬币数量, total:硬币总数量”。最后一行输出“">
@@ -252,11 +252,12 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验4-2-4-换硬币（20-分）"><a href="#实验4-2-4-换硬币（20-分）" class="headerlink" title="实验4-2-4 换硬币（20 分）"></a>实验4-2-4 换硬币（20 分）</h2><p>将一笔零钱换成5分、2分和1分的硬币，要求每种硬币至少有一枚，有几种不同的换法？</p>
-<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h1><p>输入在一行中给出待换的零钱数额x∈(8,100)。</p>
-<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h1><p>要求按5分、2分和1分硬币的数量依次从大到小的顺序，输出各种换法。每行输出一种换法，格式为：“fen5:5分硬币数量, fen2:2分硬币数量, fen1:1分硬币数量, total:硬币总数量”。最后一行输出“count = 换法个数”。</p>
-<h1 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h1><p>13</p>
-<h1 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h1><p>fen5:2, fen2:1, fen1:1, total:4<br>fen5:1, fen2:3, fen1:2, total:6<br>fen5:1, fen2:2, fen1:4, total:7<br>fen5:1, fen2:1, fen1:6, total:8<br>count = 4<br><a id="more"></a></p>
+            <h4 id="实验4-2-4-换硬币（20-分）"><a href="#实验4-2-4-换硬币（20-分）" class="headerlink" title="实验4-2-4 换硬币（20 分）"></a>实验4-2-4 换硬币（20 分）</h4><p>将一笔零钱换成5分、2分和1分的硬币，要求每种硬币至少有一枚，有几种不同的换法？</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出待换的零钱数额x∈(8,100)。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>要求按5分、2分和1分硬币的数量依次从大到小的顺序，输出各种换法。每行输出一种换法，格式为：“fen5:5分硬币数量, fen2:2分硬币数量, fen1:1分硬币数量, total:硬币总数量”。最后一行输出“count = 换法个数”。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fen5:2, fen2:1, fen1:1, total:4</span><br><span class="line">fen5:1, fen2:3, fen1:2, total:6</span><br><span class="line">fen5:1, fen2:2, fen1:4, total:7</span><br><span class="line">fen5:1, fen2:1, fen1:6, total:8</span><br><span class="line">count = 4</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> x,i,j,k,a,b,c,count=<span class="number">0</span>; </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);  </span><br><span class="line">	<span class="keyword">for</span>(i=x/<span class="number">5</span>;i&gt;=<span class="number">1</span>;i--)&#123;    </span><br><span class="line">		<span class="keyword">for</span>(j=x/<span class="number">2</span>;j&gt;=<span class="number">1</span>;j--)&#123;     </span><br><span class="line">			<span class="keyword">for</span>(k=x;k&gt;=<span class="number">1</span>;k--)&#123;       </span><br><span class="line">				<span class="keyword">if</span>(<span class="number">5</span>*i+<span class="number">2</span>*j+k==x)&#123;       </span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">"fen5:%d, fen2:%d, fen1:%d, total:%d\n"</span>,i,j,k,i+j+k);    </span><br><span class="line">					count++;     </span><br><span class="line">				&#125;  </span><br><span class="line">			&#125; </span><br><span class="line">		&#125;      </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"count = %d"</span>,count);  </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2017/11/02/shryen4-2-4/" data-id="cje6t3odv00dz41wo52l8tddq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/02/shryen4-2-4/" data-id="cjfeslyqo00dh2pwob4p9ezly" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

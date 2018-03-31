@@ -5,18 +5,18 @@
     
     <title>实验7-3-1 字符串逆序（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="实验7-3-1 字符串逆序（15 分）输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。 输入格式：输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。 输出格式：在一行中输出逆序后的字符串。 输入样例：Hello World! 输出样例：!dlroW olleH">
+    <meta name="description" content="实验7-3-1 字符串逆序（15 分）输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。 输入格式：输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。 输出格式：在一行中输出逆序后的字符串。 输入样例：1Hello World! 输出样例：1!dlroW olleH">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验7-3-1 字符串逆序（15 分）">
 <meta property="og:url" content="/2017/12/21/shryen7-3-1/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验7-3-1 字符串逆序（15 分）输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。 输入格式：输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。 输出格式：在一行中输出逆序后的字符串。 输入样例：Hello World! 输出样例：!dlroW olleH">
+<meta property="og:description" content="实验7-3-1 字符串逆序（15 分）输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。 输入格式：输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。 输出格式：在一行中输出逆序后的字符串。 输入样例：1Hello World! 输出样例：1!dlroW olleH">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:22:56.000Z">
+<meta property="og:updated_time" content="2018-03-27T10:11:25.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验7-3-1 字符串逆序（15 分）">
-<meta name="twitter:description" content="实验7-3-1 字符串逆序（15 分）输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。 输入格式：输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。 输出格式：在一行中输出逆序后的字符串。 输入样例：Hello World! 输出样例：!dlroW olleH">
+<meta name="twitter:description" content="实验7-3-1 字符串逆序（15 分）输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。 输入格式：输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。 输出格式：在一行中输出逆序后的字符串。 输入样例：1Hello World! 输出样例：1!dlroW olleH">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验7-3-1-字符串逆序（15-分）"><a href="#实验7-3-1-字符串逆序（15-分）" class="headerlink" title="实验7-3-1 字符串逆序（15 分）"></a>实验7-3-1 字符串逆序（15 分）</h2><p>输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>在一行中输出逆序后的字符串。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>Hello World!</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>!dlroW olleH<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> str[<span class="number">81</span>];</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>((c=getchar()) != <span class="string">'\n'</span>)&#123;<span class="comment">// 记录字符串</span></span><br><span class="line">		str[i] = (<span class="keyword">char</span>) c;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	i--;</span><br><span class="line">	<span class="keyword">for</span>(;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%c"</span>, str[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="实验7-3-1-字符串逆序（15-分）"><a href="#实验7-3-1-字符串逆序（15-分）" class="headerlink" title="实验7-3-1 字符串逆序（15 分）"></a>实验7-3-1 字符串逆序（15 分）</h4><p>输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出逆序后的字符串。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World!</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!dlroW olleH</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> str[<span class="number">81</span>];</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>((c=getchar()) != <span class="string">'\n'</span>)&#123;<span class="comment">// 记录字符串</span></span><br><span class="line">		str[i] = (<span class="keyword">char</span>) c;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	i--;</span><br><span class="line">	<span class="keyword">for</span>(;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%c"</span>, str[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2017/12/21/shryen7-3-1/" data-id="cje6t3ofs00hz41woowsufdyl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/21/shryen7-3-1/" data-id="cjfeslysl00hh2pwouef6y3yp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

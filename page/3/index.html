@@ -267,7 +267,7 @@
 
 </div>
 
-    <a data-url="/2018/02/08/siti9-4/" data-id="cje6t3okk00rh41worheh6kbx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/08/siti9-4/" data-id="cjfeslyxu00rk2pwocrrn3zl2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -404,7 +404,7 @@
 
 </div>
 
-    <a data-url="/2018/02/06/siti9-2/" data-id="cje6t3okc00r241woicayyigd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/06/siti9-2/" data-id="cjfeslyxs00re2pwoz8c3esim" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -539,7 +539,7 @@
 
 </div>
 
-    <a data-url="/2018/02/06/siti9-1/" data-id="cje6t3okf00r841wozukdfga6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/06/siti9-1/" data-id="cjfeslyxq00rb2pwocu51860n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -676,145 +676,7 @@
 
 </div>
 
-    <a data-url="/2018/02/06/siti8-10/" data-id="cje6t3ok500qk41woa363p5p7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-siti8-8" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/02/06/siti8-8/">习题8-8 判断回文字符串（20 分）</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/06/siti8-8/">
-            <time datetime="2018-02-06T02:57:00.000Z" itemprop="datePublished">2018-02-06</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h4 id="习题8-8-判断回文字符串（20-分）"><a href="#习题8-8-判断回文字符串（20-分）" class="headerlink" title="习题8-8 判断回文字符串（20 分）"></a>习题8-8 判断回文字符串（20 分）</h4><p>本题要求编写函数，判断给定的一串字符是否为“回文”。所谓“回文”是指顺读和倒读都一样的字符串。如“XYZYX”和“xyzzyx”都是回文。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool palindrome( char *s );</span><br></pre></td></tr></table></figure>
-<p>函数<code>palindrome</code>判断输入字符串<code>char *s</code>是否为回文。若是则返回<code>true</code>，否则返回<code>false</code>。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAXN 20</span><br><span class="line">typedef enum &#123;false, true&#125; bool;</span><br><span class="line"></span><br><span class="line">bool palindrome( char *s );</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    char s[MAXN];</span><br><span class="line"></span><br><span class="line">    scanf(&quot;%s&quot;, s);</span><br><span class="line">    if ( palindrome(s)==true )</span><br><span class="line">        printf(&quot;Yes\n&quot;);</span><br><span class="line">    else</span><br><span class="line">        printf(&quot;No\n&quot;);</span><br><span class="line">    printf(&quot;%s\n&quot;, s);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 你的代码将被嵌在这里 */</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">No</span><br><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure></p>
-            <p class="article-more-link">
-                <a href="/2018/02/06/siti8-8/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2018/02/06/siti8-8/" data-id="cje6t3okb00qz41wohg9v4yhv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/06/siti8-10/" data-id="cjfeslyxd00qn2pwot70o0jc2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -952,7 +814,145 @@
 
 </div>
 
-    <a data-url="/2018/02/06/siti8-9/" data-id="cje6t3oke00r541wooebzh5do" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/06/siti8-9/" data-id="cjfeslyxn00r52pwo7dyb435v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-siti8-8" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/02/06/siti8-8/">习题8-8 判断回文字符串（20 分）</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/02/06/siti8-8/">
+            <time datetime="2018-02-06T02:57:00.000Z" itemprop="datePublished">2018-02-06</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h4 id="习题8-8-判断回文字符串（20-分）"><a href="#习题8-8-判断回文字符串（20-分）" class="headerlink" title="习题8-8 判断回文字符串（20 分）"></a>习题8-8 判断回文字符串（20 分）</h4><p>本题要求编写函数，判断给定的一串字符是否为“回文”。所谓“回文”是指顺读和倒读都一样的字符串。如“XYZYX”和“xyzzyx”都是回文。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool palindrome( char *s );</span><br></pre></td></tr></table></figure>
+<p>函数<code>palindrome</code>判断输入字符串<code>char *s</code>是否为回文。若是则返回<code>true</code>，否则返回<code>false</code>。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAXN 20</span><br><span class="line">typedef enum &#123;false, true&#125; bool;</span><br><span class="line"></span><br><span class="line">bool palindrome( char *s );</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    char s[MAXN];</span><br><span class="line"></span><br><span class="line">    scanf(&quot;%s&quot;, s);</span><br><span class="line">    if ( palindrome(s)==true )</span><br><span class="line">        printf(&quot;Yes\n&quot;);</span><br><span class="line">    else</span><br><span class="line">        printf(&quot;No\n&quot;);</span><br><span class="line">    printf(&quot;%s\n&quot;, s);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 你的代码将被嵌在这里 */</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">No</span><br><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2018/02/06/siti8-8/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2018/02/06/siti8-8/" data-id="cjfeslyxl00r22pwo47hdznzc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1088,7 +1088,7 @@
 
 </div>
 
-    <a data-url="/2018/02/06/siti8-7/" data-id="cje6t3oka00qw41wor748cbbw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/06/siti8-7/" data-id="cjfeslyxo00r82pwoplvsddpg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1223,7 +1223,7 @@
 
 </div>
 
-    <a data-url="/2018/02/06/siti8-6/" data-id="cje6t3ok600qn41woo7jedp5h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/06/siti8-6/" data-id="cjfeslyxg00qt2pwolr9ckdl5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1358,7 +1358,7 @@
 
 </div>
 
-    <a data-url="/2018/02/04/siti8-5/" data-id="cje6t3ok900qt41wojxjpsxlg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/04/siti8-5/" data-id="cjfeslyxi00qw2pwonha0glrd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1494,7 +1494,7 @@
 
 </div>
 
-    <a data-url="/2018/02/04/siti8-4/" data-id="cje6t3ok700qq41woypecfc24" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/04/siti8-4/" data-id="cjfeslyxf00qq2pwo7vbrj8p5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

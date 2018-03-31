@@ -5,18 +5,18 @@
     
     <title>练习2-17 生成3的乘方表（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="练习2-17 生成3的乘方表（15 分）输入一个非负整数n，生成一张3的乘方表，输出3^​0​​ ~3^​n​​ 的值。可调用幂函数计算3的乘方。 输入格式:输入在一行中给出一个非负整数n。 输出格式:按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。 输入样例:3 输出样例:pow(3,0) = 1pow(3,1) = 3p">
+    <meta name="description" content="练习2-17 生成3的乘方表（15 分）输入一个非负整数n，生成一张3的乘方表，输出30~3n的值。可调用幂函数计算3的乘方。 输入格式:输入在一行中给出一个非负整数n。 输出格式:按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。 输入样例:13 输出样例:1234pow(3,0) = 1pow(3,1) = 3pow(3,">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="练习2-17 生成3的乘方表（15 分）">
 <meta property="og:url" content="/2018/01/16/liensi2-17/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="练习2-17 生成3的乘方表（15 分）输入一个非负整数n，生成一张3的乘方表，输出3^​0​​ ~3^​n​​ 的值。可调用幂函数计算3的乘方。 输入格式:输入在一行中给出一个非负整数n。 输出格式:按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。 输入样例:3 输出样例:pow(3,0) = 1pow(3,1) = 3p">
+<meta property="og:description" content="练习2-17 生成3的乘方表（15 分）输入一个非负整数n，生成一张3的乘方表，输出30~3n的值。可调用幂函数计算3的乘方。 输入格式:输入在一行中给出一个非负整数n。 输出格式:按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。 输入样例:13 输出样例:1234pow(3,0) = 1pow(3,1) = 3pow(3,">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:02:22.000Z">
+<meta property="og:updated_time" content="2018-03-27T16:12:40.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="练习2-17 生成3的乘方表（15 分）">
-<meta name="twitter:description" content="练习2-17 生成3的乘方表（15 分）输入一个非负整数n，生成一张3的乘方表，输出3^​0​​ ~3^​n​​ 的值。可调用幂函数计算3的乘方。 输入格式:输入在一行中给出一个非负整数n。 输出格式:按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。 输入样例:3 输出样例:pow(3,0) = 1pow(3,1) = 3p">
+<meta name="twitter:description" content="练习2-17 生成3的乘方表（15 分）输入一个非负整数n，生成一张3的乘方表，输出30~3n的值。可调用幂函数计算3的乘方。 输入格式:输入在一行中给出一个非负整数n。 输出格式:按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。 输入样例:13 输出样例:1234pow(3,0) = 1pow(3,1) = 3pow(3,">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="练习2-17-生成3的乘方表（15-分）"><a href="#练习2-17-生成3的乘方表（15-分）" class="headerlink" title="练习2-17 生成3的乘方表（15 分）"></a>练习2-17 生成3的乘方表（15 分）</h2><p>输入一个非负整数n，生成一张3的乘方表，输出3^​0​​ ~3^​n<br>​​ 的值。可调用幂函数计算3的乘方。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出一个非负整数n。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>3</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>pow(3,0) = 1<br>pow(3,1) = 3<br>pow(3,2) = 9<br>pow(3,3) = 27<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,i; </span><br><span class="line">	<span class="keyword">double</span> a; </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n); </span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=n;i++)&#123;  </span><br><span class="line">		a=<span class="built_in">pow</span>(<span class="number">3</span>,i);  </span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"pow(3,%d) = %.0f\n"</span>,i,a);  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="练习2-17-生成3的乘方表（15-分）"><a href="#练习2-17-生成3的乘方表（15-分）" class="headerlink" title="练习2-17 生成3的乘方表（15 分）"></a>练习2-17 生成3的乘方表（15 分）</h4><p>输入一个非负整数n，生成一张3的乘方表，输出30~3n的值。可调用幂函数计算3的乘方。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出一个非负整数n。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照幂的递增顺序输出n+1行，每行格式为“pow(3,i) = 3的i次幂的值”。题目保证输出数据不超过长整型整数的范围。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pow(3,0) = 1</span><br><span class="line">pow(3,1) = 3</span><br><span class="line">pow(3,2) = 9</span><br><span class="line">pow(3,3) = 27</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,i; </span><br><span class="line">	<span class="keyword">double</span> a; </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n); </span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=n;i++)&#123;  </span><br><span class="line">		a=<span class="built_in">pow</span>(<span class="number">3</span>,i);  </span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"pow(3,%d) = %.0f\n"</span>,i,a);  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2018/01/16/liensi2-17/" data-id="cje6t3o6u001i41wofl617r24" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/16/liensi2-17/" data-id="cjfeslyl3001k2pwo4w5mmd9t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

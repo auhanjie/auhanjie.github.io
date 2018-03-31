@@ -5,18 +5,18 @@
     
     <title>习题6-7 简单计算器（20 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="习题6-7 简单计算器（20 分）本题目要求编写程序统计一行字符中单词的个数。所谓“单词”是指连续不含空格的字符串，各单词之间用空格分隔，空格数可以是多个。 输入格式:输入给出一行字符。 输出格式:在一行中输出单词个数。 输入样例:Let’s go to room 209. 输出样例:5">
+    <meta name="description" content="习题6-7 简单计算器（20 分）模拟简单运算器的工作。假设计算器只能进行加减乘除运算，运算数和结果都是整数，四种运算符的优先级相同，按从左到右的顺序计算。 输入格式:输入在一行中给出一个四则运算算式，没有空格，且至少有一个操作数。遇等号”=”说明输入结束。 输出格式:在一行中输出算式的运算结果，或者如果除法分母为0或有非法运算符，则输出错误信息“ERROR”。 输入样例:11+2*10-10/2">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="习题6-7 简单计算器（20 分）">
 <meta property="og:url" content="/2017/11/30/siti6-7/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="习题6-7 简单计算器（20 分）本题目要求编写程序统计一行字符中单词的个数。所谓“单词”是指连续不含空格的字符串，各单词之间用空格分隔，空格数可以是多个。 输入格式:输入给出一行字符。 输出格式:在一行中输出单词个数。 输入样例:Let’s go to room 209. 输出样例:5">
+<meta property="og:description" content="习题6-7 简单计算器（20 分）模拟简单运算器的工作。假设计算器只能进行加减乘除运算，运算数和结果都是整数，四种运算符的优先级相同，按从左到右的顺序计算。 输入格式:输入在一行中给出一个四则运算算式，没有空格，且至少有一个操作数。遇等号”=”说明输入结束。 输出格式:在一行中输出算式的运算结果，或者如果除法分母为0或有非法运算符，则输出错误信息“ERROR”。 输入样例:11+2*10-10/2">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-02-04T04:50:43.003Z">
+<meta property="og:updated_time" content="2018-03-30T07:10:20.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="习题6-7 简单计算器（20 分）">
-<meta name="twitter:description" content="习题6-7 简单计算器（20 分）本题目要求编写程序统计一行字符中单词的个数。所谓“单词”是指连续不含空格的字符串，各单词之间用空格分隔，空格数可以是多个。 输入格式:输入给出一行字符。 输出格式:在一行中输出单词个数。 输入样例:Let’s go to room 209. 输出样例:5">
+<meta name="twitter:description" content="习题6-7 简单计算器（20 分）模拟简单运算器的工作。假设计算器只能进行加减乘除运算，运算数和结果都是整数，四种运算符的优先级相同，按从左到右的顺序计算。 输入格式:输入在一行中给出一个四则运算算式，没有空格，且至少有一个操作数。遇等号”=”说明输入结束。 输出格式:在一行中输出算式的运算结果，或者如果除法分母为0或有非法运算符，则输出错误信息“ERROR”。 输入样例:11+2*10-10/2">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="习题6-7-简单计算器（20-分）"><a href="#习题6-7-简单计算器（20-分）" class="headerlink" title="习题6-7 简单计算器（20 分）"></a>习题6-7 简单计算器（20 分）</h2><p>本题目要求编写程序统计一行字符中单词的个数。所谓“单词”是指连续不含空格的字符串，各单词之间用空格分隔，空格数可以是多个。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入给出一行字符。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中输出单词个数。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>Let’s go to room 209.</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>5<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> a[<span class="number">1000</span>];</span><br><span class="line">  gets(a);</span><br><span class="line">  <span class="keyword">int</span> m,i,j;</span><br><span class="line">  m=<span class="built_in">strlen</span>(a);</span><br><span class="line">  <span class="keyword">if</span>(a[<span class="number">0</span>]==<span class="string">' '</span>)</span><br><span class="line">	  j=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">	  j=<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m<span class="number">-1</span>;i++)</span><br><span class="line">  &#123;</span><br><span class="line">	  <span class="keyword">if</span>(a[i]==<span class="string">' '</span> &amp;&amp; a[i+<span class="number">1</span>]!=<span class="string">' '</span>)</span><br><span class="line">		  j++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,j);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="习题6-7-简单计算器（20-分）"><a href="#习题6-7-简单计算器（20-分）" class="headerlink" title="习题6-7 简单计算器（20 分）"></a>习题6-7 简单计算器（20 分）</h4><p>模拟简单运算器的工作。假设计算器只能进行加减乘除运算，运算数和结果都是整数，四种运算符的优先级相同，按从左到右的顺序计算。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出一个四则运算算式，没有空格，且至少有一个操作数。遇等号”=”说明输入结束。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出算式的运算结果，或者如果除法分母为0或有非法运算符，则输出错误信息“ERROR”。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1+2*10-10/2=</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> a[<span class="number">1000</span>];</span><br><span class="line">  gets(a);</span><br><span class="line">  <span class="keyword">int</span> m,i,j;</span><br><span class="line">  m=<span class="built_in">strlen</span>(a);</span><br><span class="line">  <span class="keyword">if</span>(a[<span class="number">0</span>]==<span class="string">' '</span>)</span><br><span class="line">	  j=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">	  j=<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m<span class="number">-1</span>;i++)</span><br><span class="line">  &#123;</span><br><span class="line">	  <span class="keyword">if</span>(a[i]==<span class="string">' '</span> &amp;&amp; a[i+<span class="number">1</span>]!=<span class="string">' '</span>)</span><br><span class="line">		  j++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,j);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         
         </div>
@@ -268,7 +269,7 @@
 
 </div>
 
-    <a data-url="/2017/11/30/siti6-7/" data-id="cje6t3ojk00pb41wokjpqs44i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/30/siti6-7/" data-id="cjfeslyw600p52pwotk2lkr5o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

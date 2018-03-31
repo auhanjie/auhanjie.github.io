@@ -5,18 +5,18 @@
     
     <title>习题4-2 求幂级数展开的部分和（20 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="习题4-2 求幂级数展开的部分和（20 分）已知函数e^​x​​ 可以展开为幂级数1+x+x^​2​​ /2!+x^​3​​ /3!+⋯+x^k​​ /k!+⋯。现给定一个实数x，要求利用此幂级数部分和求e^​x​​ 的近似值，求和一直继续到最后一项的绝对值小于0.00001。 输入格式:输入在一行中给出一个实数x∈[0,5]。 输出格式:在一行中输出满足条件的幂级数部分和，保留小数点后四位。 输">
+    <meta name="description" content="习题4-2 求幂级数展开的部分和（20 分）已知函数ex可以展开为幂级数1+x+x2/2!+x3/3!+⋯+xk/k!+⋯。现给定一个实数x，要求利用此幂级数部分和求ex的近似值，求和一直继续到最后一项的绝对值小于0.00001。 输入格式:输入在一行中给出一个实数x∈[0,5]。 输出格式:在一行中输出满足条件的幂级数部分和，保留小数点后四位。 输入样例:11.2 输出样例:13.3201">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="习题4-2 求幂级数展开的部分和（20 分）">
 <meta property="og:url" content="/2018/01/22/siti4-2/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="习题4-2 求幂级数展开的部分和（20 分）已知函数e^​x​​ 可以展开为幂级数1+x+x^​2​​ /2!+x^​3​​ /3!+⋯+x^k​​ /k!+⋯。现给定一个实数x，要求利用此幂级数部分和求e^​x​​ 的近似值，求和一直继续到最后一项的绝对值小于0.00001。 输入格式:输入在一行中给出一个实数x∈[0,5]。 输出格式:在一行中输出满足条件的幂级数部分和，保留小数点后四位。 输">
+<meta property="og:description" content="习题4-2 求幂级数展开的部分和（20 分）已知函数ex可以展开为幂级数1+x+x2/2!+x3/3!+⋯+xk/k!+⋯。现给定一个实数x，要求利用此幂级数部分和求ex的近似值，求和一直继续到最后一项的绝对值小于0.00001。 输入格式:输入在一行中给出一个实数x∈[0,5]。 输出格式:在一行中输出满足条件的幂级数部分和，保留小数点后四位。 输入样例:11.2 输出样例:13.3201">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:34:40.000Z">
+<meta property="og:updated_time" content="2018-03-28T01:43:11.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="习题4-2 求幂级数展开的部分和（20 分）">
-<meta name="twitter:description" content="习题4-2 求幂级数展开的部分和（20 分）已知函数e^​x​​ 可以展开为幂级数1+x+x^​2​​ /2!+x^​3​​ /3!+⋯+x^k​​ /k!+⋯。现给定一个实数x，要求利用此幂级数部分和求e^​x​​ 的近似值，求和一直继续到最后一项的绝对值小于0.00001。 输入格式:输入在一行中给出一个实数x∈[0,5]。 输出格式:在一行中输出满足条件的幂级数部分和，保留小数点后四位。 输">
+<meta name="twitter:description" content="习题4-2 求幂级数展开的部分和（20 分）已知函数ex可以展开为幂级数1+x+x2/2!+x3/3!+⋯+xk/k!+⋯。现给定一个实数x，要求利用此幂级数部分和求ex的近似值，求和一直继续到最后一项的绝对值小于0.00001。 输入格式:输入在一行中给出一个实数x∈[0,5]。 输出格式:在一行中输出满足条件的幂级数部分和，保留小数点后四位。 输入样例:11.2 输出样例:13.3201">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="习题4-2-求幂级数展开的部分和（20-分）"><a href="#习题4-2-求幂级数展开的部分和（20-分）" class="headerlink" title="习题4-2 求幂级数展开的部分和（20 分）"></a>习题4-2 求幂级数展开的部分和（20 分）</h2><p>已知函数e^​x<br>​​ 可以展开为幂级数1+x+x^​2​​ /2!+x^​3​​ /3!+⋯+x^k​​ /k!+⋯。现给定一个实数x，要求利用此幂级数部分和求e^​x<br>​​ 的近似值，求和一直继续到最后一项的绝对值小于0.00001。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出一个实数x∈[0,5]。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中输出满足条件的幂级数部分和，保留小数点后四位。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>1.2</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>3.3201<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-5    <span class="comment">//0.00001</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x, sum = <span class="number">1.0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lf"</span>, &amp;x);</span><br><span class="line">    <span class="keyword">double</span> result = <span class="number">1.0</span>;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; ; i++) &#123;</span><br><span class="line">        result = (result * x) / i;</span><br><span class="line">        sum += result;</span><br><span class="line">        <span class="keyword">if</span> (result &lt; eps) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.4f"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="习题4-2-求幂级数展开的部分和（20-分）"><a href="#习题4-2-求幂级数展开的部分和（20-分）" class="headerlink" title="习题4-2 求幂级数展开的部分和（20 分）"></a>习题4-2 求幂级数展开的部分和（20 分）</h4><p>已知函数ex可以展开为幂级数1+x+x2/2!+x3/3!+⋯+xk/k!+⋯。现给定一个实数x，要求利用此幂级数部分和求ex的近似值，求和一直继续到最后一项的绝对值小于0.00001。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出一个实数x∈[0,5]。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出满足条件的幂级数部分和，保留小数点后四位。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.3201</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-5    <span class="comment">//0.00001</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x, sum = <span class="number">1.0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lf"</span>, &amp;x);</span><br><span class="line">    <span class="keyword">double</span> result = <span class="number">1.0</span>;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; ; i++) &#123;</span><br><span class="line">        result = (result * x) / i;</span><br><span class="line">        sum += result;</span><br><span class="line">        <span class="keyword">if</span> (result &lt; eps) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.4f"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2018/01/22/siti4-2/" data-id="cje6t3oiq00nq41wo7v4ncvtl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/22/siti4-2/" data-id="cjfeslyva00n22pwo20ygxonz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

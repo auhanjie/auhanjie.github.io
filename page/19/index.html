@@ -250,11 +250,11 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-3-1-字符串逆序（15-分）"><a href="#实验7-3-1-字符串逆序（15-分）" class="headerlink" title="实验7-3-1 字符串逆序（15 分）"></a>实验7-3-1 字符串逆序（15 分）</h2><p>输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>在一行中输出逆序后的字符串。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>Hello World!</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>!dlroW olleH<br></p>
+            <p><h4 id="实验7-3-1-字符串逆序（15-分）"><a href="#实验7-3-1-字符串逆序（15-分）" class="headerlink" title="实验7-3-1 字符串逆序（15 分）"></a>实验7-3-1 字符串逆序（15 分）</h4><p>输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出逆序后的字符串。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World!</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!dlroW olleH</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/21/shryen7-3-1/#more">繼續閱讀</a>
             </p>
@@ -267,7 +267,7 @@
 
 </div>
 
-    <a data-url="/2017/12/21/shryen7-3-1/" data-id="cje6t3ofs00hz41woowsufdyl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/21/shryen7-3-1/" data-id="cjfeslysl00hh2pwouef6y3yp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -385,66 +385,14 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-10-简易连连看（20-分）"><a href="#实验7-2-10-简易连连看（20-分）" class="headerlink" title="实验7-2-10 简易连连看（20 分）"></a>实验7-2-10 简易连连看（20 分）</h2><p>本题要求实现一个简易连连看游戏模拟程序。<br>给定一个2N×2N的方阵网格游戏盘面，每个格子中放置一些符号。这些符号一定是成对出现的，同一个符号可能不止一对。程序读入玩家给出的一对位置(x​1​​ ,y​1​​ )、(x​2​​ ,y​2​​ )，判断这两个位置上的符号是否匹配。如果匹配成功，则将两个符号消为“*”并输出消去后的盘面；否则输出“Uh-oh”。若匹配错误达到3次，则输出“Game Over”并结束游戏。或者当全部符号匹配成功，则输出“Congratulations!”，然后结束游戏。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给一个正整数N（&lt;5）。随后2N行，每行2N个大写英文字母（其间以1个空格分隔），表示游戏盘面。盘面之后给出一个正整数K，随后K行，每行按照格式“x​1​​  y​1​​  x​2​​  y​2​​ ”给出一个玩家的输入。注意格子的行、列编号是从1到2N。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>根据玩家的每一步输入，输出相应的结果。输出盘面时注意，每行字符间以1个空格分隔，行末不得有多余空格。</p>
-<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>2<br>I T I T<br>Y T I A<br>T A T Y<br>I K K T<br>11<br>1 1 1 3<br>4 2 4 3<br>3 1 4 2<br>2 2 1 2<br>3 1 2 4<br>4 4 3 1<br>2 1 3 4<br>3 3 1 4<br>4 1 2 3<br>2 4 3 2<br>1 1 2 2</p>
-<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><ul>
-<li>T * T<br>Y T I A<br>T A T Y<br>I K K T</li>
-<li>T <em> T<br>Y T I A<br>T A T Y<br>I </em> * T<br>Uh-oh</li>
-<li><ul>
-<li><ul>
-<li>T<br>Y <em> I A<br>T A T Y<br>I </em> * T<br>Uh-oh</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
-<li>T<br>Y * I A</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>A T Y<br>I <em> </em> *</li>
-<li><ul>
-<li><ul>
-<li>T</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><ul>
-<li>I A</li>
-</ul>
-</li>
-<li>A T <em><br>I </em> <em> </em></li>
-</ul>
-<hr>
-<ul>
-<li><ul>
-<li>I A</li>
-</ul>
-</li>
-<li>A <em> </em><br>I <em> </em> *</li>
-</ul>
-<hr>
-<ul>
-<li><ul>
-<li><ul>
-<li>A</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>A <em> </em></li>
-</ul>
-<hr>
-<p>Congratulations!</p>
-<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>2<br>I T I T<br>Y T I A<br>T A T Y<br>I K K T<br>5<br>1 1 4 4<br>1 1 2 3<br>1 1 2 3<br>2 2 4 1<br>2 2 3 3</p>
-<h2 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h2><p>Uh-oh</p>
-<ul>
-<li>T I T<br>Y T * A<br>T A T Y<br>I K K T<br>Uh-oh<br>Uh-oh<br>Game Over</p>
+            <p><h4 id="实验7-2-10-简易连连看（20-分）"><a href="#实验7-2-10-简易连连看（20-分）" class="headerlink" title="实验7-2-10 简易连连看（20 分）"></a>实验7-2-10 简易连连看（20 分）</h4><p>本题要求实现一个简易连连看游戏模拟程序。</p>
+<p>给定一个2N×2N的方阵网格游戏盘面，每个格子中放置一些符号。这些符号一定是成对出现的，同一个符号可能不止一对。程序读入玩家给出的一对位置(x1,y1)、(x2,y2)，判断这两个位置上的符号是否匹配。如果匹配成功，则将两个符号消为“*”并输出消去后的盘面；否则输出“Uh-oh”。若匹配错误达到3次，则输出“Game Over”并结束游戏。或者当全部符号匹配成功，则输出“Congratulations!”，然后结束游戏。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给一个正整数N（&lt;5）。随后2N行，每行2N个大写英文字母（其间以1个空格分隔），表示游戏盘面。盘面之后给出一个正整数K，随后K行，每行按照格式“x1 y1 x2 y2”给出一个玩家的输入。注意格子的行、列编号是从1到2N。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>根据玩家的每一步输入，输出相应的结果。输出盘面时注意，每行字符间以1个空格分隔，行末不得有多余空格。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">I T I T</span><br><span class="line">Y T I A</span><br><span class="line">T A T Y</span><br><span class="line">I K K T</span><br><span class="line">11</span><br><span class="line">1 1 1 3</span><br><span class="line">4 2 4 3</span><br><span class="line">3 1 4 2</span><br><span class="line">2 2 1 2</span><br><span class="line">3 1 2 4</span><br><span class="line">4 4 3 1</span><br><span class="line">2 1 3 4</span><br><span class="line">3 3 1 4</span><br><span class="line">4 1 2 3</span><br><span class="line">2 4 3 2</span><br><span class="line">1 1 2 2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">* T * T</span><br><span class="line">Y T I A</span><br><span class="line">T A T Y</span><br><span class="line">I K K T</span><br><span class="line">* T * T</span><br><span class="line">Y T I A</span><br><span class="line">T A T Y</span><br><span class="line">I * * T</span><br><span class="line">Uh-oh</span><br><span class="line">* * * T</span><br><span class="line">Y * I A</span><br><span class="line">T A T Y</span><br><span class="line">I * * T</span><br><span class="line">Uh-oh</span><br><span class="line">* * * T</span><br><span class="line">Y * I A</span><br><span class="line">* A T Y</span><br><span class="line">I * * *</span><br><span class="line">* * * T</span><br><span class="line">* * I A</span><br><span class="line">* A T *</span><br><span class="line">I * * *</span><br><span class="line">* * * *</span><br><span class="line">* * I A</span><br><span class="line">* A * *</span><br><span class="line">I * * *</span><br><span class="line">* * * *</span><br><span class="line">* * * A</span><br><span class="line">* A * *</span><br><span class="line">* * * *</span><br><span class="line">Congratulations!</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">I T I T</span><br><span class="line">Y T I A</span><br><span class="line">T A T Y</span><br><span class="line">I K K T</span><br><span class="line">5</span><br><span class="line">1 1 4 4</span><br><span class="line">1 1 2 3</span><br><span class="line">1 1 2 3</span><br><span class="line">2 2 4 1</span><br><span class="line">2 2 3 3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Uh-oh</span><br><span class="line">* T I T</span><br><span class="line">Y T * A</span><br><span class="line">T A T Y</span><br><span class="line">I K K T</span><br><span class="line">Uh-oh</span><br><span class="line">Uh-oh</span><br><span class="line">Game Over</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/20/shryen7-2-10/#more">繼續閱讀</a>
             </p>
@@ -457,7 +405,7 @@
 
 </div>
 
-    <a data-url="/2017/12/20/shryen7-2-10/" data-id="cje6t3ofe00hb41wogoqf2vrw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/20/shryen7-2-10/" data-id="cjfeslysa00gt2pwo2ydisvtt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -575,11 +523,11 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-9-螺旋方阵（20-分）"><a href="#实验7-2-9-螺旋方阵（20-分）" class="headerlink" title="实验7-2-9 螺旋方阵（20 分）"></a>实验7-2-9 螺旋方阵（20 分）</h2><p>所谓“螺旋方阵”，是指对任意给定的N，将1到N×N的数字从左上角第1个格子开始，按顺时针螺旋方向顺序填入N×N的方阵里。本题要求构造这样的螺旋方阵。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给出一个正整数N（&lt;10）。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出N×N的螺旋方阵。每行N个数字，每个数字占3位。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>5</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>  1  2  3  4  5<br> 16 17 18 19  6<br> 15 24 25 20  7<br> 14 23 22 21  8<br> 13 12 11 10  9<br></p>
+            <p><h4 id="实验7-2-9-螺旋方阵（20-分）"><a href="#实验7-2-9-螺旋方阵（20-分）" class="headerlink" title="实验7-2-9 螺旋方阵（20 分）"></a>实验7-2-9 螺旋方阵（20 分）</h4><p>所谓“螺旋方阵”，是指对任意给定的N，将1到N×N的数字从左上角第1个格子开始，按顺时针螺旋方向顺序填入N×N的方阵里。本题要求构造这样的螺旋方阵。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个正整数N（&lt;10）。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出N×N的螺旋方阵。每行N个数字，每个数字占3位。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 1  2  3  4  5</span><br><span class="line">16 17 18 19  6</span><br><span class="line">15 24 25 20  7</span><br><span class="line">14 23 22 21  8</span><br><span class="line">13 12 11 10  9</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/20/shryen7-2-9/#more">繼續閱讀</a>
             </p>
@@ -592,7 +540,7 @@
 
 </div>
 
-    <a data-url="/2017/12/20/shryen7-2-9/" data-id="cje6t3ofr00hw41wowwg4olqb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/20/shryen7-2-9/" data-id="cjfeslysm00hk2pwof59ht40s" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -710,13 +658,14 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-8-找鞍点（20-分）"><a href="#实验7-2-8-找鞍点（20-分）" class="headerlink" title="实验7-2-8 找鞍点（20 分）"></a>实验7-2-8 找鞍点（20 分）</h2><p>一个矩阵元素的“鞍点”是指该位置上的元素值在该行上最大、在该列上最小。<br>本题要求编写程序，求一个给定的n阶方阵的鞍点。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入第一行给出一个正整数n（1≤n≤6）。随后n行，每行给出n个整数，其间以空格分隔。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出在一行中按照“行下标 列下标”（下标从0开始）的格式输出鞍点的位置。如果鞍点不存在，则输出“NONE”。题目保证给出的矩阵至多存在一个鞍点。</p>
-<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>4<br>1 7 4 1<br>4 8 3 6<br>1 6 1 2<br>0 7 8 9</p>
-<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><p>2 1</p>
-<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>2<br>1 7<br>4 1</p>
-<h2 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h2><p>NONE<br></p>
+            <p><h4 id="实验7-2-8-找鞍点（20-分）"><a href="#实验7-2-8-找鞍点（20-分）" class="headerlink" title="实验7-2-8 找鞍点（20 分）"></a>实验7-2-8 找鞍点（20 分）</h4><p>一个矩阵元素的“鞍点”是指该位置上的元素值在该行上最大、在该列上最小。</p>
+<p>本题要求编写程序，求一个给定的n阶方阵的鞍点。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个正整数n（1≤n≤6）。随后n行，每行给出n个整数，其间以空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出在一行中按照“行下标 列下标”（下标从0开始）的格式输出鞍点的位置。如果鞍点不存在，则输出“NONE”。题目保证给出的矩阵至多存在一个鞍点。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 7 4 1</span><br><span class="line">4 8 3 6</span><br><span class="line">1 6 1 2</span><br><span class="line">0 7 8 9</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 1</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1 7</span><br><span class="line">4 1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NONE</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/20/shryen7-2-8/#more">繼續閱讀</a>
             </p>
@@ -729,7 +678,7 @@
 
 </div>
 
-    <a data-url="/2017/12/20/shryen7-2-8/" data-id="cje6t3ofk00hn41woo7gw82oy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/20/shryen7-2-8/" data-id="cjfeslysj00he2pwoyuroktr3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -847,11 +796,11 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-7-方阵循环右移（20-分）"><a href="#实验7-2-7-方阵循环右移（20-分）" class="headerlink" title="实验7-2-7 方阵循环右移（20 分）"></a>实验7-2-7 方阵循环右移（20 分）</h2><p>本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第0、1、⋯、n−1列变换为第n−m、n−m+1、⋯、n−1、0、1、⋯、n−m−1列。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入第一行给出两个正整数m和n（1≤n≤6）。接下来一共n行，每行n个整数，表示一个n阶的方阵。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>按照输入格式输出移动后的方阵：即输出n行，每行n个整数，每个整数后输出一个空格。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>2 3<br>1 2 3<br>4 5 6<br>7 8 9</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>2 3 1<br>5 6 4<br>8 9 7<br></p>
+            <p><h4 id="实验7-2-7-方阵循环右移（20-分）"><a href="#实验7-2-7-方阵循环右移（20-分）" class="headerlink" title="实验7-2-7 方阵循环右移（20 分）"></a>实验7-2-7 方阵循环右移（20 分）</h4><p>本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第0、1、⋯、n−1列变换为第n−m、n−m+1、⋯、n−1、0、1、⋯、n−m−1列。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出两个正整数m和n（1≤n≤6）。接下来一共n行，每行n个整数，表示一个n阶的方阵。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照输入格式输出移动后的方阵：即输出n行，每行n个整数，每个整数后输出一个空格。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2 3</span><br><span class="line">1 2 3</span><br><span class="line">4 5 6</span><br><span class="line">7 8 9</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2 3 1 </span><br><span class="line">5 6 4 </span><br><span class="line">8 9 7</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/20/shryen7-2-7/#more">繼續閱讀</a>
             </p>
@@ -864,7 +813,7 @@
 
 </div>
 
-    <a data-url="/2017/12/20/shryen7-2-7/" data-id="cje6t3ofp00ht41wopkgnberm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/20/shryen7-2-7/" data-id="cjfeslysi00hb2pwoj7hvleo4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -982,16 +931,11 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-6-打印杨辉三角（20-分）"><a href="#实验7-2-6-打印杨辉三角（20-分）" class="headerlink" title="实验7-2-6 打印杨辉三角（20 分）"></a>实验7-2-6 打印杨辉三角（20 分）</h2><p>本题要求按照规定格式打印前N行杨辉三角。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给出N（1≤N≤10）。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>以正三角形的格式输出前N行杨辉三角。每个数字占固定4位。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>6</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><pre><code>    1
-   1   1
-  1   2   1
- 1   3   3   1
-1   4   6   4   1
-</code></pre><p>   1   5  10  10   5   1<br></p>
+            <p><h4 id="实验7-2-6-打印杨辉三角（20-分）"><a href="#实验7-2-6-打印杨辉三角（20-分）" class="headerlink" title="实验7-2-6 打印杨辉三角（20 分）"></a>实验7-2-6 打印杨辉三角（20 分）</h4><p>本题要求按照规定格式打印前N行杨辉三角。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出N（1≤N≤10）。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>以正三角形的格式输出前N行杨辉三角。每个数字占固定4位。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">     1</span><br><span class="line">    1   1</span><br><span class="line">   1   2   1</span><br><span class="line">  1   3   3   1</span><br><span class="line"> 1   4   6   4   1</span><br><span class="line">1   5  10  10   5   1</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/20/shryen7-2-6/#more">繼續閱讀</a>
             </p>
@@ -1004,7 +948,7 @@
 
 </div>
 
-    <a data-url="/2017/12/20/shryen7-2-6/" data-id="cje6t3ofj00hk41wo2b853grr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/20/shryen7-2-6/" data-id="cjfeslyse00h52pwom99m3jna" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1122,11 +1066,12 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-5-判断上三角矩阵（15-分）"><a href="#实验7-2-5-判断上三角矩阵（15-分）" class="headerlink" title="实验7-2-5 判断上三角矩阵（15 分）"></a>实验7-2-5 判断上三角矩阵（15 分）</h2><p>上三角矩阵指主对角线以下的元素都为0的矩阵；主对角线为从矩阵的左上角至右下角的连线。<br>本题要求编写程序，判断一个给定的方阵是否上三角矩阵。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入第一行给出一个正整数T，为待测矩阵的个数。接下来给出T个矩阵的信息：每个矩阵信息的第一行给出一个不超过10的正整数n。随后n行，每行给出n个整数，其间以空格分隔。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>每个矩阵的判断结果占一行。如果输入的矩阵是上三角矩阵，输出“YES”，否则输出“NO”。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>2<br>3<br>1 2 3<br>0 4 5<br>0 0 6<br>2<br>1 0<br>-8 2<br>输出样例：</p>
-<p>YES<br>NO<br></p>
+            <p><h4 id="实验7-2-5-判断上三角矩阵（15-分）"><a href="#实验7-2-5-判断上三角矩阵（15-分）" class="headerlink" title="实验7-2-5 判断上三角矩阵（15 分）"></a>实验7-2-5 判断上三角矩阵（15 分）</h4><p>上三角矩阵指主对角线以下的元素都为0的矩阵；主对角线为从矩阵的左上角至右下角的连线。</p>
+<p>本题要求编写程序，判断一个给定的方阵是否上三角矩阵。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个正整数T，为待测矩阵的个数。接下来给出T个矩阵的信息：每个矩阵信息的第一行给出一个不超过10的正整数n。随后n行，每行给出n个整数，其间以空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>每个矩阵的判断结果占一行。如果输入的矩阵是上三角矩阵，输出“YES”，否则输出“NO”。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">3</span><br><span class="line">1 2 3</span><br><span class="line">0 4 5</span><br><span class="line">0 0 6</span><br><span class="line">2</span><br><span class="line">1 0</span><br><span class="line">-8 2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/11/shryen7-2-5/#more">繼續閱讀</a>
             </p>
@@ -1139,7 +1084,7 @@
 
 </div>
 
-    <a data-url="/2017/12/11/shryen7-2-5/" data-id="cje6t3ofm00hq41wo718ung94" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/11/shryen7-2-5/" data-id="cjfeslysg00h82pwo4iplkg45" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1257,13 +1202,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-4-计算天数（15-分）"><a href="#实验7-2-4-计算天数（15-分）" class="headerlink" title="实验7-2-4 计算天数（15 分）"></a>实验7-2-4 计算天数（15 分）</h2><p>本题要求编写程序计算某年某月某日是该年中的第几天。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中按照格式“yyyy/mm/dd”（即“年/月/日”）给出日期。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。闰年的2月有29天。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行输出日期是该年中的第几天。</p>
-<h2 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h2><p>2009/03/02</p>
-<h2 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h2><p>61</p>
-<h2 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h2><p>2000/03/02</p>
-<h2 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h2><p>62<br></p>
+            <p><h4 id="实验7-2-4-计算天数（15-分）"><a href="#实验7-2-4-计算天数（15-分）" class="headerlink" title="实验7-2-4 计算天数（15 分）"></a>实验7-2-4 计算天数（15 分）</h4><p>本题要求编写程序计算某年某月某日是该年中的第几天。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中按照格式“yyyy/mm/dd”（即“年/月/日”）给出日期。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。闰年的2月有29天。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行输出日期是该年中的第几天。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2009/03/02</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">61</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2000/03/02</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">62</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/11/shryen7-2-4/#more">繼續閱讀</a>
             </p>
@@ -1276,7 +1221,7 @@
 
 </div>
 
-    <a data-url="/2017/12/11/shryen7-2-4/" data-id="cje6t3ofh00hh41woad83gixa" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/11/shryen7-2-4/" data-id="cjfeslysd00h22pwo40h8lsid" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1394,13 +1339,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-3-求矩阵的局部极大值（15-分）"><a href="#实验7-2-3-求矩阵的局部极大值（15-分）" class="headerlink" title="实验7-2-3 求矩阵的局部极大值（15 分）"></a>实验7-2-3 求矩阵的局部极大值（15 分）</h2><p>给定M行N列的整数矩阵A，如果A的非边界元素A[i][j]大于相邻的上下左右4个元素，那么就称元素A[i][j]是矩阵的局部极大值。本题要求给定矩阵的全部局部极大值及其所在的位置。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在第一行中给出矩阵A的行数M和列数N（3≤M,N≤20）；最后M行，每行给出A在该行的N个元素的值。数字间以空格分隔。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>每行按照“元素值 行号 列号”的格式输出一个局部极大值，其中行、列编号从1开始。要求按照行号递增输出；若同行有超过1个局部极大值，则该行按列号递增输出。若没有局部极大值，则输出“None 总行数 总列数”。</p>
-<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>4 5<br>1 1 1 1 1<br>1 3 9 3 1<br>1 5 3 5 1<br>1 1 1 1 1</p>
-<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><p>9 2 3<br>5 3 2<br>5 3 4</p>
-<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>3 5<br>1 1 1 1 1<br>9 3 9 9 1<br>1 5 3 5 1</p>
-<h2 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h2><p>None 3 5<br></p>
+            <p><h4 id="实验7-2-3-求矩阵的局部极大值（15-分）"><a href="#实验7-2-3-求矩阵的局部极大值（15-分）" class="headerlink" title="实验7-2-3 求矩阵的局部极大值（15 分）"></a>实验7-2-3 求矩阵的局部极大值（15 分）</h4><p>给定M行N列的整数矩阵A，如果A的非边界元素A[i][j]大于相邻的上下左右4个元素，那么就称元素A[i][j]是矩阵的局部极大值。本题要求给定矩阵的全部局部极大值及其所在的位置。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行中给出矩阵A的行数M和列数N（3≤M,N≤20）；最后M行，每行给出A在该行的N个元素的值。数字间以空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>每行按照“元素值 行号 列号”的格式输出一个局部极大值，其中行、列编号从1开始。要求按照行号递增输出；若同行有超过1个局部极大值，则该行按列号递增输出。若没有局部极大值，则输出“None 总行数 总列数”。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 5</span><br><span class="line">1 1 1 1 1</span><br><span class="line">1 3 9 3 1</span><br><span class="line">1 5 3 5 1</span><br><span class="line">1 1 1 1 1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">9 2 3</span><br><span class="line">5 3 2</span><br><span class="line">5 3 4</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 5</span><br><span class="line">1 1 1 1 1</span><br><span class="line">9 3 9 9 1</span><br><span class="line">1 5 3 5 1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">None 3 5</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/11/shryen7-2-3/#more">繼續閱讀</a>
             </p>
@@ -1413,7 +1358,7 @@
 
 </div>
 
-    <a data-url="/2017/12/11/shryen7-2-3/" data-id="cje6t3ofd00h841woin8if4fz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/11/shryen7-2-3/" data-id="cjfeslysc00gz2pwo1fhkfxpu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1531,11 +1476,11 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="实验7-2-2-矩阵运算（20-分）"><a href="#实验7-2-2-矩阵运算（20-分）" class="headerlink" title="实验7-2-2 矩阵运算（20 分）"></a>实验7-2-2 矩阵运算（20 分）</h2><p>给定一个n×n的方阵，本题要求计算该矩阵除副对角线、最后一列和最后一行以外的所有元素之和。副对角线为从矩阵的右上角至左下角的连线。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入第一行给出正整数n（1&lt;n≤10）；随后n行，每行给出n个整数，其间以空格分隔。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中给出该矩阵除副对角线、最后一列和最后一行以外的所有元素之和。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>4<br>2 3 4 1<br>5 6 1 1<br>7 1 8 1<br>1 1 1 1</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>35<br></p>
+            <p><h4 id="实验7-2-2-矩阵运算（20-分）"><a href="#实验7-2-2-矩阵运算（20-分）" class="headerlink" title="实验7-2-2 矩阵运算（20 分）"></a>实验7-2-2 矩阵运算（20 分）</h4><p>给定一个n×n的方阵，本题要求计算该矩阵除副对角线、最后一列和最后一行以外的所有元素之和。副对角线为从矩阵的右上角至左下角的连线。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数n（1&lt;n≤10）；随后n行，每行给出n个整数，其间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中给出该矩阵除副对角线、最后一列和最后一行以外的所有元素之和。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">2 3 4 1</span><br><span class="line">5 6 1 1</span><br><span class="line">7 1 8 1</span><br><span class="line">1 1 1 1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">35</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2017/12/11/shryen7-2-2/#more">繼續閱讀</a>
             </p>
@@ -1548,7 +1493,7 @@
 
 </div>
 
-    <a data-url="/2017/12/11/shryen7-2-2/" data-id="cje6t3off00he41wo9zj8hnpt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/11/shryen7-2-2/" data-id="cjfeslys900gq2pwo2t9njpks" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

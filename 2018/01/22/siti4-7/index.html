@@ -5,18 +5,18 @@
     
     <title>习题4-7 最大公约数和最小公倍数（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="习题4-7 最大公约数和最小公倍数（15 分）本题要求两个给定正整数的最大公约数和最小公倍数。 输入格式:输入在一行中给出两个正整数M和N（≤1000）。 输出格式:在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔。 输入样例:511 292 输出样例:73 2044">
+    <meta name="description" content="习题4-7 最大公约数和最小公倍数（15 分）本题要求两个给定正整数的最大公约数和最小公倍数。 输入格式:输入在一行中给出两个正整数M和N（≤1000）。 输出格式:在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔。 输入样例:1511 292 输出样例:173 2044">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="习题4-7 最大公约数和最小公倍数（15 分）">
 <meta property="og:url" content="/2018/01/22/siti4-7/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="习题4-7 最大公约数和最小公倍数（15 分）本题要求两个给定正整数的最大公约数和最小公倍数。 输入格式:输入在一行中给出两个正整数M和N（≤1000）。 输出格式:在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔。 输入样例:511 292 输出样例:73 2044">
+<meta property="og:description" content="习题4-7 最大公约数和最小公倍数（15 分）本题要求两个给定正整数的最大公约数和最小公倍数。 输入格式:输入在一行中给出两个正整数M和N（≤1000）。 输出格式:在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔。 输入样例:1511 292 输出样例:173 2044">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:35:02.000Z">
+<meta property="og:updated_time" content="2018-03-28T01:45:28.479Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="习题4-7 最大公约数和最小公倍数（15 分）">
-<meta name="twitter:description" content="习题4-7 最大公约数和最小公倍数（15 分）本题要求两个给定正整数的最大公约数和最小公倍数。 输入格式:输入在一行中给出两个正整数M和N（≤1000）。 输出格式:在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔。 输入样例:511 292 输出样例:73 2044">
+<meta name="twitter:description" content="习题4-7 最大公约数和最小公倍数（15 分）本题要求两个给定正整数的最大公约数和最小公倍数。 输入格式:输入在一行中给出两个正整数M和N（≤1000）。 输出格式:在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔。 输入样例:1511 292 输出样例:173 2044">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="习题4-7-最大公约数和最小公倍数（15-分）"><a href="#习题4-7-最大公约数和最小公倍数（15-分）" class="headerlink" title="习题4-7 最大公约数和最小公倍数（15 分）"></a>习题4-7 最大公约数和最小公倍数（15 分）</h2><p>本题要求两个给定正整数的最大公约数和最小公倍数。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出两个正整数M和N（≤1000）。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>511 292</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>73 2044<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;   </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span>&#123;   </span><br><span class="line">	<span class="keyword">int</span> m,n,gb,gy;   </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;m,&amp;n); </span><br><span class="line">	gb=m;  </span><br><span class="line">	<span class="keyword">while</span>(gb%n!=<span class="number">0</span>)&#123;  </span><br><span class="line">		gb=gb+m;     </span><br><span class="line">	&#125;  </span><br><span class="line">	gy=(m*n)/gb;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,gy,gb); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="习题4-7-最大公约数和最小公倍数（15-分）"><a href="#习题4-7-最大公约数和最小公倍数（15-分）" class="headerlink" title="习题4-7 最大公约数和最小公倍数（15 分）"></a>习题4-7 最大公约数和最小公倍数（15 分）</h4><p>本题要求两个给定正整数的最大公约数和最小公倍数。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出两个正整数M和N（≤1000）。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">511 292</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">73 2044</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;   </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span>&#123;   </span><br><span class="line">	<span class="keyword">int</span> m,n,gb,gy;   </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;m,&amp;n); </span><br><span class="line">	gb=m;  </span><br><span class="line">	<span class="keyword">while</span>(gb%n!=<span class="number">0</span>)&#123;  </span><br><span class="line">		gb=gb+m;     </span><br><span class="line">	&#125;  </span><br><span class="line">	gy=(m*n)/gb;  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,gy,gb); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2018/01/22/siti4-7/" data-id="cje6t3oiu00nz41woa1vcdhb5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/22/siti4-7/" data-id="cjfeslyvm00nw2pwowh9sw8rh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

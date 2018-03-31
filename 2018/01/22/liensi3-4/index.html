@@ -5,18 +5,18 @@
     
     <title>练习3-4 统计字符（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="练习3-4 统计字符（15 分）本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。 输入格式:输入为10个字符。最后一个回车表示输入结束，不算在内。 输出格式:在一行内按照letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数的格式输出。 输入样例:aZ &amp;amp;09 Az 输出样例">
+    <meta name="description" content="练习3-4 统计字符（15 分）本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。 输入格式:输入为10个字符。最后一个回车表示输入结束，不算在内。 输出格式:在一行内按照 1letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数 的格式输出。 输入样例:12aZ &amp;amp;09 Az">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="练习3-4 统计字符（15 分）">
 <meta property="og:url" content="/2018/01/22/liensi3-4/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="练习3-4 统计字符（15 分）本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。 输入格式:输入为10个字符。最后一个回车表示输入结束，不算在内。 输出格式:在一行内按照letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数的格式输出。 输入样例:aZ &amp;amp;09 Az 输出样例">
+<meta property="og:description" content="练习3-4 统计字符（15 分）本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。 输入格式:输入为10个字符。最后一个回车表示输入结束，不算在内。 输出格式:在一行内按照 1letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数 的格式输出。 输入样例:12aZ &amp;amp;09 Az">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:02:58.000Z">
+<meta property="og:updated_time" content="2018-03-28T01:30:51.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="练习3-4 统计字符（15 分）">
-<meta name="twitter:description" content="练习3-4 统计字符（15 分）本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。 输入格式:输入为10个字符。最后一个回车表示输入结束，不算在内。 输出格式:在一行内按照letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数的格式输出。 输入样例:aZ &amp;amp;09 Az 输出样例">
+<meta name="twitter:description" content="练习3-4 统计字符（15 分）本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。 输入格式:输入为10个字符。最后一个回车表示输入结束，不算在内。 输出格式:在一行内按照 1letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数 的格式输出。 输入样例:12aZ &amp;amp;09 Az">
     
 
     
@@ -252,12 +252,15 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="练习3-4-统计字符（15-分）"><a href="#练习3-4-统计字符（15-分）" class="headerlink" title="练习3-4 统计字符（15 分）"></a>练习3-4 统计字符（15 分）</h2><p>本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入为10个字符。最后一个回车表示输入结束，不算在内。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行内按照<br>letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数<br>的格式输出。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>aZ &amp;<br>09 Az</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>letter = 4, blank = 3, digit = 2, other = 1<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> i,letter,blank,digit,other;  </span><br><span class="line">	<span class="keyword">char</span> ch;  letter=blank=digit=other=<span class="number">0</span>; </span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;  </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;ch); </span><br><span class="line">	<span class="keyword">if</span>(ch&gt;=<span class="string">'A'</span>&amp;&amp;ch&lt;=<span class="string">'Z'</span>||(ch&gt;=<span class="string">'a'</span>&amp;&amp;ch&lt;=<span class="string">'z'</span>))  </span><br><span class="line">	letter++;  </span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">' '</span>||ch==<span class="string">'\n'</span>)  </span><br><span class="line">	blank++;  </span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)  </span><br><span class="line">	digit++;  </span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">	other++; &#125; </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"letter = %d, blank = %d, digit = %d, other = %d"</span>,letter,blank,digit,other); </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="练习3-4-统计字符（15-分）"><a href="#练习3-4-统计字符（15-分）" class="headerlink" title="练习3-4 统计字符（15 分）"></a>练习3-4 统计字符（15 分）</h4><p>本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入为10个字符。最后一个回车表示输入结束，不算在内。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内按照</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数</span><br></pre></td></tr></table></figure>
+<p>的格式输出。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aZ &amp;</span><br><span class="line">09 Az</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">letter = 4, blank = 3, digit = 2, other = 1</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> i,letter,blank,digit,other;  </span><br><span class="line">	<span class="keyword">char</span> ch;  letter=blank=digit=other=<span class="number">0</span>; </span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;  </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;ch); </span><br><span class="line">	<span class="keyword">if</span>(ch&gt;=<span class="string">'A'</span>&amp;&amp;ch&lt;=<span class="string">'Z'</span>||(ch&gt;=<span class="string">'a'</span>&amp;&amp;ch&lt;=<span class="string">'z'</span>))  </span><br><span class="line">	letter++;  </span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">' '</span>||ch==<span class="string">'\n'</span>)  </span><br><span class="line">	blank++;  </span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)  </span><br><span class="line">	digit++;  </span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">	other++; &#125; </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"letter = %d, blank = %d, digit = %d, other = %d"</span>,letter,blank,digit,other); </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +270,7 @@
 
 </div>
 
-    <a data-url="/2018/01/22/liensi3-4/" data-id="cje6t3o79002f41wou953pth1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/22/liensi3-4/" data-id="cjfeslyli002c2pwoavtn7m6f" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

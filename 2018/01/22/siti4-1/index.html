@@ -5,18 +5,18 @@
     
     <title>习题4-1 求奇数和（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="习题4-1 求奇数和（15 分）本题要求计算给定的一系列正整数中奇数的和。 输入格式:输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。 输出格式:在一行中输出正整数序列中奇数的和。 输入样例:8 7 4 3 70 5 6 101 -1 输出样例:116">
+    <meta name="description" content="习题4-1 求奇数和（15 分）本题要求计算给定的一系列正整数中奇数的和。 输入格式:输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。 输出格式:在一行中输出正整数序列中奇数的和。 输入样例:18 7 4 3 70 5 6 101 -1 输出样例:1116">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="习题4-1 求奇数和（15 分）">
 <meta property="og:url" content="/2018/01/22/siti4-1/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="习题4-1 求奇数和（15 分）本题要求计算给定的一系列正整数中奇数的和。 输入格式:输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。 输出格式:在一行中输出正整数序列中奇数的和。 输入样例:8 7 4 3 70 5 6 101 -1 输出样例:116">
+<meta property="og:description" content="习题4-1 求奇数和（15 分）本题要求计算给定的一系列正整数中奇数的和。 输入格式:输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。 输出格式:在一行中输出正整数序列中奇数的和。 输入样例:18 7 4 3 70 5 6 101 -1 输出样例:1116">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:34:04.000Z">
+<meta property="og:updated_time" content="2018-03-28T01:42:45.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="习题4-1 求奇数和（15 分）">
-<meta name="twitter:description" content="习题4-1 求奇数和（15 分）本题要求计算给定的一系列正整数中奇数的和。 输入格式:输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。 输出格式:在一行中输出正整数序列中奇数的和。 输入样例:8 7 4 3 70 5 6 101 -1 输出样例:116">
+<meta name="twitter:description" content="习题4-1 求奇数和（15 分）本题要求计算给定的一系列正整数中奇数的和。 输入格式:输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。 输出格式:在一行中输出正整数序列中奇数的和。 输入样例:18 7 4 3 70 5 6 101 -1 输出样例:1116">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="习题4-1-求奇数和（15-分）"><a href="#习题4-1-求奇数和（15-分）" class="headerlink" title="习题4-1 求奇数和（15 分）"></a>习题4-1 求奇数和（15 分）</h2><p>本题要求计算给定的一系列正整数中奇数的和。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中输出正整数序列中奇数的和。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>8 7 4 3 70 5 6 101 -1</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>116<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span>&#123;  </span><br><span class="line"><span class="keyword">int</span> n,z; z=<span class="number">0</span>;   </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);  </span><br><span class="line">	<span class="keyword">while</span>(n&gt;<span class="number">0</span>) &#123;       </span><br><span class="line">		<span class="keyword">if</span>(n%<span class="number">2</span>!=<span class="number">0</span>)  </span><br><span class="line">		z=z+n;    </span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);  </span><br><span class="line">	&#125;    </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,z);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="习题4-1-求奇数和（15-分）"><a href="#习题4-1-求奇数和（15-分）" class="headerlink" title="习题4-1 求奇数和（15 分）"></a>习题4-1 求奇数和（15 分）</h4><p>本题要求计算给定的一系列正整数中奇数的和。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出正整数序列中奇数的和。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8 7 4 3 70 5 6 101 -1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">116</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span>&#123;  </span><br><span class="line"><span class="keyword">int</span> n,z; z=<span class="number">0</span>;   </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);  </span><br><span class="line">	<span class="keyword">while</span>(n&gt;<span class="number">0</span>) &#123;       </span><br><span class="line">		<span class="keyword">if</span>(n%<span class="number">2</span>!=<span class="number">0</span>)  </span><br><span class="line">		z=z+n;    </span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);  </span><br><span class="line">	&#125;    </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,z);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2018/01/22/siti4-1/" data-id="cje6t3oim00nh41woz6y0l8ji" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/22/siti4-1/" data-id="cjfeslyvc00n82pwom4vn69y1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

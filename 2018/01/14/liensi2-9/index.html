@@ -5,18 +5,18 @@
     
     <title>练习2-9 整数四则运算（10 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="练习2-9 整数四则运算（10 分）本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。 输入格式:输入在一行中给出2个正整数A和B。 输出格式:在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。 输入样例:3 2 输出样例:3 + 2 = 53 - 2 = 13 * 2 = 63 / 2 = 1">
+    <meta name="description" content="练习2-9 整数四则运算（10 分）本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。 输入格式:输入在一行中给出2个正整数A和B。 输出格式:在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。 输入样例:13 2 输出样例:12343 + 2 = 53 - 2 = 13 * 2 = 63 / 2 = 1">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="练习2-9 整数四则运算（10 分）">
 <meta property="og:url" content="/2018/01/14/liensi2-9/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="练习2-9 整数四则运算（10 分）本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。 输入格式:输入在一行中给出2个正整数A和B。 输出格式:在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。 输入样例:3 2 输出样例:3 + 2 = 53 - 2 = 13 * 2 = 63 / 2 = 1">
+<meta property="og:description" content="练习2-9 整数四则运算（10 分）本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。 输入格式:输入在一行中给出2个正整数A和B。 输出格式:在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。 输入样例:13 2 输出样例:12343 + 2 = 53 - 2 = 13 * 2 = 63 / 2 = 1">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:01:32.000Z">
+<meta property="og:updated_time" content="2018-03-27T16:10:14.250Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="练习2-9 整数四则运算（10 分）">
-<meta name="twitter:description" content="练习2-9 整数四则运算（10 分）本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。 输入格式:输入在一行中给出2个正整数A和B。 输出格式:在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。 输入样例:3 2 输出样例:3 + 2 = 53 - 2 = 13 * 2 = 63 / 2 = 1">
+<meta name="twitter:description" content="练习2-9 整数四则运算（10 分）本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。 输入格式:输入在一行中给出2个正整数A和B。 输出格式:在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。 输入样例:13 2 输出样例:12343 + 2 = 53 - 2 = 13 * 2 = 63 / 2 = 1">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="练习2-9-整数四则运算（10-分）"><a href="#练习2-9-整数四则运算（10-分）" class="headerlink" title="练习2-9 整数四则运算（10 分）"></a>练习2-9 整数四则运算（10 分）</h2><p>本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出2个正整数A和B。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>3 2</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>3 + 2 = 5<br>3 - 2 = 1<br>3 * 2 = 6<br>3 / 2 = 1<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> ( <span class="built_in">scanf</span>( <span class="string">"%d %d"</span>, &amp;a, &amp;b ) != EOF ) &#123;</span><br><span class="line">        <span class="built_in">printf</span>( <span class="string">"%d + %d = %d\n"</span>, a, b, a + b );</span><br><span class="line">        <span class="built_in">printf</span>( <span class="string">"%d - %d = %d\n"</span>, a, b, a - b );</span><br><span class="line">        <span class="built_in">printf</span>( <span class="string">"%d * %d = %d\n"</span>, a, b, a * b );</span><br><span class="line">        <span class="built_in">printf</span>( <span class="string">"%d / %d = %d\n"</span>, a, b, a / b );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="练习2-9-整数四则运算（10-分）"><a href="#练习2-9-整数四则运算（10-分）" class="headerlink" title="练习2-9 整数四则运算（10 分）"></a>练习2-9 整数四则运算（10 分）</h4><p>本题要求编写程序，计算2个正整数的和、差、积、商并输出。题目保证输入和输出全部在整型范围内。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出2个正整数A和B。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在4行中按照格式“A 运算符 B = 结果”顺序输出和、差、积、商。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 + 2 = 5</span><br><span class="line">3 - 2 = 1</span><br><span class="line">3 * 2 = 6</span><br><span class="line">3 / 2 = 1</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> ( <span class="built_in">scanf</span>( <span class="string">"%d %d"</span>, &amp;a, &amp;b ) != EOF ) &#123;</span><br><span class="line">        <span class="built_in">printf</span>( <span class="string">"%d + %d = %d\n"</span>, a, b, a + b );</span><br><span class="line">        <span class="built_in">printf</span>( <span class="string">"%d - %d = %d\n"</span>, a, b, a - b );</span><br><span class="line">        <span class="built_in">printf</span>( <span class="string">"%d * %d = %d\n"</span>, a, b, a * b );</span><br><span class="line">        <span class="built_in">printf</span>( <span class="string">"%d / %d = %d\n"</span>, a, b, a / b );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2018/01/14/liensi2-9/" data-id="cje6t3o71002041wo0ejt4b0n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/14/liensi2-9/" data-id="cjfeslyle00252pwosks4byt0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -342,19 +343,19 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/01/14/liensi2-11/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/01/14/liensi2-10/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
             <div class="article-nav-title">
                 
-                    练习2-11 计算分段函数[2]（10 分）
+                    练习2-10 计算分段函数[1]（10 分）
                 
             </div>
         </a>
     
     
-        <a href="/2018/01/14/liensi2-10/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/01/14/liensi2-8/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">练习2-10 计算分段函数[1]（10 分）</div>
+            <div class="article-nav-title">练习2-8 计算摄氏温度（10 分）</div>
         </a>
     
 </nav>

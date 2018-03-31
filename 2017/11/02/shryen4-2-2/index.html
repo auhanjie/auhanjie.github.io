@@ -5,18 +5,18 @@
     
     <title>实验4-2-2 求e的近似值（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="实验4-2-2 求e的近似值（15 分）自然常数e可以用级数1+1/1!+1/2!+⋯+1/n!来近似计算。本题要求对给定的非负整数n，求该级数的前n项和。输入格式: 输入第一行中给出非负整数n（≤1000）。 输出格式:在一行中输出部分和的值，保留小数点后八位。 输入样例:10 输出样例:2.71828180">
+    <meta name="description" content="实验4-2-2 求e的近似值（15 分）自然常数e可以用级数1+1/1!+1/2!+⋯+1/n!来近似计算。本题要求对给定的非负整数n，求该级数的前n项和。 输入格式:输入第一行中给出非负整数n（≤1000）。 输出格式:在一行中输出部分和的值，保留小数点后八位。 输入样例:110 输出样例:12.71828180">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验4-2-2 求e的近似值（15 分）">
 <meta property="og:url" content="/2017/11/02/shryen4-2-2/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验4-2-2 求e的近似值（15 分）自然常数e可以用级数1+1/1!+1/2!+⋯+1/n!来近似计算。本题要求对给定的非负整数n，求该级数的前n项和。输入格式: 输入第一行中给出非负整数n（≤1000）。 输出格式:在一行中输出部分和的值，保留小数点后八位。 输入样例:10 输出样例:2.71828180">
+<meta property="og:description" content="实验4-2-2 求e的近似值（15 分）自然常数e可以用级数1+1/1!+1/2!+⋯+1/n!来近似计算。本题要求对给定的非负整数n，求该级数的前n项和。 输入格式:输入第一行中给出非负整数n（≤1000）。 输出格式:在一行中输出部分和的值，保留小数点后八位。 输入样例:110 输出样例:12.71828180">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:12:54.000Z">
+<meta property="og:updated_time" content="2018-03-27T10:00:36.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验4-2-2 求e的近似值（15 分）">
-<meta name="twitter:description" content="实验4-2-2 求e的近似值（15 分）自然常数e可以用级数1+1/1!+1/2!+⋯+1/n!来近似计算。本题要求对给定的非负整数n，求该级数的前n项和。输入格式: 输入第一行中给出非负整数n（≤1000）。 输出格式:在一行中输出部分和的值，保留小数点后八位。 输入样例:10 输出样例:2.71828180">
+<meta name="twitter:description" content="实验4-2-2 求e的近似值（15 分）自然常数e可以用级数1+1/1!+1/2!+⋯+1/n!来近似计算。本题要求对给定的非负整数n，求该级数的前n项和。 输入格式:输入第一行中给出非负整数n（≤1000）。 输出格式:在一行中输出部分和的值，保留小数点后八位。 输入样例:110 输出样例:12.71828180">
     
 
     
@@ -252,12 +252,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验4-2-2-求e的近似值（15-分）"><a href="#实验4-2-2-求e的近似值（15-分）" class="headerlink" title="实验4-2-2 求e的近似值（15 分）"></a>实验4-2-2 求e的近似值（15 分）</h2><p>自然常数e可以用级数1+1/1!+1/2!+⋯+1/n!来近似计算。本题要求对给定的非负整数n，求该级数的前n项和。<br>输入格式:</p>
-<p>输入第一行中给出非负整数n（≤1000）。</p>
-<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h1><p>在一行中输出部分和的值，保留小数点后八位。</p>
-<h1 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h1><p>10</p>
-<h1 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h1><p>2.71828180<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">fact</span><span class="params">(<span class="keyword">int</span> n)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;       </span><br><span class="line"><span class="keyword">double</span> count=<span class="number">1</span>;  </span><br><span class="line"><span class="keyword">int</span> i;       </span><br><span class="line"><span class="keyword">int</span> n;        </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);  </span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)  </span><br><span class="line">&#123;     </span><br><span class="line">	count=count+<span class="number">1.0</span>/fact(i); </span><br><span class="line">&#125;      </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.8f\n"</span>,count); </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;     </span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">fact</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123; </span><br><span class="line"><span class="keyword">int</span> i;     </span><br><span class="line"><span class="keyword">double</span> sum=<span class="number">1</span>;   </span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++) &#123; </span><br><span class="line">	sum=sum*i; </span><br><span class="line">&#125;      </span><br><span class="line"><span class="keyword">return</span> sum;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="实验4-2-2-求e的近似值（15-分）"><a href="#实验4-2-2-求e的近似值（15-分）" class="headerlink" title="实验4-2-2 求e的近似值（15 分）"></a>实验4-2-2 求e的近似值（15 分）</h4><p>自然常数e可以用级数1+1/1!+1/2!+⋯+1/n!来近似计算。本题要求对给定的非负整数n，求该级数的前n项和。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行中给出非负整数n（≤1000）。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出部分和的值，保留小数点后八位。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.71828180</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">fact</span><span class="params">(<span class="keyword">int</span> n)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;       </span><br><span class="line"><span class="keyword">double</span> count=<span class="number">1</span>;  </span><br><span class="line"><span class="keyword">int</span> i;       </span><br><span class="line"><span class="keyword">int</span> n;        </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);  </span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)  </span><br><span class="line">&#123;     </span><br><span class="line">	count=count+<span class="number">1.0</span>/fact(i); </span><br><span class="line">&#125;      </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.8f\n"</span>,count); </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;     </span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">fact</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123; </span><br><span class="line"><span class="keyword">int</span> i;     </span><br><span class="line"><span class="keyword">double</span> sum=<span class="number">1</span>;   </span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++) &#123; </span><br><span class="line">	sum=sum*i; </span><br><span class="line">&#125;      </span><br><span class="line"><span class="keyword">return</span> sum;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2017/11/02/shryen4-2-2/" data-id="cje6t3odo00dk41woivaeb337" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/02/shryen4-2-2/" data-id="cjfeslyqg00db2pwo2vz1n22i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

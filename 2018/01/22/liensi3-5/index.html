@@ -5,18 +5,18 @@
     
     <title>练习3-5 输出闰年（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="练习3-5 输出闰年（15 分）输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。 输入格式:输入在一行中给出21世纪的某个截止年份。 输出格式:逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出”Invalid year!”。若不存在任何闰年，则输出“None”。 输入样例1:2048 输出样">
+    <meta name="description" content="练习3-5 输出闰年（15 分）输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。 输入格式:输入在一行中给出21世纪的某个截止年份。 输出格式:逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出”Invalid year!”。若不存在任何闰年，则输出“None”。 输入样例1:12048 输出">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="练习3-5 输出闰年（15 分）">
 <meta property="og:url" content="/2018/01/22/liensi3-5/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="练习3-5 输出闰年（15 分）输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。 输入格式:输入在一行中给出21世纪的某个截止年份。 输出格式:逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出”Invalid year!”。若不存在任何闰年，则输出“None”。 输入样例1:2048 输出样">
+<meta property="og:description" content="练习3-5 输出闰年（15 分）输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。 输入格式:输入在一行中给出21世纪的某个截止年份。 输出格式:逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出”Invalid year!”。若不存在任何闰年，则输出“None”。 输入样例1:12048 输出">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:03:10.000Z">
+<meta property="og:updated_time" content="2018-03-28T01:31:17.285Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="练习3-5 输出闰年（15 分）">
-<meta name="twitter:description" content="练习3-5 输出闰年（15 分）输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。 输入格式:输入在一行中给出21世纪的某个截止年份。 输出格式:逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出”Invalid year!”。若不存在任何闰年，则输出“None”。 输入样例1:2048 输出样">
+<meta name="twitter:description" content="练习3-5 输出闰年（15 分）输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。 输入格式:输入在一行中给出21世纪的某个截止年份。 输出格式:逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出”Invalid year!”。若不存在任何闰年，则输出“None”。 输入样例1:12048 输出">
     
 
     
@@ -252,14 +252,15 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="练习3-5-输出闰年（15-分）"><a href="#练习3-5-输出闰年（15-分）" class="headerlink" title="练习3-5 输出闰年（15 分）"></a>练习3-5 输出闰年（15 分）</h2><p>输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中给出21世纪的某个截止年份。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出”Invalid year!”。若不存在任何闰年，则输出“None”。</p>
-<h2 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h2><p>2048</p>
-<h2 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h2><p>2004<br>2008<br>2012<br>2016<br>2020<br>2024<br>2028<br>2032<br>2036<br>2040<br>2044<br>2048</p>
-<h2 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h2><p>2000</p>
-<h2 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h2><p>Invalid year!<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">int</span> year, i;  </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;year);  </span><br><span class="line">    <span class="keyword">if</span>(year &lt; <span class="number">2001</span> || year &gt; <span class="number">2100</span>)    <span class="comment">/* 21世纪共100年，2001年为起始年 */</span>  </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Invalid year!\n"</span>);  </span><br><span class="line">    <span class="keyword">else</span> &#123;  </span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">2001</span>; i &lt;= year; ++i) &#123;  </span><br><span class="line">            <span class="keyword">if</span>((i % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; i % <span class="number">100</span> != <span class="number">0</span>) || (i % <span class="number">400</span> == <span class="number">0</span>))  </span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="练习3-5-输出闰年（15-分）"><a href="#练习3-5-输出闰年（15-分）" class="headerlink" title="练习3-5 输出闰年（15 分）"></a>练习3-5 输出闰年（15 分）</h4><p>输出21世纪中截止某个年份以来的所有闰年年份。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出21世纪的某个截止年份。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>逐行输出满足条件的所有闰年年份，即每个年份占一行。输入若非21世纪的年份则输出”Invalid year!”。若不存在任何闰年，则输出“None”。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2048</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">2004</span><br><span class="line">2008</span><br><span class="line">2012</span><br><span class="line">2016</span><br><span class="line">2020</span><br><span class="line">2024</span><br><span class="line">2028</span><br><span class="line">2032</span><br><span class="line">2036</span><br><span class="line">2040</span><br><span class="line">2044</span><br><span class="line">2048</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2000</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Invalid year!</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">int</span> year, i;  </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;year);  </span><br><span class="line">    <span class="keyword">if</span>(year &lt; <span class="number">2001</span> || year &gt; <span class="number">2100</span>)    <span class="comment">/* 21世纪共100年，2001年为起始年 */</span>  </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Invalid year!\n"</span>);  </span><br><span class="line">    <span class="keyword">else</span> &#123;  </span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">2001</span>; i &lt;= year; ++i) &#123;  </span><br><span class="line">            <span class="keyword">if</span>((i % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; i % <span class="number">100</span> != <span class="number">0</span>) || (i % <span class="number">400</span> == <span class="number">0</span>))  </span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -269,7 +270,7 @@
 
 </div>
 
-    <a data-url="/2018/01/22/liensi3-5/" data-id="cje6t3o7a002i41wo99glxqxy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/22/liensi3-5/" data-id="cjfeslylo002p2pwo6lr6z342" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

@@ -5,18 +5,18 @@
     
     <title>实验3-7 统计学生成绩（15 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="实验3-7 统计学生成绩（15 分）本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：大于等于90分为A；小于90且大于等于80为B；小于80且大于等于70为C；小于70且大于等于60为D；小于60为E。 输入格式:输入在第一行中给出一个正整数N（≤1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。 输出格式:在一行中输出A、">
+    <meta name="description" content="实验3-7 统计学生成绩（15 分）本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：  大于等于90分为A； 小于90且大于等于80为B； 小于80且大于等于70为C； 小于70且大于等于60为D； 小于60为E。  输入格式:输入在第一行中给出一个正整数N（≤1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。 输出格式:在">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验3-7 统计学生成绩（15 分）">
 <meta property="og:url" content="/2017/10/27/shryen3-7/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验3-7 统计学生成绩（15 分）本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：大于等于90分为A；小于90且大于等于80为B；小于80且大于等于70为C；小于70且大于等于60为D；小于60为E。 输入格式:输入在第一行中给出一个正整数N（≤1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。 输出格式:在一行中输出A、">
+<meta property="og:description" content="实验3-7 统计学生成绩（15 分）本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：  大于等于90分为A； 小于90且大于等于80为B； 小于80且大于等于70为C； 小于70且大于等于60为D； 小于60为E。  输入格式:输入在第一行中给出一个正整数N（≤1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。 输出格式:在">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:11:10.000Z">
+<meta property="og:updated_time" content="2018-03-27T09:58:38.656Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验3-7 统计学生成绩（15 分）">
-<meta name="twitter:description" content="实验3-7 统计学生成绩（15 分）本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：大于等于90分为A；小于90且大于等于80为B；小于80且大于等于70为C；小于70且大于等于60为D；小于60为E。 输入格式:输入在第一行中给出一个正整数N（≤1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。 输出格式:在一行中输出A、">
+<meta name="twitter:description" content="实验3-7 统计学生成绩（15 分）本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：  大于等于90分为A； 小于90且大于等于80为B； 小于80且大于等于70为C； 小于70且大于等于60为D； 小于60为E。  输入格式:输入在第一行中给出一个正整数N（≤1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。 输出格式:在">
     
 
     
@@ -252,12 +252,20 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验3-7-统计学生成绩（15-分）"><a href="#实验3-7-统计学生成绩（15-分）" class="headerlink" title="实验3-7 统计学生成绩（15 分）"></a>实验3-7 统计学生成绩（15 分）</h2><p>本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：<br>大于等于90分为A；<br>小于90且大于等于80为B；<br>小于80且大于等于70为C；<br>小于70且大于等于60为D；<br>小于60为E。</p>
-<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h1><p>输入在第一行中给出一个正整数N（≤1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。</p>
-<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h1><p>在一行中输出A、B、C、D、E对应的五分制成绩的人数分布，数字间以空格分隔，行末不得有多余空格。</p>
-<h1 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h1><p>7<br>77 54 92 73 60 65 69</p>
-<h1 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h1><p>1 0 2 3 1<br><a id="more"></a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;     </span><br><span class="line"><span class="keyword">int</span> n,i,A,B,C,D,N,E;     </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d\n"</span>,&amp;n);    </span><br><span class="line">A=B=C=D=E=<span class="number">0</span>;       </span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)&#123;       </span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;N);    </span><br><span class="line">		<span class="keyword">if</span>(N&gt;=<span class="number">90</span>)&#123;      </span><br><span class="line">			A++;      </span><br><span class="line">		&#125;        </span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(N&gt;=<span class="number">80</span>)&#123;   </span><br><span class="line">			B++;      </span><br><span class="line">		&#125;      </span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(N&gt;=<span class="number">70</span>)&#123;    </span><br><span class="line">			C++;     </span><br><span class="line">		&#125;     </span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (N&gt;=<span class="number">60</span>)&#123;     </span><br><span class="line">			D++;    </span><br><span class="line">		&#125;       </span><br><span class="line">		<span class="keyword">else</span>&#123;  </span><br><span class="line">			E++;   </span><br><span class="line">		&#125;      </span><br><span class="line">	&#125;     </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d %d %d %d"</span>,A,B,C,D,E);   </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;   </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="实验3-7-统计学生成绩（15-分）"><a href="#实验3-7-统计学生成绩（15-分）" class="headerlink" title="实验3-7 统计学生成绩（15 分）"></a>实验3-7 统计学生成绩（15 分）</h4><p>本题要求编写程序读入N个学生的百分制成绩，统计五分制成绩的分布。百分制成绩到五分制成绩的转换规则：</p>
+<ul>
+<li>大于等于90分为A；</li>
+<li>小于90且大于等于80为B；</li>
+<li>小于80且大于等于70为C；</li>
+<li>小于70且大于等于60为D；</li>
+<li>小于60为E。</li>
+</ul>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在第一行中给出一个正整数N（≤1000），即学生人数；第二行中给出N个学生的百分制成绩，其间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出A、B、C、D、E对应的五分制成绩的人数分布，数字间以空格分隔，行末不得有多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">77 54 92 73 60 65 69</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 0 2 3 1</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;     </span><br><span class="line"><span class="keyword">int</span> n,i,A,B,C,D,N,E;     </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d\n"</span>,&amp;n);    </span><br><span class="line">A=B=C=D=E=<span class="number">0</span>;       </span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)&#123;       </span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;N);    </span><br><span class="line">		<span class="keyword">if</span>(N&gt;=<span class="number">90</span>)&#123;      </span><br><span class="line">			A++;      </span><br><span class="line">		&#125;        </span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(N&gt;=<span class="number">80</span>)&#123;   </span><br><span class="line">			B++;      </span><br><span class="line">		&#125;      </span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(N&gt;=<span class="number">70</span>)&#123;    </span><br><span class="line">			C++;     </span><br><span class="line">		&#125;     </span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (N&gt;=<span class="number">60</span>)&#123;     </span><br><span class="line">			D++;    </span><br><span class="line">		&#125;       </span><br><span class="line">		<span class="keyword">else</span>&#123;  </span><br><span class="line">			E++;   </span><br><span class="line">		&#125;      </span><br><span class="line">	&#125;     </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d %d %d %d"</span>,A,B,C,D,E);   </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;   </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +275,7 @@
 
 </div>
 
-    <a data-url="/2017/10/27/shryen3-7/" data-id="cje6t3ocx00ch41woj9lsbgh3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/27/shryen3-7/" data-id="cjfeslypx00c82pwoxqg5p5d7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

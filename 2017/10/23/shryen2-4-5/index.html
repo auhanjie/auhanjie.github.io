@@ -5,18 +5,18 @@
     
     <title>实验2-4-5 简单实现x的n次方（10 分） | auhanjie&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="实验2-4-5 简单实现x的n次方（10 分）本题要求实现一个计算x^n​ （n≥0）的函数。 函数接口定义：double mypow( double x, int n );函数mypow应返回x的n次幂的值。题目保证结果在双精度范围内。 裁判测试程序样例：12345678910111213141516#include &amp;lt;stdio.h&amp;gt;double mypow( double x,">
+    <meta name="description" content="实验2-4-5 简单实现x的n次方（10 分）本题要求实现一个计算x^n（n≥0）的函数。 函数接口定义：1double mypow( double x, int n ); 函数mypow应返回x的n次幂的值。题目保证结果在双精度范围内。 裁判测试程序样例：12345678910111213141516#include &amp;lt;stdio.h&amp;gt;double mypow( double x,">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验2-4-5 简单实现x的n次方（10 分）">
 <meta property="og:url" content="/2017/10/23/shryen2-4-5/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验2-4-5 简单实现x的n次方（10 分）本题要求实现一个计算x^n​ （n≥0）的函数。 函数接口定义：double mypow( double x, int n );函数mypow应返回x的n次幂的值。题目保证结果在双精度范围内。 裁判测试程序样例：12345678910111213141516#include &amp;lt;stdio.h&amp;gt;double mypow( double x,">
+<meta property="og:description" content="实验2-4-5 简单实现x的n次方（10 分）本题要求实现一个计算x^n（n≥0）的函数。 函数接口定义：1double mypow( double x, int n ); 函数mypow应返回x的n次幂的值。题目保证结果在双精度范围内。 裁判测试程序样例：12345678910111213141516#include &amp;lt;stdio.h&amp;gt;double mypow( double x,">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-01-24T08:09:42.000Z">
+<meta property="og:updated_time" content="2018-03-05T01:54:04.644Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验2-4-5 简单实现x的n次方（10 分）">
-<meta name="twitter:description" content="实验2-4-5 简单实现x的n次方（10 分）本题要求实现一个计算x^n​ （n≥0）的函数。 函数接口定义：double mypow( double x, int n );函数mypow应返回x的n次幂的值。题目保证结果在双精度范围内。 裁判测试程序样例：12345678910111213141516#include &amp;lt;stdio.h&amp;gt;double mypow( double x,">
+<meta name="twitter:description" content="实验2-4-5 简单实现x的n次方（10 分）本题要求实现一个计算x^n（n≥0）的函数。 函数接口定义：1double mypow( double x, int n ); 函数mypow应返回x的n次幂的值。题目保证结果在双精度范围内。 裁判测试程序样例：12345678910111213141516#include &amp;lt;stdio.h&amp;gt;double mypow( double x,">
     
 
     
@@ -252,12 +252,14 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="实验2-4-5-简单实现x的n次方（10-分）"><a href="#实验2-4-5-简单实现x的n次方（10-分）" class="headerlink" title="实验2-4-5 简单实现x的n次方（10 分）"></a>实验2-4-5 简单实现x的n次方（10 分）</h2><p>本题要求实现一个计算x^n​ （n≥0）的函数。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>double mypow( double x, int n );<br>函数mypow应返回x的n次幂的值。题目保证结果在双精度范围内。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">mypow</span><span class="params">( <span class="keyword">double</span> x, <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, mypow(x, n));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h1 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h1><p>0.24 4</p>
-<h1 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h1><p>0.003318<br><a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;   </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">mypow</span><span class="params">(<span class="keyword">double</span> x,<span class="keyword">int</span> n)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">	<span class="keyword">double</span> x; <span class="keyword">int</span> n;   </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf %d"</span>, &amp;x, &amp;n); </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%f\n"</span>, mypow(x, n));  </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">mypow</span><span class="params">(<span class="keyword">double</span> x,<span class="keyword">int</span> n)</span></span>&#123;  </span><br><span class="line">	<span class="keyword">double</span> r;  </span><br><span class="line">	r=<span class="built_in">pow</span>(x,n); </span><br><span class="line">	<span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+            <h4 id="实验2-4-5-简单实现x的n次方（10-分）"><a href="#实验2-4-5-简单实现x的n次方（10-分）" class="headerlink" title="实验2-4-5 简单实现x的n次方（10 分）"></a>实验2-4-5 简单实现x的n次方（10 分）</h4><p>本题要求实现一个计算x^n（n≥0）的函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double mypow( double x, int n );</span><br></pre></td></tr></table></figure>
+<p>函数<code>mypow</code>应返回<code>x</code>的<code>n</code>次幂的值。题目保证结果在双精度范围内。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">mypow</span><span class="params">( <span class="keyword">double</span> x, <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, mypow(x, n));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.24 4</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.003318</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;   </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">mypow</span><span class="params">(<span class="keyword">double</span> x,<span class="keyword">int</span> n)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">	<span class="keyword">double</span> x; <span class="keyword">int</span> n;   </span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf %d"</span>, &amp;x, &amp;n); </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%f\n"</span>, mypow(x, n));  </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">mypow</span><span class="params">(<span class="keyword">double</span> x,<span class="keyword">int</span> n)</span></span>&#123;  </span><br><span class="line">	<span class="keyword">double</span> r;  </span><br><span class="line">	r=<span class="built_in">pow</span>(x,n); </span><br><span class="line">	<span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +269,7 @@
 
 </div>
 
-    <a data-url="/2017/10/23/shryen2-4-5/" data-id="cje6t3oc600bb41worfcp0ms7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/23/shryen2-4-5/" data-id="cjfeslype00b52pwob98hizlk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -342,19 +344,19 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/10/23/shryen2-4-4/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/10/26/shryen2-4-6/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
             <div class="article-nav-title">
                 
-                    实验2-4-4 求阶乘序列前N项和（15 分）
+                    实验2-4-6 求幂之和（15 分）
                 
             </div>
         </a>
     
     
-        <a href="/2017/10/23/shryen2-4-3/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/10/23/shryen2-4-4/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">实验2-4-3 求平方根序列前N项和（15 分）</div>
+            <div class="article-nav-title">实验2-4-4 求阶乘序列前N项和（15 分）</div>
         </a>
     
 </nav>
