@@ -250,11 +250,12 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="习题8-3-数组循环右移（20-分）"><a href="#习题8-3-数组循环右移（20-分）" class="headerlink" title="习题8-3 数组循环右移（20 分）"></a>习题8-3 数组循环右移（20 分）</h2><p>本题要求实现一个对数组进行循环右移的简单函数：一个数组a中存有n（&gt;0）个整数，将每个整数循环向右移m（≥0）个位置，即将a中的数据由（a​0​​ a​1​​ ⋯a​n−1​​ ）变换为（a​n−m​​ ⋯a​n−1​​ a​0​​ a​1​​ ⋯a​n−m−1​​ ）（最后m个数循环移至最前面的m个位置）。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int ArrayShift( int a[], int n, int m );<br>其中a[]是用户传入的数组；n是数组的大小；m是右移的位数。函数ArrayShift须将循环右移后的数组仍然存在a[]中。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ArrayShift</span><span class="params">( <span class="keyword">int</span> a[], <span class="keyword">int</span> n, <span class="keyword">int</span> m )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> a[MAXN], n, m;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">ArrayShift(a, n, m);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (i != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>6 2<br>1 2 3 4 5 6</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>5 6 1 2 3 4<br></p>
+            <p><h4 id="习题8-3-数组循环右移（20-分）"><a href="#习题8-3-数组循环右移（20-分）" class="headerlink" title="习题8-3 数组循环右移（20 分）"></a>习题8-3 数组循环右移（20 分）</h4><p>本题要求实现一个对数组进行循环右移的简单函数：一个数组a中存有n（&gt;0）个整数，将每个整数循环向右移m（≥0）个位置，即将a中的数据由（a0a1⋯an−1）变换为（an−m⋯an−1a0a1⋯an−m−1）（最后m个数循环移至最前面的m个位置）。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int ArrayShift( int a[], int n, int m );</span><br></pre></td></tr></table></figure>
+<p>其中<code>a[]</code>是用户传入的数组；<code>n</code>是数组的大小；<code>m</code>是右移的位数。函数<code>ArrayShift</code>须将循环右移后的数组仍然存在<code>a[]</code>中。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ArrayShift</span><span class="params">( <span class="keyword">int</span> a[], <span class="keyword">int</span> n, <span class="keyword">int</span> m )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[MAXN], n, m;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">    ArrayShift(a, n, m);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++ ) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 2</span><br><span class="line">1 2 3 4 5 6</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 6 1 2 3 4</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2018/02/01/siti8-3/#more">繼續閱讀</a>
             </p>
@@ -267,7 +268,7 @@
 
 </div>
 
-    <a data-url="/2018/02/01/siti8-3/" data-id="cjfeslyxj00qz2pwo62p71mw9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/01/siti8-3/" data-id="cjfj2zb5n00qc7gwotur3lxeq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -385,14 +386,15 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="习题8-2-在数组中查找指定元素（15-分）"><a href="#习题8-2-在数组中查找指定元素（15-分）" class="headerlink" title="习题8-2 在数组中查找指定元素（15 分）"></a>习题8-2 在数组中查找指定元素（15 分）</h2><p>本题要求实现一个在数组中查找指定元素的简单函数。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>int search( int list[], int n, int x );<br>其中list[]是用户传入的数组；n（≥0）是list[]中元素的个数；x是待查找的元素。如果找到</p>
-<p>则函数search返回相应元素的最小下标（下标从0开始），否则返回−1。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">( <span class="keyword">int</span> <span class="built_in">list</span>[], <span class="keyword">int</span> n, <span class="keyword">int</span> x )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i, index, n, x;</span><br><span class="line"><span class="keyword">int</span> a[MAXN];</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line"><span class="keyword">for</span>( i = <span class="number">0</span>; i &lt; n; i++ )</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</span><br><span class="line">index = search( a, n, x );</span><br><span class="line"><span class="keyword">if</span>( index != <span class="number">-1</span> )</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"index = %d\n"</span>, index);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Not found\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>5<br>1 2 2 5 4<br>2</p>
-<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><p>index = 1</p>
-<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>5<br>1 2 2 5 4<br>0</p>
-<h2 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h2><p>Not found<br></p>
+            <p><h4 id="习题8-2-在数组中查找指定元素（15-分）"><a href="#习题8-2-在数组中查找指定元素（15-分）" class="headerlink" title="习题8-2 在数组中查找指定元素（15 分）"></a>习题8-2 在数组中查找指定元素（15 分）</h4><p>本题要求实现一个在数组中查找指定元素的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int search( int list[], int n, int x );</span><br></pre></td></tr></table></figure>
+<p>其中<code>list[]</code>是用户传入的数组；<code>n</code>（≥0）是<code>list[]</code>中元素的个数；<code>x</code>是待查找的元素。如果找到</p>
+<p>则函数<code>search</code>返回相应元素的最小下标（下标从0开始），否则返回−1。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">( <span class="keyword">int</span> <span class="built_in">list</span>[], <span class="keyword">int</span> n, <span class="keyword">int</span> x )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, index, n, x;</span><br><span class="line">    <span class="keyword">int</span> a[MAXN];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>( i = <span class="number">0</span>; i &lt; n; i++ )</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</span><br><span class="line">    index = search( a, n, x );</span><br><span class="line">    <span class="keyword">if</span>( index != <span class="number">-1</span> )</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"index = %d\n"</span>, index);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Not found\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 2 2 5 4</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index = 1</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 2 2 5 4</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Not found</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2018/02/01/siti8-2/#more">繼續閱讀</a>
             </p>
@@ -405,7 +407,7 @@
 
 </div>
 
-    <a data-url="/2018/02/01/siti8-2/" data-id="cjfeslyxc00qk2pwouq9sqr82" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/01/siti8-2/" data-id="cjfj2zb5m00q97gwo20xccf03" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -523,11 +525,12 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="习题8-1-拆分实数的整数与小数部分（15-分）"><a href="#习题8-1-拆分实数的整数与小数部分（15-分）" class="headerlink" title="习题8-1 拆分实数的整数与小数部分（15 分）"></a>习题8-1 拆分实数的整数与小数部分（15 分）</h2><p>本题要求实现一个拆分实数的整数与小数部分的简单函数。</p>
-<h2 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h2><p>void splitfloat( float x, int <em>intpart, float </em>fracpart );<br>其中x是被拆分的实数（0≤x&lt;10000），<em>intpart和</em>fracpart分别是将实数x拆分出来的整数部分与小数部分。</p>
-<h2 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">splitfloat</span><span class="params">( <span class="keyword">float</span> x, <span class="keyword">int</span> *intpart, <span class="keyword">float</span> *fracpart )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">float</span> x, fracpart;</span><br><span class="line"><span class="keyword">int</span> intpart;</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;x);</span><br><span class="line">splitfloat(x, &amp;intpart, &amp;fracpart);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"The integer part is %d\n"</span>, intpart);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"The fractional part is %g\n"</span>, fracpart);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>2.718</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>The integer part is 2<br>The fractional part is 0.718<br></p>
+            <p><h4 id="习题8-1-拆分实数的整数与小数部分（15-分）"><a href="#习题8-1-拆分实数的整数与小数部分（15-分）" class="headerlink" title="习题8-1 拆分实数的整数与小数部分（15 分）"></a>习题8-1 拆分实数的整数与小数部分（15 分）</h4><p>本题要求实现一个拆分实数的整数与小数部分的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void splitfloat( float x, int *intpart, float *fracpart );</span><br></pre></td></tr></table></figure>
+<p>其中<code>x</code>是被拆分的实数（0≤<code>x</code>&lt;10000），<code>*intpart</code>和<code>*fracpart</code>分别是将实数x拆分出来的整数部分与小数部分。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">splitfloat</span><span class="params">( <span class="keyword">float</span> x, <span class="keyword">int</span> *intpart, <span class="keyword">float</span> *fracpart )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">float</span> x, fracpart;</span><br><span class="line">    <span class="keyword">int</span> intpart;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;x);</span><br><span class="line">    splitfloat(x, &amp;intpart, &amp;fracpart);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The integer part is %d\n"</span>, intpart);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The fractional part is %g\n"</span>, fracpart);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.718</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The integer part is 2</span><br><span class="line">The fractional part is 0.718</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2018/02/01/siti8-1/#more">繼續閱讀</a>
             </p>
@@ -540,7 +543,7 @@
 
 </div>
 
-    <a data-url="/2018/02/01/siti8-1/" data-id="cjfeslyx900qf2pwolzi94q3o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/02/01/siti8-1/" data-id="cjfj2zb5k00q37gwo0xi1gauh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -675,7 +678,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi8-8/" data-id="cjfeslymk004p2pwobdkq5o67" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi8-8/" data-id="cjfj2zaw6004q7gwojee6jpq3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -810,7 +813,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/liensi8-2/" data-id="cjfeslymn004s2pwok0dk7z5i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/liensi8-2/" data-id="cjfj2zaw4004k7gwo1lfk7vjs" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -928,11 +931,11 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="习题7-8-字符串转换成十进制整数（15-分）"><a href="#习题7-8-字符串转换成十进制整数（15-分）" class="headerlink" title="习题7-8 字符串转换成十进制整数（15 分）"></a>习题7-8 字符串转换成十进制整数（15 分）</h2><p>输入一个以#结束的字符串，本题要求滤去所有的非十六进制字符（不分大小写），组成一个新的表示十六进制数字的字符串，然后将其转换为十进制数后输出。如果在第一个十六进制字符之前存在字符“-”，则代表该数是负数。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给出一个以#结束的非空字符串。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>在一行中输出转换后的十进制数。题目保证输出在长整型范围内。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>+-P-xf4+-1!#</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>-3905<br></p>
+            <p><h4 id="习题7-8-字符串转换成十进制整数（15-分）"><a href="#习题7-8-字符串转换成十进制整数（15-分）" class="headerlink" title="习题7-8 字符串转换成十进制整数（15 分）"></a>习题7-8 字符串转换成十进制整数（15 分）</h4><p>输入一个以#结束的字符串，本题要求滤去所有的非十六进制字符（不分大小写），组成一个新的表示十六进制数字的字符串，然后将其转换为十进制数后输出。如果在第一个十六进制字符之前存在字符“-”，则代表该数是负数。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个以#结束的非空字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出转换后的十进制数。题目保证输出在长整型范围内。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+-P-xf4+-1!#</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-3905</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2018/01/24/siti7-8/#more">繼續閱讀</a>
             </p>
@@ -945,7 +948,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-8/" data-id="cjfeslyx800qd2pworh7t2pfc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-8/" data-id="cjfj2zb5i00q07gwo8ngxhryx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1063,11 +1066,53 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="习题7-7-字符串替换（15-分）"><a href="#习题7-7-字符串替换（15-分）" class="headerlink" title="习题7-7 字符串替换（15 分）"></a>习题7-7 字符串替换（15 分）</h2><p>本题要求编写程序，将给定字符串中的大写英文字母按以下对应规则替换：<br>| 原字母 |对应字母 |<br>|:————-:|:————-:|<br>| A | Z |<br>| B    | Y |<br>| C    | X |<br>| D    | W |<br>…    …<br>| X    | C |<br>| Y    | B |<br>| Z    | A |</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给出一个不超过80个字符、并以回车结束的字符串。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出在一行中给出替换完成后的字符串。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>Only the 11 CAPItaL LeTtERS are replaced.</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>Lnly the 11 XZKRtaO OeGtVIH are replaced.<br></p>
+            <p><h4 id="习题7-7-字符串替换（15-分）"><a href="#习题7-7-字符串替换（15-分）" class="headerlink" title="习题7-7 字符串替换（15 分）"></a>习题7-7 字符串替换（15 分）</h4><p>本题要求编写程序，将给定字符串中的大写英文字母按以下对应规则替换：</p>
+<table>
+<thead>
+<tr>
+<th>原字母</th>
+<th>对应字母</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>C</td>
+<td>X</td>
+</tr>
+<tr>
+<td>D</td>
+<td>W</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>X</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个不超过80个字符、并以回车结束的字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出在一行中给出替换完成后的字符串。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Only the 11 CAPItaL LeTtERS are replaced.</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lnly the 11 XZKRtaO OeGtVIH are replaced.</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2018/01/24/siti7-7/#more">繼續閱讀</a>
             </p>
@@ -1080,7 +1125,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-7/" data-id="cjfeslyx700qc2pwocbfprxg9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-7/" data-id="cjfj2zb5h00px7gwo6370fpkp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1198,11 +1243,11 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="习题7-6-统计大写辅音字母（15-分）"><a href="#习题7-6-统计大写辅音字母（15-分）" class="headerlink" title="习题7-6 统计大写辅音字母（15 分）"></a>习题7-6 统计大写辅音字母（15 分）</h2><p>英文辅音字母是除A、E、I、O、U以外的字母。本题要求编写程序，统计给定字符串中大写辅音字母的个数。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给出一个不超过80个字符、并以回车结束的字符串。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出在一行中给出字符串中大写辅音字母的个数。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>HELLO World!</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>4<br></p>
+            <p><h4 id="习题7-6-统计大写辅音字母（15-分）"><a href="#习题7-6-统计大写辅音字母（15-分）" class="headerlink" title="习题7-6 统计大写辅音字母（15 分）"></a>习题7-6 统计大写辅音字母（15 分）</h4><p>英文辅音字母是除<code>A</code>、<code>E</code>、<code>I</code>、<code>O</code>、<code>U</code>以外的字母。本题要求编写程序，统计给定字符串中<strong>大写</strong>辅音字母的个数。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个不超过80个字符、并以回车结束的字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出在一行中给出字符串中大写辅音字母的个数。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HELLO World!</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2018/01/24/siti7-6/#more">繼續閱讀</a>
             </p>
@@ -1215,7 +1260,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-6/" data-id="cjfeslyxb00qh2pwo1k12w7h8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-6/" data-id="cjfj2zb5f00pr7gwojz3bey3c" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1333,13 +1378,14 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="习题7-5-找鞍点（20-分）"><a href="#习题7-5-找鞍点（20-分）" class="headerlink" title="习题7-5 找鞍点（20 分）"></a>习题7-5 找鞍点（20 分）</h2><p>一个矩阵元素的“鞍点”是指该位置上的元素值在该行上最大、在该列上最小。<br>本题要求编写程序，求一个给定的n阶方阵的鞍点。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入第一行给出一个正整数n（1≤n≤6）。随后n行，每行给出n个整数，其间以空格分隔。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出在一行中按照“行下标 列下标”（下标从0开始）的格式输出鞍点的位置。如果鞍点不存在，则输出“NONE”。题目保证给出的矩阵至多存在一个鞍点。</p>
-<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>4<br>1 7 4 1<br>4 8 3 6<br>1 6 1 2<br>0 7 8 9</p>
-<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><p>2 1</p>
-<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>2<br>1 7<br>4 1</p>
-<h2 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h2><p>NONE<br></p>
+            <p><h4 id="习题7-5-找鞍点（20-分）"><a href="#习题7-5-找鞍点（20-分）" class="headerlink" title="习题7-5 找鞍点（20 分）"></a>习题7-5 找鞍点（20 分）</h4><p>一个矩阵元素的“鞍点”是指该位置上的元素值在该行上最大、在该列上最小。</p>
+<p>本题要求编写程序，求一个给定的n阶方阵的鞍点。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个正整数n（1≤n≤6）。随后n行，每行给出n个整数，其间以空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出在一行中按照“行下标 列下标”（下标从0开始）的格式输出鞍点的位置。如果鞍点不存在，则输出“NONE”。题目保证给出的矩阵至多存在一个鞍点。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 7 4 1</span><br><span class="line">4 8 3 6</span><br><span class="line">1 6 1 2</span><br><span class="line">0 7 8 9</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 1</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1 7</span><br><span class="line">4 1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NONE</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2018/01/24/siti7-5/#more">繼續閱讀</a>
             </p>
@@ -1352,7 +1398,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-5/" data-id="cjfeslywa00pe2pwod23ti0df" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-5/" data-id="cjfj2zb5g00pu7gwo8uqbiw3n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1470,11 +1516,12 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h2 id="习题7-4-求矩阵各行元素之和（15-分）"><a href="#习题7-4-求矩阵各行元素之和（15-分）" class="headerlink" title="习题7-4 求矩阵各行元素之和（15 分）"></a>习题7-4 求矩阵各行元素之和（15 分）</h2><p>本题要求编写程序，求一个给定的m×n矩阵各行元素之和。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入第一行给出两个正整数m和n（1≤m,n≤6）。随后m行，每行给出n个整数，其间<br>以空格分隔。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>每行输出对应矩阵行元素之和。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>3 2<br>6 3<br>1 -8<br>3 12</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>9<br>-7<br>15<br></p>
+            <p><h4 id="习题7-4-求矩阵各行元素之和（15-分）"><a href="#习题7-4-求矩阵各行元素之和（15-分）" class="headerlink" title="习题7-4 求矩阵各行元素之和（15 分）"></a>习题7-4 求矩阵各行元素之和（15 分）</h4><p>本题要求编写程序，求一个给定的m×n矩阵各行元素之和。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出两个正整数m和n（1≤m,n≤6）。随后m行，每行给出n个整数，其间</p>
+<p>以空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>每行输出对应矩阵行元素之和。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 2</span><br><span class="line">6 3</span><br><span class="line">1 -8</span><br><span class="line">3 12</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">-7</span><br><span class="line">15</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
                 <a href="/2018/01/24/siti7-4/#more">繼續閱讀</a>
             </p>
@@ -1487,7 +1534,7 @@
 
 </div>
 
-    <a data-url="/2018/01/24/siti7-4/" data-id="cjfeslywc00ph2pwojyi1tt4i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/24/siti7-4/" data-id="cjfj2zb5e00po7gwo3thes9af" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
