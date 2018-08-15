@@ -267,7 +267,141 @@
 
 </div>
 
-    <a data-url="/2017/10/23/shryen2-3-3/" data-id="cjkuk5rcq00ew8vfyss073wbr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/23/shryen2-3-3/" data-id="cjkuk9u0700euanfy441mxmxi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-shryen2-3-1" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/22/shryen2-3-1/">实验2-3-1 求1到100的和（10 分）</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/10/22/shryen2-3-1/">
+            <time datetime="2017-10-22T11:15:07.000Z" itemprop="datePublished">2017-10-22</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h4 id="实验2-3-1-求1到100的和（10-分）"><a href="#实验2-3-1-求1到100的和（10-分）" class="headerlink" title="实验2-3-1 求1到100的和（10 分）"></a>实验2-3-1 求1到100的和（10 分）</h4><p>本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照以下格式输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum = 累加和</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2017/10/22/shryen2-3-1/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2017/10/22/shryen2-3-1/" data-id="cjkuk9u0600eranfybu1z7c7a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -402,141 +536,7 @@
 
 </div>
 
-    <a data-url="/2017/10/22/shryen2-3-2/" data-id="cjkuk5rcn00en8vfyxgigr3lj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-shryen2-3-1" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/10/22/shryen2-3-1/">实验2-3-1 求1到100的和（10 分）</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/10/22/shryen2-3-1/">
-            <time datetime="2017-10-22T11:15:07.000Z" itemprop="datePublished">2017-10-22</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h4 id="实验2-3-1-求1到100的和（10-分）"><a href="#实验2-3-1-求1到100的和（10-分）" class="headerlink" title="实验2-3-1 求1到100的和（10 分）"></a>实验2-3-1 求1到100的和（10 分）</h4><p>本题要求编写程序，计算表达式 1 + 2 + 3 + … + 100 的值。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照以下格式输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum = 累加和</span><br></pre></td></tr></table></figure></p>
-            <p class="article-more-link">
-                <a href="/2017/10/22/shryen2-3-1/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2017/10/22/shryen2-3-1/" data-id="cjkuk5rcj00ee8vfyuj898638" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/22/shryen2-3-2/" data-id="cjkuk9u0400elanfybzlcmvq0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -671,7 +671,7 @@
 
 </div>
 
-    <a data-url="/2017/10/22/shryen2-2-9/" data-id="cjkuk5rcm00ek8vfyc1qltk7a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/22/shryen2-2-9/" data-id="cjkuk9u0500eoanfylrvj8nm8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -808,7 +808,7 @@
 
 </div>
 
-    <a data-url="/2017/10/22/shryen2-2-8/" data-id="cjkuk5rck00eh8vfyfayyvtnc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/22/shryen2-2-8/" data-id="cjkuk9u0200efanfyoe8p0no9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -943,7 +943,7 @@
 
 </div>
 
-    <a data-url="/2017/10/22/shryen2-2-7/" data-id="cjkuk5rcg00e58vfy05hvugfc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/22/shryen2-2-7/" data-id="cjkuk9u0000e9anfyxv3iy6cv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1081,7 +1081,7 @@
 
 </div>
 
-    <a data-url="/2017/10/20/shryen2-2-6/" data-id="cjkuk5rch00e88vfylnhk2q6s" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/20/shryen2-2-6/" data-id="cjkuk9u0300eianfyut1v71bt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1216,7 +1216,7 @@
 
 </div>
 
-    <a data-url="/2017/10/20/shryen2-2-5/" data-id="cjkuk5rci00eb8vfydslzv6m9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/20/shryen2-2-5/" data-id="cjkuk9u0100ecanfy0asn0tcp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1355,7 +1355,7 @@
 
 </div>
 
-    <a data-url="/2017/10/19/shryen2-2-4/" data-id="cjkuk5rce00e28vfy2xvhv2fn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/19/shryen2-2-4/" data-id="cjkuk9tzx00e6anfyu0mmufza" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1490,7 +1490,7 @@
 
 </div>
 
-    <a data-url="/2017/10/19/shryen2-2-3/" data-id="cjkuk5rcc00dw8vfyyxt36yc3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/10/19/shryen2-2-3/" data-id="cjkuk9tzu00dxanfyltbr3vd6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
