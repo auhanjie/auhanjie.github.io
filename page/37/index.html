@@ -208,6 +208,130 @@
 
             
             <section id="main">
+    <article id="post-Picked-up-JAVA-TOOL-OPTIONS-agentlib-jvmhook" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/05/28/Picked-up-JAVA-TOOL-OPTIONS-agentlib-jvmhook/">Picked up JAVA_TOOL_OPTIONS: -agentlib:jvmhook</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/05/28/Picked-up-JAVA-TOOL-OPTIONS-agentlib-jvmhook/">
+            <time datetime="2016-05-28T08:25:00.000Z" itemprop="datePublished">2016-05-28</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/bugs/">bugs</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">刪除用戶變量中的JAVA_TOOL_OPTIONS後正常</span><br><span class="line"></span><br><span class="line">_JAVA_OPTIONS</span><br><span class="line">-Xrunjvmhook -Xbootclasspath/a:C:\PROGRA~<span class="number">2</span>\HP\QUICKT~<span class="number">1</span>\bin\JAVA_S~<span class="number">1</span>\classes;C:\PROGRA~<span class="number">2</span>\HP\QUICKT~<span class="number">1</span>\bin\JAVA_S~<span class="number">1</span>\classes\jasmine.jar</span><br><span class="line"></span><br><span class="line">JAVA_TOOL_OPTIONS</span><br><span class="line">-agentlib:jvmhook</span><br><span class="line"></span><br><span class="line">IBM_JAVA_OPTIONS</span><br><span class="line">-Xrunjvmhook -Xbootclasspath/a:C:\PROGRA~<span class="number">2</span>\HP\QUICKT~<span class="number">1</span>\bin\JAVA_S~<span class="number">1</span>\classes;C:\PROGRA~<span class="number">2</span>\HP\QUICKT~<span class="number">1</span>\bin\JAVA_S~<span class="number">1</span>\classes\jasmine.jar</span><br><span class="line"></span><br><span class="line">_JAVA_OPTIONS</span><br><span class="line">-Xrunjvmhook -Xbootclasspath/a:C:\PROGRA~<span class="number">2</span>\HP\QUICKT~<span class="number">1</span>\bin\JAVA_S~<span class="number">1</span>\classes;C:\PROGRA~<span class="number">2</span>\HP\QUICKT~<span class="number">1</span>\bin\JAVA_S~<span class="number">1</span>\classes\jasmine.jar</span><br></pre></td></tr></table></figure>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2016/05/28/Picked-up-JAVA-TOOL-OPTIONS-agentlib-jvmhook/" data-id="cjkujzxdf000d6kfy8f2zff9f" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-findbugs" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -263,7 +387,7 @@
 
 </div>
 
-    <a data-url="/2016/05/10/findbugs/" data-id="cjkujvd4c000e4cfykjr7wrhi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/10/findbugs/" data-id="cjkujzxdk000i6kfydcq78htp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -406,7 +530,7 @@
 
 </div>
 
-    <a data-url="/2016/05/07/DFA-program/" data-id="cjkujvd3y00044cfybxq7iv89" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/07/DFA-program/" data-id="cjkujzxd200016kfysdiyrs6b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -535,7 +659,7 @@
 
 </div>
 
-    <a data-url="/2016/05/04/mvninstallojdbc14/" data-id="cjkujvd9g009f4cfyol2j9d56" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/04/mvninstallojdbc14/" data-id="cjkujzxi1009i6kfydnuxijrb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -674,7 +798,7 @@
 
 </div>
 
-    <a data-url="/2016/05/04/oracle-imp-exp/" data-id="cjkujvd9d00984cfyz4nbzre8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/04/oracle-imp-exp/" data-id="cjkujzxi0009f6kfy42xp07d6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -816,7 +940,7 @@
 
 </div>
 
-    <a data-url="/2016/05/04/MinGW/" data-id="cjkujvd4g000f4cfy31r9gi9l" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/04/MinGW/" data-id="cjkujzxdc00086kfy6f5l5j2q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -957,7 +1081,7 @@
 
 </div>
 
-    <a data-url="/2016/05/01/huayu-pinyin/" data-id="cjkujvd4s000x4cfyoijevk9z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/01/huayu-pinyin/" data-id="cjkujzxdt000w6kfyb5ppmllm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1087,7 +1211,7 @@
 
 </div>
 
-    <a data-url="/2016/04/27/＆string＊-does-not-name-a-type/" data-id="cjkujvdmg00vn4cfybqnty53p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/04/27/＆string＊-does-not-name-a-type/" data-id="cjkujzxsw00vk6kfyysyrx81l" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1229,7 +1353,7 @@
 
 </div>
 
-    <a data-url="/2016/03/20/Hexo/" data-id="cjkujvd4200054cfyt0hd1u5m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/03/20/Hexo/" data-id="cjkujzxd600036kfyrk8e1911" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1370,159 +1494,7 @@
 
 </div>
 
-    <a data-url="/2016/03/20/github-page/" data-id="cjkujvd4j000l4cfyq6vue4tr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-resume" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2016/03/20/resume/" itemprop="url">
-            <img src="/css/gallery/home-bg1.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/03/20/resume/">個人簡歷</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/03/20/resume/">
-            <time datetime="2016-03-20T01:02:25.000Z" itemprop="datePublished">2016-03-20</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/個人簡歷/">個人簡歷</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="聯繫方式"><a href="#聯繫方式" class="headerlink" title="聯繫方式"></a>聯繫方式</h2><ul>
-<li>手機：182<strong><em>**</em></strong> </li>
-<li>Email：<strong><em>*</em></strong>@gmail.com</li>
-<li>QQ：<strong><em>**</em></strong></li>
-</ul>
-<hr>
-<h2 id="個人資訊"><a href="#個人資訊" class="headerlink" title="個人資訊"></a>個人資訊</h2><ul>
-<li>男/1991 </li>
-<li>本科/廣州大學/計算機系 </li>
-<li>工作年限：1年</li>
-<li>英語水平：CET-4 514分</li>
-<li>技術博客：<a href="http://auhanjie.github.io" target="_blank" rel="noopener">http://auhanjie.github.io</a> </li>
-<li>Github: <a href="http://github.com/auhanjie" target="_blank" rel="noopener">http://github.com/auhanjie</a></li>
-<li>期望職位：Web前端初級程式員，應用架構師</li>
-<li>期望城市：廣州、深圳和珠海</li>
-</ul>
-<hr></p>
-            <p class="article-more-link">
-                <a href="/2016/03/20/resume/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2016/03/20/resume/" data-id="cjkujvd9o009y4cfy8158ykqg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/03/20/github-page/" data-id="cjkujzxdn000k6kfyr99dwh6q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1716,7 +1688,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分類</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MinGW/">MinGW</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/findbugs/">findbugs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-page/">github page</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中二/">中二</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/基础编程题目集/">基础编程题目集</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="category-list-count">179</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="category-list-count">116</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/簡歷/">簡歷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/編譯原理/">編譯原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/華語拼音公式改/">華語拼音公式改</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面試/">面試</a><span class="category-list-count">6</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MinGW/">MinGW</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/findbugs/">findbugs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-page/">github page</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/个人简历/">个人简历</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/中二/">中二</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/基础编程题目集/">基础编程题目集</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="category-list-count">179</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="category-list-count">116</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/簡歷/">簡歷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/編譯原理/">編譯原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/華語拼音公式改/">華語拼音公式改</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面試/">面試</a><span class="category-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -1725,7 +1697,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">歸檔</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">51</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">51</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -1734,7 +1706,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">標籤</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MinGW/">MinGW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bugs/">bugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/findbugs/">findbugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中二/">中二</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/個人簡歷/">個人簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础编程题目集/">基础编程题目集</a><span class="tag-list-count">51</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="tag-list-count">179</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="tag-list-count">116</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/簡歷/">簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/編譯原理/">編譯原理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/華語拼音公式改/">華語拼音公式改</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MinGW/">MinGW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bugs/">bugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/findbugs/">findbugs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人简历/">个人简历</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中二/">中二</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础编程题目集/">基础编程题目集</a><span class="tag-list-count">51</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a><span class="tag-list-count">179</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a><span class="tag-list-count">116</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/簡歷/">簡歷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/編譯原理/">編譯原理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/華語拼音公式改/">華語拼音公式改</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1743,7 +1715,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">標籤雲</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12.5px;">oracle</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/個人簡歷/" style="font-size: 10px;">個人簡歷</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 17.5px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+            <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12.5px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 17.5px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
         </div>
     </div>
 
