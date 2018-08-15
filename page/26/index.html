@@ -208,7 +208,7 @@
 
             
             <section id="main">
-    <article id="post-shryen7-1-6" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shryen7-1-7" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -216,7 +216,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/12/07/shryen7-1-6/">实验7-1-6 求一批整数中出现最多的个位数字（20 分）</a>
+            <a class="article-title" href="/2017/12/07/shryen7-1-7/">实验7-1-7 查找整数（10 分）</a>
         </h1>
     
 
@@ -225,8 +225,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/12/07/shryen7-1-6/">
-            <time datetime="2017-12-07T00:42:00.000Z" itemprop="datePublished">2017-12-07</time>
+        <a href="/2017/12/07/shryen7-1-7/">
+            <time datetime="2017-12-07T00:44:00.000Z" itemprop="datePublished">2017-12-07</time>
         </a>
     </div>
 
@@ -250,13 +250,15 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h4 id="实验7-1-6-求一批整数中出现最多的个位数字（20-分）"><a href="#实验7-1-6-求一批整数中出现最多的个位数字（20-分）" class="headerlink" title="实验7-1-6 求一批整数中出现最多的个位数字（20 分）"></a>实验7-1-6 求一批整数中出现最多的个位数字（20 分）</h4><p>给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中按格式“M: n1 n2 …”输出，其中M是最大次数，n1、n2、……为出现次数最多的个位数字，按从小到大的顺序排列。数字间以空格分隔，但末尾不得有多余空格。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1234 2345 3456</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3: 3 4</span><br></pre></td></tr></table></figure></p>
+            <p><h4 id="实验7-1-7-查找整数（10-分）"><a href="#实验7-1-7-查找整数（10-分）" class="headerlink" title="实验7-1-7 查找整数（10 分）"></a>实验7-1-7 查找整数（10 分）</h4><p>本题要求从输入的N个整数中查找给定的X。如果找到，输出X的位置（从0开始数）；如果没有找到，输出“Not Found”。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行中给出两个正整数N（≤20）和X，第二行给出N个整数。数字均不超过长整型，其间以空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出X的位置，或者“Not Found”。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5 7</span><br><span class="line">3 5 7 1 9</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5 7</span><br><span class="line">3 5 8 1 9</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Not Found</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
-                <a href="/2017/12/07/shryen7-1-6/#more">繼續閱讀</a>
+                <a href="/2017/12/07/shryen7-1-7/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -267,7 +269,7 @@
 
 </div>
 
-    <a data-url="/2017/12/07/shryen7-1-6/" data-id="cjkuk9u2j00kranfy3lqbc7t1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/07/shryen7-1-7/" data-id="cjkukc2xt00ksbufyk095mmkc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -343,7 +345,7 @@
 
 
 
-    <article id="post-shryen7-1-4" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shryen7-1-6" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -351,7 +353,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/12/01/shryen7-1-4/">实验7-1-4 找出不是两个数组共有的元素（20 分）</a>
+            <a class="article-title" href="/2017/12/07/shryen7-1-6/">实验7-1-6 求一批整数中出现最多的个位数字（20 分）</a>
         </h1>
     
 
@@ -360,8 +362,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/12/01/shryen7-1-4/">
-            <time datetime="2017-12-01T02:35:00.000Z" itemprop="datePublished">2017-12-01</time>
+        <a href="/2017/12/07/shryen7-1-6/">
+            <time datetime="2017-12-07T00:42:00.000Z" itemprop="datePublished">2017-12-07</time>
         </a>
     </div>
 
@@ -385,13 +387,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h4 id="实验7-1-4-找出不是两个数组共有的元素（3-分）"><a href="#实验7-1-4-找出不是两个数组共有的元素（3-分）" class="headerlink" title="实验7-1-4 找出不是两个数组共有的元素（3 分）"></a>实验7-1-4 找出不是两个数组共有的元素（3 分）</h4><p>给定两个整型数组，本题要求找出不是两者共有的元素。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入分别在两行中给出两个整型数组，每行先给出正整数N（≤20），随后是N个整数，其间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照数字给出的顺序输出不是两数组共有的元素，数字间以空格分隔，但行末不得有多余的空格。题目保证至少存在一个这样的数字。同一数字不重复输出。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 3 -5 2 8 0 3 5 -15 9 100</span><br><span class="line">11 6 4 8 2 6 -5 9 0 100 8 1</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 5 -15 6 4 1</span><br></pre></td></tr></table></figure></p>
+            <p><h4 id="实验7-1-6-求一批整数中出现最多的个位数字（20-分）"><a href="#实验7-1-6-求一批整数中出现最多的个位数字（20-分）" class="headerlink" title="实验7-1-6 求一批整数中出现最多的个位数字（20 分）"></a>实验7-1-6 求一批整数中出现最多的个位数字（20 分）</h4><p>给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中按格式“M: n1 n2 …”输出，其中M是最大次数，n1、n2、……为出现次数最多的个位数字，按从小到大的顺序排列。数字间以空格分隔，但末尾不得有多余空格。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1234 2345 3456</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3: 3 4</span><br></pre></td></tr></table></figure></p>
             <p class="article-more-link">
-                <a href="/2017/12/01/shryen7-1-4/#more">繼續閱讀</a>
+                <a href="/2017/12/07/shryen7-1-6/#more">繼續閱讀</a>
             </p>
         
         </div>
@@ -402,7 +404,7 @@
 
 </div>
 
-    <a data-url="/2017/12/01/shryen7-1-4/" data-id="cjkuk9u2h00koanfy4umr2kuf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/07/shryen7-1-6/" data-id="cjkukc2xs00kpbufyjjy4gro0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -537,7 +539,142 @@
 
 </div>
 
-    <a data-url="/2017/12/01/shryen7-1-5/" data-id="cjkuk9u2k00kuanfya7b98jn4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/01/shryen7-1-5/" data-id="cjkukc2xq00kjbufyzke25lne" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-shryen7-1-4" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/12/01/shryen7-1-4/">实验7-1-4 找出不是两个数组共有的元素（20 分）</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/12/01/shryen7-1-4/">
+            <time datetime="2017-12-01T02:35:00.000Z" itemprop="datePublished">2017-12-01</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h4 id="实验7-1-4-找出不是两个数组共有的元素（3-分）"><a href="#实验7-1-4-找出不是两个数组共有的元素（3-分）" class="headerlink" title="实验7-1-4 找出不是两个数组共有的元素（3 分）"></a>实验7-1-4 找出不是两个数组共有的元素（3 分）</h4><p>给定两个整型数组，本题要求找出不是两者共有的元素。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入分别在两行中给出两个整型数组，每行先给出正整数N（≤20），随后是N个整数，其间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照数字给出的顺序输出不是两数组共有的元素，数字间以空格分隔，但行末不得有多余的空格。题目保证至少存在一个这样的数字。同一数字不重复输出。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 3 -5 2 8 0 3 5 -15 9 100</span><br><span class="line">11 6 4 8 2 6 -5 9 0 100 8 1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 5 -15 6 4 1</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2017/12/01/shryen7-1-4/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2017/12/01/shryen7-1-4/" data-id="cjkukc2xr00kmbufy423yab3w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -672,7 +809,7 @@
 
 </div>
 
-    <a data-url="/2017/12/01/shryen7-1-2/" data-id="cjkuk9u2d00kcanfyip78xw4v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/01/shryen7-1-2/" data-id="cjkukc2xo00kgbufy6y1sxrbq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -807,7 +944,7 @@
 
 </div>
 
-    <a data-url="/2017/12/01/shryen7-1-3/" data-id="cjkuk9u2g00klanfyxfi2iqrn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/01/shryen7-1-3/" data-id="cjkukc2xn00kdbufy6w4tys6w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -942,7 +1079,7 @@
 
 </div>
 
-    <a data-url="/2017/12/01/shryen7-1-1/" data-id="cjkuk9u2b00k6anfysp54a38k" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/12/01/shryen7-1-1/" data-id="cjkukc2xj00k1bufy80hcvew3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1077,7 +1214,7 @@
 
 </div>
 
-    <a data-url="/2017/11/30/siti6-8/" data-id="cjkuk9u6t00tqanfykoxmfl2s" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/30/siti6-8/" data-id="cjkukc32100tibufywesciorl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1212,7 +1349,7 @@
 
 </div>
 
-    <a data-url="/2017/11/30/siti6-7/" data-id="cjkuk9u6q00tkanfywaicnwq0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/30/siti6-7/" data-id="cjkukc32400tobufyjyqm0pzj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1347,142 +1484,7 @@
 
 </div>
 
-    <a data-url="/2017/11/30/shryen6-9/" data-id="cjkuk9u2700jxanfyrvg7hg2a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-shryen6-8" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/11/30/shryen6-8/">实验6-8 简单计算器（20 分）</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/11/30/shryen6-8/">
-            <time datetime="2017-11-30T13:59:00.000Z" itemprop="datePublished">2017-11-30</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h4 id="实验6-8-简单计算器（20-分）"><a href="#实验6-8-简单计算器（20-分）" class="headerlink" title="实验6-8 简单计算器（20 分）"></a>实验6-8 简单计算器（20 分）</h4><p>模拟简单运算器的工作。假设计算器只能进行加减乘除运算，运算数和结果都是整数，四种运算符的优先级相同，按从左到右的顺序计算。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出一个四则运算算式，没有空格，且至少有一个操作数。遇等号”=”说明输入结束。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出算式的运算结果，或者如果除法分母为0或有非法运算符，则输出错误信息“ERROR”。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1+2*10-10/2=</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure></p>
-            <p class="article-more-link">
-                <a href="/2017/11/30/shryen6-8/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2017/11/30/shryen6-8/" data-id="cjkuk9u2800k0anfy5q46b3yc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2017/11/30/shryen6-9/" data-id="cjkukc2xg00jvbufyj571eo04" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1575,6 +1577,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/08/15/resume/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/个人简历/">个人简历</a></p>
+                            <p class="item-title"><a href="/2018/08/15/resume/" class="title">个人简历</a></p>
+                            <p class="item-date"><time datetime="2018-08-15T13:37:00.000Z" itemprop="datePublished">2018-08-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/05/06/shujujiegou6-1/" class="thumbnail">
     
     
@@ -1648,25 +1669,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/15/jichu7-35/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/基础编程题目集/">基础编程题目集</a></p>
-                            <p class="item-title"><a href="/2018/04/15/jichu7-35/" class="title">7-35 有理数均值（20 分）</a></p>
-                            <p class="item-date"><time datetime="2018-04-15T13:34:00.000Z" itemprop="datePublished">2018-04-15</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1685,7 +1687,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">歸檔</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">51</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">51</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 

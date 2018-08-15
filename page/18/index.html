@@ -208,6 +208,144 @@
 
             
             <section id="main">
+    <article id="post-shryen11-2-6" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/01/12/shryen11-2-6/">实验11-2-6 奇数值结点链表（20 分）</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/01/12/shryen11-2-6/">
+            <time datetime="2018-01-12T10:54:00.000Z" itemprop="datePublished">2018-01-12</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h4 id="实验11-2-6-奇数值结点链表（20-分）"><a href="#实验11-2-6-奇数值结点链表（20-分）" class="headerlink" title="实验11-2-6 奇数值结点链表（20 分）"></a>实验11-2-6 奇数值结点链表（20 分）</h4><p>本题要求实现两个函数，分别将读入的数据存储为单链表、将链表中奇数值的结点重新组成一个新的链表。链表结点定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct ListNode &#123;</span><br><span class="line">    int data;</span><br><span class="line">    ListNode *next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">struct ListNode *readlist();</span><br><span class="line">struct ListNode *getodd( struct ListNode **L );</span><br></pre></td></tr></table></figure>
+<p>函数<code>readlist</code>从标准输入读入一系列正整数，按照读入顺序建立单链表。当读到−1时表示输入结束，函数应返回指向单链表头结点的指针。</p>
+<p>函数<code>getodd</code>将单链表<code>L</code>中奇数值的结点分离出来，重新组成一个新的链表。返回指向新链表头结点的指针，同时将<code>L</code>中存储的地址改为删除了奇数值结点后的链表的头结点地址（所以要传入<code>L</code>的指针）。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">struct ListNode *<span class="title">readlist</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function">struct ListNode *<span class="title">getodd</span><span class="params">( struct ListNode **L )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printlist</span><span class="params">( struct ListNode *L )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">p</span> = <span class="title">L</span>;</span></span><br><span class="line">     <span class="keyword">while</span> (p) &#123;</span><br><span class="line">           <span class="built_in">printf</span>(<span class="string">"%d "</span>, p-&gt;data);</span><br><span class="line">           p = p-&gt;next;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">L</span>, *<span class="title">Odd</span>;</span></span><br><span class="line">    L = readlist();</span><br><span class="line">    Odd = getodd(&amp;L);</span><br><span class="line">    printlist(Odd);</span><br><span class="line">    printlist(L);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 2 3 4 5 6 7 -1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 3 5 7 </span><br><span class="line">2 2 4 6</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2018/01/12/shryen11-2-6/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2018/01/12/shryen11-2-6/" data-id="cjkukc2um00cvbufyg5z1y7ff" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-shryen11-2-5" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -269,7 +407,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-5/" data-id="cjkuk9tzj00d3anfymiynhx8u" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-5/" data-id="cjkukc2uk00csbufysaj6iozc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -407,7 +545,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-4/" data-id="cjkuk9tzg00cuanfyfjdhgb16" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-4/" data-id="cjkukc2uj00cpbufyxbv4dok6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -544,7 +682,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-3/" data-id="cjkuk9tze00cranfyopavewyn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-3/" data-id="cjkukc2uh00cjbufyqo4obgvj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -683,7 +821,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-2/" data-id="cjkuk9tzc00clanfy3pqekmf7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-2/" data-id="cjkukc2uf00cgbufysox35ogb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -822,7 +960,7 @@
 
 </div>
 
-    <a data-url="/2018/01/12/shryen11-2-1/" data-id="cjkuk9tzd00coanfy82wwblg9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/12/shryen11-2-1/" data-id="cjkukc2ue00cdbufyockmc7os" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -957,7 +1095,7 @@
 
 </div>
 
-    <a data-url="/2018/01/11/shryen11-1-9/" data-id="cjkuk9tz600ccanfy0x2s4mxn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/11/shryen11-1-9/" data-id="cjkukc2ui00cmbufy2k47bdwo" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1095,7 +1233,7 @@
 
 </div>
 
-    <a data-url="/2018/01/11/shryen11-1-8/" data-id="cjkuk9tzb00cianfyg1a911tu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/11/shryen11-1-8/" data-id="cjkukc2u900c4bufyucjox1od" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1230,7 +1368,7 @@
 
 </div>
 
-    <a data-url="/2018/01/11/shryen11-1-7/" data-id="cjkuk9tz800cfanfy1gud7rua" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/11/shryen11-1-7/" data-id="cjkukc2uc00cabufy314lz7sp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1370,143 +1508,7 @@
 
 </div>
 
-    <a data-url="/2018/01/11/shryen11-1-6/" data-id="cjkuk9tz500c9anfyruzto5te" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-shryen11-1-5" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/11/shryen11-1-5/">实验11-1-5 字符串的连接（15 分）</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/11/shryen11-1-5/">
-            <time datetime="2018-01-11T10:30:00.000Z" itemprop="datePublished">2018-01-11</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h4 id="实验11-1-5-字符串的连接（15-分）"><a href="#实验11-1-5-字符串的连接（15-分）" class="headerlink" title="实验11-1-5 字符串的连接（15 分）"></a>实验11-1-5 字符串的连接（15 分）</h4><p>本题要求实现一个函数，将两个字符串连接起来。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char *str_cat( char *s, char *t );</span><br></pre></td></tr></table></figure>
-<p>函数<code>str_cat</code>应将字符串<code>t</code>复制到字符串<code>s</code>的末端，并且返回字符串<code>s</code>的首地址。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXS 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">str_cat</span><span class="params">( <span class="keyword">char</span> *s, <span class="keyword">char</span> *t )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> *p;</span><br><span class="line">    <span class="keyword">char</span> str1[MAXS+MAXS] = &#123;<span class="string">'\0'</span>&#125;, str2[MAXS] = &#123;<span class="string">'\0'</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s%s"</span>, str1, str2);</span><br><span class="line">    p = str_cat(str1, str2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n%s\n"</span>, p, str1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abc</span><br><span class="line">def</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abcdef</span><br><span class="line">abcdef</span><br></pre></td></tr></table></figure></p>
-            <p class="article-more-link">
-                <a href="/2018/01/11/shryen11-1-5/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2018/01/11/shryen11-1-5/" data-id="cjkuk9tz400c6anfyuf6qnbdb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2018/01/11/shryen11-1-6/" data-id="cjkukc2ub00c7bufye2m5jxri" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1599,6 +1601,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/08/15/resume/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/个人简历/">个人简历</a></p>
+                            <p class="item-title"><a href="/2018/08/15/resume/" class="title">个人简历</a></p>
+                            <p class="item-date"><time datetime="2018-08-15T13:37:00.000Z" itemprop="datePublished">2018-08-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/05/06/shujujiegou6-1/" class="thumbnail">
     
     
@@ -1672,25 +1693,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/15/jichu7-35/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/基础编程题目集/">基础编程题目集</a></p>
-                            <p class="item-title"><a href="/2018/04/15/jichu7-35/" class="title">7-35 有理数均值（20 分）</a></p>
-                            <p class="item-date"><time datetime="2018-04-15T13:34:00.000Z" itemprop="datePublished">2018-04-15</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1709,7 +1711,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">歸檔</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">51</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">51</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">33</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">131</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">40</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
