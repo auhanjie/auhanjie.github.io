@@ -273,7 +273,145 @@
 
 </div>
 
-    <a data-url="/2016/12/21/markdown/" data-id="cjm6alamq009y6bueid8ivk1t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/12/21/markdown/" data-id="cjm7ngup800a827fy4zhj7h3b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/" itemprop="url">
+            <img src="/css/gallery/little-girl.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/">經常面試到的SQL題(查詢重複數據和清除重複數據)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/">
+            <time datetime="2016-10-22T09:47:11.000Z" itemprop="datePublished">2016-10-22</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/面試/">面試</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>sql查詢消除重複數據</p>
+<p>如數據庫有一名為biau的表：</p>
+<p>字段與數據例如下如：<br></p>
+            <p class="article-more-link">
+                <a href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/#more">繼續閱讀</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/" data-id="cjm7ngumx005s27fycbjigng8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -457,145 +595,7 @@
 
 </div>
 
-    <a data-url="/2016/10/22/huashrsiauzhau/" data-id="cjm6alaid000r6buen226g0dl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/" itemprop="url">
-            <img src="/css/gallery/little-girl.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/">經常面試到的SQL題(查詢重複數據和清除重複數據)</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/">
-            <time datetime="2016-10-22T09:47:11.000Z" itemprop="datePublished">2016-10-22</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/面試/">面試</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>sql查詢消除重複數據</p>
-<p>如數據庫有一名為biau的表：</p>
-<p>字段與數據例如下如：<br></p>
-            <p class="article-more-link">
-                <a href="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/#more">繼續閱讀</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="/2016/10/22/jingchangmienshrdaudeSQLti(chasiunchungfushujiuhecingchuchungfushujiu)/" data-id="cjm6alaku005r6buekt6w3dwb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/10/22/huashrsiauzhau/" data-id="cjm7ngujz000v27fy50h13dd5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -785,7 +785,7 @@
 
 </div>
 
-    <a data-url="/2016/10/14/shenzhenfaben/" data-id="cjm6alamy00ah6bue0fbrcx01" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/10/14/shenzhenfaben/" data-id="cjm7ngup900ab27fyff9xtnym" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -916,7 +916,7 @@
 
 </div>
 
-    <a data-url="/2016/09/25/HibernateCache/" data-id="cjm6alai000096buetfualrct" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/09/25/HibernateCache/" data-id="cjm7nguji000827fyz3i4soqd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1042,7 +1042,7 @@
 
 </div>
 
-    <a data-url="/2016/05/28/ORA-28001-the-password-has-expired/" data-id="cjm6alai1000a6buexprwm2r3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/28/ORA-28001-the-password-has-expired/" data-id="cjm7ngujm000a27fyadlda86n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1166,7 +1166,7 @@
 
 </div>
 
-    <a data-url="/2016/05/28/Picked-up-JAVA-TOOL-OPTIONS-agentlib-jvmhook/" data-id="cjm6alai3000e6buejpir6bk7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/28/Picked-up-JAVA-TOOL-OPTIONS-agentlib-jvmhook/" data-id="cjm7ngujo000e27fyrej1daa4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1297,7 +1297,7 @@
 
 </div>
 
-    <a data-url="/2016/05/10/findbugs/" data-id="cjm6alai8000j6bueeoixewsb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/10/findbugs/" data-id="cjm7ngujw000p27fyv2562plz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1440,7 +1440,7 @@
 
 </div>
 
-    <a data-url="/2016/05/07/DFA-program/" data-id="cjm6alaht00036buenpgb3u2a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/07/DFA-program/" data-id="cjm7nguj9000427fyeaaxbxrj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1569,7 +1569,7 @@
 
 </div>
 
-    <a data-url="/2016/05/04/mvninstallojdbc14/" data-id="cjm6alamu00a66buetoyfb5b3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="/2016/05/04/mvninstallojdbc14/" data-id="cjm7ngup400a027fydaf1th15" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
