@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="实验2-4-7 求组合数（15 分）本题要求编写程序，根据公式Cnm=m!(n−m)!n!算出从n个不同元素中取出m个元素（m≤n）的组合数。 建议定义和调用函数fact(n)计算n!，其中n的类型是int，函数类型是double。 输入格式:输入在一行中给出两个正整数m和n（m≤n），以空格分隔。 输出格式:按照格式“result = 组合数计算结果”输出。题目保证结果在double类型范围内。">
+    <meta name="description" content="实验2-4-7 求组合数（15 分）本题要求编写程序，根据公式$C_n^M=\frac{n!}{m!(n−m)!} $算出从n个不同元素中取出m个元素（m≤n）的组合数。 建议定义和调用函数fact(n)计算n!，其中n的类型是int，函数类型是double。 输入格式:输入在一行中给出两个正整数m和n（m≤n），以空格分隔。 输出格式:按照格式“result = 组合数计算结果”输出。题目保证结">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验2-4-7 求组合数（15 分）">
 <meta property="og:url" content="http://auhanjie.github.io/2017/10/26/shryen2-4-7/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验2-4-7 求组合数（15 分）本题要求编写程序，根据公式Cnm=m!(n−m)!n!算出从n个不同元素中取出m个元素（m≤n）的组合数。 建议定义和调用函数fact(n)计算n!，其中n的类型是int，函数类型是double。 输入格式:输入在一行中给出两个正整数m和n（m≤n），以空格分隔。 输出格式:按照格式“result = 组合数计算结果”输出。题目保证结果在double类型范围内。">
+<meta property="og:description" content="实验2-4-7 求组合数（15 分）本题要求编写程序，根据公式$C_n^M=\frac{n!}{m!(n−m)!} $算出从n个不同元素中取出m个元素（m≤n）的组合数。 建议定义和调用函数fact(n)计算n!，其中n的类型是int，函数类型是double。 输入格式:输入在一行中给出两个正整数m和n（m≤n），以空格分隔。 输出格式:按照格式“result = 组合数计算结果”输出。题目保证结">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2018-03-27T09:57:37.549Z">
+<meta property="og:updated_time" content="2019-06-03T14:02:44.024Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验2-4-7 求组合数（15 分）">
-<meta name="twitter:description" content="实验2-4-7 求组合数（15 分）本题要求编写程序，根据公式Cnm=m!(n−m)!n!算出从n个不同元素中取出m个元素（m≤n）的组合数。 建议定义和调用函数fact(n)计算n!，其中n的类型是int，函数类型是double。 输入格式:输入在一行中给出两个正整数m和n（m≤n），以空格分隔。 输出格式:按照格式“result = 组合数计算结果”输出。题目保证结果在double类型范围内。">
+<meta name="twitter:description" content="实验2-4-7 求组合数（15 分）本题要求编写程序，根据公式$C_n^M=\frac{n!}{m!(n−m)!} $算出从n个不同元素中取出m个元素（m≤n）的组合数。 建议定义和调用函数fact(n)计算n!，其中n的类型是int，函数类型是double。 输入格式:输入在一行中给出两个正整数m和n（m≤n），以空格分隔。 输出格式:按照格式“result = 组合数计算结果”输出。题目保证结">
 <meta name="twitter:image" content="http://auhanjie.github.io/images/og_image.png">
 
 
@@ -162,7 +162,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 227 個字)
+                    2 分鐘 閱讀文 (大約 230 個字)
                 </span>
                 
                 
@@ -175,7 +175,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="实验2-4-7-求组合数（15-分）"><a href="#实验2-4-7-求组合数（15-分）" class="headerlink" title="实验2-4-7 求组合数（15 分）"></a>实验2-4-7 求组合数（15 分）</h4><p>本题要求编写程序，根据公式Cnm=m!(n−m)!n!算出从n个不同元素中取出m个元素（m≤n）的组合数。</p>
+            <h4 id="实验2-4-7-求组合数（15-分）"><a href="#实验2-4-7-求组合数（15-分）" class="headerlink" title="实验2-4-7 求组合数（15 分）"></a>实验2-4-7 求组合数（15 分）</h4><p>本题要求编写程序，根据公式$C_n^M=\frac{n!}{m!(n−m)!} $算出从n个不同元素中取出m个元素（m≤n）的组合数。</p>
 <p>建议定义和调用函数<code>fact(n)</code>计算<code>n!</code>，其中<code>n</code>的类型是<code>int</code>，函数类型是<code>double</code>。</p>
 <h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出两个正整数m和n（m≤n），以空格分隔。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照格式“result = 组合数计算结果”输出。题目保证结果在<code>double</code>类型范围内。</p>
