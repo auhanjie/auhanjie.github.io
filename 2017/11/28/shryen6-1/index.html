@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="实验6-1 近似求PI（15 分）本题要求编写程序，根据下式求π的近似值，直到最后一项小于给定精度eps。 π/2 =1+1!/3 +2!/3×5 + 3!/3×5×7 +⋯+i!/3×5×⋯×(2×i+1) +⋯ 输入格式：输入在一行中给出精度eps，可以使用以下语句来读输入： 1scanf(&amp;quot;%le&amp;quot;, &amp;amp;eps); 输出格式：在一行内，按照以下格式输出π的近似值（">
+    <meta name="description" content="实验6-1 近似求PI（15 分）本题要求编写程序，根据下式求π的近似值，直到最后一项小于给定精度eps。 $\frac{π}{2} =1+\frac{1!}{3} +\frac{2!}{3\times5} + \frac{3!}{3\times5\times7} +⋯+\frac{i!}{3\times5×⋯×(2\times i+1)} \times⋯$ 输入格式：输入在一行中给出精度eps，">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验6-1 近似求PI（15 分）">
 <meta property="og:url" content="http://auhanjie.github.io/2017/11/28/shryen6-1/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验6-1 近似求PI（15 分）本题要求编写程序，根据下式求π的近似值，直到最后一项小于给定精度eps。 π/2 =1+1!/3 +2!/3×5 + 3!/3×5×7 +⋯+i!/3×5×⋯×(2×i+1) +⋯ 输入格式：输入在一行中给出精度eps，可以使用以下语句来读输入： 1scanf(&amp;quot;%le&amp;quot;, &amp;amp;eps); 输出格式：在一行内，按照以下格式输出π的近似值（">
+<meta property="og:description" content="实验6-1 近似求PI（15 分）本题要求编写程序，根据下式求π的近似值，直到最后一项小于给定精度eps。 $\frac{π}{2} =1+\frac{1!}{3} +\frac{2!}{3\times5} + \frac{3!}{3\times5\times7} +⋯+\frac{i!}{3\times5×⋯×(2\times i+1)} \times⋯$ 输入格式：输入在一行中给出精度eps，">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2018-03-27T10:03:52.917Z">
+<meta property="og:updated_time" content="2019-06-04T00:44:12.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验6-1 近似求PI（15 分）">
-<meta name="twitter:description" content="实验6-1 近似求PI（15 分）本题要求编写程序，根据下式求π的近似值，直到最后一项小于给定精度eps。 π/2 =1+1!/3 +2!/3×5 + 3!/3×5×7 +⋯+i!/3×5×⋯×(2×i+1) +⋯ 输入格式：输入在一行中给出精度eps，可以使用以下语句来读输入： 1scanf(&amp;quot;%le&amp;quot;, &amp;amp;eps); 输出格式：在一行内，按照以下格式输出π的近似值（">
+<meta name="twitter:description" content="实验6-1 近似求PI（15 分）本题要求编写程序，根据下式求π的近似值，直到最后一项小于给定精度eps。 $\frac{π}{2} =1+\frac{1!}{3} +\frac{2!}{3\times5} + \frac{3!}{3\times5\times7} +⋯+\frac{i!}{3\times5×⋯×(2\times i+1)} \times⋯$ 输入格式：输入在一行中给出精度eps，">
 <meta name="twitter:image" content="http://auhanjie.github.io/images/og_image.png">
 
 
@@ -162,7 +162,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 178 個字)
+                    1 分鐘 閱讀文 (大約 189 個字)
                 </span>
                 
                 
@@ -176,7 +176,7 @@
         </h1>
         <div class="content">
             <h4 id="实验6-1-近似求PI（15-分）"><a href="#实验6-1-近似求PI（15-分）" class="headerlink" title="实验6-1 近似求PI（15 分）"></a>实验6-1 近似求PI（15 分）</h4><p>本题要求编写程序，根据下式求π的近似值，直到最后一项小于给定精度eps。</p>
-<p>π/2 =1+1!/3 +2!/3×5 + 3!/3×5×7 +⋯+i!/3×5×⋯×(2×i+1) +⋯</p>
+<p>$\frac{π}{2} =1+\frac{1!}{3} +\frac{2!}{3\times5} + \frac{3!}{3\times5\times7} +⋯+\frac{i!}{3\times5×⋯×(2\times i+1)} \times⋯$</p>
 <h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出精度eps，可以使用以下语句来读输入：</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scanf(&quot;%le&quot;, &amp;eps);</span><br></pre></td></tr></table></figure>
 <h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行内，按照以下格式输出π的近似值（保留小数点后5位）：</p>
@@ -214,7 +214,7 @@
         <i class="fab fa-alipay"></i>
     </span>
     <span>支付寶</span>
-    <div class="qrcode"><img src="/." alt="支付寶"></div>
+    <div class="qrcode"><img src="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/home-bg4.jpg" alt="支付寶"></div>
 </a>
 
                 
@@ -224,7 +224,7 @@
         <i class="fab fa-weixin"></i>
     </span>
     <span>WeChat</span>
-    <div class="qrcode"><img src="/." alt="WeChat"></div>
+    <div class="qrcode"><img src="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/home-bg1.jpg" alt="WeChat"></div>
 </a>
 
                 
@@ -238,13 +238,13 @@
 </a>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-donate-form">
     <input type="hidden" name="cmd" value="_donations" />
-    <input type="hidden" name="business" value="/" />
+    <input type="hidden" name="business" value="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/home-bg3.jpg" />
     <input type="hidden" name="currency_code" value="USD" />
 </form>
 
                 
                 
-<a class="button is-danger donate" href="/" target="_blank">
+<a class="button is-danger donate" href="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/home-bg2.jpg" target="_blank">
     <span class="icon is-small">
         <i class="fab fa-patreon"></i>
     </span>

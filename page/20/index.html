@@ -331,7 +331,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 221 個字)
+                    1 分鐘 閱讀文 (大約 200 個字)
                 </span>
                 
                 
@@ -344,8 +344,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="实验10-8-递归计算P函数（15-分）"><a href="#实验10-8-递归计算P函数（15-分）" class="headerlink" title="实验10-8 递归计算P函数（15 分）"></a>实验10-8 递归计算P函数（15 分）</h4><p>本题要求实现下列函数P(n,x)的计算，其函数定义如下：</p>
-<p><img src="https://images.ptausercontent.com/50" alt="img"></p>
+            <h4 id="实验10-8-递归计算P函数（15-分）"><a href="#实验10-8-递归计算P函数（15-分）" class="headerlink" title="实验10-8 递归计算P函数（15 分）"></a>实验10-8 递归计算P函数（15 分）</h4><p><img src="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/20190604121922.png" alt=""></p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double P( int n, double x );</span><br></pre></td></tr></table></figure>
 <p>其中<code>n</code>是用户传入的非负整数，<code>x</code>是双精度浮点数。函数<code>P</code>返回P(n,x)函数的相应值。题目保证输入输出都在双精度范围内。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">P</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">double</span> x )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line">    <span class="hljs-keyword">double</span> x;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %lf"</span>, &amp;n, &amp;x);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.2f\n"</span>, P(n,x));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -403,7 +402,7 @@
         </h1>
         <div class="content">
             <h4 id="实验10-7-递归求Fabonacci数列（10-分）"><a href="#实验10-7-递归求Fabonacci数列（10-分）" class="headerlink" title="实验10-7 递归求Fabonacci数列（10 分）"></a>实验10-7 递归求Fabonacci数列（10 分）</h4><p>本题要求实现求Fabonacci数列项的函数。Fabonacci数列的定义如下：</p>
-<p>f(n)=f(n−2)+f(n−1) (n≥2)，其中f(0)=0，f(1)=1。</p>
+<p>$f(n)=f(n−2)+f(n−1) (n≥2)$，其中f(0)=0，f(1)=1。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int f( int n );</span><br></pre></td></tr></table></figure>
 <p>函数<code>f</code>应返回第<code>n</code>个Fabonacci数。题目保证输入输出在长整型范围内。建议用递归实现。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">f</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, f(n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -416,6 +415,65 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2018/01/10/shryen10-7/#more">繼續閱讀</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-01-10T10:46:00.000Z">2018-01-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分鐘 閱讀文 (大約 208 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/01/10/shryen10-6/">实验10-6 递归计算Ackermenn函数（15 分）</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="实验10-6-递归计算Ackermenn函数（15-分）"><a href="#实验10-6-递归计算Ackermenn函数（15-分）" class="headerlink" title="实验10-6 递归计算Ackermenn函数（15 分）"></a>实验10-6 递归计算Ackermenn函数（15 分）</h4><p>本题要求实现Ackermenn函数的计算，其函数定义如下：</p>
+<p><img src="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/20190604121303.png" alt=""></p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int Ack( int m, int n );</span><br></pre></td></tr></table></figure>
+<p>其中<code>m</code>和<code>n</code>是用户传入的非负整数。函数<code>Ack</code>返回Ackermenn函数的相应值。题目保证输入输出都在长整型</p>
+<p>范围内。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Ack</span><span class="hljs-params">( <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> m, n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, Ack(m, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2018/01/10/shryen10-6/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -461,7 +519,7 @@
         </h1>
         <div class="content">
             <h4 id="实验10-5-递归求简单交错幂级数的部分和（15-分）"><a href="#实验10-5-递归求简单交错幂级数的部分和（15-分）" class="headerlink" title="实验10-5 递归求简单交错幂级数的部分和（15 分）"></a>实验10-5 递归求简单交错幂级数的部分和（15 分）</h4><p>本题要求实现一个函数，计算下列简单交错幂级数的部分和：</p>
-<p>f(x,n)=x−x^2+x^3−x^4+⋯+(−1)^(n−1)*x^n</p>
+<p>$f(x,n)=x−x^2+x^3−x^4+⋯+(−1)^{n−1}*x^n$</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double fn( double x, int n );</span><br></pre></td></tr></table></figure>
 <p>其中题目保证传入的<code>n</code>是正整数，并且输入输出都在双精度范围内。函数<code>fn</code>应返回上述级数的部分和。建议尝试用递归实现。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fn</span><span class="hljs-params">( <span class="hljs-keyword">double</span> x, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> x;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.2f\n"</span>, fn(x,n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -474,65 +532,6 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2018/01/10/shryen10-5/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-10T10:45:00.000Z">2018-01-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分鐘 閱讀文 (大約 204 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/01/10/shryen10-6/">实验10-5 递归求简单交错幂级数的部分和（15 分）</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="实验10-6-递归计算Ackermenn函数（15-分）"><a href="#实验10-6-递归计算Ackermenn函数（15-分）" class="headerlink" title="实验10-6 递归计算Ackermenn函数（15 分）"></a>实验10-6 递归计算Ackermenn函数（15 分）</h4><p>本题要求实现Ackermenn函数的计算，其函数定义如下：</p>
-<p><img src="https://images.ptausercontent.com/48" alt="img"></p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int Ack( int m, int n );</span><br></pre></td></tr></table></figure>
-<p>其中<code>m</code>和<code>n</code>是用户传入的非负整数。函数<code>Ack</code>返回Ackermenn函数的相应值。题目保证输入输出都在长整型</p>
-<p>范围内。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Ack</span><span class="hljs-params">( <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> m, n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, Ack(m, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 3</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/10/shryen10-6/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
