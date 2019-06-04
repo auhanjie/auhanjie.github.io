@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n（0&amp;lt;m≤n≤10000）之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。 函数接口定义：12int fib( int n );void PrintFN( in">
+    <meta name="description" content="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n$（0\lt m \le n \le10000）$之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。 函数接口定义：12int fib( int n );void Pr">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）">
 <meta property="og:url" content="http://auhanjie.github.io/2018/01/24/siti6-4/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n（0&amp;lt;m≤n≤10000）之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。 函数接口定义：12int fib( int n );void PrintFN( in">
+<meta property="og:description" content="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n$（0\lt m \le n \le10000）$之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。 函数接口定义：12int fib( int n );void Pr">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2018-03-30T07:08:54.696Z">
+<meta property="og:updated_time" content="2019-06-04T11:45:06.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）">
-<meta name="twitter:description" content="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n（0&amp;lt;m≤n≤10000）之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。 函数接口定义：12int fib( int n );void PrintFN( in">
+<meta name="twitter:description" content="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n$（0\lt m \le n \le10000）$之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。 函数接口定义：12int fib( int n );void Pr">
 <meta name="twitter:image" content="http://auhanjie.github.io/images/og_image.png">
 
 
@@ -162,7 +162,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 216 個字)
+                    2 分鐘 閱讀文 (大約 374 個字)
                 </span>
                 
                 
@@ -175,7 +175,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="习题6-4-使用函数输出指定范围内的Fibonacci数（20-分）"><a href="#习题6-4-使用函数输出指定范围内的Fibonacci数（20-分）" class="headerlink" title="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）"></a>习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）</h4><p>本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n（0&lt;m≤n≤10000）之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。</p>
+            <h4 id="习题6-4-使用函数输出指定范围内的Fibonacci数（20-分）"><a href="#习题6-4-使用函数输出指定范围内的Fibonacci数（20-分）" class="headerlink" title="习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）"></a>习题6-4 使用函数输出指定范围内的Fibonacci数（20 分）</h4><p>本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n$（0\lt m \le n \le10000）$之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int fib( int n );</span><br><span class="line">void PrintFN( int m, int n );</span><br></pre></td></tr></table></figure>
 <p>其中函数<code>fib</code>须返回第<code>n</code>项Fibonacci数；函数<code>PrintFN</code>要在一行中输出给定范围[<code>m</code>, <code>n</code>]内的所有Fibonacci数，相邻数字间有一个空格，行末不得有多余空格。如果给定区间内没有Fibonacci数，则输出一行“No Fibonacci number”。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">fib</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PrintFN</span><span class="hljs-params">( <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line">	</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> m, n, t;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d %d"</span>, &amp;m, &amp;n, &amp;t);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"fib(%d) = %d\n"</span>, t, fib(t));</span><br><span class="line">    PrintFN(m, n);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>

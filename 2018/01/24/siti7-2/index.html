@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="习题7-2 求一批整数中出现最多的个位数字（20 分）给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。 输入格式：输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。 输出格式：在一行中按格式“M: n1 n2 …”输出，其中M是最大次数">
+    <meta name="description" content="习题7-2 求一批整数中出现最多的个位数字（20 分）给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。 输入格式：输入在第1行中给出正整数N$（\le 1000）$，在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。 输出格式：在一行中按格式“M: n1 n2 …”输出，其中M">
 <meta name="keywords" content="浙大版《C语言程序设计（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="习题7-2 求一批整数中出现最多的个位数字（20 分）">
 <meta property="og:url" content="http://auhanjie.github.io/2018/01/24/siti7-2/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="习题7-2 求一批整数中出现最多的个位数字（20 分）给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。 输入格式：输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。 输出格式：在一行中按格式“M: n1 n2 …”输出，其中M是最大次数">
+<meta property="og:description" content="习题7-2 求一批整数中出现最多的个位数字（20 分）给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。 输入格式：输入在第1行中给出正整数N$（\le 1000）$，在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。 输出格式：在一行中按格式“M: n1 n2 …”输出，其中M">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2018-04-03T02:43:14.879Z">
+<meta property="og:updated_time" content="2019-06-04T11:46:00.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="习题7-2 求一批整数中出现最多的个位数字（20 分）">
-<meta name="twitter:description" content="习题7-2 求一批整数中出现最多的个位数字（20 分）给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。 输入格式：输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。 输出格式：在一行中按格式“M: n1 n2 …”输出，其中M是最大次数">
+<meta name="twitter:description" content="习题7-2 求一批整数中出现最多的个位数字（20 分）给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。 输入格式：输入在第1行中给出正整数N$（\le 1000）$，在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。 输出格式：在一行中按格式“M: n1 n2 …”输出，其中M">
 <meta name="twitter:image" content="http://auhanjie.github.io/images/og_image.png">
 
 
@@ -176,7 +176,7 @@
         </h1>
         <div class="content">
             <h4 id="习题7-2-求一批整数中出现最多的个位数字（20-分）"><a href="#习题7-2-求一批整数中出现最多的个位数字（20-分）" class="headerlink" title="习题7-2 求一批整数中出现最多的个位数字（20 分）"></a>习题7-2 求一批整数中出现最多的个位数字（20 分）</h4><p>给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第1行中给出正整数N$（\le 1000）$，在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。</p>
 <h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中按格式“M: n1 n2 …”输出，其中M是最大次数，n1、n2、……为出现次数最多的个位数字，按从小到大的顺序排列。数字间以空格分隔，但末尾不得有多余空格。</p>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1234 2345 3456</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3: 3 4</span><br></pre></td></tr></table></figure>
@@ -260,16 +260,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/01/24/siti7-1/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/01/24/siti7-3/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">习题7-1 选择法排序（20 分）</span>
+                <span class="level-item">习题7-3 判断上三角矩阵（15 分）</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/01/24/liensi7-11/">
-                <span class="level-item">练习7-11 字符串逆序（15 分）</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/01/24/siti7-1/">
+                <span class="level-item">习题7-1 选择法排序（20 分）</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>

@@ -174,9 +174,9 @@
             
         </h1>
         <div class="content">
-            <h4 id="习题5-3-使用函数计算两点间的距离（10-分）"><a href="#习题5-3-使用函数计算两点间的距离（10-分）" class="headerlink" title="习题5-3 使用函数计算两点间的距离（10 分）"></a>习题5-3 使用函数计算两点间的距离（10 分）</h4><p>本题要求实现一个函数，对给定平面任意两点坐标(x1,y1)和(x2,y2)，求这两点之间的距离。</p>
+            <h4 id="习题5-3-使用函数计算两点间的距离（10-分）"><a href="#习题5-3-使用函数计算两点间的距离（10-分）" class="headerlink" title="习题5-3 使用函数计算两点间的距离（10 分）"></a>习题5-3 使用函数计算两点间的距离（10 分）</h4><p>本题要求实现一个函数，对给定平面任意两点坐标$(x_1,y_1)$和$(x_2,y_2)$，求这两点之间的距离。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double dist( double x1, double y1, double x2, double y2 );</span><br></pre></td></tr></table></figure>
-<p>其中用户传入的参数为平面上两个点的坐标(<code>x1</code>, <code>y1</code>)和(<code>x2</code>, <code>y2</code>)，函数<code>dist</code>应返回两点间的距离。</p>
+<p>其中用户传入的参数为平面上两个点的坐标$(x_1, y_1)$和$(x_2, y_2)$，函数<code>dist</code>应返回两点间的距离。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">dist</span><span class="hljs-params">( <span class="hljs-keyword">double</span> x1, <span class="hljs-keyword">double</span> y1, <span class="hljs-keyword">double</span> x2, <span class="hljs-keyword">double</span> y2 )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;    </span><br><span class="line">    <span class="hljs-keyword">double</span> x1, y1, x2, y2;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf %lf %lf %lf"</span>, &amp;x1, &amp;y1, &amp;x2, &amp;y2);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"dist = %.2f\n"</span>, dist(x1, y1, x2, y2));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 10 200 100</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dist = 210.24</span><br></pre></td></tr></table></figure>
@@ -447,7 +447,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 116 個字)
+                    1 分鐘 閱讀文 (大約 164 個字)
                 </span>
                 
                 
@@ -460,7 +460,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="练习5-1-求m到n之和（10-分）"><a href="#练习5-1-求m到n之和（10-分）" class="headerlink" title="练习5-1 求m到n之和（10 分）"></a>练习5-1 求m到n之和（10 分）</h4><p>本题要求实现一个计算m~n（m&lt;n）之间所有整数的和的简单函数。</p>
+            <h4 id="练习5-1-求m到n之和（10-分）"><a href="#练习5-1-求m到n之和（10-分）" class="headerlink" title="练习5-1 求m到n之和（10 分）"></a>练习5-1 求m到n之和（10 分）</h4><p>本题要求实现一个计算m~n$（m \lt n）$之间所有整数的和的简单函数。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int sum( int m, int n );</span><br></pre></td></tr></table></figure>
 <p>其中<code>m</code>和<code>n</code>是用户传入的参数，保证有m&lt;n。函数返回的是m~n之间所有整数的和。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;    </span><br><span class="line">    <span class="hljs-keyword">int</span> m, n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sum = %d\n"</span>, sum(m, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -560,7 +560,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 185 個字)
+                    1 分鐘 閱讀文 (大約 221 個字)
                 </span>
                 
                 
@@ -574,7 +574,7 @@
         </h1>
         <div class="content">
             <h4 id="习题4-10-猴子吃桃问题（15-分）"><a href="#习题4-10-猴子吃桃问题（15-分）" class="headerlink" title="习题4-10 猴子吃桃问题（15 分）"></a>习题4-10 猴子吃桃问题（15 分）</h4><p>一只猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个；第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半加一个。到第N天早上想再吃时，见只剩下一个桃子了。问：第一天共摘了多少个桃子？</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出正整数N（1&lt;N≤10）。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出正整数N$（1\lt N \le 10）$。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出第一天共摘了多少个桃子。</p>
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
