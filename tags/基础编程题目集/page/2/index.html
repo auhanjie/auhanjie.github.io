@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang="zh">
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>標籤: 基础编程题目集 - auhanjie&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -86,10 +86,10 @@
     
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body class="is-3-column">
-    <nav class="navbar navbar-main">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
@@ -185,7 +185,7 @@
         </h1>
         <div class="content">
             <h4 id="7-28-猴子选大王（20-分）"><a href="#7-28-猴子选大王（20-分）" class="headerlink" title="7-28 猴子选大王（20 分）"></a>7-28 猴子选大王（20 分）</h4><p>一群猴子要选新猴王。新猴王的选择方法是：让N只候选猴子围成一圈，从某位置起顺序编号为1~N号。从第1号开始报数，每轮从1报到3，凡报到3的猴子即退出圈子，接着又从紧邻的下一只猴子开始同样的报数。如此不断循环，最后剩下的一只猴子就选为猴王。请问是原来第几号猴子当选猴王？</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给一个正整数N（≤1000）。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给一个正整数$N（\leq 1000）$。</p>
 <h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出当选猴王的编号。</p>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure>
@@ -227,7 +227,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 258 個字)
+                    3 分鐘 閱讀文 (大約 390 個字)
                 </span>
                 
                 
@@ -240,9 +240,9 @@
             
         </h1>
         <div class="content">
-            <h4 id="7-27-冒泡法排序（20-分）"><a href="#7-27-冒泡法排序（20-分）" class="headerlink" title="7-27 冒泡法排序（20 分）"></a>7-27 冒泡法排序（20 分）</h4><p>将N个整数按从小到大排序的冒泡排序法是这样工作的：从头到尾比较相邻两个元素，如果前面的元素大于其紧随的后面元素，则交换它们。通过一遍扫描，则最后一个元素必定是最大的元素。然后用同样的方法对前N−1个元素进行第二遍扫描。依此类推，最后只需处理两个元素，就完成了对N个数的排序。</p>
-<p>本题要求对任意给定的K（&lt;N），输出扫描完第K遍后的中间结果数列。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第1行中给出N和K（1≤K&lt;N≤100），在第2行中给出N个待排序的整数，数字间以空格分隔。</p>
+            <h4 id="7-27-冒泡法排序（20-分）"><a href="#7-27-冒泡法排序（20-分）" class="headerlink" title="7-27 冒泡法排序（20 分）"></a>7-27 冒泡法排序（20 分）</h4><p>将N个整数按从小到大排序的冒泡排序法是这样工作的：从头到尾比较相邻两个元素，如果前面的元素大于其紧随的后面元素，则交换它们。通过一遍扫描，则最后一个元素必定是最大的元素。然后用同样的方法对前$N−1$个元素进行第二遍扫描。依此类推，最后只需处理两个元素，就完成了对N个数的排序。</p>
+<p>本题要求对任意给定的$K（\lt N）$，输出扫描完第K遍后的中间结果数列。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第1行中给出$N\text{和}K（1\leq K\lt N\leq 100）$，在第2行中给出N个待排序的整数，数字间以空格分隔。</p>
 <h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出冒泡排序法扫描完第K遍后的中间结果数列，数字间以空格分隔，但末尾不得有多余空格。</p>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 2</span><br><span class="line">2 3 5 1 6 4</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 1 3 4 5 6</span><br></pre></td></tr></table></figure>
@@ -583,9 +583,9 @@
             
         </h1>
         <div class="content">
-            <h4 id="7-21-求特殊方程的正整数解（15-分）"><a href="#7-21-求特殊方程的正整数解（15-分）" class="headerlink" title="7-21 求特殊方程的正整数解（15 分）"></a>7-21 求特殊方程的正整数解（15 分）</h4><p>本题要求对任意给定的正整数N，求方程X2+Y2=N的全部正整数解。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出正整数N（≤10000）。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出方程X2+Y2=N的全部正整数解，其中X≤Y。每组解占1行，两数字间以1空格分隔，按X的递增顺序输出。如果没有解，则输出<code>No Solution</code>。</p>
+            <h4 id="7-21-求特殊方程的正整数解（15-分）"><a href="#7-21-求特殊方程的正整数解（15-分）" class="headerlink" title="7-21 求特殊方程的正整数解（15 分）"></a>7-21 求特殊方程的正整数解（15 分）</h4><p>本题要求对任意给定的正整数$N$，求方程$X^2+Y^2=N$的全部正整数解。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出正整数$N（\leq 10000）$。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出方程$X^2+Y^2=N$的全部正整数解，其中$X\leq Y$。每组解占1行，两数字间以1空格分隔，按$X$的递增顺序输出。如果没有解，则输出<code>No Solution</code>。</p>
 <h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">884</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 28</span><br><span class="line">20 22</span><br></pre></td></tr></table></figure>
 <h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11</span><br></pre></td></tr></table></figure>
@@ -796,7 +796,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        375
+                        376
                     </p>
                 </div>
             </div>
@@ -1036,7 +1036,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1098,7 +1098,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 12px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
     </div>
 </div>
 
@@ -1248,7 +1248,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1528,7 +1528,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1725,7 +1725,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -2005,7 +2005,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -2233,7 +2233,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 </html>

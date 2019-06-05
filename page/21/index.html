@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang="zh">
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>auhanjie&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -86,10 +86,10 @@
     
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body class="is-3-column">
-    <nav class="navbar navbar-main">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
@@ -145,6 +145,63 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-01-10T10:30:00.000Z">2018-01-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分鐘 閱讀文 (大約 241 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/01/10/shryen10-2/">实验10-2 判断满足条件的三位数（15 分）</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="实验10-2-判断满足条件的三位数（15-分）"><a href="#实验10-2-判断满足条件的三位数（15-分）" class="headerlink" title="实验10-2 判断满足条件的三位数（15 分）"></a>实验10-2 判断满足条件的三位数（15 分）</h4><p>本题要求实现一个函数，统计给定区间内的三位数中有两位数字相同的完全平方数（如144、676）的个数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int search( int n );</span><br></pre></td></tr></table></figure>
+<p>其中传入的参数<code>int n</code>是一个三位数的正整数（最高位数字非0）。函数<code>search</code>返回[101, <code>n</code>]区间内所有满足条件的数的个数。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">search</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> number;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>,&amp;number);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"count=%d\n"</span>,search(number));</span><br><span class="line">		</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">500</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">count=6</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2018/01/10/shryen10-2/#more">繼續閱讀</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
     <div class="card">
     
     <div class="card-content article ">
@@ -230,7 +287,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 193 個字)
+                    1 分鐘 閱讀文 (大約 196 個字)
                 </span>
                 
                 
@@ -244,7 +301,7 @@
         </h1>
         <div class="content">
             <h4 id="实验9-10-平面向量加法（15-分）"><a href="#实验9-10-平面向量加法（15-分）" class="headerlink" title="实验9-10 平面向量加法（15 分）"></a>实验9-10 平面向量加法（15 分）</h4><p>本题要求编写程序，计算两个二维平面向量的和向量。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中按照“$x_1 y_1 x_2 y_2$”的格式给出两个二维平面向量$v_1=(x_1, y_1)$和$v_2=(x_2, y_2)$的分量。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中按照“$x_1\quad y_1 \quad x_2\quad y_2$”的格式给出两个二维平面向量$v_1=(x_1, y_1)$和$v_2=(x_2, y_2)$的分量。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照$(x, y)$的格式输出和向量，坐标输出小数点后一位（注意不能输出−0.0）。</p>
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.5 -2.7 -13.9 8.7</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(-10.4, 6.0)</span><br></pre></td></tr></table></figure>
@@ -414,7 +471,7 @@
         </h1>
         <div class="content">
             <h4 id="实验9-7-找出总分最高的学生（15-分）"><a href="#实验9-7-找出总分最高的学生（15-分）" class="headerlink" title="实验9-7 找出总分最高的学生（15 分）"></a>实验9-7 找出总分最高的学生（15 分）</h4><p>给定$N$个学生的基本信息，包括学号（由5个数字组成的字符串）、姓名（长度小于10的不包含空白字符的非空字符串）和3门课程的成绩（[0,100]区间内的整数），要求输出总分最高学生的姓名、学号和总分。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出正整数$N$（≤10）。随后N行，每行给出一位学生的信息，格式为“学号 姓名 成绩1 成绩2 成绩3”，中间以空格分隔。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出正整数$N（\le10）$。随后N行，每行给出一位学生的信息，格式为“学号 姓名 成绩1 成绩2 成绩3”，中间以空格分隔。</p>
 <h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出总分最高学生的姓名、学号和总分，间隔一个空格。题目保证这样的学生是唯一的。</p>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">00001 huanglan 78 83 75</span><br><span class="line">00002 wanghai 76 80 77</span><br><span class="line">00003 shenqiang 87 83 76</span><br><span class="line">10001 zhangfeng 92 88 78</span><br><span class="line">21987 zhangmeng 80 82 75</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zhangfeng 10001 258</span><br></pre></td></tr></table></figure>
@@ -515,7 +572,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 250 個字)
+                    2 分鐘 閱讀文 (大約 251 個字)
                 </span>
                 
                 
@@ -528,8 +585,8 @@
             
         </h1>
         <div class="content">
-            <h4 id="实验9-5-查找书籍（20-分）"><a href="#实验9-5-查找书籍（20-分）" class="headerlink" title="实验9-5 查找书籍（20 分）"></a>实验9-5 查找书籍（20 分）</h4><p>给定n本书的名称和定价，本题要求编写程序，查找并输出其中定价最高和最低的书的名称和定价。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数n（&lt;10），随后给出n本书的信息。每本书在一行中给出书名，即长度不超过30的字符串，随后一行中给出正实数价格。题目保证没有同样价格的书。</p>
+            <h4 id="实验9-5-查找书籍（20-分）"><a href="#实验9-5-查找书籍（20-分）" class="headerlink" title="实验9-5 查找书籍（20 分）"></a>实验9-5 查找书籍（20 分）</h4><p>给定$n$本书的名称和定价，本题要求编写程序，查找并输出其中定价最高和最低的书的名称和定价。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数$n（\lt 10）$，随后给出n本书的信息。每本书在一行中给出书名，即长度不超过30的字符串，随后一行中给出正实数价格。题目保证没有同样价格的书。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照“价格, 书名”的格式先后输出价格最高和最低的书。价格保留2位小数。</p>
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">Programming in C</span><br><span class="line">21.5</span><br><span class="line">Programming in VB</span><br><span class="line">18.5</span><br><span class="line">Programming in Delphi</span><br><span class="line">25.0</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">25.00, Programming in Delphi</span><br><span class="line">18.50, Programming in VB</span><br></pre></td></tr></table></figure>
@@ -643,7 +700,7 @@
         </h1>
         <div class="content">
             <h4 id="实验9-3-计算平均成绩（15-分）"><a href="#实验9-3-计算平均成绩（15-分）" class="headerlink" title="实验9-3 计算平均成绩（15 分）"></a>实验9-3 计算平均成绩（15 分）</h4><p>给定$N$个学生的基本信息，包括学号（由5个数字组成的字符串）、姓名（长度小于10的不包含空白字符的非空字符串）和成绩（[0,100]区间内的整数），要求计算他们的平均成绩，并顺序输出平均线以下的学生名单。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出正整数$N$（≤10）。随后$N$行，每行给出一位学生的信息，格式为“学号 姓名 成绩”，中间以空格分隔。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出正整数$N（\leq 10）$。随后$N$行，每行给出一位学生的信息，格式为“学号 姓名 成绩”，中间以空格分隔。</p>
 <h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>首先在一行中输出平均成绩，保留2位小数。然后按照输入顺序，每行输出一位平均线以下的学生的姓名和学号，间隔一个空格。</p>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">00001 zhang 70</span><br><span class="line">00002 wang 80</span><br><span class="line">00003 qian 90</span><br><span class="line">10001 li 100</span><br><span class="line">21987 chen 60</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">80.00</span><br><span class="line">zhang 00001</span><br><span class="line">chen 21987</span><br></pre></td></tr></table></figure>
@@ -654,62 +711,6 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2018/01/04/shryen9-3/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-04T09:50:00.000Z">2018-01-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分鐘 閱讀文 (大約 238 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/01/04/shryen9-2/">实验9-2 时间换算（15 分）</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="实验9-2-时间换算（15-分）"><a href="#实验9-2-时间换算（15-分）" class="headerlink" title="实验9-2 时间换算（15 分）"></a>实验9-2 时间换算（15 分）</h4><p>本题要求编写程序，以<code>hh:mm:ss</code>的格式输出某给定时间再过<code>n</code>秒后的时间值（超过23:59:59就从0点开始计时）。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行中以<code>hh:mm:ss</code>的格式给出起始时间，第二行给出整秒数<code>n</code>（&lt;60）。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出在一行中给出<code>hh:mm:ss</code>格式的结果时间。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">11:59:40</span><br><span class="line">30</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12:00:10</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/04/shryen9-2/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -797,7 +798,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        375
+                        376
                     </p>
                 </div>
             </div>
@@ -1037,7 +1038,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1099,7 +1100,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 12px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
     </div>
 </div>
 
@@ -1249,7 +1250,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1529,7 +1530,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1726,7 +1727,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -2006,7 +2007,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -2234,7 +2235,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 </html>

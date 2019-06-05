@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html  lang="zh">
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>实验7-2-7 方阵循环右移（20 分） - auhanjie&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="实验7-2-7 方阵循环右移（20 分）本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第0、1、⋯、n−1列变换为第n−m、n−m+1、⋯、n−1、0、1、⋯、n−m−1列。 输入格式：输入第一行给出两个正整数m和n（1≤n≤6）。接下来一共n行，每行n个整数，表示一个n阶的方阵。 输出格式：按照输入格式输出移动后的方阵：即输出n行，每行n个整数，每个整数后输出一个空格。">
+    <meta name="description" content="实验7-2-7 方阵循环右移（20 分）本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第$0、1、⋯、n−1$列变换为第n−m、$n−m+1、⋯、n−1、0、1、⋯、n−m−1$列。 输入格式：输入第一行给出两个正整数$m和$n（1≤n≤6）$。接下来一共$n$行，每行$n$个整数，表示一个n阶的方阵。 输出格式：按照输入格式输出移动后的方阵：即输出n行，每行$n$个整数，">
 <meta name="keywords" content="浙大版《C语言程序设计实验与习题指导（第3版）》题目集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实验7-2-7 方阵循环右移（20 分）">
 <meta property="og:url" content="http://auhanjie.github.io/2017/12/20/shryen7-2-7/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="实验7-2-7 方阵循环右移（20 分）本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第0、1、⋯、n−1列变换为第n−m、n−m+1、⋯、n−1、0、1、⋯、n−m−1列。 输入格式：输入第一行给出两个正整数m和n（1≤n≤6）。接下来一共n行，每行n个整数，表示一个n阶的方阵。 输出格式：按照输入格式输出移动后的方阵：即输出n行，每行n个整数，每个整数后输出一个空格。">
+<meta property="og:description" content="实验7-2-7 方阵循环右移（20 分）本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第$0、1、⋯、n−1$列变换为第n−m、$n−m+1、⋯、n−1、0、1、⋯、n−m−1$列。 输入格式：输入第一行给出两个正整数$m和$n（1≤n≤6）$。接下来一共$n$行，每行$n$个整数，表示一个n阶的方阵。 输出格式：按照输入格式输出移动后的方阵：即输出n行，每行$n$个整数，">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2018-03-27T10:08:54.997Z">
+<meta property="og:updated_time" content="2019-06-05T02:29:06.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实验7-2-7 方阵循环右移（20 分）">
-<meta name="twitter:description" content="实验7-2-7 方阵循环右移（20 分）本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第0、1、⋯、n−1列变换为第n−m、n−m+1、⋯、n−1、0、1、⋯、n−m−1列。 输入格式：输入第一行给出两个正整数m和n（1≤n≤6）。接下来一共n行，每行n个整数，表示一个n阶的方阵。 输出格式：按照输入格式输出移动后的方阵：即输出n行，每行n个整数，每个整数后输出一个空格。">
+<meta name="twitter:description" content="实验7-2-7 方阵循环右移（20 分）本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第$0、1、⋯、n−1$列变换为第n−m、$n−m+1、⋯、n−1、0、1、⋯、n−m−1$列。 输入格式：输入第一行给出两个正整数$m和$n（1≤n≤6）$。接下来一共$n$行，每行$n$个整数，表示一个n阶的方阵。 输出格式：按照输入格式输出移动后的方阵：即输出n行，每行$n$个整数，">
 <meta name="twitter:image" content="http://auhanjie.github.io/images/og_image.png">
 
 
@@ -88,10 +88,10 @@
     
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body class="is-3-column">
-    <nav class="navbar navbar-main">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
@@ -175,9 +175,9 @@
             
         </h1>
         <div class="content">
-            <h4 id="实验7-2-7-方阵循环右移（20-分）"><a href="#实验7-2-7-方阵循环右移（20-分）" class="headerlink" title="实验7-2-7 方阵循环右移（20 分）"></a>实验7-2-7 方阵循环右移（20 分）</h4><p>本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第0、1、⋯、n−1列变换为第n−m、n−m+1、⋯、n−1、0、1、⋯、n−m−1列。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出两个正整数m和n（1≤n≤6）。接下来一共n行，每行n个整数，表示一个n阶的方阵。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照输入格式输出移动后的方阵：即输出n行，每行n个整数，每个整数后输出一个空格。</p>
+            <h4 id="实验7-2-7-方阵循环右移（20-分）"><a href="#实验7-2-7-方阵循环右移（20-分）" class="headerlink" title="实验7-2-7 方阵循环右移（20 分）"></a>实验7-2-7 方阵循环右移（20 分）</h4><p>本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第$0、1、⋯、n−1$列变换为第n−m、$n−m+1、⋯、n−1、0、1、⋯、n−m−1$列。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出两个正整数$m和$n（1≤n≤6）$。接下来一共$n$行，每行$n$个整数，表示一个n阶的方阵。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照输入格式输出移动后的方阵：即输出n行，每行$n$个整数，每个整数后输出一个空格。</p>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2 3</span><br><span class="line">1 2 3</span><br><span class="line">4 5 6</span><br><span class="line">7 8 9</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2 3 1 </span><br><span class="line">5 6 4 </span><br><span class="line">8 9 7</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -268,7 +268,7 @@
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2017/12/20/shryen7-2-6/">
-                <span class="level-item">实验7-2-5 打印杨辉三角（20 分）</span>
+                <span class="level-item">实验7-2-6 打印杨辉三角（20 分）</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -320,7 +320,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        375
+                        376
                     </p>
                 </div>
             </div>
@@ -560,7 +560,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -622,7 +622,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 12px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
     </div>
 </div>
 
@@ -772,7 +772,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1052,7 +1052,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1249,7 +1249,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1529,7 +1529,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1757,7 +1757,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 </html>

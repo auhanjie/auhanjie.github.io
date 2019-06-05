@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang="zh">
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>auhanjie&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -86,10 +86,10 @@
     
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body class="is-3-column">
-    <nav class="navbar navbar-main">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
@@ -145,6 +145,64 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-01-24T07:49:00.000Z">2018-01-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分鐘 閱讀文 (大約 335 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/01/24/siti5-4/">习题5-4 使用函数求素数和（20 分）</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="习题5-4-使用函数求素数和（20-分）"><a href="#习题5-4-使用函数求素数和（20-分）" class="headerlink" title="习题5-4 使用函数求素数和（20 分）"></a>习题5-4 使用函数求素数和（20 分）</h4><p>本题要求实现一个判断素数的简单函数、以及利用该函数计算给定区间内素数和的函数。</p>
+<p>素数就是只能被1和自身整除的正整数。注意：1不是素数，2是素数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int prime( int p );</span><br><span class="line">int PrimeSum( int m, int n );</span><br></pre></td></tr></table></figure>
+<p>其中函数<code>prime</code>当用户传入参数<code>p</code>为素数时返回1，否则返回0；函数<code>PrimeSum</code>返回区间[<code>m</code>, <code>n</code>]内所有素数的和。题目保证用户传入的参数$m \le n$。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">prime</span><span class="hljs-params">( <span class="hljs-keyword">int</span> p )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">PrimeSum</span><span class="hljs-params">( <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> m, n, p;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Sum of ( "</span>);</span><br><span class="line">    <span class="hljs-keyword">for</span>( p=m; p&lt;=n; p++ ) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>( prime(p) != <span class="hljs-number">0</span> )</span><br><span class="line">            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d "</span>, p);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">") = %d\n"</span>, PrimeSum(m, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1 10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sum of ( 2 3 5 7 ) = 17</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2018/01/24/siti5-4/#more">繼續閱讀</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
     <div class="card">
     
     <div class="card-content article ">
@@ -447,7 +505,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 164 個字)
+                    1 分鐘 閱讀文 (大約 118 個字)
                 </span>
                 
                 
@@ -460,7 +518,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="练习5-1-求m到n之和（10-分）"><a href="#练习5-1-求m到n之和（10-分）" class="headerlink" title="练习5-1 求m到n之和（10 分）"></a>练习5-1 求m到n之和（10 分）</h4><p>本题要求实现一个计算m~n$（m \lt n）$之间所有整数的和的简单函数。</p>
+            <h4 id="练习5-1-求m到n之和（10-分）"><a href="#练习5-1-求m到n之和（10-分）" class="headerlink" title="练习5-1 求m到n之和（10 分）"></a>练习5-1 求m到n之和（10 分）</h4><p>本题要求实现一个计算$\mathrm{m} \sim \mathrm{n}(m&lt;n)$之间所有整数的和的简单函数。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int sum( int m, int n );</span><br></pre></td></tr></table></figure>
 <p>其中<code>m</code>和<code>n</code>是用户传入的参数，保证有m&lt;n。函数返回的是m~n之间所有整数的和。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;    </span><br><span class="line">    <span class="hljs-keyword">int</span> m, n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sum = %d\n"</span>, sum(m, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -573,8 +631,8 @@
             
         </h1>
         <div class="content">
-            <h4 id="习题4-10-猴子吃桃问题（15-分）"><a href="#习题4-10-猴子吃桃问题（15-分）" class="headerlink" title="习题4-10 猴子吃桃问题（15 分）"></a>习题4-10 猴子吃桃问题（15 分）</h4><p>一只猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个；第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半加一个。到第N天早上想再吃时，见只剩下一个桃子了。问：第一天共摘了多少个桃子？</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出正整数N$（1\lt N \le 10）$。</p>
+            <h4 id="习题4-10-猴子吃桃问题（15-分）"><a href="#习题4-10-猴子吃桃问题（15-分）" class="headerlink" title="习题4-10 猴子吃桃问题（15 分）"></a>习题4-10 猴子吃桃问题（15 分）</h4><p>一只猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个；第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半加一个。到第$N$天早上想再吃时，见只剩下一个桃子了。问：第一天共摘了多少个桃子？</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出正整数$N（1\lt N \leq 10）$。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出第一天共摘了多少个桃子。</p>
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
@@ -641,62 +699,6 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2018/01/22/siti4-9/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-22T09:57:00.000Z">2018-01-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分鐘 閱讀文 (大約 256 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/01/22/siti4-8/">习题4-8 高空坠球（20 分）</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="习题4-8-高空坠球（20-分）"><a href="#习题4-8-高空坠球（20-分）" class="headerlink" title="习题4-8 高空坠球（20 分）"></a>习题4-8 高空坠球（20 分）</h4><p>皮球从某给定高度自由落下，触地后反弹到原高度的一半，再落下，再反弹，……，如此反复。问皮球在第n次落地时，在空中一共经过多少距离？第n次反弹的高度是多少？</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出两个非负整数，分别是皮球的初始高度和n，均在长整型范围内。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中顺序输出皮球第n次落地时在空中经过的距离、以及第n次反弹的高度，其间以一个空格分隔，保留一位小数。题目保证计算结果不超过双精度范围。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">33 5</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">94.9 1.0</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/22/siti4-8/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -784,7 +786,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        375
+                        376
                     </p>
                 </div>
             </div>
@@ -1024,7 +1026,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1086,7 +1088,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 12px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
     </div>
 </div>
 
@@ -1236,7 +1238,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1516,7 +1518,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1713,7 +1715,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1993,7 +1995,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -2221,7 +2223,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 </html>

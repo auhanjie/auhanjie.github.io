@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang="zh">
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>標籤: 浙大版《C语言程序设计（第3版）》题目集 - auhanjie&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -86,10 +86,10 @@
     
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body class="is-3-column">
-    <nav class="navbar navbar-main">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
@@ -185,7 +185,7 @@
         </h1>
         <div class="content">
             <h4 id="习题10-6-递归求Fabonacci数列（10-分）"><a href="#习题10-6-递归求Fabonacci数列（10-分）" class="headerlink" title="习题10-6 递归求Fabonacci数列（10 分）"></a>习题10-6 递归求Fabonacci数列（10 分）</h4><p>本题要求实现求Fabonacci数列项的函数。Fabonacci数列的定义如下：</p>
-<p>f(n)=f(n−2)+f(n−1) (n≥2)，其中f(0)=0，f(1)=1。</p>
+<p>$f(n)=f(n−2)+f(n−1) (n\ge2)$，其中$f(0)=0，f(1)=1$。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int f( int n );</span><br></pre></td></tr></table></figure>
 <p>函数<code>f</code>应返回第<code>n</code>个Fabonacci数。题目保证输入输出在长整型范围内。建议用递归实现。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">f</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, f(n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -229,7 +229,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 223 個字)
+                    2 分鐘 閱讀文 (大約 226 個字)
                 </span>
                 
                 
@@ -242,7 +242,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="习题10-5-递归计算Ackermenn函数（15-分）"><a href="#习题10-5-递归计算Ackermenn函数（15-分）" class="headerlink" title="习题10-5 递归计算Ackermenn函数（15 分）"></a>习题10-5 递归计算Ackermenn函数（15 分）</h4><p>本题要求实现Ackermenn函数的计算，其函数定义如下：<br>$$<br>ack(m,n)=\begin{cases}<br>n+1 &amp;   m=0  \\<br>ack(m-1,1) &amp;  n=0\quad \&amp;\&amp; \quad m&gt;0\\<br>ack(m-1,ack(m,n-1)) &amp; m&gt;0\quad \&amp;\&amp; \quad n&gt;0<br>\end{cases}<br>$$</p>
+            <h4 id="习题10-5-递归计算Ackermenn函数（15-分）"><a href="#习题10-5-递归计算Ackermenn函数（15-分）" class="headerlink" title="习题10-5 递归计算Ackermenn函数（15 分）"></a>习题10-5 递归计算Ackermenn函数（15 分）</h4><p>本题要求实现Ackermenn函数的计算，其函数定义如下：<br>$$<br>\operatorname{ack}(m, n)=\begin{cases}<br>n+1, &amp;  m = 0  \\\\<br>\operatorname{ack}(m-1, 1), &amp;  n=0 \&amp; \&amp; m\gt0 \\\\<br>\operatorname{ack}(m-1, \operatorname{ack}(m, n-1)),&amp; m \gt0 \&amp; \&amp;  n\gt 0<br>\end{cases}<br>$$</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int Ack( int m, int n );</span><br></pre></td></tr></table></figure>
 <p>其中<code>m</code>和<code>n</code>是用户传入的非负整数。函数<code>Ack</code>返回Ackermenn函数的相应值。题目保证输入输出都在长整型</p>
 <p>范围内。</p>
@@ -287,7 +287,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 232 個字)
+                    2 分鐘 閱讀文 (大約 229 個字)
                 </span>
                 
                 
@@ -301,7 +301,7 @@
         </h1>
         <div class="content">
             <h4 id="习题10-4-递归求简单交错幂级数的部分和（15-分）"><a href="#习题10-4-递归求简单交错幂级数的部分和（15-分）" class="headerlink" title="习题10-4 递归求简单交错幂级数的部分和（15 分）"></a>习题10-4 递归求简单交错幂级数的部分和（15 分）</h4><p>本题要求实现一个函数，计算下列简单交错幂级数的部分和：</p>
-<p>f(x,n)=x−x2+x3−x4+⋯+(−1)n−1xn</p>
+<p>$f(x, n)=x-x^{2}+x^{3}-x^{4}+\cdots+(-1)^{n-1} x^{n}$</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double fn( double x, int n );</span><br></pre></td></tr></table></figure>
 <p>其中题目保证传入的<code>n</code>是正整数，并且输入输出都在双精度范围内。函数<code>fn</code>应返回上述级数的部分和。建议尝试用递归实现。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fn</span><span class="hljs-params">( <span class="hljs-keyword">double</span> x, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> x;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.2f\n"</span>, fn(x,n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -345,7 +345,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 190 個字)
+                    1 分鐘 閱讀文 (大約 191 個字)
                 </span>
                 
                 
@@ -358,7 +358,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="习题10-3-递归实现指数函数（15-分）"><a href="#习题10-3-递归实现指数函数（15-分）" class="headerlink" title="习题10-3 递归实现指数函数（15 分）"></a>习题10-3 递归实现指数函数（15 分）</h4><p>本题要求实现一个计算xn（n≥1）的函数。</p>
+            <h4 id="习题10-3-递归实现指数函数（15-分）"><a href="#习题10-3-递归实现指数函数（15-分）" class="headerlink" title="习题10-3 递归实现指数函数（15 分）"></a>习题10-3 递归实现指数函数（15 分）</h4><p>本题要求实现一个计算$x^n（n \geq 1）$的函数。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double calc_pow( double x, int n );</span><br></pre></td></tr></table></figure>
 <p>函数<code>calc_pow</code>应返回<code>x</code>的<code>n</code>次幂的值。建议用递归实现。题目保证结果在双精度范围内。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">calc_pow</span><span class="hljs-params">( <span class="hljs-keyword">double</span> x, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> x;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.0f\n"</span>, calc_pow(x, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -402,7 +402,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 249 個字)
+                    2 分鐘 閱讀文 (大約 250 個字)
                 </span>
                 
                 
@@ -415,7 +415,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="习题10-2-递归求阶乘和（15-分）"><a href="#习题10-2-递归求阶乘和（15-分）" class="headerlink" title="习题10-2 递归求阶乘和（15 分）"></a>习题10-2 递归求阶乘和（15 分）</h4><p>本题要求实现一个计算非负整数阶乘的简单函数，并利用该函数求 1!+2!+3!+…+n! 的值。</p>
+            <h4 id="习题10-2-递归求阶乘和（15-分）"><a href="#习题10-2-递归求阶乘和（15-分）" class="headerlink" title="习题10-2 递归求阶乘和（15 分）"></a>习题10-2 递归求阶乘和（15 分）</h4><p>本题要求实现一个计算非负整数阶乘的简单函数，并利用该函数求 $1 !+2 !+3 !+\ldots+n !$的值。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">double fact( int n );</span><br><span class="line">double factsum( int n );</span><br></pre></td></tr></table></figure>
 <p>函数<code>fact</code>应返回<code>n</code>的阶乘，建议用递归实现。函数<code>factsum</code>应返回 1!+2!+…+<code>n</code>! 的值。题目保证输入输出在双精度范围内。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fact</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">factsum</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"fact(%d) = %.0f\n"</span>, n, fact(n));</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sum = %.0f\n"</span>, factsum(n));</span><br><span class="line">		</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -474,7 +474,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="练习10-1-使用递归函数计算1到n之和（10-分）"><a href="#练习10-1-使用递归函数计算1到n之和（10-分）" class="headerlink" title="练习10-1 使用递归函数计算1到n之和（10 分）"></a>练习10-1 使用递归函数计算1到n之和（10 分）</h4><p>本题要求实现一个用递归计算1+2+3+…+n的和的简单函数。</p>
+            <h4 id="练习10-1-使用递归函数计算1到n之和（10-分）"><a href="#练习10-1-使用递归函数计算1到n之和（10-分）" class="headerlink" title="练习10-1 使用递归函数计算1到n之和（10 分）"></a>练习10-1 使用递归函数计算1到n之和（10 分）</h4><p>本题要求实现一个用递归计算$1+2+3+\ldots+n$的和的简单函数。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int sum( int n );</span><br></pre></td></tr></table></figure>
 <p>该函数对于传入的正整数<code>n</code>返回<code>1+2+3+…+n</code>的和；若<code>n</code>不是正整数则返回0。题目保证输入输出在长整型范围内。建议尝试写成递归函数。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span> (<span class="hljs-string">"%d\n"</span>, sum(n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -533,7 +533,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="练习10-1-使用递归函数计算1到n之和（10-分）"><a href="#练习10-1-使用递归函数计算1到n之和（10-分）" class="headerlink" title="练习10-1 使用递归函数计算1到n之和（10 分）"></a>练习10-1 使用递归函数计算1到n之和（10 分）</h4><p>本题要求实现一个用递归计算1+2+3+…+n的和的简单函数。</p>
+            <h4 id="练习10-1-使用递归函数计算1到n之和（10-分）"><a href="#练习10-1-使用递归函数计算1到n之和（10-分）" class="headerlink" title="练习10-1 使用递归函数计算1到n之和（10 分）"></a>练习10-1 使用递归函数计算1到n之和（10 分）</h4><p>本题要求实现一个用递归计算$1+2+3+\ldots+n$的和的简单函数。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int sum( int n );</span><br></pre></td></tr></table></figure>
 <p>该函数对于传入的正整数<code>n</code>返回<code>1+2+3+…+n</code>的和；若<code>n</code>不是正整数则返回0。题目保证输入输出在长整型范围内。建议尝试写成递归函数。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int sum( int n );</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line"></span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);</span><br><span class="line">    printf (&quot;%d\n&quot;, sum(n));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 你的代码将被嵌在这里 */</span><br></pre></td></tr></table></figure>
@@ -638,7 +638,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 289 個字)
+                    2 分鐘 閱讀文 (大約 290 個字)
                 </span>
                 
                 
@@ -652,7 +652,7 @@
         </h1>
         <div class="content">
             <h4 id="习题9-5-通讯录排序（20-分）"><a href="#习题9-5-通讯录排序（20-分）" class="headerlink" title="习题9-5 通讯录排序（20 分）"></a>习题9-5 通讯录排序（20 分）</h4><p>输入n个朋友的信息，包括姓名、生日、电话号码，本题要求编写程序，按照年龄从大到小的顺序依次输出通讯录。题目保证所有人的生日均不相同。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数n（&lt;10）。随后n行，每行按照“姓名 生日 电话号码”的格式给出一位朋友的信息，其中“姓名”是长度不超过10的英文字母组成的字符串，“生日”是<code>yyyymmdd</code>格式的日期，“电话号码”是不超过17位的数字及<code>+</code>、<code>-</code>组成的字符串。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数$n（\lt 10）$。随后n行，每行按照“姓名 生日 电话号码”的格式给出一位朋友的信息，其中“姓名”是长度不超过10的英文字母组成的字符串，“生日”是<code>yyyymmdd</code>格式的日期，“电话号码”是不超过17位的数字及<code>+</code>、<code>-</code>组成的字符串。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照年龄从大到小输出朋友的信息，格式同输出。</p>
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">zhang 19850403 13912345678</span><br><span class="line">wang 19821020 +86-0571-88018448</span><br><span class="line">qian 19840619 13609876543</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wang 19821020 +86-0571-88018448</span><br><span class="line">qian 19840619 13609876543</span><br><span class="line">zhang 19850403 13912345678</span><br></pre></td></tr></table></figure>
@@ -694,7 +694,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 250 個字)
+                    2 分鐘 閱讀文 (大約 251 個字)
                 </span>
                 
                 
@@ -708,7 +708,7 @@
         </h1>
         <div class="content">
             <h4 id="习题9-4-查找书籍（20-分）"><a href="#习题9-4-查找书籍（20-分）" class="headerlink" title="习题9-4 查找书籍（20 分）"></a>习题9-4 查找书籍（20 分）</h4><p>给定n本书的名称和定价，本题要求编写程序，查找并输出其中定价最高和最低的书的名称和定价。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数n（&lt;10），随后给出n本书的信息。每本书在一行中给出书名，即长度不超过30的字符串，随后一行中给出正实数价格。题目保证没有同样价格的书。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数$n（\lt 10）$，随后给出n本书的信息。每本书在一行中给出书名，即长度不超过30的字符串，随后一行中给出正实数价格。题目保证没有同样价格的书。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照“价格, 书名”的格式先后输出价格最高和最低的书。价格保留2位小数。</p>
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">Programming in C</span><br><span class="line">21.5</span><br><span class="line">Programming in VB</span><br><span class="line">18.5</span><br><span class="line">Programming in Delphi</span><br><span class="line">25.0</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">25.00, Programming in Delphi</span><br><span class="line">18.50, Programming in VB</span><br></pre></td></tr></table></figure>
@@ -802,7 +802,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        375
+                        376
                     </p>
                 </div>
             </div>
@@ -1042,7 +1042,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1104,7 +1104,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 12px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
     </div>
 </div>
 
@@ -1254,7 +1254,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1534,7 +1534,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1731,7 +1731,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -2011,7 +2011,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -2239,7 +2239,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 </html>

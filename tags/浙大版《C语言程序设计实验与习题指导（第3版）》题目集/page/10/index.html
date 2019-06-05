@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang="zh">
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>標籤: 浙大版《C语言程序设计实验与习题指导（第3版）》题目集 - auhanjie&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -86,10 +86,10 @@
     
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body class="is-3-column">
-    <nav class="navbar navbar-main">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
@@ -397,7 +397,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 216 個字)
+                    3 分鐘 閱讀文 (大約 375 個字)
                 </span>
                 
                 
@@ -410,7 +410,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="实验6-5-使用函数输出指定范围内的Fibonacci数（20-分）"><a href="#实验6-5-使用函数输出指定范围内的Fibonacci数（20-分）" class="headerlink" title="实验6-5 使用函数输出指定范围内的Fibonacci数（20 分）"></a>实验6-5 使用函数输出指定范围内的Fibonacci数（20 分）</h4><p>本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数m和n（0&lt;m≤n≤10000）之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。</p>
+            <h4 id="实验6-5-使用函数输出指定范围内的Fibonacci数（20-分）"><a href="#实验6-5-使用函数输出指定范围内的Fibonacci数（20-分）" class="headerlink" title="实验6-5 使用函数输出指定范围内的Fibonacci数（20 分）"></a>实验6-5 使用函数输出指定范围内的Fibonacci数（20 分）</h4><p>本题要求实现一个计算Fibonacci数的简单函数，并利用其实现另一个函数，输出两正整数$m \text{和} n（0 \lt m \leq n\leq 10000）$之间的所有Fibonacci数。所谓Fibonacci数列就是满足任一项数字是前两项的和（最开始两项均定义为1）的数列。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int fib( int n );</span><br><span class="line">void PrintFN( int m, int n );</span><br></pre></td></tr></table></figure>
 <p>其中函数<code>fib</code>须返回第<code>n</code>项Fibonacci数；函数<code>PrintFN</code>要在一行中输出给定范围[<code>m</code>, <code>n</code>]内的所有Fibonacci数，相邻数字间有一个空格，行末不得有多余空格。如果给定区间内没有Fibonacci数，则输出一行“No Fibonacci number”。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">fib</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PrintFN</span><span class="hljs-params">( <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line">	</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> m, n, t;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d %d"</span>, &amp;m, &amp;n, &amp;t);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"fib(%d) = %d\n"</span>, t, fib(t));</span><br><span class="line">    PrintFN(m, n);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -456,7 +456,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 300 個字)
+                    3 分鐘 閱讀文 (大約 486 個字)
                 </span>
                 
                 
@@ -469,7 +469,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="实验6-4-使用函数输出指定范围内的完数（20-分）"><a href="#实验6-4-使用函数输出指定范围内的完数（20-分）" class="headerlink" title="实验6-4 使用函数输出指定范围内的完数（20 分）"></a>实验6-4 使用函数输出指定范围内的完数（20 分）</h4><p>本题要求实现一个计算整数因子和的简单函数，并利用其实现另一个函数，输出两正整数m和n（0&lt;m≤n≤10000）之间的所有完数。所谓完数就是该数恰好等于除自身外的因子之和。例如：$6=1+2+3$，其中1、2、3为6的因子。</p>
+            <h4 id="实验6-4-使用函数输出指定范围内的完数（20-分）"><a href="#实验6-4-使用函数输出指定范围内的完数（20-分）" class="headerlink" title="实验6-4 使用函数输出指定范围内的完数（20 分）"></a>实验6-4 使用函数输出指定范围内的完数（20 分）</h4><p>本题要求实现一个计算整数因子和的简单函数，并利用其实现另一个函数，输出两正整数$m\text{和}n（0\lt m\leq n\leq 10000）$之间的所有完数。所谓完数就是该数恰好等于除自身外的因子之和。例如：$6=1+2+3$，其中1、2、3为6的因子。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int factorsum( int number );</span><br><span class="line">void PrintPN( int m, int n );</span><br></pre></td></tr></table></figure>
 <p>其中函数<code>factorsum</code>须返回<code>int number</code>的因子和；函数<code>PrintPN</code>要逐行输出给定范围[<code>m</code>, <code>n</code>]内每个完数的因子累加形式的分解式，每个完数占一行，格式为“完数 = 因子1 + 因子2 + … + 因子k”，其中完数和因子均按递增顺序给出。如果给定区间内没有完数，则输出一行“No perfect number”。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">factorsum</span><span class="hljs-params">( <span class="hljs-keyword">int</span> number )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PrintPN</span><span class="hljs-params">( <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line">	</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> i, m, n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="hljs-keyword">if</span> ( factorsum(m) == m ) <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d is a perfect number\n"</span>, m);</span><br><span class="line">    <span class="hljs-keyword">if</span> ( factorsum(n) == n ) <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d is a perfect number\n"</span>, n);</span><br><span class="line">    PrintPN(m, n);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -528,7 +528,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="实验6-3-使用函数求特殊a串数列和（20-分）"><a href="#实验6-3-使用函数求特殊a串数列和（20-分）" class="headerlink" title="实验6-3 使用函数求特殊a串数列和（20 分）"></a>实验6-3 使用函数求特殊a串数列和（20 分）</h4><p>给定两个均不超过9的正整数a和n，要求编写函数求$a+aa+aaa++⋯+aa⋯a$（n个a）之和。</p>
+            <h4 id="实验6-3-使用函数求特殊a串数列和（20-分）"><a href="#实验6-3-使用函数求特殊a串数列和（20-分）" class="headerlink" title="实验6-3 使用函数求特殊a串数列和（20 分）"></a>实验6-3 使用函数求特殊a串数列和（20 分）</h4><p>给定两个均不超过9的正整数$a$和$n$，要求编写函数求$a+aa+aaa++⋯+aa⋯a$（$n$个$a$）之和。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int fn( int a, int n );</span><br><span class="line">int SumA( int a, int n );</span><br></pre></td></tr></table></figure>
 <p>其中函数<code>fn</code>须返回的是<code>n</code>个<code>a</code>组成的数字；<code>SumA</code>返回要求的和。</p>
 <h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">fn</span><span class="hljs-params">( <span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">SumA</span><span class="hljs-params">( <span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line">	</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> a, n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;a, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"fn(%d, %d) = %d\n"</span>, a, n, fn(a,n));		</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"s = %d\n"</span>, SumA(a,n));	</span><br><span class="line">	</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
@@ -803,7 +803,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        375
+                        376
                     </p>
                 </div>
             </div>
@@ -1043,7 +1043,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1105,7 +1105,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 12px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
     </div>
 </div>
 
@@ -1255,7 +1255,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1535,7 +1535,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1732,7 +1732,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -2012,7 +2012,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -2240,7 +2240,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 </html>

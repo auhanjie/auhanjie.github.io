@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang="zh">
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>標籤: 浙大版《C语言程序设计（第3版）》题目集 - auhanjie&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -86,10 +86,10 @@
     
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body class="is-3-column">
-    <nav class="navbar navbar-main">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
@@ -161,7 +161,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-08T03:06:00.000Z">2018-02-08</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:05:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -171,7 +171,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 193 個字)
+                    1 分鐘 閱讀文 (大約 197 個字)
                 </span>
                 
                 
@@ -185,7 +185,7 @@
         </h1>
         <div class="content">
             <h4 id="习题9-3-平面向量加法（15-分）"><a href="#习题9-3-平面向量加法（15-分）" class="headerlink" title="习题9-3 平面向量加法（15 分）"></a>习题9-3 平面向量加法（15 分）</h4><p>本题要求编写程序，计算两个二维平面向量的和向量。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中按照“x1 y1 x2 y2”的格式给出两个二维平面向量v1=(x1,y1)和v2=(x2,y2)的分量。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中按照 “$ x_{1} y_{1} x_{2} y_{2}$ ”的格式给出两个二维平面向量$v_{1}=\left(x_{1}, y_{1}\right)$和$v_{2}=\left(x_{2}, y_{2}\right)$的分量。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照<code>(x, y)</code>的格式输出和向量，坐标输出小数点后一位（注意不能输出−0.0）。</p>
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.5 -2.7 -13.9 8.7</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(-10.4, 6.0)</span><br></pre></td></tr></table></figure>
@@ -399,7 +399,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 290 個字)
+                    2 分鐘 閱讀文 (大約 270 個字)
                 </span>
                 
                 
@@ -408,25 +408,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/06/siti8-9/">习题8-9 分类统计各类字符个数（15 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/06/siti8-8/">习题8-8 判断回文字符串（20 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-9-分类统计各类字符个数（15-分）"><a href="#习题8-9-分类统计各类字符个数（15-分）" class="headerlink" title="习题8-9 分类统计各类字符个数（15 分）"></a>习题8-9 分类统计各类字符个数（15 分）</h4><p>本题要求实现一个函数，统计给定字符串中的大写字母、小写字母、空格、数字以及其它字符各有多少。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void StringCount( char *s );</span><br></pre></td></tr></table></figure>
-<p>其中 <code>char *s</code> 是用户传入的字符串。函数<code>StringCount</code>须在一行内按照</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">大写字母个数 小写字母个数 空格个数 数字个数 其它字符个数</span><br></pre></td></tr></table></figure>
-<p>的格式输出。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXS 15</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">StringCount</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ReadString</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>; <span class="hljs-comment">/* 由裁判实现，略去不表 */</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> s[MAXS];</span><br><span class="line"></span><br><span class="line">    ReadString(s);</span><br><span class="line">    StringCount(s);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* Your function will be put here */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aZ&amp;*?</span><br><span class="line">093 Az</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 2 1 3 4</span><br></pre></td></tr></table></figure>
+            <h4 id="习题8-8-判断回文字符串（20-分）"><a href="#习题8-8-判断回文字符串（20-分）" class="headerlink" title="习题8-8 判断回文字符串（20 分）"></a>习题8-8 判断回文字符串（20 分）</h4><p>本题要求编写函数，判断给定的一串字符是否为“回文”。所谓“回文”是指顺读和倒读都一样的字符串。如“XYZYX”和“xyzzyx”都是回文。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool palindrome( char *s );</span><br></pre></td></tr></table></figure>
+<p>函数<code>palindrome</code>判断输入字符串<code>char *s</code>是否为回文。若是则返回<code>true</code>，否则返回<code>false</code>。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 20</span></span><br><span class="line"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span> &#123;<span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>&#125; <span class="hljs-keyword">bool</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">palindrome</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> s[MAXN];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, s);</span><br><span class="line">    <span class="hljs-keyword">if</span> ( palindrome(s)==<span class="hljs-literal">true</span> )</span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Yes\n"</span>);</span><br><span class="line">    <span class="hljs-keyword">else</span></span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"No\n"</span>);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, s);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">No</span><br><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-9/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-8/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -458,7 +458,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 270 個字)
+                    2 分鐘 閱讀文 (大約 290 個字)
                 </span>
                 
                 
@@ -467,25 +467,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/06/siti8-8/">习题8-8 判断回文字符串（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/06/siti8-9/">习题8-9 分类统计各类字符个数（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-8-判断回文字符串（20-分）"><a href="#习题8-8-判断回文字符串（20-分）" class="headerlink" title="习题8-8 判断回文字符串（20 分）"></a>习题8-8 判断回文字符串（20 分）</h4><p>本题要求编写函数，判断给定的一串字符是否为“回文”。所谓“回文”是指顺读和倒读都一样的字符串。如“XYZYX”和“xyzzyx”都是回文。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool palindrome( char *s );</span><br></pre></td></tr></table></figure>
-<p>函数<code>palindrome</code>判断输入字符串<code>char *s</code>是否为回文。若是则返回<code>true</code>，否则返回<code>false</code>。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 20</span></span><br><span class="line"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span> &#123;<span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>&#125; <span class="hljs-keyword">bool</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">palindrome</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> s[MAXN];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, s);</span><br><span class="line">    <span class="hljs-keyword">if</span> ( palindrome(s)==<span class="hljs-literal">true</span> )</span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Yes\n"</span>);</span><br><span class="line">    <span class="hljs-keyword">else</span></span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"No\n"</span>);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, s);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">No</span><br><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure>
+            <h4 id="习题8-9-分类统计各类字符个数（15-分）"><a href="#习题8-9-分类统计各类字符个数（15-分）" class="headerlink" title="习题8-9 分类统计各类字符个数（15 分）"></a>习题8-9 分类统计各类字符个数（15 分）</h4><p>本题要求实现一个函数，统计给定字符串中的大写字母、小写字母、空格、数字以及其它字符各有多少。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void StringCount( char *s );</span><br></pre></td></tr></table></figure>
+<p>其中 <code>char *s</code> 是用户传入的字符串。函数<code>StringCount</code>须在一行内按照</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">大写字母个数 小写字母个数 空格个数 数字个数 其它字符个数</span><br></pre></td></tr></table></figure>
+<p>的格式输出。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXS 15</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">StringCount</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ReadString</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>; <span class="hljs-comment">/* 由裁判实现，略去不表 */</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> s[MAXS];</span><br><span class="line"></span><br><span class="line">    ReadString(s);</span><br><span class="line">    StringCount(s);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* Your function will be put here */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aZ&amp;*?</span><br><span class="line">093 Az</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 2 1 3 4</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-8/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-9/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -688,7 +688,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 199 個字)
+                    3 分鐘 閱讀文 (大約 380 個字)
                 </span>
                 
                 
@@ -701,7 +701,7 @@
             
         </h1>
         <div class="content">
-            <h4 id="习题8-4-报数（20-分）"><a href="#习题8-4-报数（20-分）" class="headerlink" title="习题8-4 报数（20 分）"></a>习题8-4 报数（20 分）</h4><p>报数游戏是这样的：有n个人围成一圈，按顺序从1到n编好号。从第一个人开始报数，报到m（&lt;n）的人退出圈子；下一个人从1开始报数，报到m的人退出圈子。如此下去，直到留下最后一个人。</p>
+            <h4 id="习题8-4-报数（20-分）"><a href="#习题8-4-报数（20-分）" class="headerlink" title="习题8-4 报数（20 分）"></a>习题8-4 报数（20 分）</h4><p>报数游戏是这样的：有n个人围成一圈，按顺序从1到n编好号。从第一个人开始报数，报到$m（\lt n）$的人退出圈子；下一个人从1开始报数，报到m的人退出圈子。如此下去，直到留下最后一个人。</p>
 <p>本题要求编写函数，给出每个人的退出顺序编号。</p>
 <h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void CountOff( int n, int m, int out[] );</span><br></pre></td></tr></table></figure>
 <p>其中<code>n</code>是初始人数；<code>m</code>是游戏规定的退出位次（保证为小于n的正整数）。函数<code>CountOff</code>将每个人的退出顺序编号存在数组<code>out[]</code>中。因为C语言数组下标是从0开始的，所以第<code>i</code>个位置上的人是第<code>out[i-1]</code>个退出的。</p>
@@ -800,7 +800,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        375
+                        376
                     </p>
                 </div>
             </div>
@@ -1040,7 +1040,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1102,7 +1102,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 10px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 12px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 12px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a> <a href="/tags/華語拼音公式改/" style="font-size: 10px;">華語拼音公式改</a>
     </div>
 </div>
 
@@ -1252,7 +1252,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1532,7 +1532,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1729,7 +1729,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -2009,7 +2009,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -2237,7 +2237,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </body>
 </html>
