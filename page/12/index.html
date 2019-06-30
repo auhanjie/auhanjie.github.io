@@ -151,7 +151,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:26:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:31:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 333 個字)
+                    2 分鐘 閱讀文 (大約 229 個字)
                 </span>
                 
                 
@@ -170,22 +170,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/siti7-2/">习题7-2 求一批整数中出现最多的个位数字（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/siti10-4/">习题10-4 递归求简单交错幂级数的部分和（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题7-2-求一批整数中出现最多的个位数字（20-分）"><a href="#习题7-2-求一批整数中出现最多的个位数字（20-分）" class="headerlink" title="习题7-2 求一批整数中出现最多的个位数字（20 分）"></a>习题7-2 求一批整数中出现最多的个位数字（20 分）</h4><p>给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第1行中给出正整数$N（\leq 1000）$，在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中按格式“M: n1 n2 …”输出，其中M是最大次数，n1、n2、……为出现次数最多的个位数字，按从小到大的顺序排列。数字间以空格分隔，但末尾不得有多余空格。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1234 2345 3456</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3: 3 4</span><br></pre></td></tr></table></figure>
+            <h4 id="习题10-4-递归求简单交错幂级数的部分和（15-分）"><a href="#习题10-4-递归求简单交错幂级数的部分和（15-分）" class="headerlink" title="习题10-4 递归求简单交错幂级数的部分和（15 分）"></a>习题10-4 递归求简单交错幂级数的部分和（15 分）</h4><p>本题要求实现一个函数，计算下列简单交错幂级数的部分和：</p>
+<p>$f(x, n)=x-x^{2}+x^{3}-x^{4}+\cdots+(-1)^{n-1} x^{n}$</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double fn( double x, int n );</span><br></pre></td></tr></table></figure>
+<p>其中题目保证传入的<code>n</code>是正整数，并且输入输出都在双精度范围内。函数<code>fn</code>应返回上述级数的部分和。建议尝试用递归实现。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fn</span><span class="hljs-params">( <span class="hljs-keyword">double</span> x, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> x;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.2f\n"</span>, fn(x,n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.5 12</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.33</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/siti7-2/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/siti10-4/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -207,7 +209,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:24:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:30:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -217,7 +219,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 142 個字)
+                    1 分鐘 閱讀文 (大約 191 個字)
                 </span>
                 
                 
@@ -226,22 +228,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/liensi7-11/">练习7-11 字符串逆序（15 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/siti10-3/">习题10-3 递归实现指数函数（15 分）</a>
             
         </h1>
         <div class="content">
-            <h2 id="练习7-11-字符串逆序（15-分）"><a href="#练习7-11-字符串逆序（15-分）" class="headerlink" title="练习7-11 字符串逆序（15 分）"></a>练习7-11 字符串逆序（15 分）</h2><p>输入一个字符串，对该字符串进行逆序，输出逆序后的字符串。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在一行中给出一个不超过80个字符长度的、以回车结束的非空字符串。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>在一行中输出逆序后的字符串。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>Hello World!</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>!dlroW olleH<br></p>
+            <h4 id="习题10-3-递归实现指数函数（15-分）"><a href="#习题10-3-递归实现指数函数（15-分）" class="headerlink" title="习题10-3 递归实现指数函数（15 分）"></a>习题10-3 递归实现指数函数（15 分）</h4><p>本题要求实现一个计算$x^n（n \geq 1）$的函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double calc_pow( double x, int n );</span><br></pre></td></tr></table></figure>
+<p>函数<code>calc_pow</code>应返回<code>x</code>的<code>n</code>次幂的值。建议用递归实现。题目保证结果在双精度范围内。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">calc_pow</span><span class="hljs-params">( <span class="hljs-keyword">double</span> x, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> x;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.0f\n"</span>, calc_pow(x, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/liensi7-11/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/siti10-3/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -263,7 +266,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:22:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:28:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -273,7 +276,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 200 個字)
+                    2 分鐘 閱讀文 (大約 250 個字)
                 </span>
                 
                 
@@ -282,24 +285,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/liensi7-10/">练习7-10 查找指定字符（15 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/siti10-2/">习题10-2 递归求阶乘和（15 分）</a>
             
         </h1>
         <div class="content">
-            <h2 id="练习7-10-查找指定字符（15-分）"><a href="#练习7-10-查找指定字符（15-分）" class="headerlink" title="练习7-10 查找指定字符（15 分）"></a>练习7-10 查找指定字符（15 分）</h2><p>本题要求编写程序，从给定字符串中查找某指定的字符。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入的第一行是一个待查找的字符。第二行是一个以回车结束的非空字符串（不超过80个字符）。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>如果找到，在一行内按照格式“index = 下标”输出该字符在字符串中所对应的最大下标（下标从0开始）；否则输出”Not Found”。</p>
-<h2 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h2><p>m<br>programming</p>
-<h2 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h2><p>index = 7</p>
-<h2 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h2><p>a<br>1234<br>输出样例2：</p>
-<p>Not Found<br></p>
+            <h4 id="习题10-2-递归求阶乘和（15-分）"><a href="#习题10-2-递归求阶乘和（15-分）" class="headerlink" title="习题10-2 递归求阶乘和（15 分）"></a>习题10-2 递归求阶乘和（15 分）</h4><p>本题要求实现一个计算非负整数阶乘的简单函数，并利用该函数求 $1 !+2 !+3 !+\ldots+n !$的值。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">double fact( int n );</span><br><span class="line">double factsum( int n );</span><br></pre></td></tr></table></figure>
+<p>函数<code>fact</code>应返回<code>n</code>的阶乘，建议用递归实现。函数<code>factsum</code>应返回 1!+2!+…+<code>n</code>! 的值。题目保证输入输出在双精度范围内。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fact</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">factsum</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"fact(%d) = %.0f\n"</span>, n, fact(n));</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sum = %.0f\n"</span>, factsum(n));</span><br><span class="line">		</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fact(10) = 3628800</span><br><span class="line">sum = 4037913</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fact(0) = 1</span><br><span class="line">sum = 0</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/liensi7-10/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/siti10-2/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -321,7 +325,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:20:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:26:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -331,7 +335,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 189 個字)
+                    2 分鐘 閱讀文 (大約 237 個字)
                 </span>
                 
                 
@@ -340,24 +344,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/liensi7-9/">练习7-9 计算天数（15 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/siti10-1/">习题10-1 判断满足条件的三位数（15 分）</a>
             
         </h1>
         <div class="content">
-            <h2 id="练习7-9-计算天数（15-分）"><a href="#练习7-9-计算天数（15-分）" class="headerlink" title="练习7-9 计算天数（15 分）"></a>练习7-9 计算天数（15 分）</h2><p>本题要求编写程序计算某年某月某日是该年中的第几天。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行中按照格式“yyyy/mm/dd”（即“年/月/日”）给出日期。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。闰年的2月有29天。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行输出日期是该年中的第几天。</p>
-<h2 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h2><p>2009/03/02</p>
-<h2 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h2><p>61</p>
-<h2 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h2><p>2000/03/02</p>
-<h2 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h2><p>62<br></p>
+            <h4 id="练习10-1-使用递归函数计算1到n之和（10-分）"><a href="#练习10-1-使用递归函数计算1到n之和（10-分）" class="headerlink" title="练习10-1 使用递归函数计算1到n之和（10 分）"></a>练习10-1 使用递归函数计算1到n之和（10 分）</h4><p>本题要求实现一个用递归计算$1+2+3+\ldots+n$的和的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int sum( int n );</span><br></pre></td></tr></table></figure>
+<p>该函数对于传入的正整数<code>n</code>返回<code>1+2+3+…+n</code>的和；若<code>n</code>不是正整数则返回0。题目保证输入输出在长整型范围内。建议尝试写成递归函数。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span> (<span class="hljs-string">"%d\n"</span>, sum(n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">55</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/liensi7-9/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/siti10-1/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -379,7 +384,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:18:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:15:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -389,7 +394,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 224 個字)
+                    1 分鐘 閱讀文 (大約 201 個字)
                 </span>
                 
                 
@@ -398,22 +403,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/liensi7-8/">练习7-8 方阵循环右移（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/liensi10-1/">练习10-1 使用递归函数计算1到n之和（10 分）</a>
             
         </h1>
         <div class="content">
-            <h2 id="练习7-8-方阵循环右移（20-分）"><a href="#练习7-8-方阵循环右移（20-分）" class="headerlink" title="练习7-8 方阵循环右移（20 分）"></a>练习7-8 方阵循环右移（20 分）</h2><p>本题要求编写程序，将给定n×n方阵中的每个元素循环向右移m个位置，即将第$0,1, \cdots, n-1$列变换为第$n-m, n-m+1, \cdots, n-1,0,1, \cdots, n-1-1$列。</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入第一行给出两个正整数$m$和$n（1\le  n\le 6）$。接下来一共n行，每行n个整数，表示一个n阶的方阵。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>按照输入格式输出移动后的方阵：即输出n行，每行n个整数，每个整数后输出一个空格。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>2 3<br>1 2 3<br>4 5 6<br>7 8 9</p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>2 3 1<br>5 6 4<br>8 9 7<br></p>
+            <h4 id="练习10-1-使用递归函数计算1到n之和（10-分）"><a href="#练习10-1-使用递归函数计算1到n之和（10-分）" class="headerlink" title="练习10-1 使用递归函数计算1到n之和（10 分）"></a>练习10-1 使用递归函数计算1到n之和（10 分）</h4><p>本题要求实现一个用递归计算$1+2+3+\ldots+n$的和的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int sum( int n );</span><br></pre></td></tr></table></figure>
+<p>该函数对于传入的正整数<code>n</code>返回<code>1+2+3+…+n</code>的和；若<code>n</code>不是正整数则返回0。题目保证输入输出在长整型范围内。建议尝试写成递归函数。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int sum( int n );</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line"></span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);</span><br><span class="line">    printf (&quot;%d\n&quot;, sum(n));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 你的代码将被嵌在这里 */</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">55</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/liensi7-8/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/liensi10-1/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -435,7 +443,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:15:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:13:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -445,7 +453,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 233 個字)
+                    3 分鐘 閱讀文 (大約 488 個字)
                 </span>
                 
                 
@@ -454,22 +462,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/liensi7-7/">练习7-7 矩阵运算（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/siti9-6/">习题9-6 按等级统计学生成绩（20 分）</a>
             
         </h1>
         <div class="content">
-            <h2 id="练习7-7-矩阵运算（20-分）"><a href="#练习7-7-矩阵运算（20-分）" class="headerlink" title="练习7-7 矩阵运算（20 分）"></a>练习7-7 矩阵运算（20 分）</h2><p>给定一个n×n的方阵，本题要求计算该矩阵除副对角线、最后一列和最后一行以外的所有元素之和。副对角线为从矩阵的右上角至左下角的连线。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入第一行给出正整数$n（1\lt n\leq 10）$；随后n行，每行给出n个整数，其间以空格分隔。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中给出该矩阵除副对角线、最后一列和最后一行以外的所有元素之和。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>4<br>2 3 4 1<br>5 6 1 1<br>7 1 8 1<br>1 1 1 1</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>35<br></p>
+            <h4 id="习题9-6-按等级统计学生成绩（20-分）"><a href="#习题9-6-按等级统计学生成绩（20-分）" class="headerlink" title="习题9-6 按等级统计学生成绩（20 分）"></a>习题9-6 按等级统计学生成绩（20 分）</h4><p>本题要求实现一个根据学生成绩设置其等级，并统计不及格人数的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int set_grade( struct student *p, int n );</span><br></pre></td></tr></table></figure>
+<p>其中<code>p</code>是指向学生信息的结构体数组的指针，该结构体的定义为：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct student&#123;</span><br><span class="line">    int num;</span><br><span class="line">    char name[20];</span><br><span class="line">    int score;</span><br><span class="line">    char grade;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><code>n</code>是数组元素个数。学号<code>num</code>、姓名<code>name</code>和成绩<code>score</code>均是已经存储好的。<code>set_grade</code>函数需要根据学生的成绩<code>score</code>设置其等级<code>grade</code>。等级设置：85－100为A，70－84为B，60－69为C，0－59为D。同时，<code>set_grade</code>还需要返回不及格的人数。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">student</span>&#123;</span></span><br><span class="line">    <span class="hljs-keyword">int</span> num;</span><br><span class="line">    <span class="hljs-keyword">char</span> name[<span class="hljs-number">20</span>];</span><br><span class="line">    <span class="hljs-keyword">int</span> score;</span><br><span class="line">    <span class="hljs-keyword">char</span> grade;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">set_grade</span><span class="hljs-params">( struct student *p, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;   <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">student</span> <span class="hljs-title">stu</span>[<span class="hljs-title">MAXN</span>], *<span class="hljs-title">ptr</span>;</span></span><br><span class="line">    <span class="hljs-keyword">int</span> n, i, count;</span><br><span class="line"></span><br><span class="line">    ptr = stu;</span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d\n"</span>, &amp;n);</span><br><span class="line">    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">       <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%s%d"</span>, &amp;stu[i].num, stu[i].name, &amp;stu[i].score);</span><br><span class="line">    &#125; </span><br><span class="line">   count = set_grade(ptr, n);</span><br><span class="line">   <span class="hljs-built_in">printf</span>(<span class="hljs-string">"The count for failed (&lt;60): %d\n"</span>, count);</span><br><span class="line">   <span class="hljs-built_in">printf</span>(<span class="hljs-string">"The grades:\n"</span>); </span><br><span class="line">   <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; n; i++)</span><br><span class="line">       <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d %s %c\n"</span>, stu[i].num, stu[i].name, stu[i].grade);</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">31001 annie 85</span><br><span class="line">31002 bonny 75</span><br><span class="line">31003 carol 70</span><br><span class="line">31004 dan 84</span><br><span class="line">31005 susan 90</span><br><span class="line">31006 paul 69</span><br><span class="line">31007 pam 60</span><br><span class="line">31008 apple 50</span><br><span class="line">31009 nancy 100</span><br><span class="line">31010 bob 78</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">The count for failed (&lt;60): 1</span><br><span class="line">The grades:</span><br><span class="line">31001 annie A</span><br><span class="line">31002 bonny B</span><br><span class="line">31003 carol B</span><br><span class="line">31004 dan B</span><br><span class="line">31005 susan A</span><br><span class="line">31006 paul C</span><br><span class="line">31007 pam C</span><br><span class="line">31008 apple D</span><br><span class="line">31009 nancy A</span><br><span class="line">31010 bob B</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/liensi7-7/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/siti9-6/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -491,7 +502,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:14:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:12:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -501,7 +512,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 376 個字)
+                    2 分鐘 閱讀文 (大約 290 個字)
                 </span>
                 
                 
@@ -510,22 +521,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/liensi7-4/">练习7-4 找出不是两个数组共有的元素（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/siti9-5/">习题9-5 通讯录排序（20 分）</a>
             
         </h1>
         <div class="content">
-            <h2 id="练习7-4-找出不是两个数组共有的元素（20-分）"><a href="#练习7-4-找出不是两个数组共有的元素（20-分）" class="headerlink" title="练习7-4 找出不是两个数组共有的元素（20 分）"></a>练习7-4 找出不是两个数组共有的元素（20 分）</h2><p>给定两个整型数组，本题要求找出不是两者共有的元素。</p>
-<h2 id="输入格式-S"><a href="#输入格式-S" class="headerlink" title="输入格式:S"></a>输入格式:S</h2><p>输入分别在两行中给出两个整型数组，每行先给出正整数$N（\leq 20）$，随后是N个整数，其间以空格分隔。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中按照数字给出的顺序输出不是两数组共有的元素，数字间以空格分隔，但行末不得有多余的空格。题目保证至少存在一个这样的数字。同一数字不重复输出。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>10 3 -5 2 8 0 3 5 -15 9 100<br>11 6 4 8 2 6 -5 9 0 100 8 1</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>3 5 -15 6 4 1<br></p>
+            <h4 id="习题9-5-通讯录排序（20-分）"><a href="#习题9-5-通讯录排序（20-分）" class="headerlink" title="习题9-5 通讯录排序（20 分）"></a>习题9-5 通讯录排序（20 分）</h4><p>输入n个朋友的信息，包括姓名、生日、电话号码，本题要求编写程序，按照年龄从大到小的顺序依次输出通讯录。题目保证所有人的生日均不相同。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数$n（\lt 10）$。随后n行，每行按照“姓名 生日 电话号码”的格式给出一位朋友的信息，其中“姓名”是长度不超过10的英文字母组成的字符串，“生日”是<code>yyyymmdd</code>格式的日期，“电话号码”是不超过17位的数字及<code>+</code>、<code>-</code>组成的字符串。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照年龄从大到小输出朋友的信息，格式同输出。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">zhang 19850403 13912345678</span><br><span class="line">wang 19821020 +86-0571-88018448</span><br><span class="line">qian 19840619 13609876543</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wang 19821020 +86-0571-88018448</span><br><span class="line">qian 19840619 13609876543</span><br><span class="line">zhang 19850403 13912345678</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/liensi7-4/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/siti9-5/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -547,7 +558,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:12:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:06:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -557,7 +568,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 214 個字)
+                    2 分鐘 閱讀文 (大約 251 個字)
                 </span>
                 
                 
@@ -566,22 +577,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/liensi7-3/">练习7-3 将数组中的数逆序存放（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/siti9-4/">习题9-4 查找书籍（20 分）</a>
             
         </h1>
         <div class="content">
-            <h2 id="练习7-3-将数组中的数逆序存放（20-分）"><a href="#练习7-3-将数组中的数逆序存放（20-分）" class="headerlink" title="练习7-3 将数组中的数逆序存放（20 分）"></a>练习7-3 将数组中的数逆序存放（20 分）</h2><p>本题要求编写程序，将给定的n个整数存入数组中，将数组中的这$n$个数逆序存放，再按顺序输出数组中的元素。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在第一行中给出一个正整数$n（1\le n\le 10）$。第二行输入$n$个整数，用空格分开。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中输出这$n$个整数的处理结果，相邻数字中间用一个空格分开，行末不得有多余空格。</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>4<br>10 8 1 2</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>2 1 8 10<br></p>
+            <h4 id="习题9-4-查找书籍（20-分）"><a href="#习题9-4-查找书籍（20-分）" class="headerlink" title="习题9-4 查找书籍（20 分）"></a>习题9-4 查找书籍（20 分）</h4><p>给定n本书的名称和定价，本题要求编写程序，查找并输出其中定价最高和最低的书的名称和定价。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数$n（\lt 10）$，随后给出n本书的信息。每本书在一行中给出书名，即长度不超过30的字符串，随后一行中给出正实数价格。题目保证没有同样价格的书。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照“价格, 书名”的格式先后输出价格最高和最低的书。价格保留2位小数。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">Programming in C</span><br><span class="line">21.5</span><br><span class="line">Programming in VB</span><br><span class="line">18.5</span><br><span class="line">Programming in Delphi</span><br><span class="line">25.0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">25.00, Programming in Delphi</span><br><span class="line">18.50, Programming in VB</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/liensi7-3/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/siti9-4/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -603,7 +614,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:10:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T03:05:00.000Z">2018-02-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -613,7 +624,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 189 個字)
+                    1 分鐘 閱讀文 (大約 197 個字)
                 </span>
                 
                 
@@ -622,26 +633,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/liensi7-2/">练习7-2 求最大值及其下标（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/08/siti9-3/">习题9-3 平面向量加法（15 分）</a>
             
         </h1>
         <div class="content">
-            <h2 id="练习7-2-求最大值及其下标（20-分）"><a href="#练习7-2-求最大值及其下标（20-分）" class="headerlink" title="练习7-2 求最大值及其下标（20 分）"></a>练习7-2 求最大值及其下标（20 分）</h2><p>本题要求编写程序，找出给定的n个数中的最大值及其对应的最小下标（下标从0开始）。</p>
-<p>##　输入格式:</p>
-<p>输入在第一行中给出一个正整数$n（1\lt n\le10）$。第二行输入n个整数，用空格分开。</p>
-<p>##　输出格式:</p>
-<p>在一行中输出最大值及最大值的最小下标，中间用一个空格分开。</p>
-<p>##　输入样例:</p>
-<p>6<br>2 8 10 1 9 10</p>
-<p>##　输出样例:</p>
-<p>10 2<br></p>
+            <h4 id="习题9-3-平面向量加法（15-分）"><a href="#习题9-3-平面向量加法（15-分）" class="headerlink" title="习题9-3 平面向量加法（15 分）"></a>习题9-3 平面向量加法（15 分）</h4><p>本题要求编写程序，计算两个二维平面向量的和向量。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中按照 “$ x_{1} y_{1} x_{2} y_{2}$ ”的格式给出两个二维平面向量$v_{1}=\left(x_{1}, y_{1}\right)$和$v_{2}=\left(x_{2}, y_{2}\right)$的分量。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照<code>(x, y)</code>的格式输出和向量，坐标输出小数点后一位（注意不能输出−0.0）。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.5 -2.7 -13.9 8.7</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(-10.4, 6.0)</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/liensi7-2/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/08/siti9-3/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -663,7 +670,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-01-24T10:03:00.000Z">2018-01-24</time>
+                <time class="level-item has-text-grey" datetime="2018-02-06T03:44:00.000Z">2018-02-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -673,7 +680,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 165 個字)
+                    2 分鐘 閱讀文 (大約 262 個字)
                 </span>
                 
                 
@@ -682,23 +689,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/01/24/siti6-6/">习题6-6 使用函数输出一个整数的逆序数（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/06/siti9-2/">习题9-2 计算两个复数之积（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题6-6-使用函数输出一个整数的逆序数（20-分）"><a href="#习题6-6-使用函数输出一个整数的逆序数（20-分）" class="headerlink" title="习题6-6 使用函数输出一个整数的逆序数（20 分）"></a>习题6-6 使用函数输出一个整数的逆序数（20 分）</h4><p>本题要求实现一个求整数的逆序数的简单函数。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int reverse( int number );</span><br></pre></td></tr></table></figure>
-<p>其中函数<code>reverse</code>须返回用户传入的整型<code>number</code>的逆序数。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">reverse</span><span class="hljs-params">( <span class="hljs-keyword">int</span> number )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, reverse(n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-12340</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-4321</span><br></pre></td></tr></table></figure>
+            <h4 id="习题9-2-计算两个复数之积（15-分）"><a href="#习题9-2-计算两个复数之积（15-分）" class="headerlink" title="习题9-2 计算两个复数之积（15 分）"></a>习题9-2 计算两个复数之积（15 分）</h4><p>本题要求实现一个计算复数之积的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">struct complex multiply(struct complex x, struct complex y);</span><br></pre></td></tr></table></figure>
+<p>其中<code>struct complex</code>是复数结构体，其定义如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct complex&#123;</span><br><span class="line">    int real;</span><br><span class="line">    int imag;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">struct complex&#123;</span><br><span class="line">    int real;</span><br><span class="line">    int imag;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">struct complex multiply(struct complex x, struct complex y);</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    struct complex product, x, y;</span><br><span class="line"></span><br><span class="line">    scanf(&quot;%d%d%d%d&quot;, &amp;x.real, &amp;x.imag, &amp;y.real, &amp;y.imag);</span><br><span class="line">    product = multiply(x, y);</span><br><span class="line">    printf(&quot;(%d+%di) * (%d+%di) = %d + %di\n&quot;, </span><br><span class="line">            x.real, x.imag, y.real, y.imag, product.real, product.imag);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 你的代码将被嵌在这里 */</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 4 5 6</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(3+4i) * (5+6i) = -9 + 38i</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/01/24/siti6-6/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/06/siti9-2/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -738,7 +746,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/39/">39</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/42/">42</a></li>
             
         </ul>
     </nav>
@@ -786,7 +794,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        383
+                        413
                     </p>
                 </div>
             </div>
@@ -1026,7 +1034,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">40</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1230,7 +1238,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">10</span>
+                    <span class="level-item tag">40</span>
                 </span>
             </a>
         </li>
@@ -1510,7 +1518,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">40</span>
                     </a>
                 </div>
                 
@@ -1700,7 +1708,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">10</span>
+                    <span class="level-item tag">40</span>
                 </span>
             </a>
         </li>
@@ -1980,7 +1988,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">40</span>
                     </a>
                 </div>
                 

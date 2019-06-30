@@ -151,7 +151,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:13:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-27T01:22:00.000Z">2017-10-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 126 個字)
+                    2 分鐘 閱讀文 (大約 349 個字)
                 </span>
                 
                 
@@ -170,21 +170,27 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen2-1-5/">实验2-1-5 将x的平方赋值给y（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/27/shryen3-5/">实验3-5 查询水果价格（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验2-1-5-将x的平方赋值给y（5-分）"><a href="#实验2-1-5-将x的平方赋值给y（5-分）" class="headerlink" title="实验2-1-5 将x的平方赋值给y（5 分）"></a>实验2-1-5 将x的平方赋值给y（5 分）</h4><p>假设x的值为3，计算x的平方并赋值给y，分别以“$y = x \times x$”和“$x \times x = y$”的形式输出x和y的值。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照下列格式输出代入<code>x</code>=3的结果：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y = x * x</span><br><span class="line">x * x = y</span><br></pre></td></tr></table></figure>
+            <h4 id="实验3-5-查询水果价格（15-分）"><a href="#实验3-5-查询水果价格（15-分）" class="headerlink" title="实验3-5 查询水果价格（15 分）"></a>实验3-5 查询水果价格（15 分）</h4><p>给定四种水果，分别是苹果（apple）、梨（pear）、桔子（orange）、葡萄（grape），单价分别对应为3.00元/公斤、2.50元/公斤、4.10元/公斤、10.20元/公斤。</p>
+<p>首先在屏幕上显示以下菜单：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[1] apple</span><br><span class="line">[2] pear</span><br><span class="line">[3] orange</span><br><span class="line">[4] grape</span><br><span class="line">[0] exit</span><br></pre></td></tr></table></figure>
+<p>用户可以输入编号1~4查询对应水果的单价。当连续查询次数超过5次时，程序应自动退出查询；不到5次而用户输入0即退出；输入其他编号，显示价格为0。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出用户连续输入的若干个编号。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>首先在屏幕上显示菜单。然后对应用户的每个输入，在一行中按格式“price = 价格”输出查询结果，其中价格保留两位小数。当用户连续查询次数超过5次、或主动输入0时，程序结束。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 -1 0 2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[1] apple</span><br><span class="line">[2] pear</span><br><span class="line">[3] orange</span><br><span class="line">[4] grape</span><br><span class="line">[0] exit</span><br><span class="line">price = 4.10</span><br><span class="line">price = 0.00</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 3 4 4 5 6 7 8</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[1] apple</span><br><span class="line">[2] pear</span><br><span class="line">[3] orange</span><br><span class="line">[4] grape</span><br><span class="line">[0] exit</span><br><span class="line">price = 3.00</span><br><span class="line">price = 2.50</span><br><span class="line">price = 4.10</span><br><span class="line">price = 4.10</span><br><span class="line">price = 10.20</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen2-1-5/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/27/shryen3-5/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -206,7 +212,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:12:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-27T01:21:00.000Z">2017-10-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -216,7 +222,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 127 個字)
+                    1 分鐘 閱讀文 (大約 202 個字)
                 </span>
                 
                 
@@ -225,22 +231,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen2-1-4/">实验2-1-4 计算平均分（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/27/shryen3-4/">实验3-4 统计字符（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验2-1-4-计算平均分（5-分）"><a href="#实验2-1-4-计算平均分（5-分）" class="headerlink" title="实验2-1-4 计算平均分（5 分）"></a>实验2-1-4 计算平均分（5 分）</h4><p>已知某位学生的数学、英语和计算机课程的成绩分别是87分、72分和93分，求该生3门课程的平均成绩（结果按整型输出）。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照下列格式输出结果：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">math = 87, eng = 72, comp = 93, average = 计算所得的平均成绩</span><br></pre></td></tr></table></figure>
+            <h4 id="实验3-4-统计字符（15-分）"><a href="#实验3-4-统计字符（15-分）" class="headerlink" title="实验3-4 统计字符（15 分）"></a>实验3-4 统计字符（15 分）</h4><p>本题要求编写程序，输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入为10个字符。最后一个回车表示输入结束，不算在内。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内按照</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">letter = 英文字母个数, blank = 空格或回车个数, digit = 数字字符个数, other = 其他字符个数</span><br></pre></td></tr></table></figure>
+<p>的格式输出。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aZ &amp;</span><br><span class="line">09 Az</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">letter = 4, blank = 3, digit = 2, other = 1</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen2-1-4/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/27/shryen3-4/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -262,7 +270,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:11:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-27T01:20:00.000Z">2017-10-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -272,7 +280,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    幾秒 閱讀文 (大約 111 個字)
+                    1 分鐘 閱讀文 (大約 114 個字)
                 </span>
                 
                 
@@ -281,22 +289,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen2-1-3/">实验2-1-3 计算物体自由下落的距离（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/27/shryen3-3/">实验3-3 比较大小（10 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验2-1-3-计算物体自由下落的距离（5-分）"><a href="#实验2-1-3-计算物体自由下落的距离（5-分）" class="headerlink" title="实验2-1-3 计算物体自由下落的距离（5 分）"></a>实验2-1-3 计算物体自由下落的距离（5 分）</h4><p>一个物体从100米的高空自由落下。编写程序，求它在前3秒内下落的垂直距离。设重力加速度为10米/$秒^2$。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>本题目没有输入。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照下列格式输出</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">height = 垂直距离值</span><br></pre></td></tr></table></figure>
-<p>结果保留2位小数。<br></p>
+            <h4 id="实验3-3-比较大小（10-分）"><a href="#实验3-3-比较大小（10-分）" class="headerlink" title="实验3-3 比较大小（10 分）"></a>实验3-3 比较大小（10 分）</h4><p>本题要求将输入的任意3个整数从小到大输出。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出3个整数，其间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中将3个整数从小到大输出，其间以“-&gt;”相连。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 2 8</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2-&gt;4-&gt;8</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen2-1-3/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/27/shryen3-3/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -318,7 +326,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:10:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-27T01:19:00.000Z">2017-10-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -328,7 +336,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 130 個字)
+                    1 分鐘 閱讀文 (大約 169 個字)
                 </span>
                 
                 
@@ -337,21 +345,28 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen2-1-2/">实验2-1-2 温度转换（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/27/shryen3-2/">实验3-2 计算符号函数的值（10 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验2-1-2-温度转换（5-分）"><a href="#实验2-1-2-温度转换（5-分）" class="headerlink" title="实验2-1-2 温度转换（5 分）"></a>实验2-1-2 温度转换（5 分）</h4><p>本题要求编写程序，计算华氏温度150°F对应的摄氏温度。计算公式：$C=5\times(F−32)\div9$，式中：C表示摄氏温度，F表示华氏温度，输出数据要求为整型。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>本题目没有输入。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照下列格式输出</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fahr = 150, celsius = 计算所得摄氏温度的整数值</span><br></pre></td></tr></table></figure>
+            <h4 id="实验3-2-计算符号函数的值（10-分）"><a href="#实验3-2-计算符号函数的值（10-分）" class="headerlink" title="实验3-2 计算符号函数的值（10 分）"></a>实验3-2 计算符号函数的值（10 分）</h4><p>对于任一整数n，符号函数sign(n)的定义如下：</p>
+<p>$$sign(n)=\begin{cases}-1, &amp;  (n \lt 10)  \\\ 0, &amp;  (n=0) \\\ 1,&amp; (n\gt0) \end{cases}$$</p>
+<p>请编写程序计算该函数对任一输入整数的值。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出整数n。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照格式“sign(n) = 函数值”输出该整数n对应的函数值。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sign(10) = 1</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sign(0) = 0</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例3"><a href="#输入样例3" class="headerlink" title="输入样例3:"></a>输入样例3:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-98</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例3"><a href="#输出样例3" class="headerlink" title="输出样例3:"></a>输出样例3:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sign(-98) = -1</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen2-1-2/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/27/shryen3-2/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -373,7 +388,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:09:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-26T02:29:00.000Z">2017-10-26</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -383,7 +398,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    幾秒 閱讀文 (大約 103 個字)
+                    3 分鐘 閱讀文 (大約 378 個字)
                 </span>
                 
                 
@@ -392,21 +407,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen2-1-1/">实验2-1-1 计算摄氏温度（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/26/shryen3-1/">实验3-1 求一元二次方程的根（20 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验2-1-1-计算摄氏温度（5-分）"><a href="#实验2-1-1-计算摄氏温度（5-分）" class="headerlink" title="实验2-1-1 计算摄氏温度（5 分）"></a>实验2-1-1 计算摄氏温度（5 分）</h4><p>$C=5\times(F−32)\div9$，式中：C表示摄氏温度，F表示华氏温度，输出数据要求为整型。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>本题目没有输入。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照下列格式输出</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fahr = 100, celsius = 计算所得摄氏温度的整数值</span><br></pre></td></tr></table></figure>
+            <h4 id="实验3-1-求一元二次方程的根（20-分）"><a href="#实验3-1-求一元二次方程的根（20-分）" class="headerlink" title="实验3-1 求一元二次方程的根（20 分）"></a>实验3-1 求一元二次方程的根（20 分）</h4><p>本题目要求一元二次方程的根，结果保留2位小数。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出3个浮点系数a、b、c，中间用空格分开。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>根据系数情况，输出不同结果：</p>
+<p>1)如果方程有两个不相等的实数根，则每行输出一个根，先大后小；</p>
+<p>2)如果方程有两个不相等复数根，则每行按照格式“实部+虚部i”输出一个根，先输出虚部为正的，后输出虚部为负的；</p>
+<p>3)如果方程只有一个根，则直接输出此根；</p>
+<p>4)如果系数都为0，则输出”Zero Equation”；</p>
+<p>5)如果a和b为0，c不为0，则输出”Not An Equation”。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.1 8.9 3.5</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-0.44</span><br><span class="line">-3.80</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-1.00+1.41i</span><br><span class="line">-1.00-1.41i</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例3"><a href="#输入样例3" class="headerlink" title="输入样例3:"></a>输入样例3:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 2 4</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例3"><a href="#输出样例3" class="headerlink" title="输出样例3:"></a>输出样例3:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-2.00</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例4"><a href="#输入样例4" class="headerlink" title="输入样例4:"></a>输入样例4:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 0 0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例4"><a href="#输出样例4" class="headerlink" title="输出样例4:"></a>输出样例4:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Zero Equation</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例5"><a href="#输入样例5" class="headerlink" title="输入样例5:"></a>输入样例5:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 0 1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例5"><a href="#输出样例5" class="headerlink" title="输出样例5:"></a>输出样例5:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Not An Equation</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen2-1-1/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/26/shryen3-1/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -428,7 +457,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:08:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-26T02:28:00.000Z">2017-10-26</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -438,7 +467,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    幾秒 閱讀文 (大約 89 個字)
+                    2 分鐘 閱讀文 (大約 230 個字)
                 </span>
                 
                 
@@ -447,21 +476,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen1-8/">实验1-8 输出倒三角图案（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/26/shryen2-4-7/">实验2-4-7 求组合数（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验1-8-输出倒三角图案（5-分）"><a href="#实验1-8-输出倒三角图案（5-分）" class="headerlink" title="实验1-8 输出倒三角图案（5 分）"></a>实验1-8 输出倒三角图案（5 分）</h4><p>本题要求编写程序，输出指定的由“*”组成的倒三角图案。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>本题目没有输入。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照下列格式输出由“*”组成的倒三角图案。</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* * * *</span><br><span class="line"> * * *</span><br><span class="line">  * *</span><br><span class="line">   *</span><br></pre></td></tr></table></figure>
+            <h4 id="实验2-4-7-求组合数（15-分）"><a href="#实验2-4-7-求组合数（15-分）" class="headerlink" title="实验2-4-7 求组合数（15 分）"></a>实验2-4-7 求组合数（15 分）</h4><p>本题要求编写程序，根据公式$C_n^M=\frac{n!}{m!(n−m)!} $算出从$n$个不同元素中取出$m$个元素$（m\leq n）$的组合数。</p>
+<p>建议定义和调用函数<code>fact(n)</code>计算<code>n!</code>，其中<code>n</code>的类型是<code>int</code>，函数类型是<code>double</code>。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出两个正整数m和n（m≤n），以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照格式“result = 组合数计算结果”输出。题目保证结果在<code>double</code>类型范围内。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 7</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = 21</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen1-8/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/26/shryen2-4-7/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -483,7 +514,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:07:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-26T02:27:00.000Z">2017-10-26</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -493,7 +524,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    幾秒 閱讀文 (大約 75 個字)
+                    1 分鐘 閱讀文 (大約 114 個字)
                 </span>
                 
                 
@@ -502,20 +533,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen1-7/">实验1-7 What is a computer?（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/26/shryen2-4-6/">实验2-4-6 求幂之和（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验1-7-What-is-a-computer-（5-分）"><a href="#实验1-7-What-is-a-computer-（5-分）" class="headerlink" title="实验1-7 What is a computer?（5 分）"></a>实验1-7 What is a computer?（5 分）</h4><p>本题要求编写程序，输出一个短句“What is a computer?”。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>本题目没有输入。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出短句“What is a computer?”。</p>
+            <h4 id="实验2-4-6-求幂之和（15-分）"><a href="#实验2-4-6-求幂之和（15-分）" class="headerlink" title="实验2-4-6 求幂之和（15 分）"></a>实验2-4-6 求幂之和（15 分）</h4><p>本题要求编写程序，计算$sum=2^1+2^2+2^3+⋯+2^n$。可以调用pow函数求幂。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出正整数$n（\leq 10）$。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照格式“result = 计算结果”输出。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = 62</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen1-7/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/26/shryen2-4-6/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -537,7 +570,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:06:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-23T02:28:00.000Z">2017-10-23</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -547,7 +580,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    幾秒 閱讀文 (大約 73 個字)
+                    1 分鐘 閱讀文 (大約 172 個字)
                 </span>
                 
                 
@@ -556,21 +589,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen1-6/">实验1-6 输出带框文字（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/23/shryen2-4-5/">实验2-4-5 简单实现x的n次方（10 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验1-6-输出带框文字（5-分）"><a href="#实验1-6-输出带框文字（5-分）" class="headerlink" title="实验1-6 输出带框文字（5 分）"></a>实验1-6 输出带框文字（5 分）</h4><p>本题要求编写程序，输出指定的带框文字。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照下列格式输出带框文字。</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">************</span><br><span class="line">  Welcome</span><br><span class="line">************</span><br></pre></td></tr></table></figure>
+            <h4 id="实验2-4-5-简单实现x的n次方（10-分）"><a href="#实验2-4-5-简单实现x的n次方（10-分）" class="headerlink" title="实验2-4-5 简单实现x的n次方（10 分）"></a>实验2-4-5 简单实现x的n次方（10 分）</h4><p>本题要求实现一个计算 $x^n（n\geq 0）$的函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double mypow( double x, int n );</span><br></pre></td></tr></table></figure>
+<p>函数<code>mypow</code>应返回<code>x</code>的<code>n</code>次幂的值。题目保证结果在双精度范围内。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">mypow</span><span class="hljs-params">( <span class="hljs-keyword">double</span> x, <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">double</span> x;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf %d"</span>, &amp;x, &amp;n);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%f\n"</span>, mypow(x, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.24 4</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.003318</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen1-6/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/23/shryen2-4-5/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -592,7 +627,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:05:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-23T02:27:00.000Z">2017-10-23</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -602,7 +637,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    幾秒 閱讀文 (大約 93 個字)
+                    1 分鐘 閱讀文 (大約 131 個字)
                 </span>
                 
                 
@@ -611,21 +646,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen1-5/">实验1-4 输出三角形（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/23/shryen2-4-4/">实验2-4-4 求阶乘序列前N项和（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验1-5-输出菱形图案（5-分）"><a href="#实验1-5-输出菱形图案（5-分）" class="headerlink" title="实验1-5 输出菱形图案（5 分）"></a>实验1-5 输出菱形图案（5 分）</h4><p>本题要求编写程序，输出指定的由“A”组成的菱形图案。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照下列格式输出由“A”组成的菱形图案。</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  A</span><br><span class="line">A   A</span><br><span class="line">  A</span><br></pre></td></tr></table></figure>
+            <h4 id="实验2-4-4-求阶乘序列前N项和（15-分）"><a href="#实验2-4-4-求阶乘序列前N项和（15-分）" class="headerlink" title="实验2-4-4 求阶乘序列前N项和（15 分）"></a>实验2-4-4 求阶乘序列前N项和（15 分）</h4><p>本题要求编写程序，计算序列 $1!+2!+3!+\cdots$ 的前N项之和。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出一个不超过12的正整数N。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出整数结果。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">153</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen1-5/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/23/shryen2-4-4/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -647,7 +683,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-10-19T01:04:00.000Z">2017-10-19</time>
+                <time class="level-item has-text-grey" datetime="2017-10-23T02:00:00.000Z">2017-10-23</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -657,7 +693,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    幾秒 閱讀文 (大約 84 個字)
+                    1 分鐘 閱讀文 (大約 175 個字)
                 </span>
                 
                 
@@ -666,21 +702,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/10/19/shryen1-4/">实验1-4 输出三角形（5 分）</a>
+                <a class="has-link-black-ter" href="/2017/10/23/shryen2-4-3/">实验2-4-3 求平方根序列前N项和（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验1-4-输出三角形（5-分）"><a href="#实验1-4-输出三角形（5-分）" class="headerlink" title="实验1-4 输出三角形（5 分）"></a>实验1-4 输出三角形（5 分）</h4><p>本题要求编写程序，输出指定的由“*”组成的三角图案。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照下列格式输出由“*”组成的三角图案。</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">****</span><br><span class="line">***</span><br><span class="line">**</span><br><span class="line">*</span><br></pre></td></tr></table></figure>
+            <h4 id="实验2-4-3-求平方根序列前N项和（15-分）"><a href="#实验2-4-3-求平方根序列前N项和（15-分）" class="headerlink" title="实验2-4-3 求平方根序列前N项和（15 分）"></a>实验2-4-3 求平方根序列前N项和（15 分）</h4><p>本题要求编写程序，计算平方根序列$\sqrt{1}+\sqrt{2}+\sqrt{3}+\cdots$的前N项之和。可包含头文件<code>math.h</code>，并调用<code>sqrt</code>函数求平方根。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出一个正整数N。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后两位。题目保证计算结果不超过双精度范围。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum = 22.47</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/10/19/shryen1-4/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/10/23/shryen2-4-3/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -718,9 +755,9 @@
             
             <li><a class="pagination-link has-text-black-ter" href="/page/37/">37</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/38/">38</a></li>
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/39/">39</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/42/">42</a></li>
             
         </ul>
     </nav>
@@ -768,7 +805,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        383
+                        413
                     </p>
                 </div>
             </div>
@@ -1008,7 +1045,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">40</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1212,7 +1249,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">10</span>
+                    <span class="level-item tag">40</span>
                 </span>
             </a>
         </li>
@@ -1492,7 +1529,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">40</span>
                     </a>
                 </div>
                 
@@ -1682,7 +1719,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">10</span>
+                    <span class="level-item tag">40</span>
                 </span>
             </a>
         </li>
@@ -1962,7 +1999,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">40</span>
                     </a>
                 </div>
                 
