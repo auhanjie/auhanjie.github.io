@@ -151,7 +151,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:01:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:23:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 442 個字)
+                    3 分鐘 閱讀文 (大約 471 個字)
                 </span>
                 
                 
@@ -170,23 +170,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-25/">7-25 朋友圈 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-50/">7-50 畅通工程之局部最小花费问题 (35 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-25-朋友圈-25-分"><a href="#7-25-朋友圈-25-分" class="headerlink" title="7-25 朋友圈 (25 分)"></a>7-25 朋友圈 (25 分)</h4><p>某学校有$N$个学生，形成$M$个俱乐部。每个俱乐部里的学生有着一定相似的兴趣爱好，形成一个朋友圈。一个学生可以同时属于若干个不同的俱乐部。根据“我的朋友的朋友也是我的朋友”这个推论可以得出，如果A和B是朋友，且B和C是朋友，则A和C也是朋友。请编写程序计算最大朋友圈中有多少人。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行包含两个正整数$N$（≤30000）和$M$（≤1000），分别代表学校的学生总数和俱乐部的个数。后面的$M$行每行按以下格式给出1个俱乐部的信息，其中学生从1~$N$编号：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">第i个俱乐部的人数Mi（空格）学生1（空格）学生2 … 学生Mi</span><br></pre></td></tr></table></figure>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出给出一个整数，表示在最大朋友圈中有多少人。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">7 4</span><br><span class="line">3 1 2 3</span><br><span class="line">2 1 4</span><br><span class="line">3 5 6 7</span><br><span class="line">1 6</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+            <h4 id="7-50-畅通工程之局部最小花费问题-35-分"><a href="#7-50-畅通工程之局部最小花费问题-35-分" class="headerlink" title="7-50 畅通工程之局部最小花费问题 (35 分)"></a>7-50 畅通工程之局部最小花费问题 (35 分)</h4><p>某地区经过对城镇交通状况的调查，得到现有城镇间快速道路的统计数据，并提出“畅通工程”的目标：使整个地区任何两个城镇间都可以实现快速交通（但不一定有直接的快速道路相连，只要互相间接通过快速路可达即可）。现得到城镇道路统计表，表中列出了任意两城镇间修建快速路的费用，以及该道路是否已经修通的状态。现请你编写程序，计算出全地区畅通需要的最低成本。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行给出村庄数目$N$ (1≤$N$≤100)；随后的$N$($N$−1)/2行对应村庄间道路的成本及修建状态：每行给出4个正整数，分别是两个村庄的编号（从1编号到$N$），此两村庄间道路的成本，以及修建状态 — 1表示已建，0表示未建。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出全省畅通需要的最低成本。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 2 1 1</span><br><span class="line">1 3 4 0</span><br><span class="line">1 4 1 1</span><br><span class="line">2 3 3 0</span><br><span class="line">2 4 2 1</span><br><span class="line">3 4 5 0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-25/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-50/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -208,7 +207,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:00:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:22:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -218,7 +217,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 383 個字)
+                    4 分鐘 閱讀文 (大約 536 個字)
                 </span>
                 
                 
@@ -227,22 +226,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-24/">7-24 树种统计 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-49/">7-49 打印学生选课清单 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-24-树种统计-25-分"><a href="#7-24-树种统计-25-分" class="headerlink" title="7-24 树种统计 (25 分)"></a>7-24 树种统计 (25 分)</h4><p>随着卫星成像技术的应用，自然资源研究机构可以识别每一棵树的种类。请编写程序帮助研究人员统计每种树的数量，计算每种树占总数的百分比。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出正整数N（≤105），随后N行，每行给出卫星观测到的一棵树的种类名称。种类名称由不超过30个英文字母和空格组成（大小写不区分）。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按字典序递增输出各种树的种类名称及其所占总数的百分比，其间以空格分隔，保留小数点后4位。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">29</span><br><span class="line">Red Alder</span><br><span class="line">Ash</span><br><span class="line">Aspen</span><br><span class="line">Basswood</span><br><span class="line">Ash</span><br><span class="line">Beech</span><br><span class="line">Yellow Birch</span><br><span class="line">Ash</span><br><span class="line">Cherry</span><br><span class="line">Cottonwood</span><br><span class="line">Ash</span><br><span class="line">Cypress</span><br><span class="line">Red Elm</span><br><span class="line">Gum</span><br><span class="line">Hackberry</span><br><span class="line">White Oak</span><br><span class="line">Hickory</span><br><span class="line">Pecan</span><br><span class="line">Hard Maple</span><br><span class="line">White Oak</span><br><span class="line">Soft Maple</span><br><span class="line">Red Oak</span><br><span class="line">Red Oak</span><br><span class="line">White Oak</span><br><span class="line">Poplan</span><br><span class="line">Sassafras</span><br><span class="line">Sycamore</span><br><span class="line">Black Walnut</span><br><span class="line">Willow</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Ash 13.7931%</span><br><span class="line">Aspen 3.4483%</span><br><span class="line">Basswood 3.4483%</span><br><span class="line">Beech 3.4483%</span><br><span class="line">Black Walnut 3.4483%</span><br><span class="line">Cherry 3.4483%</span><br><span class="line">Cottonwood 3.4483%</span><br><span class="line">Cypress 3.4483%</span><br><span class="line">Gum 3.4483%</span><br><span class="line">Hackberry 3.4483%</span><br><span class="line">Hard Maple 3.4483%</span><br><span class="line">Hickory 3.4483%</span><br><span class="line">Pecan 3.4483%</span><br><span class="line">Poplan 3.4483%</span><br><span class="line">Red Alder 3.4483%</span><br><span class="line">Red Elm 3.4483%</span><br><span class="line">Red Oak 6.8966%</span><br><span class="line">Sassafras 3.4483%</span><br><span class="line">Soft Maple 3.4483%</span><br><span class="line">Sycamore 3.4483%</span><br><span class="line">White Oak 10.3448%</span><br><span class="line">Willow 3.4483%</span><br><span class="line">Yellow Birch 3.4483%</span><br></pre></td></tr></table></figure>
+            <h4 id="7-49-打印学生选课清单-25-分"><a href="#7-49-打印学生选课清单-25-分" class="headerlink" title="7-49 打印学生选课清单 (25 分)"></a>7-49 打印学生选课清单 (25 分)</h4><p>假设全校有最多40000名学生和最多2500门课程。现给出每门课的选课学生名单，要求输出每个前来查询的学生的选课清单。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行是两个正整数：N（≤40000），为前来查询课表的学生总数；K（≤2500），为总课程数。此后顺序给出课程1到K的选课学生名单。格式为：对每一门课，首先在一行中输出课程编号（简单起见，课程从1到K编号）和选课学生总数（之间用空格分隔），之后在第二行给出学生名单，相邻两个学生名字用1个空格分隔。学生姓名由3个大写英文字母+1位数字组成。选课信息之后，在一行内给出了N个前来查询课表的学生的名字，相邻两个学生名字用1个空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对每位前来查询课表的学生，首先输出其名字，随后在同一行中输出一个正整数C，代表该生所选的课程门数，随后按递增顺序输出C个课程的编号。相邻数据用1个空格分隔，注意行末不能输出多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">10 5</span><br><span class="line">1 4</span><br><span class="line">ANN0 BOB5 JAY9 LOR6</span><br><span class="line">2 7</span><br><span class="line">ANN0 BOB5 FRA8 JAY9 JOE4 KAT3 LOR6</span><br><span class="line">3 1</span><br><span class="line">BOB5</span><br><span class="line">4 7</span><br><span class="line">BOB5 DON2 FRA8 JAY9 KAT3 LOR6 ZOE1</span><br><span class="line">5 9</span><br><span class="line">AMY7 ANN0 BOB5 DON2 FRA8 JAY9 KAT3 LOR6 ZOE1</span><br><span class="line">ZOE1 ANN0 BOB5 JOE4 JAY9 FRA8 DON2 AMY7 KAT3 LOR6</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ZOE1 2 4 5</span><br><span class="line">ANN0 3 1 2 5</span><br><span class="line">BOB5 5 1 2 3 4 5</span><br><span class="line">JOE4 1 2</span><br><span class="line">JAY9 4 1 2 4 5</span><br><span class="line">FRA8 3 2 4 5</span><br><span class="line">DON2 2 4 5</span><br><span class="line">AMY7 1 5</span><br><span class="line">KAT3 3 2 4 5</span><br><span class="line">LOR6 4 1 2 4 5</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-24/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-49/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -264,7 +263,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:59:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:21:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -274,7 +273,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 284 個字)
+                    8 分鐘 閱讀文 (大約 1187 個字)
                 </span>
                 
                 
@@ -283,22 +282,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-23/">7-23 还原二叉树 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-48/">7-48 银行排队问题之单窗口“夹塞”版 (30 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-23-还原二叉树-25-分"><a href="#7-23-还原二叉树-25-分" class="headerlink" title="7-23 还原二叉树 (25 分)"></a>7-23 还原二叉树 (25 分)</h4><p>给定一棵二叉树的先序遍历序列和中序遍历序列，要求计算该二叉树的高度。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出正整数$N$（≤50），为树中结点总数。下面两行先后给出先序和中序遍历序列，均是长度为$N$的不包含重复英文字母（区别大小写）的字符串。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出为一个整数，即该二叉树的高度。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">ABDFGHIEC</span><br><span class="line">FDHGIBEAC</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+            <h4 id="7-48-银行排队问题之单窗口“夹塞”版-30-分"><a href="#7-48-银行排队问题之单窗口“夹塞”版-30-分" class="headerlink" title="7-48 银行排队问题之单窗口“夹塞”版 (30 分)"></a>7-48 银行排队问题之单窗口“夹塞”版 (30 分)</h4><p>排队“夹塞”是引起大家强烈不满的行为，但是这种现象时常存在。在银行的单窗口排队问题中，假设银行只有1个窗口提供服务，所有顾客按到达时间排成一条长龙。当窗口空闲时，下一位顾客即去该窗口处理事务。此时如果已知第$i$位顾客与排在后面的第$j$位顾客是好朋友，并且愿意替朋友办理事务的话，那么第$i$位顾客的事务处理时间就是自己的事务加朋友的事务所耗时间的总和。在这种情况下，顾客的等待时间就可能被影响。假设所有人到达银行时，若没有空窗口，都会请求排在最前面的朋友帮忙（包括正在窗口接受服务的朋友）；当有不止一位朋友请求某位顾客帮忙时，该顾客会根据自己朋友请求的顺序来依次处理事务。试编写程序模拟这种现象，并计算顾客的平均等待时间。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行是两个整数：1≤$N$≤10000，为顾客总数；0≤$M$≤100，为彼此不相交的朋友圈子个数。若$M$非0，则此后$M$行，每行先给出正整数2≤$L$≤100，代表该圈子里朋友的总数，随后给出该朋友圈里的$L$位朋友的名字。名字由3个大写英文字母组成，名字间用1个空格分隔。最后$N$行给出$N$位顾客的姓名、到达时间$T$和事务处理时间$P$（以分钟为单位），之间用1个空格分隔。简单起见，这里假设顾客信息是按照到达时间先后顺序给出的（有并列时间的按照给出顺序排队），并且假设每个事务最多占用窗口服务60分钟（如果超过则按60分钟计算）。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按顾客接受服务的顺序输出顾客名字，每个名字占1行。最后一行输出所有顾客的平均等待时间，保留到小数点后1位。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">6 2</span><br><span class="line">3 ANN BOB JOE</span><br><span class="line">2 JIM ZOE</span><br><span class="line">JIM 0 20</span><br><span class="line">BOB 0 15</span><br><span class="line">ANN 0 30</span><br><span class="line">AMY 0 2</span><br><span class="line">ZOE 1 61</span><br><span class="line">JOE 3 10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">JIM</span><br><span class="line">ZOE</span><br><span class="line">BOB</span><br><span class="line">ANN</span><br><span class="line">JOE</span><br><span class="line">AMY</span><br><span class="line">75.2</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-23/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-48/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -320,7 +319,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:58:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:20:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -330,7 +329,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 465 個字)
+                    3 分鐘 閱讀文 (大約 391 個字)
                 </span>
                 
                 
@@ -339,30 +338,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-22/">7-22 堆栈模拟队列 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-47/">7-47 打印选课学生名单 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-22-堆栈模拟队列-25-分"><a href="#7-22-堆栈模拟队列-25-分" class="headerlink" title="7-22 堆栈模拟队列 (25 分)"></a>7-22 堆栈模拟队列 (25 分)</h4><p>设已知有两个堆栈S1和S2，请用这两个堆栈模拟出一个队列Q。</p>
-<p>所谓用堆栈模拟队列，实际上就是通过调用堆栈的下列操作函数:</p>
-<ul>
-<li><code>int IsFull(Stack S)</code>：判断堆栈<code>S</code>是否已满，返回1或0；</li>
-<li><code>int IsEmpty (Stack S )</code>：判断堆栈<code>S</code>是否为空，返回1或0；</li>
-<li><code>void Push(Stack S, ElementType item )</code>：将元素<code>item</code>压入堆栈<code>S</code>；</li>
-<li><code>ElementType Pop(Stack S )</code>：删除并返回<code>S</code>的栈顶元素。</li>
-</ul>
-<p>实现队列的操作，即入队<code>void AddQ(ElementType item)</code>和出队<code>ElementType DeleteQ()</code>。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出两个正整数<code>N1</code>和<code>N2</code>，表示堆栈<code>S1</code>和<code>S2</code>的最大容量。随后给出一系列的队列操作：<code>A  item</code>表示将<code>item</code>入列（这里假设<code>item</code>为整型数字）；<code>D</code>表示出队操作；<code>T</code>表示输入结束。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对输入中的每个<code>D</code>操作，输出相应出队的数字，或者错误信息<code>ERROR:Empty</code>。如果入队操作无法执行，也需要输出<code>ERROR:Full</code>。每个输出占1行。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3 2</span><br><span class="line">A 1 A 2 A 3 A 4 A 5 D A 6 D A 7 D A 8 D D D D T</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ERROR:Full</span><br><span class="line">1</span><br><span class="line">ERROR:Full</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">ERROR:Empty</span><br></pre></td></tr></table></figure>
+            <h4 id="7-47-打印选课学生名单-25-分"><a href="#7-47-打印选课学生名单-25-分" class="headerlink" title="7-47 打印选课学生名单 (25 分)"></a>7-47 打印选课学生名单 (25 分)</h4><p>假设全校有最多40000名学生和最多2500门课程。现给出每个学生的选课清单，要求输出每门课的选课学生名单。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行是两个正整数：N（≤40000），为全校学生总数；K（≤2500），为总课程数。此后N行，每行包括一个学生姓名（3个大写英文字母+1位数字）、一个正整数C（≤20）代表该生所选的课程门数、随后是C个课程编号。简单起见，课程从1到K编号。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>顺序输出课程1到K的选课学生名单。格式为：对每一门课，首先在一行中输出课程编号和选课学生总数（之间用空格分隔），之后在第二行按字典序输出学生名单，每个学生名字占一行。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10 5</span><br><span class="line">ZOE1 2 4 5</span><br><span class="line">ANN0 3 5 2 1</span><br><span class="line">BOB5 5 3 4 2 1 5</span><br><span class="line">JOE4 1 2</span><br><span class="line">JAY9 4 1 2 5 4</span><br><span class="line">FRA8 3 4 2 5</span><br><span class="line">DON2 2 4 5</span><br><span class="line">AMY7 1 5</span><br><span class="line">KAT3 3 5 4 2</span><br><span class="line">LOR6 4 2 4 1 5</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">1 4</span><br><span class="line">ANN0</span><br><span class="line">BOB5</span><br><span class="line">JAY9</span><br><span class="line">LOR6</span><br><span class="line">2 7</span><br><span class="line">ANN0</span><br><span class="line">BOB5</span><br><span class="line">FRA8</span><br><span class="line">JAY9</span><br><span class="line">JOE4</span><br><span class="line">KAT3</span><br><span class="line">LOR6</span><br><span class="line">3 1</span><br><span class="line">BOB5</span><br><span class="line">4 7</span><br><span class="line">BOB5</span><br><span class="line">DON2</span><br><span class="line">FRA8</span><br><span class="line">JAY9</span><br><span class="line">KAT3</span><br><span class="line">LOR6</span><br><span class="line">ZOE1</span><br><span class="line">5 9</span><br><span class="line">AMY7</span><br><span class="line">ANN0</span><br><span class="line">BOB5</span><br><span class="line">DON2</span><br><span class="line">FRA8</span><br><span class="line">JAY9</span><br><span class="line">KAT3</span><br><span class="line">LOR6</span><br><span class="line">ZOE1</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-22/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-47/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -384,7 +375,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:57:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:19:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -394,7 +385,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 309 個字)
+                    6 分鐘 閱讀文 (大約 868 個字)
                 </span>
                 
                 
@@ -403,22 +394,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-21/">7-21 求前缀表达式的值 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-46/">7-46 新浪微博热门话题 (30 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-21-求前缀表达式的值-25-分"><a href="#7-21-求前缀表达式的值-25-分" class="headerlink" title="7-21 求前缀表达式的值 (25 分)"></a>7-21 求前缀表达式的值 (25 分)</h4><p>算术表达式有前缀表示法、中缀表示法和后缀表示法等形式。前缀表达式指二元运算符位于两个运算数之前，例如<code>2+3*(7-4)+8/4</code>的前缀表达式是：<code>+ + 2 * 3 - 7 4 / 8 4</code>。请设计程序计算前缀表达式的结果值。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行内给出不超过30个字符的前缀表达式，只包含<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>以及运算数，不同对象（运算数、运算符号）之间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出前缀表达式的运算结果，保留小数点后1位，或错误信息<code>ERROR</code>。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ + 2 * 3 - 7 4 / 8 4</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13.0</span><br></pre></td></tr></table></figure>
+            <h4 id="7-46-新浪微博热门话题-30-分"><a href="#7-46-新浪微博热门话题-30-分" class="headerlink" title="7-46 新浪微博热门话题 (30 分)"></a>7-46 新浪微博热门话题 (30 分)</h4><p>新浪微博可以在发言中嵌入“话题”，即将发言中的话题文字写在一对“#”之间，就可以生成话题链接，点击链接可以看到有多少人在跟自己讨论相同或者相似的话题。新浪微博还会随时更新热门话题列表，并将最热门的话题放在醒目的位置推荐大家关注。</p>
+<p>本题目要求实现一个简化的热门话题推荐功能，从大量英文（因为中文分词处理比较麻烦）微博中解析出话题，找出被最多条微博提到的话题。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入说明：输入首先给出一个正整数$N$（≤105），随后$N$行，每行给出一条英文微博，其长度不超过140个字符。任何包含在一对最近的<code>#</code>中的内容均被认为是一个话题，输入保证<code>#</code>成对出现。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>第一行输出被最多条微博提到的话题，第二行输出其被提到的微博条数。如果这样的话题不唯一，则输出按字母序最小的话题，并在第三行输出<code>And k more ...</code>，其中<code>k</code>是另外几条热门话题的条数。输入保证至少存在一条话题。</p>
+<p>注意：两条话题被认为是相同的，如果在去掉所有非英文字母和数字的符号、并忽略大小写区别后，它们是相同的字符串；同时它们有完全相同的分词。输出时除首字母大写外，只保留小写英文字母和数字，并用一个空格分隔原文中的单词。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">This is a #test of topic#.</span><br><span class="line">Another #Test of topic.#</span><br><span class="line">This is a #Hot# #Hot# topic</span><br><span class="line">Another #hot!# #Hot# topic</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hot</span><br><span class="line">2</span><br><span class="line">And 1 more ...</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-21/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-46/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -440,7 +433,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:56:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:18:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -450,7 +443,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 315 個字)
+                    3 分鐘 閱讀文 (大約 455 個字)
                 </span>
                 
                 
@@ -459,22 +452,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-20/">7-20 表达式转换 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-45/">7-45 航空公司VIP客户查询 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-20-表达式转换-25-分"><a href="#7-20-表达式转换-25-分" class="headerlink" title="7-20 表达式转换 (25 分)"></a>7-20 表达式转换 (25 分)</h4><p>算术表达式有前缀表示法、中缀表示法和后缀表示法等形式。日常使用的算术表达式是采用中缀表示法，即二元运算符位于两个运算数中间。请设计程序将中缀表达式转换为后缀表达式。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出不含空格的中缀表达式，可包含<code>+</code>、<code>-</code>、<code>*</code>、<code>\</code>以及左右括号<code>()</code>，表达式不超过20个字符。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出转换后的后缀表达式，要求不同对象（运算数、运算符号）之间以空格分隔，但结尾不得有多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2+3*(7-4)+8/4</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 3 7 4 - * + 8 4 / +</span><br></pre></td></tr></table></figure>
+            <h4 id="7-45-航空公司VIP客户查询-25-分"><a href="#7-45-航空公司VIP客户查询-25-分" class="headerlink" title="7-45 航空公司VIP客户查询 (25 分)"></a>7-45 航空公司VIP客户查询 (25 分)</h4><p>不少航空公司都会提供优惠的会员服务，当某顾客飞行里程累积达到一定数量后，可以使用里程积分直接兑换奖励机票或奖励升舱等服务。现给定某航空公司全体会员的飞行记录，要求实现根据身份证号码快速查询会员里程积分的功能。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出两个正整数$N$（≤105）和$K$（≤500）。其中$K$是最低里程，即为照顾乘坐短程航班的会员,航空公司还会将航程低于$K$公里的航班也按$K$公里累积。随后$N$行，每行给出一条飞行记录。飞行记录的输入格式为：<code>18位身份证号码（空格）飞行里程</code>。其中身份证号码由17位数字加最后一位校验码组成，校验码的取值范围为0~9和x共11个符号；飞行里程单位为公里，是(0, 15 000]区间内的整数。然后给出一个正整数$M$（≤105），随后给出$M$行查询人的身份证号码。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对每个查询人，给出其当前的里程累积值。如果该人不是会员，则输出<code>No Info</code>。每个查询结果占一行。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">4 500</span><br><span class="line">330106199010080419 499</span><br><span class="line">110108198403100012 15000</span><br><span class="line">120104195510156021 800</span><br><span class="line">330106199010080419 1</span><br><span class="line">4</span><br><span class="line">120104195510156021</span><br><span class="line">110108198403100012</span><br><span class="line">330106199010080419</span><br><span class="line">33010619901008041x</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">800</span><br><span class="line">15000</span><br><span class="line">1000</span><br><span class="line">No Info</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-20/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-45/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -496,7 +489,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:55:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:17:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -506,7 +499,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 236 個字)
+                    4 分鐘 閱讀文 (大約 557 個字)
                 </span>
                 
                 
@@ -515,22 +508,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-19/">7-19 求链式线性表的倒数第K项 (20 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-44/">7-44 基于词频的文件相似度 (30 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-19-求链式线性表的倒数第K项-20-分"><a href="#7-19-求链式线性表的倒数第K项-20-分" class="headerlink" title="7-19 求链式线性表的倒数第K项 (20 分)"></a>7-19 求链式线性表的倒数第K项 (20 分)</h4><p>给定一系列正整数，请设计一个尽可能高效的算法，查找倒数第K个位置上的数字。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出一个正整数K，随后是若干正整数，最后以一个负整数表示结尾（该负数不算在序列内，不要处理）。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出倒数第K个位置上的数据。如果这个位置不存在，输出错误信息<code>NULL</code>。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 1 2 3 4 5 6 7 8 9 0 -1</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure>
+            <h4 id="7-44-基于词频的文件相似度-30-分"><a href="#7-44-基于词频的文件相似度-30-分" class="headerlink" title="7-44 基于词频的文件相似度 (30 分)"></a>7-44 基于词频的文件相似度 (30 分)</h4><p>实现一种简单原始的文件相似度计算，即以两文件的公共词汇占总词汇的比例来定义相似度。为简化问题，这里不考虑中文（因为分词太难了），只考虑长度不小于3、且不超过10的英文单词，长度超过10的只考虑前10个字母。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出正整数$N$（≤100），为文件总数。随后按以下格式给出每个文件的内容：首先给出文件正文，最后在一行中只给出一个字符<code>#</code>，表示文件结束。在$N$个文件内容结束之后，给出查询总数$M$（≤104），随后$M$行，每行给出一对文件编号，其间以空格分隔。这里假设文件按给出的顺序从1到$N$编号。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>针对每一条查询，在一行中输出两文件的相似度，即两文件的公共词汇量占两文件总词汇量的百分比，精确到小数点后1位。注意这里的一个“单词”只包括仅由英文字母组成的、长度不小于3、且不超过10的英文单词，长度超过10的只考虑前10个字母。单词间以任何非英文字母隔开。另外，大小写不同的同一单词被认为是相同的单词，例如“You”和“you”是同一个单词。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">Aaa Bbb Ccc</span><br><span class="line">#</span><br><span class="line">Bbb Ccc Ddd</span><br><span class="line">#</span><br><span class="line">Aaa2 ccc Eee</span><br><span class="line">is at Ddd@Fff</span><br><span class="line">#</span><br><span class="line">2</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">50.0%</span><br><span class="line">33.3%</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-19/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-44/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -552,7 +545,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:54:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:16:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -562,7 +555,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 375 個字)
+                    3 分鐘 閱讀文 (大約 491 個字)
                 </span>
                 
                 
@@ -571,22 +564,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-18/">7-18 银行业务队列简单模拟 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-43/">7-43 字符串关键字的散列映射 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-18-银行业务队列简单模拟-25-分"><a href="#7-18-银行业务队列简单模拟-25-分" class="headerlink" title="7-18 银行业务队列简单模拟 (25 分)"></a>7-18 银行业务队列简单模拟 (25 分)</h4><p>设某银行有A、B两个业务窗口，且处理业务的速度不一样，其中A窗口处理速度是B窗口的2倍 —— 即当A窗口每处理完2个顾客时，B窗口处理完1个顾客。给定到达银行的顾客序列，请按业务完成的顺序输出顾客序列。假定不考虑顾客先后到达的时间间隔，并且当不同窗口同时处理完2个顾客时，A窗口顾客优先输出。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入为一行正整数，其中第1个数字N(≤1000)为顾客总数，后面跟着N位顾客的编号。编号为奇数的顾客需要到A窗口办理业务，为偶数的顾客则去B窗口。数字间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按业务处理完成的顺序输出顾客的编号。数字间以空格分隔，但最后一个编号后不能有多余的空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8 2 1 3 9 4 11 13 15</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 3 2 9 11 4 13 15</span><br></pre></td></tr></table></figure>
+            <h4 id="7-43-字符串关键字的散列映射-25-分"><a href="#7-43-字符串关键字的散列映射-25-分" class="headerlink" title="7-43 字符串关键字的散列映射 (25 分)"></a>7-43 字符串关键字的散列映射 (25 分)</h4><p>给定一系列由大写英文字母组成的字符串关键字和素数$P$，用移位法定义的散列函数$H$($K$$e$$y$)将关键字$K$$e$$y$中的最后3个字符映射为整数，每个字符占5位；再用除留余数法将整数映射到长度为$P$的散列表中。例如将字符串<code>AZDEG</code>插入长度为1009的散列表中，我们首先将26个大写英文字母顺序映射到整数0~25；再通过移位将其映射为$3×32^2+4×32+6=3206$；然后根据表长得到，即是该字符串的散列映射位置。</p>
+<p>发生冲突时请用平方探测法解决。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行首先给出两个正整数$N$（≤500）和$P$（≥2$N$的最小素数），分别为待插入的关键字总数、以及散列表的长度。第二行给出$N$个字符串关键字，每个长度不超过8位，其间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内输出每个字符串关键字在散列表中的位置。数字间以空格分隔，但行末尾不得有多余空格。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4 11</span><br><span class="line">HELLO ANNK ZOE LOLI</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 10 4 0</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 11</span><br><span class="line">LLO ANNA NNK ZOJ INNK AAA</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 0 10 9 6 1</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-18/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-43/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -608,7 +604,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:53:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:15:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -618,7 +614,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分鐘 閱讀文 (大約 558 個字)
+                    2 分鐘 閱讀文 (大約 318 個字)
                 </span>
                 
                 
@@ -627,22 +623,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-17/">7-17 汉诺塔的非递归实现 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-42/">7-42 整型关键字的散列映射 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-17-汉诺塔的非递归实现-25-分"><a href="#7-17-汉诺塔的非递归实现-25-分" class="headerlink" title="7-17 汉诺塔的非递归实现 (25 分)"></a>7-17 汉诺塔的非递归实现 (25 分)</h4><p>借助堆栈以非递归（循环）方式求解汉诺塔的问题（n, a, b, c），即将N个盘子从起始柱（标记为“a”）通过借助柱（标记为“b”）移动到目标柱（标记为“c”），并保证每个移动符合汉诺塔问题的要求。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入为一个正整数N，即起始柱上的盘数。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>每个操作（移动）占一行，按<code>柱1 -&gt; 柱2</code>的格式输出。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a -&gt; c</span><br><span class="line">a -&gt; b</span><br><span class="line">c -&gt; b</span><br><span class="line">a -&gt; c</span><br><span class="line">b -&gt; a</span><br><span class="line">b -&gt; c</span><br><span class="line">a -&gt; c</span><br></pre></td></tr></table></figure>
+            <h4 id="7-42-整型关键字的散列映射-25-分"><a href="#7-42-整型关键字的散列映射-25-分" class="headerlink" title="7-42 整型关键字的散列映射 (25 分)"></a>7-42 整型关键字的散列映射 (25 分)</h4><p>给定一系列整型关键字和素数$P$，用除留余数法定义的散列函数将关键字映射到长度为$P$的散列表中。用线性探测法解决冲突。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行首先给出两个正整数$N$（≤1000）和$P$（≥$N$的最小素数），分别为待插入的关键字总数、以及散列表的长度。第二行给出$N$个整型关键字。数字间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内输出每个整型关键字在散列表中的位置。数字间以空格分隔，但行末尾不得有多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4 5</span><br><span class="line">24 15 61 88</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 0 1 3</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-17/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-42/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -664,7 +660,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:52:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:14:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -674,7 +670,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 187 個字)
+                    5 分鐘 閱讀文 (大約 700 個字)
                 </span>
                 
                 
@@ -683,22 +679,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-16/">7-16 一元多项式求导 (20 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-41/">7-41 PAT排名汇总 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-16-一元多项式求导-20-分"><a href="#7-16-一元多项式求导-20-分" class="headerlink" title="7-16 一元多项式求导 (20 分)"></a>7-16 一元多项式求导 (20 分)</h4><p>设计函数求一元多项式的导数。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>以指数递降方式输入多项式非零项系数和指数（绝对值均为不超过1000的整数）。数字间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>以与输入相同的格式输出导数多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 4 -5 2 6 1 -2 0</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12 3 -10 1 6 0</span><br></pre></td></tr></table></figure>
+            <h4 id="7-41-PAT排名汇总-25-分"><a href="#7-41-PAT排名汇总-25-分" class="headerlink" title="7-41 PAT排名汇总 (25 分)"></a>7-41 PAT排名汇总 (25 分)</h4><p>计算机程序设计能力考试（Programming Ability Test，简称PAT）旨在通过统一组织的在线考试及自动评测方法客观地评判考生的算法设计与程序设计实现能力，科学的评价计算机程序设计人才，为企业选拔人才提供参考标准（网址<a href="http://www.patest.cn" target="_blank" rel="noopener">http://www.patest.cn）。</a>./)</p>
+<p>每次考试会在若干个不同的考点同时举行，每个考点用局域网，产生本考点的成绩。考试结束后，各个考点的成绩将即刻汇总成一张总的排名表。</p>
+<p>现在就请你写一个程序自动归并各个考点的成绩并生成总排名表。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行给出一个正整数N（≤100），代表考点总数。随后给出N个考点的成绩，格式为：首先一行给出正整数K（≤300），代表该考点的考生总数；随后K行，每行给出1个考生的信息，包括考号（由13位整数字组成）和得分（为[0,100]区间内的整数），中间用空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>首先在第一行里输出考生总数。随后输出汇总的排名表，每个考生的信息占一行，顺序为：考号、最终排名、考点编号、在该考点的排名。其中考点按输入给出的顺序从1到N编号。考生的输出须按最终排名的非递减顺序输出，获得相同分数的考生应有相同名次，并按考号的递增顺序输出。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">5</span><br><span class="line">1234567890001 95</span><br><span class="line">1234567890005 100</span><br><span class="line">1234567890003 95</span><br><span class="line">1234567890002 77</span><br><span class="line">1234567890004 85</span><br><span class="line">4</span><br><span class="line">1234567890013 65</span><br><span class="line">1234567890011 25</span><br><span class="line">1234567890014 100</span><br><span class="line">1234567890012 85</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">1234567890005 1 1 1</span><br><span class="line">1234567890014 1 2 1</span><br><span class="line">1234567890001 3 1 2</span><br><span class="line">1234567890003 3 1 2</span><br><span class="line">1234567890004 5 1 4</span><br><span class="line">1234567890012 5 2 2</span><br><span class="line">1234567890002 7 1 5</span><br><span class="line">1234567890013 8 2 3</span><br><span class="line">1234567890011 9 2 4</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-16/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-41/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -734,7 +732,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/42/">42</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
             
         </ul>
     </nav>
@@ -782,7 +780,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        413
+                        438
                     </p>
                 </div>
             </div>
@@ -1022,7 +1020,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">40</span>
+                <span class="level-item tag">65</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1076,7 +1074,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16.67px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 15px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -1226,7 +1224,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">40</span>
+                    <span class="level-item tag">65</span>
                 </span>
             </a>
         </li>
@@ -1506,7 +1504,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">40</span>
+                        <span class="tag is-grey">65</span>
                     </a>
                 </div>
                 
@@ -1696,7 +1694,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">40</span>
+                    <span class="level-item tag">65</span>
                 </span>
             </a>
         </li>
@@ -1976,7 +1974,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">40</span>
+                        <span class="tag is-grey">65</span>
                     </a>
                 </div>
                 

@@ -151,17 +151,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-06T03:42:00.000Z">2018-02-06</time>
+                <time class="level-item has-text-grey" datetime="2018-04-13T07:51:00.000Z">2018-04-13</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+                <a class="has-link-grey -link" href="/categories/基础编程题目集/">基础编程题目集</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 238 個字)
+                    1 分鐘 閱讀文 (大約 169 個字)
                 </span>
                 
                 
@@ -170,22 +170,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/06/siti9-1/">习题9-1 时间换算（15 分）</a>
+                <a class="has-link-black-ter" href="/2018/04/13/jichu6-3/">6-3 简单求和（10 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题9-1-时间换算（15-分）"><a href="#习题9-1-时间换算（15-分）" class="headerlink" title="习题9-1 时间换算（15 分）"></a>习题9-1 时间换算（15 分）</h4><p>本题要求编写程序，以<code>hh:mm:ss</code>的格式输出某给定时间再过<code>n</code>秒后的时间值（超过23:59:59就从0点开始计时）。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行中以<code>hh:mm:ss</code>的格式给出起始时间，第二行给出整秒数<code>n</code>（&lt;60）。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出在一行中给出<code>hh:mm:ss</code>格式的结果时间。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">11:59:40</span><br><span class="line">30</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12:00:10</span><br></pre></td></tr></table></figure>
+            <h4 id="6-3-简单求和（10-分）"><a href="#6-3-简单求和（10-分）" class="headerlink" title="6-3 简单求和（10 分）"></a>6-3 简单求和（10 分）</h4><p>本题要求实现一个函数，求给定的<code>N</code>个整数的和。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int Sum ( int List[], int N );</span><br></pre></td></tr></table></figure>
+<p>其中给定整数存放在数组<code>List[]</code>中，正整数<code>N</code>是数组元素个数。该函数须返回<code>N</code>个<code>List[]</code>元素的和。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Sum</span> <span class="hljs-params">( <span class="hljs-keyword">int</span> List[], <span class="hljs-keyword">int</span> N )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> List[MAXN], N, i;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;N);</span><br><span class="line">    <span class="hljs-keyword">for</span> ( i=<span class="hljs-number">0</span>; i&lt;N; i++ )</span><br><span class="line">        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;List[i]);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, Sum(List, N));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">12 34 -5</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">41</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/06/siti9-1/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/04/13/jichu6-3/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -207,17 +208,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-06T03:01:00.000Z">2018-02-06</time>
+                <time class="level-item has-text-grey" datetime="2018-04-13T07:47:00.000Z">2018-04-13</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+                <a class="has-link-grey -link" href="/categories/基础编程题目集/">基础编程题目集</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 226 個字)
+                    2 分鐘 閱讀文 (大約 254 個字)
                 </span>
                 
                 
@@ -226,24 +227,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/06/siti8-10/">习题8-10 输出学生成绩（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/04/13/jichu6-2/">6-2 多项式求值（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-10-输出学生成绩（20-分）"><a href="#习题8-10-输出学生成绩（20-分）" class="headerlink" title="习题8-10 输出学生成绩（20 分）"></a>习题8-10 输出学生成绩（20 分）</h4><p>本题要求编写程序，根据输入学生的成绩，统计并输出学生的平均成绩、最高成绩和最低成绩。建议使用动态内存分配来实现。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行首先给出一个正整数N，表示学生的个数。接下来一行给出N个学生的成绩，数字间以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照以下格式输出：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">average = 平均成绩</span><br><span class="line">max = 最高成绩</span><br><span class="line">min = 最低成绩</span><br></pre></td></tr></table></figure>
-<p>结果均保留两位小数。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">85 90 95</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">average = 90.00</span><br><span class="line">max = 95.00</span><br><span class="line">min = 85.00</span><br></pre></td></tr></table></figure>
+            <h4 id="6-2-多项式求值（15-分）"><a href="#6-2-多项式求值（15-分）" class="headerlink" title="6-2 多项式求值（15 分）"></a>6-2 多项式求值（15 分）</h4><p>本题要求实现一个函数，计算阶数为<code>n</code>，系数为<code>a[0]</code> … <code>a[n]</code>的多项式$f(x)=\sum_{i=0}^{n}\left(a[i] \times x^{i}\right)$在<code>x</code>点的值。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double f( int n, double a[], double x );</span><br></pre></td></tr></table></figure>
+<p>其中<code>n</code>是多项式的阶数，<code>a[]</code>中存储系数，<code>x</code>是给定点。函数须返回多项式<code>f(x)</code>的值。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">f</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">double</span> a[], <span class="hljs-keyword">double</span> x )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n, i;</span><br><span class="line">    <span class="hljs-keyword">double</span> a[MAXN], x;</span><br><span class="line">	</span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %lf"</span>, &amp;n, &amp;x);</span><br><span class="line">    <span class="hljs-keyword">for</span> ( i=<span class="hljs-number">0</span>; i&lt;=n; i++ )</span><br><span class="line">        <span class="hljs-built_in">scanf</span>(“%lf”, &amp;a[i]);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.1f\n"</span>, f(n, a, x));</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 1.1</span><br><span class="line">1 2.5 -38.7</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-43.1</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-10/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/04/13/jichu6-2/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -265,17 +265,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-06T02:57:00.000Z">2018-02-06</time>
+                <time class="level-item has-text-grey" datetime="2018-04-13T07:46:00.000Z">2018-04-13</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
+                <a class="has-link-grey -link" href="/categories/基础编程题目集/">基础编程题目集</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 270 個字)
+                    1 分鐘 閱讀文 (大約 170 個字)
                 </span>
                 
                 
@@ -284,25 +284,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/06/siti8-8/">习题8-8 判断回文字符串（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/04/13/jichu6-1/">6-1 简单输出整数（10 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-8-判断回文字符串（20-分）"><a href="#习题8-8-判断回文字符串（20-分）" class="headerlink" title="习题8-8 判断回文字符串（20 分）"></a>习题8-8 判断回文字符串（20 分）</h4><p>本题要求编写函数，判断给定的一串字符是否为“回文”。所谓“回文”是指顺读和倒读都一样的字符串。如“XYZYX”和“xyzzyx”都是回文。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool palindrome( char *s );</span><br></pre></td></tr></table></figure>
-<p>函数<code>palindrome</code>判断输入字符串<code>char *s</code>是否为回文。若是则返回<code>true</code>，否则返回<code>false</code>。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 20</span></span><br><span class="line"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span> &#123;<span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>&#125; <span class="hljs-keyword">bool</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">palindrome</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> s[MAXN];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, s);</span><br><span class="line">    <span class="hljs-keyword">if</span> ( palindrome(s)==<span class="hljs-literal">true</span> )</span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Yes\n"</span>);</span><br><span class="line">    <span class="hljs-keyword">else</span></span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"No\n"</span>);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, s);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br><span class="line">thisistrueurtsisiht</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">No</span><br><span class="line">thisisnottrue</span><br></pre></td></tr></table></figure>
+            <h4 id="6-1-简单输出整数（10-分）"><a href="#6-1-简单输出整数（10-分）" class="headerlink" title="6-1 简单输出整数（10 分）"></a>6-1 简单输出整数（10 分）</h4><p>本题要求实现一个函数，对给定的正整数<code>N</code>，打印从1到<code>N</code>的全部正整数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void PrintN ( int N );</span><br></pre></td></tr></table></figure>
+<p>其中<code>N</code>是用户传入的参数。该函数必须将从1到<code>N</code>的全部正整数顺序打印出来，每个数字占1行。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PrintN</span> <span class="hljs-params">( <span class="hljs-keyword">int</span> N )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> N;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;N);</span><br><span class="line">    PrintN( N );</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-8/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/04/13/jichu6-1/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -324,7 +322,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-06T02:57:00.000Z">2018-02-06</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T21:40:00.000Z">2018-02-09</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -334,7 +332,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 290 個字)
+                    3 分鐘 閱讀文 (大約 453 個字)
                 </span>
                 
                 
@@ -343,25 +341,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/06/siti8-9/">习题8-9 分类统计各类字符个数（15 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/09/siti11-8/">习题11-8 单链表结点删除（20 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-9-分类统计各类字符个数（15-分）"><a href="#习题8-9-分类统计各类字符个数（15-分）" class="headerlink" title="习题8-9 分类统计各类字符个数（15 分）"></a>习题8-9 分类统计各类字符个数（15 分）</h4><p>本题要求实现一个函数，统计给定字符串中的大写字母、小写字母、空格、数字以及其它字符各有多少。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void StringCount( char *s );</span><br></pre></td></tr></table></figure>
-<p>其中 <code>char *s</code> 是用户传入的字符串。函数<code>StringCount</code>须在一行内按照</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">大写字母个数 小写字母个数 空格个数 数字个数 其它字符个数</span><br></pre></td></tr></table></figure>
-<p>的格式输出。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXS 15</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">StringCount</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ReadString</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>; <span class="hljs-comment">/* 由裁判实现，略去不表 */</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> s[MAXS];</span><br><span class="line"></span><br><span class="line">    ReadString(s);</span><br><span class="line">    StringCount(s);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* Your function will be put here */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aZ&amp;*?</span><br><span class="line">093 Az</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 2 1 3 4</span><br></pre></td></tr></table></figure>
+            <h4 id="习题11-8-单链表结点删除（20-分）"><a href="#习题11-8-单链表结点删除（20-分）" class="headerlink" title="习题11-8 单链表结点删除（20 分）"></a>习题11-8 单链表结点删除（20 分）</h4><p>本题要求实现两个函数，分别将读入的数据存储为单链表、将链表中所有存储了某给定值的结点删除。链表结点定义如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct ListNode &#123;</span><br><span class="line">    int data;</span><br><span class="line">    ListNode *next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">struct ListNode *readlist();</span><br><span class="line">struct ListNode *deletem( struct ListNode *L, int m );</span><br></pre></td></tr></table></figure>
+<p>函数<code>readlist</code>从标准输入读入一系列正整数，按照读入顺序建立单链表。当读到−1时表示输入结束，函数应返回指向单链表头结点的指针。</p>
+<p>函数<code>deletem</code>将单链表<code>L</code>中所有存储了<code>m</code>的结点删除。返回指向结果链表头结点的指针。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> &#123;</span></span><br><span class="line">    <span class="hljs-keyword">int</span> data;</span><br><span class="line">    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> *<span class="hljs-title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function">struct ListNode *<span class="hljs-title">readlist</span><span class="hljs-params">()</span></span>;</span><br><span class="line"><span class="hljs-function">struct ListNode *<span class="hljs-title">deletem</span><span class="hljs-params">( struct ListNode *L, <span class="hljs-keyword">int</span> m )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printlist</span><span class="hljs-params">( struct ListNode *L )</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">     <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> *<span class="hljs-title">p</span> = <span class="hljs-title">L</span>;</span></span><br><span class="line">     <span class="hljs-keyword">while</span> (p) &#123;</span><br><span class="line">           <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d "</span>, p-&gt;data);</span><br><span class="line">           p = p-&gt;next;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> m;</span><br><span class="line">    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> *<span class="hljs-title">L</span> = <span class="hljs-title">readlist</span>();</span></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;m);</span><br><span class="line">    L = deletem(L, m);</span><br><span class="line">    printlist(L);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 11 10 12 10 -1</span><br><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11 12</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-9/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/09/siti11-8/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -383,7 +381,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-06T02:45:00.000Z">2018-02-06</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T21:39:00.000Z">2018-02-09</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -393,7 +391,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 217 個字)
+                    3 分鐘 閱讀文 (大約 518 個字)
                 </span>
                 
                 
@@ -402,23 +400,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/06/siti8-7/">习题8-7 字符串排序（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/09/siti11-7/">习题11-7 奇数值结点链表（20 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-7-字符串排序（20-分）"><a href="#习题8-7-字符串排序（20-分）" class="headerlink" title="习题8-7 字符串排序（20 分）"></a>习题8-7 字符串排序（20 分）</h4><p>本题要求编写程序，读入5个字符串，按由小到大的顺序输出。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入为由空格分隔的5个非空字符串，每个字符串不包括空格、制表符、换行符等空白字符，长度小于80。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照以下格式输出排序后的结果：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">After sorted:</span><br><span class="line">每行一个字符串</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">red yellow blue green white</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">After sorted:</span><br><span class="line">blue</span><br><span class="line">green</span><br><span class="line">red</span><br><span class="line">white</span><br><span class="line">yellow</span><br></pre></td></tr></table></figure>
+            <h4 id="习题11-7-奇数值结点链表（20-分）"><a href="#习题11-7-奇数值结点链表（20-分）" class="headerlink" title="习题11-7 奇数值结点链表（20 分）"></a>习题11-7 奇数值结点链表（20 分）</h4><p>本题要求实现两个函数，分别将读入的数据存储为单链表、将链表中奇数值的结点重新组成一个新的链表。链表结点定义如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct ListNode &#123;</span><br><span class="line">    int data;</span><br><span class="line">    ListNode *next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">struct ListNode *readlist();</span><br><span class="line">struct ListNode *getodd( struct ListNode **L );</span><br></pre></td></tr></table></figure>
+<p>函数<code>readlist</code>从标准输入读入一系列正整数，按照读入顺序建立单链表。当读到−1时表示输入结束，函数应返回指向单链表头结点的指针。</p>
+<p>函数<code>getodd</code>将单链表<code>L</code>中奇数值的结点分离出来，重新组成一个新的链表。返回指向新链表头结点的指针，同时将<code>L</code>中存储的地址改为删除了奇数值结点后的链表的头结点地址（所以要传入<code>L</code>的指针）。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> &#123;</span></span><br><span class="line">    <span class="hljs-keyword">int</span> data;</span><br><span class="line">    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> *<span class="hljs-title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function">struct ListNode *<span class="hljs-title">readlist</span><span class="hljs-params">()</span></span>;</span><br><span class="line"><span class="hljs-function">struct ListNode *<span class="hljs-title">getodd</span><span class="hljs-params">( struct ListNode **L )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printlist</span><span class="hljs-params">( struct ListNode *L )</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">     <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> *<span class="hljs-title">p</span> = <span class="hljs-title">L</span>;</span></span><br><span class="line">     <span class="hljs-keyword">while</span> (p) &#123;</span><br><span class="line">           <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d "</span>, p-&gt;data);</span><br><span class="line">           p = p-&gt;next;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> *<span class="hljs-title">L</span>, *<span class="hljs-title">Odd</span>;</span></span><br><span class="line">    L = readlist();</span><br><span class="line">    Odd = getodd(&amp;L);</span><br><span class="line">    printlist(Odd);</span><br><span class="line">    printlist(L);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 2 3 4 5 6 7 -1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 3 5 7 </span><br><span class="line">2 2 4 6</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-7/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/09/siti11-7/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -440,7 +440,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-06T02:45:00.000Z">2018-02-06</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T21:38:00.000Z">2018-02-09</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -450,7 +450,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 262 個字)
+                    2 分鐘 閱讀文 (大約 291 個字)
                 </span>
                 
                 
@@ -459,23 +459,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/06/siti8-6/">习题8-6 删除字符（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/09/siti11-6/">习题11-6 查找子串（20 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-6-删除字符（20-分）"><a href="#习题8-6-删除字符（20-分）" class="headerlink" title="习题8-6 删除字符（20 分）"></a>习题8-6 删除字符（20 分）</h4><p>本题要求实现一个删除字符串中的指定字符的简单函数。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void delchar( char *str, char c );</span><br></pre></td></tr></table></figure>
-<p>其中<code>char *str</code>是传入的字符串，<code>c</code>是待删除的字符。函数<code>delchar</code>的功能是将字符串<code>str</code>中出现的所有<code>c</code>字符删除。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 20</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">delchar</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *str, <span class="hljs-keyword">char</span> c )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ReadString</span><span class="hljs-params">( <span class="hljs-keyword">char</span> s[] )</span></span>; <span class="hljs-comment">/* 由裁判实现，略去不表 */</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> str[MAXN], c;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%c\n"</span>, &amp;c);</span><br><span class="line">    ReadString(str);</span><br><span class="line">    delchar(str, c);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, str);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">happy new year</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hppy new yer</span><br></pre></td></tr></table></figure>
+            <h4 id="习题11-6-查找子串（20-分）"><a href="#习题11-6-查找子串（20-分）" class="headerlink" title="习题11-6 查找子串（20 分）"></a>习题11-6 查找子串（20 分）</h4><p>本题要求实现一个字符串查找的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char *search( char *s, char *t );</span><br></pre></td></tr></table></figure>
+<p>函数<code>search</code>在字符串<code>s</code>中查找子串<code>t</code>，返回子串t在<code>s</code>中的首地址。若未找到，则返回NULL。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXS 30</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">char</span> *<span class="hljs-title">search</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s, <span class="hljs-keyword">char</span> *t)</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ReadString</span><span class="hljs-params">( <span class="hljs-keyword">char</span> s[] )</span></span>; <span class="hljs-comment">/* 裁判提供，细节不表 */</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> s[MAXS], t[MAXS], *pos;</span><br><span class="line"></span><br><span class="line">    ReadString(s);</span><br><span class="line">    ReadString(t);</span><br><span class="line">    pos = search(s, t);</span><br><span class="line">    <span class="hljs-keyword">if</span> ( pos != <span class="hljs-literal">NULL</span> )</span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, pos - s);</span><br><span class="line">    <span class="hljs-keyword">else</span></span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"-1\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The C Programming Language</span><br><span class="line">ram</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The C Programming Language</span><br><span class="line">bored</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/06/siti8-6/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/09/siti11-6/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -497,7 +499,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-04T04:19:00.000Z">2018-02-04</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T21:36:00.000Z">2018-02-09</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -507,7 +509,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 309 個字)
+                    3 分鐘 閱讀文 (大約 375 個字)
                 </span>
                 
                 
@@ -516,23 +518,27 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/04/siti8-5/">习题8-5 使用函数实现字符串部分复制（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/09/siti11-5/">习题11-5 指定位置输出字符串（20 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-5-使用函数实现字符串部分复制（20-分）"><a href="#习题8-5-使用函数实现字符串部分复制（20-分）" class="headerlink" title="习题8-5 使用函数实现字符串部分复制（20 分）"></a>习题8-5 使用函数实现字符串部分复制（20 分）</h4><p>本题要求编写函数，将输入字符串t中从第m个字符开始的全部字符复制到字符串s中。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void strmcpy( char *t, int m, char *s );</span><br></pre></td></tr></table></figure>
-<p>函数<code>strmcpy</code>将输入字符串<code>char *t</code>中从第<code>m</code>个字符开始的全部字符复制到字符串<code>char *s</code>中。若<code>m</code>超过输入字符串的长度，则结果字符串应为空串。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 20</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">strmcpy</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *t, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">char</span> *s )</span></span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ReadString</span><span class="hljs-params">( <span class="hljs-keyword">char</span> s[] )</span></span>; <span class="hljs-comment">/* 由裁判实现，略去不表 */</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> t[MAXN], s[MAXN];</span><br><span class="line">    <span class="hljs-keyword">int</span> m;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d\n"</span>, &amp;m);</span><br><span class="line">    ReadString(t);</span><br><span class="line">    strmcpy( t, m, s );</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, s);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">happy new year</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new year</span><br></pre></td></tr></table></figure>
+            <h4 id="习题11-5-指定位置输出字符串（20-分）"><a href="#习题11-5-指定位置输出字符串（20-分）" class="headerlink" title="习题11-5 指定位置输出字符串（20 分）"></a>习题11-5 指定位置输出字符串（20 分）</h4><p>本题要求实现一个函数，对给定的一个字符串和两个字符，打印出给定字符串中从与第一个字符匹配的位置开始到与第二个字符匹配的位置之间的所有字符。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char *match( char *s, char ch1, char ch2 );</span><br></pre></td></tr></table></figure>
+<p>函数<code>match</code>应打印<code>s</code>中从<code>ch1</code>到<code>ch2</code>之间的所有字符，并且返回<code>ch1</code>的地址。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXS 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">char</span> *<span class="hljs-title">match</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s, <span class="hljs-keyword">char</span> ch1, <span class="hljs-keyword">char</span> ch2 )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> str[MAXS], ch_start, ch_end, *p;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s\n"</span>, str);</span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%c %c"</span>, &amp;ch_start, &amp;ch_end);</span><br><span class="line">    p = match(str, ch_start, ch_end);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, p);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">program</span><br><span class="line">r g</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rog</span><br><span class="line">rogram</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">program</span><br><span class="line">z o</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(空行)</span><br><span class="line">(空行)</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例3："><a href="#输入样例3：" class="headerlink" title="输入样例3："></a>输入样例3：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">program</span><br><span class="line">g z</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例3："><a href="#输出样例3：" class="headerlink" title="输出样例3："></a>输出样例3：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gram</span><br><span class="line">gram</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/04/siti8-5/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/09/siti11-5/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -554,7 +560,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-04T03:50:00.000Z">2018-02-04</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T21:35:00.000Z">2018-02-09</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -564,7 +570,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 380 個字)
+                    1 分鐘 閱讀文 (大約 210 個字)
                 </span>
                 
                 
@@ -573,24 +579,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/04/siti8-4/">习题8-4 报数（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/09/siti11-4/">习题11-4 字符串的连接（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-4-报数（20-分）"><a href="#习题8-4-报数（20-分）" class="headerlink" title="习题8-4 报数（20 分）"></a>习题8-4 报数（20 分）</h4><p>报数游戏是这样的：有n个人围成一圈，按顺序从1到n编好号。从第一个人开始报数，报到$m（\lt n）$的人退出圈子；下一个人从1开始报数，报到m的人退出圈子。如此下去，直到留下最后一个人。</p>
-<p>本题要求编写函数，给出每个人的退出顺序编号。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void CountOff( int n, int m, int out[] );</span><br></pre></td></tr></table></figure>
-<p>其中<code>n</code>是初始人数；<code>m</code>是游戏规定的退出位次（保证为小于n的正整数）。函数<code>CountOff</code>将每个人的退出顺序编号存在数组<code>out[]</code>中。因为C语言数组下标是从0开始的，所以第<code>i</code>个位置上的人是第<code>out[i-1]</code>个退出的。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 20</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">CountOff</span><span class="hljs-params">( <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> out[] )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> out[MAXN], n, m;</span><br><span class="line">    <span class="hljs-keyword">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line">    CountOff( n, m, out );   </span><br><span class="line">    <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt; n; i++ )</span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d "</span>, out[i]);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11 3</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 10 1 7 5 2 11 9 3 6 8</span><br></pre></td></tr></table></figure>
+            <h4 id="习题11-4-字符串的连接（15-分）"><a href="#习题11-4-字符串的连接（15-分）" class="headerlink" title="习题11-4 字符串的连接（15 分）"></a>习题11-4 字符串的连接（15 分）</h4><p>本题要求实现一个函数，将两个字符串连接起来。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char *str_cat( char *s, char *t );</span><br></pre></td></tr></table></figure>
+<p>函数<code>str_cat</code>应将字符串<code>t</code>复制到字符串<code>s</code>的末端，并且返回字符串<code>s</code>的首地址。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXS 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">char</span> *<span class="hljs-title">str_cat</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s, <span class="hljs-keyword">char</span> *t )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">char</span> *p;</span><br><span class="line">    <span class="hljs-keyword">char</span> str1[MAXS+MAXS] = &#123;<span class="hljs-string">'\0'</span>&#125;, str2[MAXS] = &#123;<span class="hljs-string">'\0'</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s%s"</span>, str1, str2);</span><br><span class="line">    p = str_cat(str1, str2);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n%s\n"</span>, p, str1);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abc</span><br><span class="line">def</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abcdef</span><br><span class="line">abcdef</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/04/siti8-4/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/09/siti11-4/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -612,7 +617,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-01T06:23:00.000Z">2018-02-01</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T21:34:00.000Z">2018-02-09</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -622,7 +627,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 365 個字)
+                    2 分鐘 閱讀文 (大約 260 個字)
                 </span>
                 
                 
@@ -631,23 +636,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/01/siti8-3/">习题8-3 数组循环右移（20 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/09/siti11-3/">习题11-3 计算最长的字符串长度（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-3-数组循环右移（20-分）"><a href="#习题8-3-数组循环右移（20-分）" class="headerlink" title="习题8-3 数组循环右移（20 分）"></a>习题8-3 数组循环右移（20 分）</h4><p>本题要求实现一个对数组进行循环右移的简单函数：一个数组<em>a</em>中存有$n（\gt 0）$个整数，将每个整数循环向右移$m（\geq 0）$个位置，即将<em>a</em>中的数据由$\left(a_{0} a_{1} \cdots a_{n-1}\right)$变换为$\left(a_{n-m} \cdots a_{n-1} a_{0} a_{1} \cdots a_{n-m-1}\right)$（最后m个数循环移至最前面的<em>m</em>个位置）。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int ArrayShift( int a[], int n, int m );</span><br></pre></td></tr></table></figure>
-<p>其中<code>a[]</code>是用户传入的数组；<code>n</code>是数组的大小；<code>m</code>是右移的位数。函数<code>ArrayShift</code>须将循环右移后的数组仍然存在<code>a[]</code>中。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ArrayShift</span><span class="hljs-params">( <span class="hljs-keyword">int</span> a[], <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> m )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> a[MAXN], n, m;</span><br><span class="line">    <span class="hljs-keyword">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line">    <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt; n; i++ ) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">    ArrayShift(a, n, m);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt; n; i++ ) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (i != <span class="hljs-number">0</span>) <span class="hljs-built_in">printf</span>(<span class="hljs-string">" "</span>);</span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 2</span><br><span class="line">1 2 3 4 5 6</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 6 1 2 3 4</span><br></pre></td></tr></table></figure>
+            <h4 id="习题11-3-计算最长的字符串长度（15-分）"><a href="#习题11-3-计算最长的字符串长度（15-分）" class="headerlink" title="习题11-3 计算最长的字符串长度（15 分）"></a>习题11-3 计算最长的字符串长度（15 分）</h4><p>本题要求实现一个函数，用于计算有n个元素的指针数组s中最长的字符串的长度。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int max_len( char *s[], int n );</span><br></pre></td></tr></table></figure>
+<p>其中<code>n</code>个字符串存储在<code>s[]</code>中，函数<code>max_len</code>应返回其中最长字符串的长度。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXS 20</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">max_len</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s[], <span class="hljs-keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> i, n;</span><br><span class="line">    <span class="hljs-keyword">char</span> *<span class="hljs-built_in">string</span>[MAXN] = &#123;<span class="hljs-literal">NULL</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="hljs-built_in">string</span>[i] = (<span class="hljs-keyword">char</span> *)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">char</span>)*MAXS);</span><br><span class="line">        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, <span class="hljs-built_in">string</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, max_len(<span class="hljs-built_in">string</span>, n));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">blue</span><br><span class="line">yellow</span><br><span class="line">red</span><br><span class="line">green</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/01/siti8-3/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/09/siti11-3/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -669,7 +674,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-01T02:26:00.000Z">2018-02-01</time>
+                <time class="level-item has-text-grey" datetime="2018-02-08T21:32:00.000Z">2018-02-09</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计（第3版）》题目集/">浙大版《C语言程序设计（第3版）》题目集</a>
@@ -679,7 +684,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 300 個字)
+                    2 分鐘 閱讀文 (大約 240 個字)
                 </span>
                 
                 
@@ -688,26 +693,63 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/02/01/siti8-2/">习题8-2 在数组中查找指定元素（15 分）</a>
+                <a class="has-link-black-ter" href="/2018/02/09/siti11-2/">习题11-2 查找星期（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="习题8-2-在数组中查找指定元素（15-分）"><a href="#习题8-2-在数组中查找指定元素（15-分）" class="headerlink" title="习题8-2 在数组中查找指定元素（15 分）"></a>习题8-2 在数组中查找指定元素（15 分）</h4><p>本题要求实现一个在数组中查找指定元素的简单函数。</p>
-<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int search( int list[], int n, int x );</span><br></pre></td></tr></table></figure>
-<p>其中<code>list[]</code>是用户传入的数组；<code>n</code>（≥0）是<code>list[]</code>中元素的个数；<code>x</code>是待查找的元素。如果找到</p>
-<p>则函数<code>search</code>返回相应元素的最小下标（下标从0开始），否则返回−1。</p>
-<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">search</span><span class="hljs-params">( <span class="hljs-keyword">int</span> <span class="hljs-built_in">list</span>[], <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> x )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> i, index, n, x;</span><br><span class="line">    <span class="hljs-keyword">int</span> a[MAXN];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="hljs-keyword">for</span>( i = <span class="hljs-number">0</span>; i &lt; n; i++ )</span><br><span class="line">        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;a[i]);</span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;x);</span><br><span class="line">    index = search( a, n, x );</span><br><span class="line">    <span class="hljs-keyword">if</span>( index != <span class="hljs-number">-1</span> )</span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"index = %d\n"</span>, index);</span><br><span class="line">    <span class="hljs-keyword">else</span></span><br><span class="line">        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Not found\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
-<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 2 2 5 4</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index = 1</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 2 2 5 4</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Not found</span><br></pre></td></tr></table></figure>
+            <h4 id="习题11-2-查找星期（15-分）"><a href="#习题11-2-查找星期（15-分）" class="headerlink" title="习题11-2 查找星期（15 分）"></a>习题11-2 查找星期（15 分）</h4><p>本题要求实现函数，可以根据下表查找到星期，返回对应的序号。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>星期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Sunday</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Monday</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tuesday</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wednesday</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Thursday</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Friday</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Saturday</td>
+</tr>
+</tbody>
+</table>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int getindex( char *s );</span><br></pre></td></tr></table></figure>
+<p>函数<code>getindex</code>应返回字符串<code>s</code>序号。如果传入的参数<code>s</code>不是一个代表星期的字符串，则返回-1。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXS 80</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getindex</span><span class="hljs-params">( <span class="hljs-keyword">char</span> *s )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line">    <span class="hljs-keyword">char</span> s[MAXS];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, s);</span><br><span class="line">    n = getindex(s);</span><br><span class="line">    <span class="hljs-keyword">if</span> ( n==<span class="hljs-number">-1</span> ) <span class="hljs-built_in">printf</span>(<span class="hljs-string">"wrong input!\n"</span>);</span><br><span class="line">    <span class="hljs-keyword">else</span> <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, n);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tuesday</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">today</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrong input!</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/01/siti8-2/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/02/09/siti11-2/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -747,7 +789,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/42/">42</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
             
         </ul>
     </nav>
@@ -795,7 +837,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        413
+                        438
                     </p>
                 </div>
             </div>
@@ -1035,7 +1077,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">40</span>
+                <span class="level-item tag">65</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1089,7 +1131,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16.67px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 15px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -1239,7 +1281,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">40</span>
+                    <span class="level-item tag">65</span>
                 </span>
             </a>
         </li>
@@ -1519,7 +1561,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">40</span>
+                        <span class="tag is-grey">65</span>
                     </a>
                 </div>
                 
@@ -1709,7 +1751,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">40</span>
+                    <span class="level-item tag">65</span>
                 </span>
             </a>
         </li>
@@ -1989,7 +2031,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">40</span>
+                        <span class="tag is-grey">65</span>
                     </a>
                 </div>
                 

@@ -161,7 +161,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:54:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:16:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -171,7 +171,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 375 個字)
+                    3 分鐘 閱讀文 (大約 491 個字)
                 </span>
                 
                 
@@ -180,22 +180,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-18/">7-18 银行业务队列简单模拟 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-43/">7-43 字符串关键字的散列映射 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-18-银行业务队列简单模拟-25-分"><a href="#7-18-银行业务队列简单模拟-25-分" class="headerlink" title="7-18 银行业务队列简单模拟 (25 分)"></a>7-18 银行业务队列简单模拟 (25 分)</h4><p>设某银行有A、B两个业务窗口，且处理业务的速度不一样，其中A窗口处理速度是B窗口的2倍 —— 即当A窗口每处理完2个顾客时，B窗口处理完1个顾客。给定到达银行的顾客序列，请按业务完成的顺序输出顾客序列。假定不考虑顾客先后到达的时间间隔，并且当不同窗口同时处理完2个顾客时，A窗口顾客优先输出。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入为一行正整数，其中第1个数字N(≤1000)为顾客总数，后面跟着N位顾客的编号。编号为奇数的顾客需要到A窗口办理业务，为偶数的顾客则去B窗口。数字间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按业务处理完成的顺序输出顾客的编号。数字间以空格分隔，但最后一个编号后不能有多余的空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8 2 1 3 9 4 11 13 15</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 3 2 9 11 4 13 15</span><br></pre></td></tr></table></figure>
+            <h4 id="7-43-字符串关键字的散列映射-25-分"><a href="#7-43-字符串关键字的散列映射-25-分" class="headerlink" title="7-43 字符串关键字的散列映射 (25 分)"></a>7-43 字符串关键字的散列映射 (25 分)</h4><p>给定一系列由大写英文字母组成的字符串关键字和素数$P$，用移位法定义的散列函数$H$($K$$e$$y$)将关键字$K$$e$$y$中的最后3个字符映射为整数，每个字符占5位；再用除留余数法将整数映射到长度为$P$的散列表中。例如将字符串<code>AZDEG</code>插入长度为1009的散列表中，我们首先将26个大写英文字母顺序映射到整数0~25；再通过移位将其映射为$3×32^2+4×32+6=3206$；然后根据表长得到，即是该字符串的散列映射位置。</p>
+<p>发生冲突时请用平方探测法解决。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行首先给出两个正整数$N$（≤500）和$P$（≥2$N$的最小素数），分别为待插入的关键字总数、以及散列表的长度。第二行给出$N$个字符串关键字，每个长度不超过8位，其间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内输出每个字符串关键字在散列表中的位置。数字间以空格分隔，但行末尾不得有多余空格。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4 11</span><br><span class="line">HELLO ANNK ZOE LOLI</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 10 4 0</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 11</span><br><span class="line">LLO ANNA NNK ZOJ INNK AAA</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 0 10 9 6 1</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-18/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-43/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -217,7 +220,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:53:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:15:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -227,7 +230,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分鐘 閱讀文 (大約 558 個字)
+                    2 分鐘 閱讀文 (大約 318 個字)
                 </span>
                 
                 
@@ -236,22 +239,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-17/">7-17 汉诺塔的非递归实现 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-42/">7-42 整型关键字的散列映射 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-17-汉诺塔的非递归实现-25-分"><a href="#7-17-汉诺塔的非递归实现-25-分" class="headerlink" title="7-17 汉诺塔的非递归实现 (25 分)"></a>7-17 汉诺塔的非递归实现 (25 分)</h4><p>借助堆栈以非递归（循环）方式求解汉诺塔的问题（n, a, b, c），即将N个盘子从起始柱（标记为“a”）通过借助柱（标记为“b”）移动到目标柱（标记为“c”），并保证每个移动符合汉诺塔问题的要求。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入为一个正整数N，即起始柱上的盘数。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>每个操作（移动）占一行，按<code>柱1 -&gt; 柱2</code>的格式输出。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a -&gt; c</span><br><span class="line">a -&gt; b</span><br><span class="line">c -&gt; b</span><br><span class="line">a -&gt; c</span><br><span class="line">b -&gt; a</span><br><span class="line">b -&gt; c</span><br><span class="line">a -&gt; c</span><br></pre></td></tr></table></figure>
+            <h4 id="7-42-整型关键字的散列映射-25-分"><a href="#7-42-整型关键字的散列映射-25-分" class="headerlink" title="7-42 整型关键字的散列映射 (25 分)"></a>7-42 整型关键字的散列映射 (25 分)</h4><p>给定一系列整型关键字和素数$P$，用除留余数法定义的散列函数将关键字映射到长度为$P$的散列表中。用线性探测法解决冲突。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行首先给出两个正整数$N$（≤1000）和$P$（≥$N$的最小素数），分别为待插入的关键字总数、以及散列表的长度。第二行给出$N$个整型关键字。数字间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内输出每个整型关键字在散列表中的位置。数字间以空格分隔，但行末尾不得有多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4 5</span><br><span class="line">24 15 61 88</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 0 1 3</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-17/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-42/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -273,7 +276,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:52:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:14:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -283,7 +286,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 187 個字)
+                    5 分鐘 閱讀文 (大約 700 個字)
                 </span>
                 
                 
@@ -292,22 +295,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-16/">7-16 一元多项式求导 (20 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-41/">7-41 PAT排名汇总 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-16-一元多项式求导-20-分"><a href="#7-16-一元多项式求导-20-分" class="headerlink" title="7-16 一元多项式求导 (20 分)"></a>7-16 一元多项式求导 (20 分)</h4><p>设计函数求一元多项式的导数。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>以指数递降方式输入多项式非零项系数和指数（绝对值均为不超过1000的整数）。数字间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>以与输入相同的格式输出导数多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 4 -5 2 6 1 -2 0</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12 3 -10 1 6 0</span><br></pre></td></tr></table></figure>
+            <h4 id="7-41-PAT排名汇总-25-分"><a href="#7-41-PAT排名汇总-25-分" class="headerlink" title="7-41 PAT排名汇总 (25 分)"></a>7-41 PAT排名汇总 (25 分)</h4><p>计算机程序设计能力考试（Programming Ability Test，简称PAT）旨在通过统一组织的在线考试及自动评测方法客观地评判考生的算法设计与程序设计实现能力，科学的评价计算机程序设计人才，为企业选拔人才提供参考标准（网址<a href="http://www.patest.cn" target="_blank" rel="noopener">http://www.patest.cn）。</a>./)</p>
+<p>每次考试会在若干个不同的考点同时举行，每个考点用局域网，产生本考点的成绩。考试结束后，各个考点的成绩将即刻汇总成一张总的排名表。</p>
+<p>现在就请你写一个程序自动归并各个考点的成绩并生成总排名表。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行给出一个正整数N（≤100），代表考点总数。随后给出N个考点的成绩，格式为：首先一行给出正整数K（≤300），代表该考点的考生总数；随后K行，每行给出1个考生的信息，包括考号（由13位整数字组成）和得分（为[0,100]区间内的整数），中间用空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>首先在第一行里输出考生总数。随后输出汇总的排名表，每个考生的信息占一行，顺序为：考号、最终排名、考点编号、在该考点的排名。其中考点按输入给出的顺序从1到N编号。考生的输出须按最终排名的非递减顺序输出，获得相同分数的考生应有相同名次，并按考号的递增顺序输出。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">5</span><br><span class="line">1234567890001 95</span><br><span class="line">1234567890005 100</span><br><span class="line">1234567890003 95</span><br><span class="line">1234567890002 77</span><br><span class="line">1234567890004 85</span><br><span class="line">4</span><br><span class="line">1234567890013 65</span><br><span class="line">1234567890011 25</span><br><span class="line">1234567890014 100</span><br><span class="line">1234567890012 85</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">1234567890005 1 1 1</span><br><span class="line">1234567890014 1 2 1</span><br><span class="line">1234567890001 3 1 2</span><br><span class="line">1234567890003 3 1 2</span><br><span class="line">1234567890004 5 1 4</span><br><span class="line">1234567890012 5 2 2</span><br><span class="line">1234567890002 7 1 5</span><br><span class="line">1234567890013 8 2 3</span><br><span class="line">1234567890011 9 2 4</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-16/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-41/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -329,7 +334,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:51:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:13:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -339,7 +344,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 493 個字)
+                    7 分鐘 閱讀文 (大約 995 個字)
                 </span>
                 
                 
@@ -348,23 +353,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-15/">7-15 QQ帐户的申请与登陆 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-40/">7-40 奥运排行榜 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-15-QQ帐户的申请与登陆-25-分"><a href="#7-15-QQ帐户的申请与登陆-25-分" class="headerlink" title="7-15 QQ帐户的申请与登陆 (25 分)"></a>7-15 QQ帐户的申请与登陆 (25 分)</h4><p>实现QQ新帐户申请和老帐户登陆的简化版功能。最大挑战是：据说现在的QQ号码已经有10位数了。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出一个正整数$N$（≤105），随后给出$N$行指令。每行指令的格式为：“命令符（空格）QQ号码（空格）密码”。其中命令符为“<code>N</code>”（代表New）时表示要新申请一个QQ号，<code>后面是新帐户的号码和密码</code>；命令符为“L”（代表Login）时表示是老帐户登陆，后面是登陆信息。QQ号码为一个不超过10位、但大于1000（据说QQ老总的号码是1001）的整数。密码为不小于6位、不超过16位、且不包含空格的字符串。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>针对每条指令，给出相应的信息：</p>
-<p>1）若新申请帐户成功，则输出“New: OK”；<br>2）若新申请的号码已经存在，则输出“ERROR: Exist”；<br>3）若老帐户登陆成功，则输出“Login: OK”；<br>4）若老帐户QQ号码不存在，则输出“ERROR: Not Exist”；<br>5）若老帐户密码错误，则输出“ERROR: Wrong PW”。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">L 1234567890 myQQ@qq.com</span><br><span class="line">N 1234567890 myQQ@qq.com</span><br><span class="line">N 1234567890 myQQ@qq.com</span><br><span class="line">L 1234567890 myQQ@qq</span><br><span class="line">L 1234567890 myQQ@qq.com</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Not Exist</span><br><span class="line">New: OK</span><br><span class="line">ERROR: Exist</span><br><span class="line">ERROR: Wrong PW</span><br><span class="line">Login: OK</span><br></pre></td></tr></table></figure>
+            <h4 id="7-40-奥运排行榜-25-分"><a href="#7-40-奥运排行榜-25-分" class="headerlink" title="7-40 奥运排行榜 (25 分)"></a>7-40 奥运排行榜 (25 分)</h4><p>每年奥运会各大媒体都会公布一个排行榜，但是细心的读者发现，不同国家的排行榜略有不同。比如中国金牌总数列第一的时候，中国媒体就公布“金牌榜”；而美国的奖牌总数第一，于是美国媒体就公布“奖牌榜”。如果人口少的国家公布一个“国民人均奖牌榜”，说不定非洲的国家会成为榜魁…… 现在就请你写一个程序，对每个前来咨询的国家按照对其最有利的方式计算它的排名。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行给出两个正整数$N$和$M$（≤224，因为世界上共有224个国家和地区），分别是参与排名的国家和地区的总个数、以及前来咨询的国家的个数。为简单起见，我们把国家从0 ~ $N$−1编号。之后有$N$行输入，第<em>i</em>行给出编号为<em>i</em>−1的国家的金牌数、奖牌数、国民人口数（单位为百万），数字均为[0,1000]区间内的整数，用空格分隔。最后面一行给出$M$个前来咨询的国家的编号，用空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行里顺序输出前来咨询的国家的<code>排名:计算方式编号</code>。其排名按照对该国家最有利的方式计算；计算方式编号为：金牌榜=1，奖牌榜=2，国民人均金牌榜=3，国民人均奖牌榜=4。输出间以空格分隔，输出结尾不能有多余空格。</p>
+<p>若某国在不同排名方式下有相同名次，则输出编号最小的计算方式。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">4 4</span><br><span class="line">51 100 1000</span><br><span class="line">36 110 300</span><br><span class="line">6 14 32</span><br><span class="line">5 18 40</span><br><span class="line">0 1 2 3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1:1 1:2 1:3 1:4</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-15/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-40/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -386,7 +391,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:50:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:12:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -396,7 +401,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分鐘 閱讀文 (大約 1048 個字)
+                    4 分鐘 閱讀文 (大約 591 個字)
                 </span>
                 
                 
@@ -405,22 +410,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-14/">7-14 电话聊天狂人 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-39/">7-39 魔法优惠券 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-14-电话聊天狂人-25-分"><a href="#7-14-电话聊天狂人-25-分" class="headerlink" title="7-14 电话聊天狂人 (25 分)"></a>7-14 电话聊天狂人 (25 分)</h4><p>给定大量手机用户通话记录，找出其中通话次数最多的聊天狂人。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出正整数$N$（≤105），为通话记录条数。随后$N$行，每行给出一条通话记录。简单起见，这里只列出拨出方和接收方的11位数字构成的手机号码，其中以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中给出聊天狂人的手机号码及其通话次数，其间以空格分隔。如果这样的人不唯一，则输出狂人中最小的号码及其通话次数，并且附加给出并列狂人的人数。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">13005711862 13588625832</span><br><span class="line">13505711862 13088625832</span><br><span class="line">13588625832 18087925832</span><br><span class="line">15005713862 13588625832</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13588625832 3</span><br></pre></td></tr></table></figure>
+            <h4 id="7-39-魔法优惠券-25-分"><a href="#7-39-魔法优惠券-25-分" class="headerlink" title="7-39 魔法优惠券 (25 分)"></a>7-39 魔法优惠券 (25 分)</h4><p>在火星上有个魔法商店，提供魔法优惠券。每个优惠劵上印有一个整数面值K，表示若你在购买某商品时使用这张优惠劵，可以得到K倍该商品价值的回报！该商店还免费赠送一些有价值的商品，但是如果你在领取免费赠品的时候使用面值为正的优惠劵，则必须倒贴给商店K倍该商品价值的金额…… 但是不要紧，还有面值为负的优惠劵可以用！（真是神奇的火星）</p>
+<p>例如，给定一组优惠劵，面值分别为1、2、4、-1；对应一组商品，价值为火星币M$7、6、-2、-3，其中负的价值表示该商品是免费赠品。我们可以将优惠劵3用在商品1上，得到M$28的回报；优惠劵2用在商品2上，得到M$12的回报；优惠劵4用在商品4上，得到M$3的回报。但是如果一不小心把优惠劵3用在商品4上，你必须倒贴给商店M$12。同样，当你一不小心把优惠劵4用在商品1上，你必须倒贴给商店M$7。</p>
+<p>规定每张优惠券和每件商品都只能最多被使用一次，求你可以得到的最大回报。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入有两行。第一行首先给出优惠劵的个数N，随后给出N个优惠劵的整数面值。第二行首先给出商品的个数M，随后给出M个商品的整数价值。N和M在[1, 106]之间，所有的数据大小不超过230，数字间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出可以得到的最大回报。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4 1 2 4 -1</span><br><span class="line">4 7 6 -2 -3</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">43</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-14/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-39/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -442,7 +449,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:49:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:11:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -452,7 +459,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 204 個字)
+                    2 分鐘 閱讀文 (大約 307 個字)
                 </span>
                 
                 
@@ -461,22 +468,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-13/">7-13 统计工龄 (20 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-38/">7-38 寻找大富翁 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-13-统计工龄-20-分"><a href="#7-13-统计工龄-20-分" class="headerlink" title="7-13 统计工龄 (20 分)"></a>7-13 统计工龄 (20 分)</h4><p>给定公司$N$名员工的工龄，要求按工龄增序输出每个工龄段有多少员工。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出正整数$N$（≤105），即员工总人数；随后给出$N$个整数，即每个员工的工龄，范围在[0, 50]。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按工龄的递增顺序输出每个工龄的员工个数，格式为：“工龄:人数”。每项占一行。如果人数为0则不输出该项。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">10 2 0 5 7 2 5 2</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0:1</span><br><span class="line">2:3</span><br><span class="line">5:2</span><br><span class="line">7:1</span><br><span class="line">10:1</span><br></pre></td></tr></table></figure>
+            <h4 id="7-38-寻找大富翁-25-分"><a href="#7-38-寻找大富翁-25-分" class="headerlink" title="7-38 寻找大富翁 (25 分)"></a>7-38 寻找大富翁 (25 分)</h4><p>胡润研究院的调查显示，截至2017年底，中国个人资产超过1亿元的高净值人群达15万人。假设给出N个人的个人资产值，请快速找出资产排前M位的大富翁。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出两个正整数$N$（≤106）和$M$（≤10），其中$N$为总人数，$M$为需要找出的大富翁数；接下来一行给出$N$个人的个人资产值，以百万元为单位，为不超过长整型范围的整数。数字间以空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内按非递增顺序输出资产排前$M$位的大富翁的个人资产值。数字间以空格分隔，但结尾不得有多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">8 3</span><br><span class="line">8 12 7 3 20 9 5 18</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">20 18 12</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-13/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-38/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -498,7 +505,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:48:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:10:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -508,7 +515,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 314 個字)
+                    3 分鐘 閱讀文 (大約 420 個字)
                 </span>
                 
                 
@@ -517,36 +524,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-12/">7-12 排序 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-37/">7-37 模拟EXCEL排序 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-12-排序-25-分"><a href="#7-12-排序-25-分" class="headerlink" title="7-12 排序 (25 分)"></a>7-12 排序 (25 分)</h4><p>给定$N$个（长整型范围内的）整数，要求输出从小到大排序后的结果。</p>
-<p>本题旨在测试各种不同的排序算法在各种数据情况下的表现。各组测试数据特点如下：</p>
-<ul>
-<li><p>数据1：只有1个元素；</p>
-</li>
-<li><p>数据2：11个不相同的整数，测试基本正确性；</p>
-</li>
-<li>数据3：$10^3$个随机整数；</li>
-<li>数据4：$10^4$个随机整数；</li>
-<li>数据5：$10^5$个随机整数；</li>
-<li>数据6：$10^5$个随机整数；</li>
-<li>数据7：$10^5$个随机整数；</li>
-<li>数据8：$10^5$个随机整数；</li>
-<li>数据9：$10^5$个随机正整数，每个数字不超过1000。</li>
-</ul>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数$N$（≤105），随后一行给出$N$个（长整型范围内的）整数，其间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出从小到大排序后的结果，数字间以1个空格分隔，行末不得有多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">11</span><br><span class="line">4 981 10 -17 0 -20 29 50 8 43 -5</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-20 -17 -5 0 4 8 10 29 43 50 981</span><br></pre></td></tr></table></figure>
+            <h4 id="7-37-模拟EXCEL排序-25-分"><a href="#7-37-模拟EXCEL排序-25-分" class="headerlink" title="7-37 模拟EXCEL排序 (25 分)"></a>7-37 模拟EXCEL排序 (25 分)</h4><p>Excel可以对一组纪录按任意指定列排序。现请编写程序实现类似功能。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行包含两个正整数<em>N</em>(≤105) 和<em>C</em>，其中<em>N</em>是纪录的条数，<em>C</em>是指定排序的列号。之后有 <em>N</em>行，每行包含一条学生纪录。每条学生纪录由学号（6位数字，保证没有重复的学号）、姓名（不超过8位且不包含空格的字符串）、成绩（[0, 100]内的整数）组成，相邻属性用1个空格隔开。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在<em>N</em>行中输出按要求排序后的结果，即：当<em>C</em>=1时，按学号递增排序；当<em>C</em>=2时，按姓名的非递减字典序排序；当<em>C</em>=3时，按成绩的非递减排序。当若干学生具有相同姓名或者相同成绩时，则按他们的学号递增排序。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 1</span><br><span class="line">000007 James 85</span><br><span class="line">000010 Amy 90</span><br><span class="line">000001 Zoe 60</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">000001 Zoe 60</span><br><span class="line">000007 James 85</span><br><span class="line">000010 Amy 90</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-12/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-37/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -568,7 +561,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:47:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:10:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -578,7 +571,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8 分鐘 閱讀文 (大約 1147 個字)
+                    5 分鐘 閱讀文 (大約 741 個字)
                 </span>
                 
                 
@@ -587,26 +580,83 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-11/">7-11 关键活动 (30 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-35/">7-35 城市间紧急救援 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-11-关键活动-30-分"><a href="#7-11-关键活动-30-分" class="headerlink" title="7-11 关键活动 (30 分)"></a>7-11 关键活动 (30 分)</h4><p>假定一个工程项目由一组子任务构成，子任务之间有的可以并行执行，有的必须在完成了其它一些子任务后才能执行。“任务调度”包括一组子任务、以及每个子任务可以执行所依赖的子任务集。</p>
+            <h4 id="7-35-城市间紧急救援-25-分"><a href="#7-35-城市间紧急救援-25-分" class="headerlink" title="7-35 城市间紧急救援 (25 分)"></a>7-35 城市间紧急救援 (25 分)</h4><p>作为一个城市的应急救援队伍的负责人，你有一张特殊的全国地图。在地图上显示有多个分散的城市和一些连接城市的快速道路。每个城市的救援队数量和每一条连接两个城市的快速道路长度都标在地图上。当其他城市有紧急求助电话给你的时候，你的任务是带领你的救援队尽快赶往事发地，同时，一路上召集尽可能多的救援队。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出4个正整数$N$、$M$、$S$、$D$，其中$N$（2≤$N$≤500）是城市的个数，顺便假设城市的编号为0 ~ ($N$−1)；$M$是快速道路的条数；$S$是出发地的城市编号；$D$是目的地的城市编号。</p>
+<p>第二行给出$N$个正整数，其中第$i$个数是第$i$个城市的救援队的数目，数字间以空格分隔。随后的$M$行中，每行给出一条快速道路的信息，分别是：城市1、城市2、快速道路的长度，中间用空格分开，数字均为整数且不超过500。输入保证救援可行且最优解唯一。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>第一行输出最短路径的条数和能够召集的最多的救援队数量。第二行输出从$S$到$D$的路径中经过的城市编号。数字间以空格分隔，输出结尾不能有多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">4 5 0 3</span><br><span class="line">20 30 40 10</span><br><span class="line">0 1 1</span><br><span class="line">1 3 2</span><br><span class="line">0 3 3</span><br><span class="line">0 2 2</span><br><span class="line">2 3 2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 60</span><br><span class="line">0 1 3</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-35/#more">繼續閱讀</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:09:00.000Z">2018-05-06</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分鐘 閱讀文 (大約 607 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-34/">7-34 任务调度的合理性 (25 分)</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="7-34-任务调度的合理性-25-分"><a href="#7-34-任务调度的合理性-25-分" class="headerlink" title="7-34 任务调度的合理性 (25 分)"></a>7-34 任务调度的合理性 (25 分)</h4><p>假定一个工程项目由一组子任务构成，子任务之间有的可以并行执行，有的必须在完成了其它一些子任务后才能执行。“任务调度”包括一组子任务、以及每个子任务可以执行所依赖的子任务集。</p>
 <p>比如完成一个专业的所有课程学习和毕业设计可以看成一个本科生要完成的一项工程，各门课程可以看成是子任务。有些课程可以同时开设，比如英语和C程序设计，它们没有必须先修哪门的约束；有些课程则不可以同时开设，因为它们有先后的依赖关系，比如C程序设计和数据结构两门课，必须先学习前者。</p>
-<p>但是需要注意的是，对一组子任务，并不是任意的任务调度都是一个可行的方案。比如方案中存在“子任务A依赖于子任务B，子任务B依赖于子任务C，子任务C又依赖于子任务A”，那么这三个任务哪个都不能先执行，这就是一个不可行的方案。</p>
-<p>任务调度问题中，如果还给出了完成每个子任务需要的时间，则我们可以算出完成整个工程需要的最短时间。在这些子任务中，有些任务即使推迟几天完成，也不会影响全局的工期；但是有些任务必须准时完成，否则整个项目的工期就要因此延误，这种任务就叫“关键活动”。</p>
-<p>请编写程序判定一个给定的工程项目的任务调度是否可行；如果该调度方案可行，则计算完成整个工程项目需要的最短时间，并输出所有的关键活动。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第1行给出两个正整数$N$(≤100)和$M$，其中<em>N</em>是任务交接点（即衔接相互依赖的两个子任务的节点，例如：若任务2要在任务1完成后才开始，则两任务之间必有一个交接点）的数量。交接点按1~$N$编号，$M$是子任务的数量，依次编号为1~$M$。随后$M$行，每行给出了3个正整数，分别是该任务开始和完成涉及的交接点编号以及该任务所需的时间，整数间用空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>如果任务调度不可行，则输出0；否则第1行输出完成整个工程项目需要的时间，第2行开始输出所有关键活动，每个关键活动占一行，按格式“V-&gt;W”输出，其中V和W为该任务开始和完成涉及的交接点编号。关键活动输出的顺序规则是：任务开始的交接点编号小者优先，起点编号相同时，与输入时任务的顺序相反。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">7 8</span><br><span class="line">1 2 4</span><br><span class="line">1 3 3</span><br><span class="line">2 4 5</span><br><span class="line">3 4 3</span><br><span class="line">4 5 1</span><br><span class="line">4 6 6</span><br><span class="line">5 7 5</span><br><span class="line">6 7 2</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">17</span><br><span class="line">1-&gt;2</span><br><span class="line">2-&gt;4</span><br><span class="line">4-&gt;6</span><br><span class="line">6-&gt;7</span><br></pre></td></tr></table></figure>
+<p>但是需要注意的是，对一组子任务，并不是任意的任务调度都是一个可行的方案。比如方案中存在“子任务A依赖于子任务B，子任务B依赖于子任务C，子任务C又依赖于子任务A”，那么这三个任务哪个都不能先执行，这就是一个不可行的方案。你现在的工作是写程序判定任何一个给定的任务调度是否可行。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入说明：输入第一行给出子任务数$N$（≤100），子任务按1~$N$编号。随后$N$行，每行给出一个子任务的依赖集合：首先给出依赖集合中的子任务数$K$，随后给出$K$个子任务编号，整数之间都用空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>如果方案可行，则输出1，否则输出0。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">12</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">2 1 2</span><br><span class="line">0</span><br><span class="line">1 4</span><br><span class="line">1 5</span><br><span class="line">2 3 6</span><br><span class="line">1 3</span><br><span class="line">2 7 8</span><br><span class="line">1 7</span><br><span class="line">1 10</span><br><span class="line">1 7</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 4</span><br><span class="line">2 1 4</span><br><span class="line">2 2 5</span><br><span class="line">1 3</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-11/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-34/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -628,7 +678,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:46:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-05-06T02:09:00.000Z">2018-05-06</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
@@ -638,7 +688,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 484 個字)
+                    5 分鐘 閱讀文 (大約 752 個字)
                 </span>
                 
                 
@@ -647,78 +697,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-10/">7-10 公路村村通 (30 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-36/">7-36 社交网络图中结点的“重要性”计算 (30 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-10-公路村村通-30-分"><a href="#7-10-公路村村通-30-分" class="headerlink" title="7-10 公路村村通 (30 分)"></a>7-10 公路村村通 (30 分)</h4><p>现有村落间道路的统计数据表中，列出了有可能建设成标准公路的若干条道路的成本，求使每个村落都有公路连通所需要的最低成本。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入数据包括城镇数目正整数$N$（≤1000）和候选道路数目$M$（≤3$N$）；随后的$M$行对应$M$条道路，每行给出3个正整数，分别是该条道路直接连通的两个城镇的编号以及该道路改建的预算成本。为简单起见，城镇从1到$N$编号。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出村村通需要的最低成本。如果输入数据不足以保证畅通，则输出−1，表示需要建设更多公路。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">6 15</span><br><span class="line">1 2 5</span><br><span class="line">1 3 3</span><br><span class="line">1 4 7</span><br><span class="line">1 5 4</span><br><span class="line">1 6 2</span><br><span class="line">2 3 4</span><br><span class="line">2 4 6</span><br><span class="line">2 5 2</span><br><span class="line">2 6 6</span><br><span class="line">3 4 6</span><br><span class="line">3 5 1</span><br><span class="line">3 6 1</span><br><span class="line">4 5 10</span><br><span class="line">4 6 8</span><br><span class="line">5 6 3</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12</span><br></pre></td></tr></table></figure>
+            <h4 id="7-36-社交网络图中结点的“重要性”计算-30-分"><a href="#7-36-社交网络图中结点的“重要性”计算-30-分" class="headerlink" title="7-36 社交网络图中结点的“重要性”计算 (30 分)"></a>7-36 社交网络图中结点的“重要性”计算 (30 分)</h4><p>在社交网络中，个人或单位（结点）之间通过某些关系（边）联系起来。他们受到这些关系的影响，这种影响可以理解为网络中相互连接的结点之间蔓延的一种相互作用，可以增强也可以减弱。而结点根据其所处的位置不同，其在网络中体现的重要性也不尽相同。</p>
+<p>“紧密度中心性”是用来衡量一个结点到达其它结点的“快慢”的指标，即一个有较高中心性的结点比有较低中心性的结点能够更快地（平均意义下）到达网络中的其它结点，因而在该网络的传播过程中有更重要的价值。在有$N$个结点的网络中，结点$v_i$的“紧密度中心性”$C_c(v_i)$数学上定义为$v_i$到其余所有结点$v_j$ ($j ≠ i$) 的最短距离$d$($v_i$,$v_j$)的平均值的倒数：</p>
+<p><img src="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/54" alt=""></p>
+<p>对于非连通图，所有结点的紧密度中心性都是0。</p>
+<p>给定一个无权的无向图以及其中的一组结点，计算这组结点中每个结点的紧密度中心性。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出两个正整数$N$和$M$，其中$N$（≤104）是图中结点个数，顺便假设结点从1到$N$编号；$M$（≤105）是边的条数。随后的$M$行中，每行给出一条边的信息，即该边连接的两个结点编号，中间用空格分隔。最后一行给出需要计算紧密度中心性的这组结点的个数$K$（≤100）以及$K$个结点编号，用空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照<code>Cc(i)=x.xx</code>的格式输出$K$个给定结点的紧密度中心性，每个输出占一行，结果保留到小数点后2位。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">9 14</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br><span class="line">1 4</span><br><span class="line">2 3</span><br><span class="line">3 4</span><br><span class="line">4 5</span><br><span class="line">4 6</span><br><span class="line">5 6</span><br><span class="line">5 7</span><br><span class="line">5 8</span><br><span class="line">6 7</span><br><span class="line">6 8</span><br><span class="line">7 8</span><br><span class="line">7 9</span><br><span class="line">3 3 4 9</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Cc(3)=0.47</span><br><span class="line">Cc(4)=0.62</span><br><span class="line">Cc(9)=0.35</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-10/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T01:45:00.000Z">2018-05-06</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分鐘 閱讀文 (大約 683 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-9/">7-9 旅游规划 (25 分)</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="7-9-旅游规划-25-分"><a href="#7-9-旅游规划-25-分" class="headerlink" title="7-9 旅游规划 (25 分)"></a>7-9 旅游规划 (25 分)</h4><p>有了一张自驾旅游路线图，你会知道城市间的高速公路长度、以及该公路要收取的过路费。现在需要你写一个程序，帮助前来咨询的游客找一条出发地和目的地之间的最短路径。如果有若干条路径都是最短的，那么需要输出最便宜的一条路径。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入说明：输入数据的第1行给出4个正整数$N$、$M$、$S$、$D$，其中$N$（2≤$N$≤500）是城市的个数，顺便假设城市的编号为0~($N$−1)；$M$是高速公路的条数；$S$是出发地的城市编号；$D$是目的地的城市编号。随后的$M$行中，每行给出一条高速公路的信息，分别是：城市1、城市2、高速公路长度、收费额，中间用空格分开，数字均为整数且不超过500。输入保证解的存在。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行里输出路径的长度和收费总额，数字间以空格分隔，输出结尾不能有多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">4 5 0 3</span><br><span class="line">0 1 1 20</span><br><span class="line">1 3 2 30</span><br><span class="line">0 3 4 10</span><br><span class="line">0 2 2 20</span><br><span class="line">2 3 1 20</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 40</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-9/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-36/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -752,7 +750,9 @@
             
             <li><a class="pagination-link has-text-black-ter" href="/tags/数据结构与算法题目集（中文）/page/3/">3</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/tags/数据结构与算法题目集（中文）/page/4/">4</a></li>
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/数据结构与算法题目集（中文）/page/7/">7</a></li>
             
         </ul>
     </nav>
@@ -800,7 +800,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        413
+                        438
                     </p>
                 </div>
             </div>
@@ -1040,7 +1040,7 @@
                 <span class="level-item">数据结构与算法题目集（中文）</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">40</span>
+                <span class="level-item tag">65</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">
@@ -1094,7 +1094,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 16.67px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 15px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -1244,7 +1244,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">40</span>
+                    <span class="level-item tag">65</span>
                 </span>
             </a>
         </li>
@@ -1524,7 +1524,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">40</span>
+                        <span class="tag is-grey">65</span>
                     </a>
                 </div>
                 
@@ -1714,7 +1714,7 @@
                     <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">40</span>
+                    <span class="level-item tag">65</span>
                 </span>
             </a>
         </li>
@@ -1994,7 +1994,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/数据结构与算法题目集（中文）/">
                         <span class="tag">数据结构与算法题目集（中文）</span>
-                        <span class="tag is-grey">40</span>
+                        <span class="tag is-grey">65</span>
                     </a>
                 </div>
                 
