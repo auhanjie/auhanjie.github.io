@@ -151,7 +151,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-11T02:49:00.000Z">2017-12-11</time>
+                <time class="level-item has-text-grey" datetime="2017-12-28T01:23:00.000Z">2017-12-28</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 189 個字)
+                    2 分鐘 閱讀文 (大約 236 個字)
                 </span>
                 
                 
@@ -170,24 +170,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/11/shryen7-2-4/">实验7-2-4 计算天数（15 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/28/shryen8-1-3/">实验8-1-3 拆分实数的整数与小数部分（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-2-4-计算天数（15-分）"><a href="#实验7-2-4-计算天数（15-分）" class="headerlink" title="实验7-2-4 计算天数（15 分）"></a>实验7-2-4 计算天数（15 分）</h4><p>本题要求编写程序计算某年某月某日是该年中的第几天。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中按照格式“yyyy/mm/dd”（即“年/月/日”）给出日期。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。闰年的2月有29天。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行输出日期是该年中的第几天。</p>
-<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2009/03/02</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">61</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2000/03/02</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">62</span><br></pre></td></tr></table></figure>
+            <h4 id="实验8-1-3-拆分实数的整数与小数部分（15-分）"><a href="#实验8-1-3-拆分实数的整数与小数部分（15-分）" class="headerlink" title="实验8-1-3 拆分实数的整数与小数部分（15 分）"></a>实验8-1-3 拆分实数的整数与小数部分（15 分）</h4><p>本题要求实现一个拆分实数的整数与小数部分的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void splitfloat( float x, int *intpart, float *fracpart );</span><br></pre></td></tr></table></figure>
+<p>其中<code>x</code>是被拆分的实数（0≤<code>x</code>&lt;10000），<code>*intpart</code>和<code>*fracpart</code>分别是将实数x拆分出来的整数部分与小数部分。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">splitfloat</span><span class="hljs-params">( <span class="hljs-keyword">float</span> x, <span class="hljs-keyword">int</span> *intpart, <span class="hljs-keyword">float</span> *fracpart )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">float</span> x, fracpart;</span><br><span class="line">    <span class="hljs-keyword">int</span> intpart;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%f"</span>, &amp;x);</span><br><span class="line">    splitfloat(x, &amp;intpart, &amp;fracpart);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"The integer part is %d\n"</span>, intpart);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"The fractional part is %g\n"</span>, fracpart);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.718</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The integer part is 2</span><br><span class="line">The fractional part is 0.718</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/11/shryen7-2-4/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/28/shryen8-1-3/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -209,7 +208,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-11T02:46:00.000Z">2017-12-11</time>
+                <time class="level-item has-text-grey" datetime="2017-12-28T01:16:00.000Z">2017-12-28</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -219,7 +218,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 427 個字)
+                    1 分鐘 閱讀文 (大約 224 個字)
                 </span>
                 
                 
@@ -228,24 +227,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/11/shryen7-2-3/">实验7-2-3 求矩阵的局部极大值（15 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/28/shryen8-1-2/">实验8-1-2 计算两数的和与差（10 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-2-3-求矩阵的局部极大值（15-分）"><a href="#实验7-2-3-求矩阵的局部极大值（15-分）" class="headerlink" title="实验7-2-3 求矩阵的局部极大值（15 分）"></a>实验7-2-3 求矩阵的局部极大值（15 分）</h4><p>给定$M$行$N$列的整数矩阵A，如果A的非边界元素A[i][j]大于相邻的上下左右4个元素，那么就称元素A[i][j]是矩阵的局部极大值。本题要求给定矩阵的全部局部极大值及其所在的位置。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行中给出矩阵A的行数M和列数$N（3≤M,N≤20）$；最后$M$行，每行给出A在该行的$N$个元素的值。数字间以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>每行按照“元素值 行号 列号”的格式输出一个局部极大值，其中行、列编号从1开始。要求按照行号递增输出；若同行有超过1个局部极大值，则该行按列号递增输出。若没有局部极大值，则输出“None 总行数 总列数”。</p>
-<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 5</span><br><span class="line">1 1 1 1 1</span><br><span class="line">1 3 9 3 1</span><br><span class="line">1 5 3 5 1</span><br><span class="line">1 1 1 1 1</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">9 2 3</span><br><span class="line">5 3 2</span><br><span class="line">5 3 4</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 5</span><br><span class="line">1 1 1 1 1</span><br><span class="line">9 3 9 9 1</span><br><span class="line">1 5 3 5 1</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">None 3 5</span><br></pre></td></tr></table></figure>
+            <h4 id="实验8-1-2-计算两数的和与差（10-分）"><a href="#实验8-1-2-计算两数的和与差（10-分）" class="headerlink" title="实验8-1-2 计算两数的和与差（10 分）"></a>实验8-1-2 计算两数的和与差（10 分）</h4><p>本题要求实现一个计算输入的两数的和与差的简单函数。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void sum_diff( float op1, float op2, float *psum, float *pdiff );</span><br></pre></td></tr></table></figure>
+<p>其中<code>op1</code>和<code>op2</code>是输入的两个实数，<code>*psum</code>和<code>*pdiff</code>是计算得出的和与差。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sum_diff</span><span class="hljs-params">( <span class="hljs-keyword">float</span> op1, <span class="hljs-keyword">float</span> op2, <span class="hljs-keyword">float</span> *psum, <span class="hljs-keyword">float</span> *pdiff )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">float</span> a, b, sum, diff;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%f %f"</span>, &amp;a, &amp;b);</span><br><span class="line">    sum_diff(a, b, &amp;sum, &amp;diff);</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"The sum is %.2f\nThe diff is %.2f\n"</span>, sum, diff);</span><br><span class="line">	</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 6</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The sum is 10.00</span><br><span class="line">The diff is -2.00</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/11/shryen7-2-3/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/28/shryen8-1-2/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -267,7 +265,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-11T02:39:00.000Z">2017-12-11</time>
+                <time class="level-item has-text-grey" datetime="2017-12-28T01:13:00.000Z">2017-12-28</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -277,7 +275,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 159 個字)
+                    1 分鐘 閱讀文 (大約 209 個字)
                 </span>
                 
                 
@@ -286,22 +284,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/11/shryen7-2-2/">实验7-2-2 矩阵运算（20 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/28/shryen8-1-1/">实验8-1-1 利用指针找最大值（10 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-2-2-矩阵运算（20-分）"><a href="#实验7-2-2-矩阵运算（20-分）" class="headerlink" title="实验7-2-2 矩阵运算（20 分）"></a>实验7-2-2 矩阵运算（20 分）</h4><p>给定一个$n×n$的方阵，本题要求计算该矩阵除副对角线、最后一列和最后一行以外的所有元素之和。副对角线为从矩阵的右上角至左下角的连线。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出正整数$n（1&lt;n≤10）$；随后$n$行，每行给出$n$个整数，其间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中给出该矩阵除副对角线、最后一列和最后一行以外的所有元素之和。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">2 3 4 1</span><br><span class="line">5 6 1 1</span><br><span class="line">7 1 8 1</span><br><span class="line">1 1 1 1</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">35</span><br></pre></td></tr></table></figure>
+            <h4 id="实验8-1-1-利用指针找最大值（10-分）"><a href="#实验8-1-1-利用指针找最大值（10-分）" class="headerlink" title="实验8-1-1 利用指针找最大值（10 分）"></a>实验8-1-1 利用指针找最大值（10 分）</h4><p>本题要求实现一个简单函数，找出两个数中的最大值。</p>
+<h3 id="函数接口定义："><a href="#函数接口定义：" class="headerlink" title="函数接口定义："></a>函数接口定义：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void findmax( int *px, int *py, int *pmax );</span><br></pre></td></tr></table></figure>
+<p>其中<code>px</code>和<code>px</code>是用户传入的两个整数的指针。函数<code>findmax</code>应找出两个指针所指向的整数中的最大值，存放在<code>pmax</code>指向的位置。</p>
+<h3 id="裁判测试程序样例："><a href="#裁判测试程序样例：" class="headerlink" title="裁判测试程序样例："></a>裁判测试程序样例：</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">findmax</span><span class="hljs-params">( <span class="hljs-keyword">int</span> *px, <span class="hljs-keyword">int</span> *py, <span class="hljs-keyword">int</span> *pmax )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;	</span><br><span class="line">    <span class="hljs-keyword">int</span> max, x, y; </span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d %d"</span>, &amp;x, &amp;y);</span><br><span class="line">    findmax( &amp;x, &amp;y, &amp;max );</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, max);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 你的代码将被嵌在这里 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 5</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/11/shryen7-2-2/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/28/shryen8-1-1/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -323,7 +322,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-11T02:30:00.000Z">2017-12-11</time>
+                <time class="level-item has-text-grey" datetime="2017-12-27T09:38:00.000Z">2017-12-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -333,7 +332,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 198 個字)
+                    1 分鐘 閱讀文 (大約 185 個字)
                 </span>
                 
                 
@@ -342,23 +341,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/11/shryen7-2-1/">实验7-2-1 求矩阵各行元素之和（15 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/27/shryen7-3-10/">实验7-3-10 删除重复字符（20 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-2-1-求矩阵各行元素之和（15-分）"><a href="#实验7-2-1-求矩阵各行元素之和（15-分）" class="headerlink" title="实验7-2-1 求矩阵各行元素之和（15 分）"></a>实验7-2-1 求矩阵各行元素之和（15 分）</h4><p>本题要求编写程序，求一个给定的$m×n$矩阵各行元素之和。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出两个正整数$m$和$n（1≤m,n≤6）$。随后m行，每行给出$n$个整数，其间</p>
-<p>以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>每行输出对应矩阵行元素之和。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 2</span><br><span class="line">6 3</span><br><span class="line">1 -8</span><br><span class="line">3 12</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">-7</span><br><span class="line">15</span><br></pre></td></tr></table></figure>
+            <h4 id="实验7-3-10-删除重复字符（20-分）"><a href="#实验7-3-10-删除重复字符（20-分）" class="headerlink" title="实验7-3-10 删除重复字符（20 分）"></a>实验7-3-10 删除重复字符（20 分）</h4><p>本题要求编写程序，将给定字符串去掉重复的字符后，按照字符ASCII码顺序从小到大排序后输出。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入是一个以回车结束的非空字符串（少于80个字符）。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出去重排序后的结果字符串。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ad2f3adjfeainzzzv</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">23adefijnvz</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/11/shryen7-2-1/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/27/shryen7-3-10/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -380,7 +378,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-11T02:27:00.000Z">2017-12-11</time>
+                <time class="level-item has-text-grey" datetime="2017-12-27T09:36:00.000Z">2017-12-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -390,7 +388,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 324 個字)
+                    1 分鐘 閱讀文 (大約 195 個字)
                 </span>
                 
                 
@@ -399,22 +397,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/11/shryen7-1-13/">实验7-1-13 装箱问题（20 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/27/shryen7-3-9/">实验7-3-9 字符串字母大小写转换（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-1-13-装箱问题（20-分）"><a href="#实验7-1-13-装箱问题（20-分）" class="headerlink" title="实验7-1-13 装箱问题（20 分）"></a>实验7-1-13 装箱问题（20 分）</h4><p>假设有N项物品，大小分别为s1、s2、…、si、…、sN，其中si为满足$1\le si\le 100$的整数。要把这些物品装入到容量为100的一批箱子（序号1-N）中。装箱方法是：对每项物品, 顺序扫描箱子，把该物品放入足以能够容下它的第一个箱子中。请写一个程序模拟这种装箱过程，并输出每个物品所在的箱子序号，以及放置全部物品所需的箱子数目。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出物品个数$N（\le 1000）$；第二行给出N个正整数$si$（$1\le si \le 100$，表示第i项物品的大小）。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照输入顺序输出每个物品的大小及其所在的箱子序号，每个物品占1行，最后一行输出所需的箱子数目。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">60 70 80 90 30 40 10 20</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">60 1</span><br><span class="line">70 2</span><br><span class="line">80 3</span><br><span class="line">90 4</span><br><span class="line">30 1</span><br><span class="line">40 5</span><br><span class="line">10 1</span><br><span class="line">20 2</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+            <h4 id="实验7-3-9-字符串字母大小写转换（15-分）"><a href="#实验7-3-9-字符串字母大小写转换（15-分）" class="headerlink" title="实验7-3-9 字符串字母大小写转换（15 分）"></a>实验7-3-9 字符串字母大小写转换（15 分）</h4><p>本题要求编写程序，对一个以“#”结束的字符串，将其小写字母全部转换成大写字母，把大写字母全部转换成小写字母，其他字符不变输出。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入为一个以“#”结束的字符串（不超过30个字符）。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出大小写转换后的结果字符串。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World! 123#</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hELLO wORLD! 123</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/11/shryen7-1-13/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/27/shryen7-3-9/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -436,7 +434,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-11T02:16:00.000Z">2017-12-11</time>
+                <time class="level-item has-text-grey" datetime="2017-12-27T09:31:00.000Z">2017-12-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -446,7 +444,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 286 個字)
+                    1 分鐘 閱讀文 (大約 218 個字)
                 </span>
                 
                 
@@ -455,23 +453,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/11/shryen7-1-12/">实验7-1-12 组个最小数（20 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/27/shryen7-3-8/">实验7-2-8 找鞍点（20 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-1-12-组个最小数（20-分）"><a href="#实验7-1-12-组个最小数（20-分）" class="headerlink" title="实验7-1-12 组个最小数（20 分）"></a>实验7-1-12 组个最小数（20 分）</h4><p>给定数字0-9各若干个。你可以以任意顺序排列这些数字，但必须全部使用。目标是使得最后得到的数尽可能小（注意0不能做首位）。例如：给定两个0，两个1，三个5，一个8，我们得到的最小的数就是10015558。</p>
-<p>现给定数字，请编写程序输出能够组成的最小的数。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出10个非负整数，顺序表示我们拥有数字0、数字1、……数字9的个数。整数间用一个空格分隔。10个数字的总个数不超过50，且至少拥有1个非0的数字。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出能够组成的最小的数。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 2 0 0 0 3 0 0 1 0</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10015558</span><br></pre></td></tr></table></figure>
+            <h4 id="实验7-3-8-统计字符出现次数（20-分）"><a href="#实验7-3-8-统计字符出现次数（20-分）" class="headerlink" title="实验7-3-8 统计字符出现次数（20 分）"></a>实验7-3-8 统计字符出现次数（20 分）</h4><p>本题要求编写程序，统计并输出某给定字符在给定字符串中出现的次数。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个以回车结束的字符串（少于80个字符）；第二行输入一个字符。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出给定字符在给定字符串中出现的次数。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">programming is More fun!</span><br><span class="line">m</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/11/shryen7-1-12/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/27/shryen7-3-8/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -493,7 +490,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-11T02:12:00.000Z">2017-12-11</time>
+                <time class="level-item has-text-grey" datetime="2017-12-27T09:29:00.000Z">2017-12-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -503,7 +500,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 229 個字)
+                    1 分鐘 閱讀文 (大約 175 個字)
                 </span>
                 
                 
@@ -512,22 +509,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/11/shryen7-1-11/">实验7-1-11 求整数序列中出现次数最多的数（15 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/27/shryen7-3-7/">实验7-3-7 字符转换（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-1-11-求整数序列中出现次数最多的数（15-分）"><a href="#实验7-1-11-求整数序列中出现次数最多的数（15-分）" class="headerlink" title="实验7-1-11 求整数序列中出现次数最多的数（15 分）"></a>实验7-1-11 求整数序列中出现次数最多的数（15 分）</h4><p>本题要求统计一个整型序列中出现次数最多的整数及其出现次数。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出序列中整数个数$N（0\lt N\le 1000）$，以及$N$个整数。数字间以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出出现次数最多的整数及其出现次数，数字间以空格分隔。题目保证这样的数字是唯一的。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 3 2 -1 5 3 4 3 0 3 2</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 4</span><br></pre></td></tr></table></figure>
+            <h4 id="实验7-3-7-字符转换（15-分）"><a href="#实验7-3-7-字符转换（15-分）" class="headerlink" title="实验7-3-7 字符转换（15 分）"></a>实验7-3-7 字符转换（15 分）</h4><p>本题要求提取一个字符串中的所有数字字符（’0’……’9’），将其转换为一个整数输出。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个不超过80个字符且以回车结束的字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出转换后的整数。题目保证输出不超过长整型范围。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free82jeep5</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">825</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/11/shryen7-1-11/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/27/shryen7-3-7/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -549,7 +546,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-08T03:12:00.000Z">2017-12-08</time>
+                <time class="level-item has-text-grey" datetime="2017-12-27T09:27:00.000Z">2017-12-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -559,7 +556,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 229 個字)
+                    2 分鐘 閱讀文 (大約 314 個字)
                 </span>
                 
                 
@@ -568,23 +565,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/08/shryen7-1-10/">实验7-1-10 交换最小值和最大值（15 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/27/shryen7-3-6/">实验7-3-6 字符串转换成十进制整数（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-1-10-交换最小值和最大值（15-分）"><a href="#实验7-1-10-交换最小值和最大值（15-分）" class="headerlink" title="实验7-1-10 交换最小值和最大值（15 分）"></a>实验7-1-10 交换最小值和最大值（15 分）</h4><p>本题要求编写程序，先将输入的一系列整数中的最小值与第一个数交换，然后将最大值与最后一个数交换，最后输出交换后的序列。</p>
-<p>注意：题目保证最大和最小值都是唯一的。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行中给出一个正整数N（≤10），第二行给出N个整数，数字间以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中顺序输出交换后的序列，每个整数后跟一个空格。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">8 2 5 1 4</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 5 4 8</span><br></pre></td></tr></table></figure>
+            <h4 id="实验7-3-6-字符串转换成十进制整数（15-分）"><a href="#实验7-3-6-字符串转换成十进制整数（15-分）" class="headerlink" title="实验7-3-6 字符串转换成十进制整数（15 分）"></a>实验7-3-6 字符串转换成十进制整数（15 分）</h4><p>输入一个以#结束的字符串，本题要求滤去所有的非十六进制字符（不分大小写），组成一个新的表示十六进制数字的字符串，然后将其转换为十进制数后输出。如果在第一个十六进制字符之前存在字符“-”，则代表该数是负数。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个以#结束的非空字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出转换后的十进制数。题目保证输出在长整型范围内。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+-P-xf4+-1!#</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-3905</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/08/shryen7-1-10/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/27/shryen7-3-6/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -606,7 +602,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-07T01:32:00.000Z">2017-12-07</time>
+                <time class="level-item has-text-grey" datetime="2017-12-27T03:37:00.000Z">2017-12-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -625,22 +621,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/07/shryen7-1-9/">实验7-1-9 数字加密（15 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/27/shryen7-3-5/">实验7-3-5 输出大写英文字母（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-1-9-数字加密（15-分）"><a href="#实验7-1-9-数字加密（15-分）" class="headerlink" title="实验7-1-9 数字加密（15 分）"></a>实验7-1-9 数字加密（15 分）</h4><p>输入一个四位数，将其加密后输出。方法是将该数每一位上的数字加9，然后除以10取余，做为该位上的新数字，最后将千位和十位上的数字互换，百位和个位上的数字互换，组成加密后的新四位数。例如输入1257，经过加9取余后得到新数字0146，再经过两次换位后得到4601。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个四位的整数x，即要求被加密的数。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中按照格式“The encrypted number is V”输出加密后得到的新数V。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1257</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The encrypted number is 4601</span><br></pre></td></tr></table></figure>
+            <h4 id="实验7-3-5-输出大写英文字母（15-分）"><a href="#实验7-3-5-输出大写英文字母（15-分）" class="headerlink" title="实验7-3-5 输出大写英文字母（15 分）"></a>实验7-3-5 输出大写英文字母（15 分）</h4><p>本题要求编写程序，顺序输出给定字符串中所出现过的大写英文字母，每个字母只输出一遍；若无大写英文字母则输出“Not Found”。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入为一个以回车结束的字符串（少于80个字符）。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照输入的顺序在一行中输出所出现过的大写英文字母，每个字母只输出一遍。若无大写英文字母则输出“Not Found”。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FONTNAME and FILENAME</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FONTAMEIL</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fontname and filrname</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Not Found</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/07/shryen7-1-9/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/27/shryen7-3-5/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -662,7 +660,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2017-12-07T00:48:00.000Z">2017-12-07</time>
+                <time class="level-item has-text-grey" datetime="2017-12-27T03:32:00.000Z">2017-12-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a>
@@ -672,7 +670,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 207 個字)
+                    1 分鐘 閱讀文 (大約 201 個字)
                 </span>
                 
                 
@@ -681,22 +679,64 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2017/12/07/shryen7-1-8/">实验7-1-8 输出数组元素（15 分）</a>
+                <a class="has-link-black-ter" href="/2017/12/27/shryen7-3-4/">实验7-3-4 字符串替换（15 分）</a>
             
         </h1>
         <div class="content">
-            <h4 id="实验7-1-8-输出数组元素（15-分）"><a href="#实验7-1-8-输出数组元素（15-分）" class="headerlink" title="实验7-1-8 输出数组元素（15 分）"></a>实验7-1-8 输出数组元素（15 分）</h4><p>本题要求编写程序，对顺序读入的$n$个整数，顺次计算后项减前项之差，并按每行三个元素的格式输出结果。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入的第一行给出正整数$n（1\lt n\le 10）$。随后一行给出$n$个整数，其间以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>顺次计算后项减前项之差，并按每行三个元素的格式输出结果。数字间空一格，行末不得有多余空格。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">5 1 7 14 6 36 4 28 50 100</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-4 6 7</span><br><span class="line">-8 30 -32</span><br><span class="line">24 22 50</span><br></pre></td></tr></table></figure>
+            <h4 id="实验7-3-4-字符串替换（15-分）"><a href="#实验7-3-4-字符串替换（15-分）" class="headerlink" title="实验7-3-4 字符串替换（15 分）"></a>实验7-3-4 字符串替换（15 分）</h4><p>本题要求编写程序，将给定字符串中的大写英文字母按以下对应规则替换：</p>
+<table>
+<thead>
+<tr>
+<th>原字母</th>
+<th>对应字母</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>C</td>
+<td>X</td>
+</tr>
+<tr>
+<td>D</td>
+<td>W</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>X</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个不超过80个字符、并以回车结束的字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出在一行中给出替换完成后的字符串。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Only the 11 CAPItaL LeTtERS are replaced.</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lnly the 11 XZKRtaO OeGtVIH are replaced.</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2017/12/07/shryen7-1-8/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2017/12/27/shryen7-3-4/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -736,7 +776,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/46/">46</a></li>
             
         </ul>
     </nav>
@@ -784,7 +824,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        438
+                        456
                     </p>
                 </div>
             </div>
@@ -794,7 +834,7 @@
                         分類
                     </p>
                     <p class="title has-text-weight-normal">
-                        20
+                        19
                     </p>
                 </div>
             </div>
@@ -804,7 +844,7 @@
                         標籤
                     </p>
                     <p class="title has-text-weight-normal">
-                        20
+                        27
                     </p>
                 </div>
             </div>
@@ -960,7 +1000,7 @@
                 <span class="level-item">leetcode</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">23</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/markdown/">
@@ -998,14 +1038,6 @@
         <a class="level is-marginless" href="/categories/个人观点/">
             <span class="level-start">
                 <span class="level-item">个人观点</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/中二/">
-            <span class="level-start">
-                <span class="level-item">中二</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -1078,7 +1110,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 10px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -1095,35 +1127,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/08/service和serviceImpl的选择/" class="media-left">
+            <a href="/2019/09/01/leetcode-35-search-insert-position/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="service和serviceImpl的选择">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-35-search-insert-position">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-08T01:30:00.000Z">2018-09-08</time></div>
-                    <a href="/2018/09/08/service和serviceImpl的选择/" class="has-link-black-ter is-size-6">service和serviceImpl的选择</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/个人观点/">个人观点</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/09/04/leetcode-longest-substring-without-repeating-characters/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="longest-substring-without-repeating-characters">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-04T01:26:00.000Z">2018-09-04</time></div>
-                    <a href="/2018/09/04/leetcode-longest-substring-without-repeating-characters/" class="has-link-black-ter is-size-6">longest-substring-without-repeating-characters</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:40:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-35-search-insert-position/" class="has-link-black-ter is-size-6">leetcode-35-search-insert-position</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1133,16 +1146,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/03/leetcode-median-of-two-sorted-arrays/" class="media-left">
+            <a href="/2019/09/01/leetcode-28-implement-strstr/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="median-of-two-sorted-arrays">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-28-implement-strstr">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-03T01:00:00.000Z">2018-09-03</time></div>
-                    <a href="/2018/09/03/leetcode-median-of-two-sorted-arrays/" class="has-link-black-ter is-size-6">median-of-two-sorted-arrays</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:39:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-28-implement-strstr/" class="has-link-black-ter is-size-6">leetcode-28-implement-strstr</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1152,16 +1165,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/02/leetcode-add-two-numbers/" class="media-left">
+            <a href="/2019/09/01/leetcode-27-remove-element/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="add-two-numbers">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-27-remove-element">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-02T01:00:00.000Z">2018-09-02</time></div>
-                    <a href="/2018/09/02/leetcode-add-two-numbers/" class="has-link-black-ter is-size-6">add-two-numbers</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:38:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-27-remove-element/" class="has-link-black-ter is-size-6">leetcode-27-remove-element</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1171,16 +1184,35 @@
         
         <article class="media">
             
-            <a href="/2018/09/01/leetcode-two-sum/" class="media-left">
+            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="two-sum">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-01T01:26:00.000Z">2018-09-01</time></div>
-                    <a href="/2018/09/01/leetcode-two-sum/" class="has-link-black-ter is-size-6">two-sum</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
+                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1201,12 +1233,34 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">19</span>
                 </span>
             </a>
         </li>
@@ -1327,7 +1381,7 @@
                     <span class="level-item">十二月 2016</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1452,7 +1506,63 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">15</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Array-BinarySearch/">
+                        <span class="tag">leetcode Array BinarySearch</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Array-TwoPointers/">
+                        <span class="tag">leetcode Array TwoPointers</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Easy-Array-HashTable/">
+                        <span class="tag">leetcode Easy Array HashTable</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Easy-Math/">
+                        <span class="tag">leetcode Easy Math</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
+                        <span class="tag">leetcode LinkedList</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack/">
+                        <span class="tag">leetcode Stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-TwoPointers/">
+                        <span class="tag">leetcode TwoPointers</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-TwoPointers-String/">
+                        <span class="tag">leetcode TwoPointers String</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1487,13 +1597,6 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/个人观点/">
                         <span class="tag">个人观点</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/中二/">
-                        <span class="tag">中二</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1565,35 +1668,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/08/service和serviceImpl的选择/" class="media-left">
+            <a href="/2019/09/01/leetcode-35-search-insert-position/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="service和serviceImpl的选择">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-35-search-insert-position">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-08T01:30:00.000Z">2018-09-08</time></div>
-                    <a href="/2018/09/08/service和serviceImpl的选择/" class="has-link-black-ter is-size-6">service和serviceImpl的选择</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/个人观点/">个人观点</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/09/04/leetcode-longest-substring-without-repeating-characters/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="longest-substring-without-repeating-characters">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-04T01:26:00.000Z">2018-09-04</time></div>
-                    <a href="/2018/09/04/leetcode-longest-substring-without-repeating-characters/" class="has-link-black-ter is-size-6">longest-substring-without-repeating-characters</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:40:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-35-search-insert-position/" class="has-link-black-ter is-size-6">leetcode-35-search-insert-position</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1603,16 +1687,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/03/leetcode-median-of-two-sorted-arrays/" class="media-left">
+            <a href="/2019/09/01/leetcode-28-implement-strstr/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="median-of-two-sorted-arrays">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-28-implement-strstr">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-03T01:00:00.000Z">2018-09-03</time></div>
-                    <a href="/2018/09/03/leetcode-median-of-two-sorted-arrays/" class="has-link-black-ter is-size-6">median-of-two-sorted-arrays</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:39:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-28-implement-strstr/" class="has-link-black-ter is-size-6">leetcode-28-implement-strstr</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1622,16 +1706,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/02/leetcode-add-two-numbers/" class="media-left">
+            <a href="/2019/09/01/leetcode-27-remove-element/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="add-two-numbers">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-27-remove-element">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-02T01:00:00.000Z">2018-09-02</time></div>
-                    <a href="/2018/09/02/leetcode-add-two-numbers/" class="has-link-black-ter is-size-6">add-two-numbers</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:38:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-27-remove-element/" class="has-link-black-ter is-size-6">leetcode-27-remove-element</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1641,16 +1725,35 @@
         
         <article class="media">
             
-            <a href="/2018/09/01/leetcode-two-sum/" class="media-left">
+            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="two-sum">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-01T01:26:00.000Z">2018-09-01</time></div>
-                    <a href="/2018/09/01/leetcode-two-sum/" class="has-link-black-ter is-size-6">two-sum</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
+                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1671,12 +1774,34 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">19</span>
                 </span>
             </a>
         </li>
@@ -1797,7 +1922,7 @@
                     <span class="level-item">十二月 2016</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1922,7 +2047,63 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">15</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Array-BinarySearch/">
+                        <span class="tag">leetcode Array BinarySearch</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Array-TwoPointers/">
+                        <span class="tag">leetcode Array TwoPointers</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Easy-Array-HashTable/">
+                        <span class="tag">leetcode Easy Array HashTable</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Easy-Math/">
+                        <span class="tag">leetcode Easy Math</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
+                        <span class="tag">leetcode LinkedList</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack/">
+                        <span class="tag">leetcode Stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-TwoPointers/">
+                        <span class="tag">leetcode TwoPointers</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-TwoPointers-String/">
+                        <span class="tag">leetcode TwoPointers String</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1957,13 +2138,6 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/个人观点/">
                         <span class="tag">个人观点</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/中二/">
-                        <span class="tag">中二</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>

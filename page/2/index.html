@@ -151,17 +151,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:23:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:37:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 471 個字)
+                    1 分鐘 閱讀文 (大約 195 個字)
                 </span>
                 
                 
@@ -170,22 +170,34 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-50/">7-50 畅通工程之局部最小花费问题 (35 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-20-valid-parentheses/">leetcode-20-valid-parentheses</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-50-畅通工程之局部最小花费问题-35-分"><a href="#7-50-畅通工程之局部最小花费问题-35-分" class="headerlink" title="7-50 畅通工程之局部最小花费问题 (35 分)"></a>7-50 畅通工程之局部最小花费问题 (35 分)</h4><p>某地区经过对城镇交通状况的调查，得到现有城镇间快速道路的统计数据，并提出“畅通工程”的目标：使整个地区任何两个城镇间都可以实现快速交通（但不一定有直接的快速道路相连，只要互相间接通过快速路可达即可）。现得到城镇道路统计表，表中列出了任意两城镇间修建快速路的费用，以及该道路是否已经修通的状态。现请你编写程序，计算出全地区畅通需要的最低成本。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行给出村庄数目$N$ (1≤$N$≤100)；随后的$N$($N$−1)/2行对应村庄间道路的成本及修建状态：每行给出4个正整数，分别是两个村庄的编号（从1编号到$N$），此两村庄间道路的成本，以及修建状态 — 1表示已建，0表示未建。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出全省畅通需要的最低成本。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 2 1 1</span><br><span class="line">1 3 4 0</span><br><span class="line">1 4 1 1</span><br><span class="line">2 3 3 0</span><br><span class="line">2 4 2 1</span><br><span class="line">3 4 5 0</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a string containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
+<p>An input string is valid if:</p>
+<ol>
+<li>Open brackets must be closed by the same type of brackets.</li>
+<li>Open brackets must be closed in the correct order.</li>
+</ol>
+<p>Note that an empty string is also considered valid.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;()&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;()[]&#123;&#125;&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;(]&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+<p><strong>Example 4:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;([)]&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+<p><strong>Example 5:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;&#123;[]&#125;&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-50/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-20-valid-parentheses/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -207,17 +219,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:22:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:36:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分鐘 閱讀文 (大約 536 個字)
+                    2 分鐘 閱讀文 (大約 365 個字)
                 </span>
                 
                 
@@ -226,22 +238,34 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-49/">7-49 打印学生选课清单 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-682-baseball-game/">leetcode-682-baseball-game</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-49-打印学生选课清单-25-分"><a href="#7-49-打印学生选课清单-25-分" class="headerlink" title="7-49 打印学生选课清单 (25 分)"></a>7-49 打印学生选课清单 (25 分)</h4><p>假设全校有最多40000名学生和最多2500门课程。现给出每门课的选课学生名单，要求输出每个前来查询的学生的选课清单。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行是两个正整数：N（≤40000），为前来查询课表的学生总数；K（≤2500），为总课程数。此后顺序给出课程1到K的选课学生名单。格式为：对每一门课，首先在一行中输出课程编号（简单起见，课程从1到K编号）和选课学生总数（之间用空格分隔），之后在第二行给出学生名单，相邻两个学生名字用1个空格分隔。学生姓名由3个大写英文字母+1位数字组成。选课信息之后，在一行内给出了N个前来查询课表的学生的名字，相邻两个学生名字用1个空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对每位前来查询课表的学生，首先输出其名字，随后在同一行中输出一个正整数C，代表该生所选的课程门数，随后按递增顺序输出C个课程的编号。相邻数据用1个空格分隔，注意行末不能输出多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">10 5</span><br><span class="line">1 4</span><br><span class="line">ANN0 BOB5 JAY9 LOR6</span><br><span class="line">2 7</span><br><span class="line">ANN0 BOB5 FRA8 JAY9 JOE4 KAT3 LOR6</span><br><span class="line">3 1</span><br><span class="line">BOB5</span><br><span class="line">4 7</span><br><span class="line">BOB5 DON2 FRA8 JAY9 KAT3 LOR6 ZOE1</span><br><span class="line">5 9</span><br><span class="line">AMY7 ANN0 BOB5 DON2 FRA8 JAY9 KAT3 LOR6 ZOE1</span><br><span class="line">ZOE1 ANN0 BOB5 JOE4 JAY9 FRA8 DON2 AMY7 KAT3 LOR6</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ZOE1 2 4 5</span><br><span class="line">ANN0 3 1 2 5</span><br><span class="line">BOB5 5 1 2 3 4 5</span><br><span class="line">JOE4 1 2</span><br><span class="line">JAY9 4 1 2 4 5</span><br><span class="line">FRA8 3 2 4 5</span><br><span class="line">DON2 2 4 5</span><br><span class="line">AMY7 1 5</span><br><span class="line">KAT3 3 2 4 5</span><br><span class="line">LOR6 4 1 2 4 5</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>You’re now a baseball game point recorder.</p>
+<p>Given a list of strings, each string can be one of the 4 following types:</p>
+<ol>
+<li><code>Integer</code> (one round’s score): Directly represents the number of points you get in this round.</li>
+<li><code>&quot;+&quot;</code> (one round’s score): Represents that the points you get in this round are the sum of the last two <code>valid</code> round’s points.</li>
+<li><code>&quot;D&quot;</code> (one round’s score): Represents that the points you get in this round are the doubled data of the last <code>valid</code> round’s points.</li>
+<li><code>&quot;C&quot;</code> (an operation, which isn’t a round’s score): Represents the last <code>valid</code> round’s points you get were invalid and should be removed.</li>
+</ol>
+<p>Each round’s operation is permanent and could have an impact on the round before and the round after.</p>
+<p>You need to return the sum of the points you could get in all the rounds.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: [&quot;5&quot;,&quot;2&quot;,&quot;C&quot;,&quot;D&quot;,&quot;+&quot;]</span><br><span class="line">Output: 30</span><br><span class="line">Explanation: </span><br><span class="line">Round 1: You could get 5 points. The sum is: 5.</span><br><span class="line">Round 2: You could get 2 points. The sum is: 7.</span><br><span class="line">Operation 1: The round 2&apos;s data was invalid. The sum is: 5.  </span><br><span class="line">Round 3: You could get 10 points (the round 2&apos;s data has been removed). The sum is: 15.</span><br><span class="line">Round 4: You could get 5 + 10 = 15 points. The sum is: 30.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Input: [&quot;5&quot;,&quot;-2&quot;,&quot;4&quot;,&quot;C&quot;,&quot;D&quot;,&quot;9&quot;,&quot;+&quot;,&quot;+&quot;]</span><br><span class="line">Output: 27</span><br><span class="line">Explanation: </span><br><span class="line">Round 1: You could get 5 points. The sum is: 5.</span><br><span class="line">Round 2: You could get -2 points. The sum is: 3.</span><br><span class="line">Round 3: You could get 4 points. The sum is: 7.</span><br><span class="line">Operation 1: The round 3&apos;s data is invalid. The sum is: 3.  </span><br><span class="line">Round 4: You could get -4 points (the round 3&apos;s data has been removed). The sum is: -1.</span><br><span class="line">Round 5: You could get 9 points. The sum is: 8.</span><br><span class="line">Round 6: You could get -4 + 9 = 5 points. The sum is 13.</span><br><span class="line">Round 7: You could get 9 + 5 = 14 points. The sum is 27.</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<p>The size of the input list will be between 1 and 1000.</p>
+<p>Every integer represented in the list will be between -30000 and 30000.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-49/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-682-baseball-game/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -263,17 +287,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:21:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:35:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    8 分鐘 閱讀文 (大約 1187 個字)
+                    1 分鐘 閱讀文 (大約 220 個字)
                 </span>
                 
                 
@@ -282,22 +306,40 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-48/">7-48 银行排队问题之单窗口“夹塞”版 (30 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-232-implement-queue-using-stacks/">leetcode-232-implement-queue-using-stacks</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-48-银行排队问题之单窗口“夹塞”版-30-分"><a href="#7-48-银行排队问题之单窗口“夹塞”版-30-分" class="headerlink" title="7-48 银行排队问题之单窗口“夹塞”版 (30 分)"></a>7-48 银行排队问题之单窗口“夹塞”版 (30 分)</h4><p>排队“夹塞”是引起大家强烈不满的行为，但是这种现象时常存在。在银行的单窗口排队问题中，假设银行只有1个窗口提供服务，所有顾客按到达时间排成一条长龙。当窗口空闲时，下一位顾客即去该窗口处理事务。此时如果已知第$i$位顾客与排在后面的第$j$位顾客是好朋友，并且愿意替朋友办理事务的话，那么第$i$位顾客的事务处理时间就是自己的事务加朋友的事务所耗时间的总和。在这种情况下，顾客的等待时间就可能被影响。假设所有人到达银行时，若没有空窗口，都会请求排在最前面的朋友帮忙（包括正在窗口接受服务的朋友）；当有不止一位朋友请求某位顾客帮忙时，该顾客会根据自己朋友请求的顺序来依次处理事务。试编写程序模拟这种现象，并计算顾客的平均等待时间。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行是两个整数：1≤$N$≤10000，为顾客总数；0≤$M$≤100，为彼此不相交的朋友圈子个数。若$M$非0，则此后$M$行，每行先给出正整数2≤$L$≤100，代表该圈子里朋友的总数，随后给出该朋友圈里的$L$位朋友的名字。名字由3个大写英文字母组成，名字间用1个空格分隔。最后$N$行给出$N$位顾客的姓名、到达时间$T$和事务处理时间$P$（以分钟为单位），之间用1个空格分隔。简单起见，这里假设顾客信息是按照到达时间先后顺序给出的（有并列时间的按照给出顺序排队），并且假设每个事务最多占用窗口服务60分钟（如果超过则按60分钟计算）。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按顾客接受服务的顺序输出顾客名字，每个名字占1行。最后一行输出所有顾客的平均等待时间，保留到小数点后1位。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">6 2</span><br><span class="line">3 ANN BOB JOE</span><br><span class="line">2 JIM ZOE</span><br><span class="line">JIM 0 20</span><br><span class="line">BOB 0 15</span><br><span class="line">ANN 0 30</span><br><span class="line">AMY 0 2</span><br><span class="line">ZOE 1 61</span><br><span class="line">JOE 3 10</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">JIM</span><br><span class="line">ZOE</span><br><span class="line">BOB</span><br><span class="line">ANN</span><br><span class="line">JOE</span><br><span class="line">AMY</span><br><span class="line">75.2</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><ul>
+<li><p>Implement the following operations of a queue using stacks.</p>
+</li>
+<li><ul>
+<li>push(x) – Push element x to the back of queue.</li>
+<li>pop() – Removes the element from in front of queue.</li>
+<li>peek() – Get the front element.</li>
+<li>empty() – Return whether the queue is empty.</li>
+</ul>
+</li>
+<li><p><strong>Example:</strong></p>
+</li>
+<li><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MyQueue queue = new MyQueue();</span><br><span class="line"></span><br><span class="line">queue.push(1);</span><br><span class="line">queue.push(2);  </span><br><span class="line">queue.peek();  // returns 1</span><br><span class="line">queue.pop();   // returns 1</span><br><span class="line">queue.empty(); // returns false</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Notes:</strong></p>
+</li>
+<li><ul>
+<li>You must use <em>only</em> standard operations of a stack – which means only <code>push to top</code>, <code>peek/pop from top</code>, <code>size</code>, and <code>is empty</code>operations are valid.</li>
+<li>Depending on your language, stack may not be supported natively. You may simulate a stack by using a list or deque (double-ended queue), as long as you use only standard operations of a stack.</li>
+<li>You may assume that all operations are valid (for example, no pop or peek operations will be called on an empty queue).</li>
+</ul>
+</li>
+</ul>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-48/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-232-implement-queue-using-stacks/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -319,17 +361,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:20:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:35:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 391 個字)
+                    2 分鐘 閱讀文 (大約 248 個字)
                 </span>
                 
                 
@@ -338,22 +380,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-47/">7-47 打印选课学生名单 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-496-next-greater-element-i/">leetcode-496-next-greater-element-i</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-47-打印选课学生名单-25-分"><a href="#7-47-打印选课学生名单-25-分" class="headerlink" title="7-47 打印选课学生名单 (25 分)"></a>7-47 打印选课学生名单 (25 分)</h4><p>假设全校有最多40000名学生和最多2500门课程。现给出每个学生的选课清单，要求输出每门课的选课学生名单。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行是两个正整数：N（≤40000），为全校学生总数；K（≤2500），为总课程数。此后N行，每行包括一个学生姓名（3个大写英文字母+1位数字）、一个正整数C（≤20）代表该生所选的课程门数、随后是C个课程编号。简单起见，课程从1到K编号。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>顺序输出课程1到K的选课学生名单。格式为：对每一门课，首先在一行中输出课程编号和选课学生总数（之间用空格分隔），之后在第二行按字典序输出学生名单，每个学生名字占一行。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10 5</span><br><span class="line">ZOE1 2 4 5</span><br><span class="line">ANN0 3 5 2 1</span><br><span class="line">BOB5 5 3 4 2 1 5</span><br><span class="line">JOE4 1 2</span><br><span class="line">JAY9 4 1 2 5 4</span><br><span class="line">FRA8 3 4 2 5</span><br><span class="line">DON2 2 4 5</span><br><span class="line">AMY7 1 5</span><br><span class="line">KAT3 3 5 4 2</span><br><span class="line">LOR6 4 2 4 1 5</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">1 4</span><br><span class="line">ANN0</span><br><span class="line">BOB5</span><br><span class="line">JAY9</span><br><span class="line">LOR6</span><br><span class="line">2 7</span><br><span class="line">ANN0</span><br><span class="line">BOB5</span><br><span class="line">FRA8</span><br><span class="line">JAY9</span><br><span class="line">JOE4</span><br><span class="line">KAT3</span><br><span class="line">LOR6</span><br><span class="line">3 1</span><br><span class="line">BOB5</span><br><span class="line">4 7</span><br><span class="line">BOB5</span><br><span class="line">DON2</span><br><span class="line">FRA8</span><br><span class="line">JAY9</span><br><span class="line">KAT3</span><br><span class="line">LOR6</span><br><span class="line">ZOE1</span><br><span class="line">5 9</span><br><span class="line">AMY7</span><br><span class="line">ANN0</span><br><span class="line">BOB5</span><br><span class="line">DON2</span><br><span class="line">FRA8</span><br><span class="line">JAY9</span><br><span class="line">KAT3</span><br><span class="line">LOR6</span><br><span class="line">ZOE1</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><ol>
+<li><p>You are given two arrays <strong>(without duplicates)</strong><code>nums1</code> and <code>nums2</code> where <code>nums1</code>’s elements are subset of <code>nums2</code>. Find all the next greater numbers for <code>nums1</code>‘s elements in the corresponding places of <code>nums2</code>.</p>
+<p>   The Next Greater Number of a number <strong>x</strong> in <code>nums1</code> is the first greater number to its right in <code>nums2</code>. If it does not exist, output -1 for this number.</p>
+<p>   <strong>Example 1:</strong></p>
+   <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: nums1 = [4,1,2], nums2 = [1,3,4,2].</span><br><span class="line">Output: [-1,3,-1]</span><br><span class="line">Explanation:</span><br><span class="line">    For number 4 in the first array, you cannot find the next greater number for it in the second array, so output -1.</span><br><span class="line">    For number 1 in the first array, the next greater number for it in the second array is 3.</span><br><span class="line">    For number 2 in the first array, there is no next greater number for it in the second array, so output -1.</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>**Example 2:**
+
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: nums1 = [2,4], nums2 = [1,2,3,4].</span><br><span class="line">Output: [3,-1]</span><br><span class="line">Explanation:</span><br><span class="line">    For number 2 in the first array, the next greater number for it in the second array is 3.</span><br><span class="line">    For number 4 in the first array, there is no next greater number for it in the second array, so output -1.</span><br></pre></td></tr></table></figure>
+
+
+
+**Note:**
+
+1. All elements in `nums1` and `nums2` are unique.
+2. The length of both `nums1` and `nums2` would not exceed 1000.
+</code></pre>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-47/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-496-next-greater-element-i/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -375,17 +430,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:19:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:34:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分鐘 閱讀文 (大約 868 個字)
+                    1 分鐘 閱讀文 (大約 119 個字)
                 </span>
                 
                 
@@ -394,24 +449,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-46/">7-46 新浪微博热门话题 (30 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-224-basic-calculator/">leetcode-224-basic-calculator</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-46-新浪微博热门话题-30-分"><a href="#7-46-新浪微博热门话题-30-分" class="headerlink" title="7-46 新浪微博热门话题 (30 分)"></a>7-46 新浪微博热门话题 (30 分)</h4><p>新浪微博可以在发言中嵌入“话题”，即将发言中的话题文字写在一对“#”之间，就可以生成话题链接，点击链接可以看到有多少人在跟自己讨论相同或者相似的话题。新浪微博还会随时更新热门话题列表，并将最热门的话题放在醒目的位置推荐大家关注。</p>
-<p>本题目要求实现一个简化的热门话题推荐功能，从大量英文（因为中文分词处理比较麻烦）微博中解析出话题，找出被最多条微博提到的话题。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入说明：输入首先给出一个正整数$N$（≤105），随后$N$行，每行给出一条英文微博，其长度不超过140个字符。任何包含在一对最近的<code>#</code>中的内容均被认为是一个话题，输入保证<code>#</code>成对出现。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>第一行输出被最多条微博提到的话题，第二行输出其被提到的微博条数。如果这样的话题不唯一，则输出按字母序最小的话题，并在第三行输出<code>And k more ...</code>，其中<code>k</code>是另外几条热门话题的条数。输入保证至少存在一条话题。</p>
-<p>注意：两条话题被认为是相同的，如果在去掉所有非英文字母和数字的符号、并忽略大小写区别后，它们是相同的字符串；同时它们有完全相同的分词。输出时除首字母大写外，只保留小写英文字母和数字，并用一个空格分隔原文中的单词。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">This is a #test of topic#.</span><br><span class="line">Another #Test of topic.#</span><br><span class="line">This is a #Hot# #Hot# topic</span><br><span class="line">Another #hot!# #Hot# topic</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hot</span><br><span class="line">2</span><br><span class="line">And 1 more ...</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Implement a basic calculator to evaluate a simple expression string.</p>
+<p>The expression string may contain open <code>(</code> and closing parentheses <code>)</code>, the plus <code>+</code> or minus sign <code>-</code>, <strong>non-negative</strong> integers and empty spaces ``.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;1 + 1&quot;</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot; 2-1 + 2 &quot;</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;(1+(4+5+2)-3)+(6+8)&quot;</span><br><span class="line">Output: 23</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-46/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-224-basic-calculator/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -433,17 +490,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:18:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:33:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 455 個字)
+                    1 分鐘 閱讀文 (大約 179 個字)
                 </span>
                 
                 
@@ -452,22 +509,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-45/">7-45 航空公司VIP客户查询 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-155-min-stack/">leetcode-155-min-stack</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-45-航空公司VIP客户查询-25-分"><a href="#7-45-航空公司VIP客户查询-25-分" class="headerlink" title="7-45 航空公司VIP客户查询 (25 分)"></a>7-45 航空公司VIP客户查询 (25 分)</h4><p>不少航空公司都会提供优惠的会员服务，当某顾客飞行里程累积达到一定数量后，可以使用里程积分直接兑换奖励机票或奖励升舱等服务。现给定某航空公司全体会员的飞行记录，要求实现根据身份证号码快速查询会员里程积分的功能。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出两个正整数$N$（≤105）和$K$（≤500）。其中$K$是最低里程，即为照顾乘坐短程航班的会员,航空公司还会将航程低于$K$公里的航班也按$K$公里累积。随后$N$行，每行给出一条飞行记录。飞行记录的输入格式为：<code>18位身份证号码（空格）飞行里程</code>。其中身份证号码由17位数字加最后一位校验码组成，校验码的取值范围为0~9和x共11个符号；飞行里程单位为公里，是(0, 15 000]区间内的整数。然后给出一个正整数$M$（≤105），随后给出$M$行查询人的身份证号码。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对每个查询人，给出其当前的里程累积值。如果该人不是会员，则输出<code>No Info</code>。每个查询结果占一行。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">4 500</span><br><span class="line">330106199010080419 499</span><br><span class="line">110108198403100012 15000</span><br><span class="line">120104195510156021 800</span><br><span class="line">330106199010080419 1</span><br><span class="line">4</span><br><span class="line">120104195510156021</span><br><span class="line">110108198403100012</span><br><span class="line">330106199010080419</span><br><span class="line">33010619901008041x</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">800</span><br><span class="line">15000</span><br><span class="line">1000</span><br><span class="line">No Info</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>
+<ul>
+<li>push(x) – Push element x onto stack.</li>
+<li>pop() – Removes the element on top of the stack.</li>
+<li>top() – Get the top element.</li>
+<li>getMin() – Retrieve the minimum element in the stack.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">MinStack minStack = new MinStack();</span><br><span class="line">minStack.push(-2);</span><br><span class="line">minStack.push(0);</span><br><span class="line">minStack.push(-3);</span><br><span class="line">minStack.getMin();   --&gt; Returns -3.</span><br><span class="line">minStack.pop();</span><br><span class="line">minStack.top();      --&gt; Returns 0.</span><br><span class="line">minStack.getMin();   --&gt; Returns -2.</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-45/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-155-min-stack/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -489,17 +550,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:17:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:32:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分鐘 閱讀文 (大約 557 個字)
+                    幾秒 閱讀文 (大約 103 個字)
                 </span>
                 
                 
@@ -508,22 +569,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-44/">7-44 基于词频的文件相似度 (30 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-125-valid-parentheses/">leetcode-125-valid-parentheses</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-44-基于词频的文件相似度-30-分"><a href="#7-44-基于词频的文件相似度-30-分" class="headerlink" title="7-44 基于词频的文件相似度 (30 分)"></a>7-44 基于词频的文件相似度 (30 分)</h4><p>实现一种简单原始的文件相似度计算，即以两文件的公共词汇占总词汇的比例来定义相似度。为简化问题，这里不考虑中文（因为分词太难了），只考虑长度不小于3、且不超过10的英文单词，长度超过10的只考虑前10个字母。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入首先给出正整数$N$（≤100），为文件总数。随后按以下格式给出每个文件的内容：首先给出文件正文，最后在一行中只给出一个字符<code>#</code>，表示文件结束。在$N$个文件内容结束之后，给出查询总数$M$（≤104），随后$M$行，每行给出一对文件编号，其间以空格分隔。这里假设文件按给出的顺序从1到$N$编号。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>针对每一条查询，在一行中输出两文件的相似度，即两文件的公共词汇量占两文件总词汇量的百分比，精确到小数点后1位。注意这里的一个“单词”只包括仅由英文字母组成的、长度不小于3、且不超过10的英文单词，长度超过10的只考虑前10个字母。单词间以任何非英文字母隔开。另外，大小写不同的同一单词被认为是相同的单词，例如“You”和“you”是同一个单词。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">Aaa Bbb Ccc</span><br><span class="line">#</span><br><span class="line">Bbb Ccc Ddd</span><br><span class="line">#</span><br><span class="line">Aaa2 ccc Eee</span><br><span class="line">is at Ddd@Fff</span><br><span class="line">#</span><br><span class="line">2</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">50.0%</span><br><span class="line">33.3%</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p>
+<p><strong>Note:</strong> For the purpose of this problem, we define empty string as valid palindrome.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;A man, a plan, a canal: Panama&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;race a car&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-44/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-125-valid-parentheses/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -545,17 +607,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:16:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:31:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 491 個字)
+                    1 分鐘 閱讀文 (大約 141 個字)
                 </span>
                 
                 
@@ -564,25 +626,27 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-43/">7-43 字符串关键字的散列映射 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-876-middle-of-the-linked-list/">leetcode-876-middle-of-the-linked-list</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-43-字符串关键字的散列映射-25-分"><a href="#7-43-字符串关键字的散列映射-25-分" class="headerlink" title="7-43 字符串关键字的散列映射 (25 分)"></a>7-43 字符串关键字的散列映射 (25 分)</h4><p>给定一系列由大写英文字母组成的字符串关键字和素数$P$，用移位法定义的散列函数$H$($K$$e$$y$)将关键字$K$$e$$y$中的最后3个字符映射为整数，每个字符占5位；再用除留余数法将整数映射到长度为$P$的散列表中。例如将字符串<code>AZDEG</code>插入长度为1009的散列表中，我们首先将26个大写英文字母顺序映射到整数0~25；再通过移位将其映射为$3×32^2+4×32+6=3206$；然后根据表长得到，即是该字符串的散列映射位置。</p>
-<p>发生冲突时请用平方探测法解决。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行首先给出两个正整数$N$（≤500）和$P$（≥2$N$的最小素数），分别为待插入的关键字总数、以及散列表的长度。第二行给出$N$个字符串关键字，每个长度不超过8位，其间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内输出每个字符串关键字在散列表中的位置。数字间以空格分隔，但行末尾不得有多余空格。</p>
-<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4 11</span><br><span class="line">HELLO ANNK ZOE LOLI</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 10 4 0</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 11</span><br><span class="line">LLO ANNA NNK ZOJ INNK AAA</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 0 10 9 6 1</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a non-empty, singly linked list with head node <code>head</code>, return a middle node of linked list.</p>
+<p>If there are two middle nodes, return the second middle node.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,2,3,4,5]</span><br><span class="line">Output: Node 3 from this list (Serialization: [3,4,5])</span><br><span class="line">The returned node has value 3.  (The judge&apos;s serialization of this node is [3,4,5]).</span><br><span class="line">Note that we returned a ListNode object ans, such that:</span><br><span class="line">ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,2,3,4,5,6]</span><br><span class="line">Output: Node 4 from this list (Serialization: [4,5,6])</span><br><span class="line">Since the list has two middle nodes with values 3 and 4, we return the second one.</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The number of nodes in the given list will be between <code>1</code> and <code>100</code>.</li>
+</ul>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-43/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-876-middle-of-the-linked-list/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -604,17 +668,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:15:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:29:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 318 個字)
+                    1 分鐘 閱讀文 (大約 118 個字)
                 </span>
                 
                 
@@ -623,22 +687,21 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-42/">7-42 整型关键字的散列映射 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-92-reverse-linked-list-ii/">leetcode-92-reverse-linked-list-ii</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-42-整型关键字的散列映射-25-分"><a href="#7-42-整型关键字的散列映射-25-分" class="headerlink" title="7-42 整型关键字的散列映射 (25 分)"></a>7-42 整型关键字的散列映射 (25 分)</h4><p>给定一系列整型关键字和素数$P$，用除留余数法定义的散列函数将关键字映射到长度为$P$的散列表中。用线性探测法解决冲突。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行首先给出两个正整数$N$（≤1000）和$P$（≥$N$的最小素数），分别为待插入的关键字总数、以及散列表的长度。第二行给出$N$个整型关键字。数字间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行内输出每个整型关键字在散列表中的位置。数字间以空格分隔，但行末尾不得有多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4 5</span><br><span class="line">24 15 61 88</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 0 1 3</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Reverse a linked list from position <em>m</em> to <em>n</em>. Do it in one-pass.</p>
+<p><strong>Note:</strong> 1 ≤ <em>m</em> ≤ <em>n</em> ≤ length of list.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4</span><br><span class="line">Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-42/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-92-reverse-linked-list-ii/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -660,17 +723,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-06T02:14:00.000Z">2018-05-06</time>
+                <time class="level-item has-text-grey" datetime="2018-09-01T01:28:00.000Z">2018-09-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/数据结构与算法题目集（中文）/">数据结构与算法题目集（中文）</a>
+                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分鐘 閱讀文 (大約 700 個字)
+                    2 分鐘 閱讀文 (大約 225 個字)
                 </span>
                 
                 
@@ -679,24 +742,20 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-41/">7-41 PAT排名汇总 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/09/01/leetcode-21-merge-two-sorted-lists/">leetcode-21-merge-two-sorted-lists</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-41-PAT排名汇总-25-分"><a href="#7-41-PAT排名汇总-25-分" class="headerlink" title="7-41 PAT排名汇总 (25 分)"></a>7-41 PAT排名汇总 (25 分)</h4><p>计算机程序设计能力考试（Programming Ability Test，简称PAT）旨在通过统一组织的在线考试及自动评测方法客观地评判考生的算法设计与程序设计实现能力，科学的评价计算机程序设计人才，为企业选拔人才提供参考标准（网址<a href="http://www.patest.cn" target="_blank" rel="noopener">http://www.patest.cn）。</a>./)</p>
-<p>每次考试会在若干个不同的考点同时举行，每个考点用局域网，产生本考点的成绩。考试结束后，各个考点的成绩将即刻汇总成一张总的排名表。</p>
-<p>现在就请你写一个程序自动归并各个考点的成绩并生成总排名表。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行给出一个正整数N（≤100），代表考点总数。随后给出N个考点的成绩，格式为：首先一行给出正整数K（≤300），代表该考点的考生总数；随后K行，每行给出1个考生的信息，包括考号（由13位整数字组成）和得分（为[0,100]区间内的整数），中间用空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>首先在第一行里输出考生总数。随后输出汇总的排名表，每个考生的信息占一行，顺序为：考号、最终排名、考点编号、在该考点的排名。其中考点按输入给出的顺序从1到N编号。考生的输出须按最终排名的非递减顺序输出，获得相同分数的考生应有相同名次，并按考号的递增顺序输出。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">5</span><br><span class="line">1234567890001 95</span><br><span class="line">1234567890005 100</span><br><span class="line">1234567890003 95</span><br><span class="line">1234567890002 77</span><br><span class="line">1234567890004 85</span><br><span class="line">4</span><br><span class="line">1234567890013 65</span><br><span class="line">1234567890011 25</span><br><span class="line">1234567890014 100</span><br><span class="line">1234567890012 85</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">1234567890005 1 1 1</span><br><span class="line">1234567890014 1 2 1</span><br><span class="line">1234567890001 3 1 2</span><br><span class="line">1234567890003 3 1 2</span><br><span class="line">1234567890004 5 1 4</span><br><span class="line">1234567890012 5 2 2</span><br><span class="line">1234567890002 7 1 5</span><br><span class="line">1234567890013 8 2 3</span><br><span class="line">1234567890011 9 2 4</span><br></pre></td></tr></table></figure>
+            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1-&gt;2-&gt;4, 1-&gt;3-&gt;4</span><br><span class="line">Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-41/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-21-merge-two-sorted-lists/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -732,7 +791,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/46/">46</a></li>
             
         </ul>
     </nav>
@@ -780,7 +839,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        438
+                        456
                     </p>
                 </div>
             </div>
@@ -790,7 +849,7 @@
                         分類
                     </p>
                     <p class="title has-text-weight-normal">
-                        20
+                        19
                     </p>
                 </div>
             </div>
@@ -800,7 +859,7 @@
                         標籤
                     </p>
                     <p class="title has-text-weight-normal">
-                        20
+                        27
                     </p>
                 </div>
             </div>
@@ -956,7 +1015,7 @@
                 <span class="level-item">leetcode</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">23</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/markdown/">
@@ -994,14 +1053,6 @@
         <a class="level is-marginless" href="/categories/个人观点/">
             <span class="level-start">
                 <span class="level-item">个人观点</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/中二/">
-            <span class="level-start">
-                <span class="level-item">中二</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -1074,7 +1125,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/中二/" style="font-size: 10px;">中二</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 10px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -1091,35 +1142,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/08/service和serviceImpl的选择/" class="media-left">
+            <a href="/2019/09/01/leetcode-35-search-insert-position/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="service和serviceImpl的选择">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-35-search-insert-position">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-08T01:30:00.000Z">2018-09-08</time></div>
-                    <a href="/2018/09/08/service和serviceImpl的选择/" class="has-link-black-ter is-size-6">service和serviceImpl的选择</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/个人观点/">个人观点</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/09/04/leetcode-longest-substring-without-repeating-characters/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="longest-substring-without-repeating-characters">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-04T01:26:00.000Z">2018-09-04</time></div>
-                    <a href="/2018/09/04/leetcode-longest-substring-without-repeating-characters/" class="has-link-black-ter is-size-6">longest-substring-without-repeating-characters</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:40:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-35-search-insert-position/" class="has-link-black-ter is-size-6">leetcode-35-search-insert-position</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1129,16 +1161,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/03/leetcode-median-of-two-sorted-arrays/" class="media-left">
+            <a href="/2019/09/01/leetcode-28-implement-strstr/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="median-of-two-sorted-arrays">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-28-implement-strstr">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-03T01:00:00.000Z">2018-09-03</time></div>
-                    <a href="/2018/09/03/leetcode-median-of-two-sorted-arrays/" class="has-link-black-ter is-size-6">median-of-two-sorted-arrays</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:39:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-28-implement-strstr/" class="has-link-black-ter is-size-6">leetcode-28-implement-strstr</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1148,16 +1180,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/02/leetcode-add-two-numbers/" class="media-left">
+            <a href="/2019/09/01/leetcode-27-remove-element/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="add-two-numbers">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-27-remove-element">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-02T01:00:00.000Z">2018-09-02</time></div>
-                    <a href="/2018/09/02/leetcode-add-two-numbers/" class="has-link-black-ter is-size-6">add-two-numbers</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:38:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-27-remove-element/" class="has-link-black-ter is-size-6">leetcode-27-remove-element</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1167,16 +1199,35 @@
         
         <article class="media">
             
-            <a href="/2018/09/01/leetcode-two-sum/" class="media-left">
+            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="two-sum">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-01T01:26:00.000Z">2018-09-01</time></div>
-                    <a href="/2018/09/01/leetcode-two-sum/" class="has-link-black-ter is-size-6">two-sum</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
+                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1197,12 +1248,34 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">19</span>
                 </span>
             </a>
         </li>
@@ -1323,7 +1396,7 @@
                     <span class="level-item">十二月 2016</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1448,7 +1521,63 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">15</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Array-BinarySearch/">
+                        <span class="tag">leetcode Array BinarySearch</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Array-TwoPointers/">
+                        <span class="tag">leetcode Array TwoPointers</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Easy-Array-HashTable/">
+                        <span class="tag">leetcode Easy Array HashTable</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Easy-Math/">
+                        <span class="tag">leetcode Easy Math</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
+                        <span class="tag">leetcode LinkedList</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack/">
+                        <span class="tag">leetcode Stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-TwoPointers/">
+                        <span class="tag">leetcode TwoPointers</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-TwoPointers-String/">
+                        <span class="tag">leetcode TwoPointers String</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1483,13 +1612,6 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/个人观点/">
                         <span class="tag">个人观点</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/中二/">
-                        <span class="tag">中二</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1561,35 +1683,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/08/service和serviceImpl的选择/" class="media-left">
+            <a href="/2019/09/01/leetcode-35-search-insert-position/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="service和serviceImpl的选择">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-35-search-insert-position">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-08T01:30:00.000Z">2018-09-08</time></div>
-                    <a href="/2018/09/08/service和serviceImpl的选择/" class="has-link-black-ter is-size-6">service和serviceImpl的选择</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/个人观点/">个人观点</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/09/04/leetcode-longest-substring-without-repeating-characters/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="longest-substring-without-repeating-characters">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-04T01:26:00.000Z">2018-09-04</time></div>
-                    <a href="/2018/09/04/leetcode-longest-substring-without-repeating-characters/" class="has-link-black-ter is-size-6">longest-substring-without-repeating-characters</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:40:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-35-search-insert-position/" class="has-link-black-ter is-size-6">leetcode-35-search-insert-position</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1599,16 +1702,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/03/leetcode-median-of-two-sorted-arrays/" class="media-left">
+            <a href="/2019/09/01/leetcode-28-implement-strstr/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="median-of-two-sorted-arrays">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-28-implement-strstr">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-03T01:00:00.000Z">2018-09-03</time></div>
-                    <a href="/2018/09/03/leetcode-median-of-two-sorted-arrays/" class="has-link-black-ter is-size-6">median-of-two-sorted-arrays</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:39:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-28-implement-strstr/" class="has-link-black-ter is-size-6">leetcode-28-implement-strstr</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1618,16 +1721,16 @@
         
         <article class="media">
             
-            <a href="/2018/09/02/leetcode-add-two-numbers/" class="media-left">
+            <a href="/2019/09/01/leetcode-27-remove-element/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="add-two-numbers">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-27-remove-element">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-02T01:00:00.000Z">2018-09-02</time></div>
-                    <a href="/2018/09/02/leetcode-add-two-numbers/" class="has-link-black-ter is-size-6">add-two-numbers</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:38:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-27-remove-element/" class="has-link-black-ter is-size-6">leetcode-27-remove-element</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1637,16 +1740,35 @@
         
         <article class="media">
             
-            <a href="/2018/09/01/leetcode-two-sum/" class="media-left">
+            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="two-sum">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-01T01:26:00.000Z">2018-09-01</time></div>
-                    <a href="/2018/09/01/leetcode-two-sum/" class="has-link-black-ter is-size-6">two-sum</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
+                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
+                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
                     </p>
@@ -1667,12 +1789,34 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">19</span>
                 </span>
             </a>
         </li>
@@ -1793,7 +1937,7 @@
                     <span class="level-item">十二月 2016</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1918,7 +2062,63 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">15</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Array-BinarySearch/">
+                        <span class="tag">leetcode Array BinarySearch</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Array-TwoPointers/">
+                        <span class="tag">leetcode Array TwoPointers</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Easy-Array-HashTable/">
+                        <span class="tag">leetcode Easy Array HashTable</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Easy-Math/">
+                        <span class="tag">leetcode Easy Math</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
+                        <span class="tag">leetcode LinkedList</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack/">
+                        <span class="tag">leetcode Stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-TwoPointers/">
+                        <span class="tag">leetcode TwoPointers</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-TwoPointers-String/">
+                        <span class="tag">leetcode TwoPointers String</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1953,13 +2153,6 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/个人观点/">
                         <span class="tag">个人观点</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/中二/">
-                        <span class="tag">中二</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
