@@ -8,7 +8,7 @@
 
 
     <meta name="description" content="Description Implement the following operations of a queue using stacks.   push(x) – Push element x to the back of queue. pop() – Removes the element from in front of queue. peek() – Get the front elem">
-<meta name="keywords" content="leetcode">
+<meta name="keywords" content="leetcode Stack Queue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode-232-implement-queue-using-stacks">
 <meta property="og:url" content="http://auhanjie.github.io/2018/09/01/leetcode-232-implement-queue-using-stacks/index.html">
@@ -16,7 +16,7 @@
 <meta property="og:description" content="Description Implement the following operations of a queue using stacks.   push(x) – Push element x to the back of queue. pop() – Removes the element from in front of queue. peek() – Get the front elem">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-30T02:49:19.887Z">
+<meta property="og:updated_time" content="2019-09-04T07:18:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode-232-implement-queue-using-stacks">
 <meta name="twitter:description" content="Description Implement the following operations of a queue using stacks.   push(x) – Push element x to the back of queue. pop() – Removes the element from in front of queue. peek() – Get the front elem">
@@ -162,7 +162,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 220 個字)
+                    2 分鐘 閱讀文 (大約 288 個字)
                 </span>
                 
                 
@@ -199,7 +199,7 @@
 </li>
 </ul>
 <a id="more"></a>
-<p>#### </p>
+<h4 id="思路0"><a href="#思路0" class="headerlink" title="思路0"></a>思路0</h4><p>題意可知是用棧實現隊列，那麼聲明兩個棧，一個是輸入棧一個是輸出棧。要輸入的數據放進到輸入棧中，而輸出棧把最後的進來的數據放進去出棧。</p>
 <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyQueue</span> </span>&#123;</span><br><span class="line">    Stack&lt;Integer&gt; input = <span class="hljs-keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    Stack&lt;Integer&gt; output = <span class="hljs-keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    <span class="hljs-comment">// Push element x to the back of queue.</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">push</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        input.push(x);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="hljs-comment">// Removes the element from in front of queue.</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pop</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        peek();</span><br><span class="line">        output.pop();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="hljs-comment">// Get the front element.</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">peek</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(output.empty())&#123;</span><br><span class="line">            <span class="hljs-keyword">while</span>(!input.empty())&#123;</span><br><span class="line">                output.push(input.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> output.peek();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="hljs-comment">// Return whether the queue is empty.</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">empty</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> input.empty() &amp;&amp; output.empty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
@@ -208,7 +208,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/leetcode/">leetcode</a>
+                    <a class="has-link-grey -link" href="/tags/leetcode-Stack-Queue/">leetcode Stack Queue</a>
                 </div>
             </div>
         </div>
@@ -279,9 +279,9 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/09/01/leetcode-682-baseball-game/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/09/01/leetcode-225-implement-stacks-using-queue/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">leetcode-682-baseball-game</span>
+                <span class="level-item">leetcode-225-implement-stacks-using-queue</span>
             </a>
         </div>
         
@@ -340,7 +340,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        456
+                        463
                     </p>
                 </div>
             </div>
@@ -350,7 +350,7 @@
                         分類
                     </p>
                     <p class="title has-text-weight-normal">
-                        19
+                        20
                     </p>
                 </div>
             </div>
@@ -360,7 +360,7 @@
                         標籤
                     </p>
                     <p class="title has-text-weight-normal">
-                        27
+                        29
                     </p>
                 </div>
             </div>
@@ -503,6 +503,14 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/java/">
+            <span class="level-start">
+                <span class="level-item">java</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/java面试/">
             <span class="level-start">
                 <span class="level-item">java面试</span>
@@ -516,7 +524,7 @@
                 <span class="level-item">leetcode</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">23</span>
+                <span class="level-item tag">28</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/markdown/">
@@ -626,7 +634,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 10px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java/" style="font-size: 11.43px;">java</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14.29px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 12.86px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-Stack-Queue/" style="font-size: 11.43px;">leetcode Stack Queue</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.43px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15.71px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 17.14px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.57px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -640,6 +648,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -698,44 +744,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
-                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
-                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -747,6 +755,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -771,12 +790,23 @@
         </li>
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">24</span>
                 </span>
             </a>
         </li>
@@ -886,7 +916,7 @@
                     <span class="level-item">三月 2017</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -1013,6 +1043,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/java面试/">
                         <span class="tag">java面试</span>
                         <span class="tag is-grey">1</span>
@@ -1022,7 +1059,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">13</span>
                     </a>
                 </div>
                 
@@ -1057,7 +1094,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
                         <span class="tag">leetcode LinkedList</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1065,6 +1102,13 @@
                     <a class="tags has-addons" href="/tags/leetcode-Stack/">
                         <span class="tag">leetcode Stack</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack-Queue/">
+                        <span class="tag">leetcode Stack Queue</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1184,6 +1228,44 @@
         
         <article class="media">
             
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/09/01/leetcode-35-search-insert-position/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-35-search-insert-position">
@@ -1239,44 +1321,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
-                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
-                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1288,6 +1332,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -1312,12 +1367,23 @@
         </li>
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">24</span>
                 </span>
             </a>
         </li>
@@ -1427,7 +1493,7 @@
                     <span class="level-item">三月 2017</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -1554,6 +1620,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/java面试/">
                         <span class="tag">java面试</span>
                         <span class="tag is-grey">1</span>
@@ -1563,7 +1636,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">13</span>
                     </a>
                 </div>
                 
@@ -1598,7 +1671,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
                         <span class="tag">leetcode LinkedList</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1606,6 +1679,13 @@
                     <a class="tags has-addons" href="/tags/leetcode-Stack/">
                         <span class="tag">leetcode Stack</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack-Queue/">
+                        <span class="tag">leetcode Stack Queue</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1721,7 +1801,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 auhanjie&nbsp;
+                &copy; 2020 auhanjie&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 

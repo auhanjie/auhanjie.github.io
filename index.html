@@ -151,6 +151,97 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java/">java</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    幾秒 閱讀文 (大約 77 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/01/03/jpa-criteraBuilder/">JPA高級動態查詢</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="JPA高級動態查詢"><a href="#JPA高級動態查詢" class="headerlink" title="JPA高級動態查詢"></a>JPA高級動態查詢</h1><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="hljs-meta">@Override</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">findAllByUserAndStatusAndDepartmentIn</span><span class="hljs-params">(User user, String key, Department department)</span> </span>&#123;</span><br><span class="line">    CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();</span><br><span class="line">    CriteriaQuery&lt;String&gt; query = criteriaBuilder.createQuery(String.class);</span><br><span class="line">    Root&lt;User&gt; root = query.from(User.class);</span><br><span class="line">    query.select(root.get(<span class="hljs-string">"id"</span>));</span><br><span class="line">    Join&lt;User,Department&gt; join = root.join(<span class="hljs-string">"departments"</span>, JoinType.LEFT);</span><br><span class="line">    query.orderBy(criteriaBuilder.desc(root.get(<span class="hljs-string">"createdDate"</span>)));</span><br><span class="line">    Predicate restrictions = criteriaBuilder.conjunction();</span><br><span class="line">    restrictions = criteriaBuilder.and(join.get(<span class="hljs-string">"id"</span>).in(department.getId()));</span><br><span class="line">    query.where(restrictions);</span><br><span class="line">    List&lt;String&gt; result = entityManager.createQuery(query).getResultList();</span><br><span class="line">    <span class="hljs-keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java/">java</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分鐘 閱讀文 (大約 237 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/01/03/how-to-order-by-field-value-in-mongodb/">How to ORDER BY FIELD VALUE in MongoDB</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="How-to-ORDER-BY-FIELD-VALUE-in-MongoDB"><a href="#How-to-ORDER-BY-FIELD-VALUE-in-MongoDB" class="headerlink" title="How to ORDER BY FIELD VALUE in MongoDB"></a>How to ORDER BY FIELD VALUE in MongoDB</h1><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">db.getCollection(<span class="hljs-string">'form'</span>).aggregate([&#123;</span><br><span class="line">    <span class="hljs-string">'$project'</span>: &#123;</span><br><span class="line">        <span class="hljs-string">'name'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'code'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'handlerUserId'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'handlerName'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'reviewerUserId'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'reviewerName'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'createdUserId'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'createdUserName'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'address'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'tnNumber'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'createdDate'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'updatedDate'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'description'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'formId'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'formNo'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'showFormNo'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'jsonObject'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'formTypeId'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'version'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'supervisorStatus'</span>: <span class="hljs-number">1</span>,</span><br><span class="line">        <span class="hljs-string">'supervisorStatusId'</span>: </span><br><span class="line">        &#123;</span><br><span class="line">            $<span class="hljs-keyword">switch</span>:</span><br><span class="line">            &#123;</span><br><span class="line">              branches: [</span><br><span class="line">                &#123;</span><br><span class="line">                  <span class="hljs-keyword">case</span>: &#123; <span class="hljs-attr">$eq</span> : [ <span class="hljs-string">'$supervisorStatus'</span>, <span class="hljs-string">"FORM_NOT_SUBMITTED"</span> ]  &#125;,</span><br><span class="line">                  then: <span class="hljs-number">5</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                  <span class="hljs-keyword">case</span>: &#123; <span class="hljs-attr">$eq</span> :  [ <span class="hljs-string">'$supervisorStatus'</span>, <span class="hljs-string">"FORM_PROCESSING"</span> ] &#125;,</span><br><span class="line">                  then: <span class="hljs-number">4</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                   <span class="hljs-keyword">case</span>: &#123; <span class="hljs-attr">$eq</span> : [ <span class="hljs-string">'$supervisorStatus'</span>, <span class="hljs-string">"FORM_SUBMITTED_FOR_REVIEW"</span> ] &#125;,</span><br><span class="line">                   then: <span class="hljs-number">3</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="hljs-keyword">case</span>: &#123; <span class="hljs-attr">$eq</span> : [ <span class="hljs-string">'$supervisorStatus'</span>, <span class="hljs-string">"FORM_APPROVED"</span> ] &#125;,</span><br><span class="line">                    then: <span class="hljs-number">2</span></span><br><span class="line">                 &#125;,</span><br><span class="line">                 &#123;</span><br><span class="line">                    <span class="hljs-keyword">case</span>: &#123; <span class="hljs-attr">$eq</span> : [ <span class="hljs-string">'$supervisorStatus'</span>, <span class="hljs-string">"FORM_AUDIT_WAS_REJECTED"</span> ] &#125;,</span><br><span class="line">                    then: <span class="hljs-number">1</span></span><br><span class="line">                 &#125;</span><br><span class="line">                 </span><br><span class="line">              ],</span><br><span class="line">              <span class="hljs-keyword">default</span>: <span class="hljs-number">0</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-string">"$sort"</span>: &#123;</span><br><span class="line">        <span class="hljs-string">"weight"</span>: <span class="hljs-number">-1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">    &#123; <span class="hljs-string">"$skip"</span> : <span class="hljs-number">0</span>&#125;, </span><br><span class="line"></span><br><span class="line">    &#123; <span class="hljs-string">"$limit"</span> : <span class="hljs-number">20</span>&#125;,</span><br><span class="line"></span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">ProjectionOperation projectOperation = project(<span class="hljs-string">"name"</span>, <span class="hljs-string">"code"</span>, <span class="hljs-string">"handlerUserId"</span>, <span class="hljs-string">"handlerName"</span>, <span class="hljs-string">"reviewerUserId"</span>, <span class="hljs-string">"reviewerName"</span>, <span class="hljs-string">"createdUserId"</span>, <span class="hljs-string">"createdUserName"</span>, <span class="hljs-string">"address"</span>, <span class="hljs-string">"tnNumber"</span>, <span class="hljs-string">"createdDate"</span>, <span class="hljs-string">"updatedDate"</span>, <span class="hljs-string">"description"</span>, <span class="hljs-string">"formId"</span>, <span class="hljs-string">"formNo"</span>, <span class="hljs-string">"showFormNo"</span>, <span class="hljs-string">"supervisorStatus"</span>, <span class="hljs-string">"formTypeId"</span>, <span class="hljs-string">"version"</span>)</span><br><span class="line">                .and(ConditionalOperators.switchCases(</span><br><span class="line">                        ConditionalOperators.Switch.CaseOperator.when(</span><br><span class="line">                                ComparisonOperators.Eq.valueOf(<span class="hljs-string">"$supervisorStatus"</span>).equalToValue(FormConstant.FORM_STATUS_APPROVED.getKey()))</span><br><span class="line">                                .then(<span class="hljs-number">5</span>),</span><br><span class="line">                        ConditionalOperators.Switch.CaseOperator.when(</span><br><span class="line">                                ComparisonOperators.Eq.valueOf(<span class="hljs-string">"$supervisorStatus"</span>).equalToValue(FormConstant.FORM_STATUS_AUDIT_WAS_REJECTED.getKey()))</span><br><span class="line">                                .then(<span class="hljs-number">4</span>),</span><br><span class="line">                        ConditionalOperators.Switch.CaseOperator.when(</span><br><span class="line">                                ComparisonOperators.Eq.valueOf(<span class="hljs-string">"$supervisorStatus"</span>).equalToValue(FormConstant.FORM_STATUS_SUBMITTED_FOR_REVIEW.getKey()))</span><br><span class="line">                                .then(<span class="hljs-number">3</span>),</span><br><span class="line">                        ConditionalOperators.Switch.CaseOperator.when(</span><br><span class="line">                                ComparisonOperators.Eq.valueOf(<span class="hljs-string">"$supervisorStatus"</span>).equalToValue(FormConstant.FORM_STATUS_NOT_SUBMITTED.getKey()))</span><br><span class="line">                                .then(<span class="hljs-number">2</span>),</span><br><span class="line">                        ConditionalOperators.Switch.CaseOperator.when(</span><br><span class="line">                                ComparisonOperators.Eq.valueOf(<span class="hljs-string">"$supervisorStatus"</span>).equalToValue(FormConstant.FORM_STATUS_PROCESSING.getKey()))</span><br><span class="line">                                .then(<span class="hljs-number">1</span>)).defaultTo(<span class="hljs-number">0</span>)</span><br><span class="line">                ).as(<span class="hljs-string">"supervisorStatusId"</span>);</span><br><span class="line">        SortOperation sortOperation = sort(DESC, <span class="hljs-string">"supervisorStatusId"</span>);</span><br><span class="line">        SkipOperation skipOperation = <span class="hljs-keyword">new</span> SkipOperation(formListSearchDto.getOffset());</span><br><span class="line">        LimitOperation limitOperation = limit(formListSearchDto.getLimit());</span><br><span class="line">        TypedAggregation&lt;Form&gt; agg = newAggregation(Form.class,</span><br><span class="line">                projectOperation,</span><br><span class="line">                sortOperation,</span><br><span class="line">                skipOperation,</span><br><span class="line">                limitOperation</span><br><span class="line">        );</span><br><span class="line">        AggregationResults&lt;Form&gt; result = mongoTemplate.aggregate(agg, <span class="hljs-string">"form"</span>, Form.class);</span><br><span class="line">        List&lt;Form&gt; stateStatsList = result.getMappedResults();</span><br><span class="line">        <span class="hljs-keyword">long</span> count = <span class="hljs-keyword">this</span>.mongoTemplate.count(query, Form.class);</span><br><span class="line">        page = <span class="hljs-keyword">new</span> PageImpl(stateStatsList, pageable, count);</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-09-01T01:40:00.000Z">2019-09-01</time>
                 
                 <div class="level-item">
@@ -449,6 +540,67 @@
 
     <div class="card">
     
+    <div class="card-image">
+        <a href="/2019/06/03/hello-world/" class="image is-7by1">
+            <img class="thumbnail" src="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/smartphone.jpg" alt="Hello World">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-03T11:21:37.000Z">2019-06-03</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分鐘 閱讀文 (大約 117 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/03/hello-world/">Hello World</a>
+            
+        </h1>
+        <div class="content">
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new "My New Post"</code></pre>
+
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre>
+
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -559,189 +711,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-03T01:00:00.000Z">2018-09-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分鐘 閱讀文 (大約 204 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/09/03/leetcode-4-median-of-two-sorted-arrays/">leetcode-4-median-of-two-sorted-arrays</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>There are two sorted arrays <strong>nums1</strong> and <strong>nums2</strong> of size m and n respectively.</p>
-<p>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
-<p>You may assume <strong>nums1</strong> and <strong>nums2</strong> cannot be both empty.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 3]</span><br><span class="line">nums2 = [2]</span><br><span class="line"></span><br><span class="line">The median is 2.0</span><br></pre></td></tr></table></figure>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 2]</span><br><span class="line">nums2 = [3, 4]</span><br><span class="line"></span><br><span class="line">The median is (2 + 3)/2 = 2.5</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/09/03/leetcode-4-median-of-two-sorted-arrays/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-02T01:00:00.000Z">2018-09-02</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分鐘 閱讀文 (大約 159 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/09/02/leetcode-2-add-two-numbers/">leetcode-2-add-two-numbers</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in <strong>reverse order</strong> and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span><br><span class="line">Output: 7 -&gt; 0 -&gt; 8</span><br><span class="line">Explanation: 342 + 465 = 807.</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/09/02/leetcode-2-add-two-numbers/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-01T01:37:00.000Z">2018-09-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分鐘 閱讀文 (大約 190 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/09/01/leetcode-844-backspace-string-compare/">leetcode-844-backspace-string-compare</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given two strings <code>S</code> and <code>T</code>, return if they are equal when both are typed into empty text editors. <code>#</code>means a backspace character.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: S = &quot;ab#c&quot;, T = &quot;ad#c&quot;</span><br><span class="line">Output: true</span><br><span class="line">Explanation: Both S and T become &quot;ac&quot;.</span><br></pre></td></tr></table></figure>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: S = &quot;ab##&quot;, T = &quot;c#d#&quot;</span><br><span class="line">Output: true</span><br><span class="line">Explanation: Both S and T become &quot;&quot;.</span><br></pre></td></tr></table></figure>
-<p><strong>Example 3:</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: S = &quot;a##c&quot;, T = &quot;#a#c&quot;</span><br><span class="line">Output: true</span><br><span class="line">Explanation: Both S and T become &quot;c&quot;.</span><br></pre></td></tr></table></figure>
-<p><strong>Example 4:</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: S = &quot;a#c&quot;, T = &quot;b&quot;</span><br><span class="line">Output: false</span><br><span class="line">Explanation: S becomes &quot;c&quot; while T becomes &quot;b&quot;.</span><br></pre></td></tr></table></figure>
-<p><strong>Note</strong>:</p>
-<ol>
-<li><code>1 &lt;= S.length &lt;= 200</code></li>
-<li><code>1 &lt;= T.length &lt;= 200</code></li>
-<li><code>S</code> and <code>T</code> only contain lowercase letters and <code>&#39;#&#39;</code> characters.</li>
-</ol>
-<p><strong>Follow up:</strong></p>
-<ul>
-<li>Can you solve it in <code>O(N)</code> time and <code>O(1)</code>space?</li>
-</ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/09/01/leetcode-844-backspace-string-compare/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -760,7 +729,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/46/">46</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/47/">47</a></li>
             
         </ul>
     </nav>
@@ -808,7 +777,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        456
+                        463
                     </p>
                 </div>
             </div>
@@ -818,7 +787,7 @@
                         分類
                     </p>
                     <p class="title has-text-weight-normal">
-                        19
+                        20
                     </p>
                 </div>
             </div>
@@ -828,7 +797,7 @@
                         標籤
                     </p>
                     <p class="title has-text-weight-normal">
-                        27
+                        29
                     </p>
                 </div>
             </div>
@@ -971,6 +940,14 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/java/">
+            <span class="level-start">
+                <span class="level-item">java</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/java面试/">
             <span class="level-start">
                 <span class="level-item">java面试</span>
@@ -984,7 +961,7 @@
                 <span class="level-item">leetcode</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">23</span>
+                <span class="level-item tag">28</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/markdown/">
@@ -1094,7 +1071,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 10px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java/" style="font-size: 11.43px;">java</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14.29px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 12.86px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-Stack-Queue/" style="font-size: 11.43px;">leetcode Stack Queue</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.43px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15.71px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 17.14px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.57px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -1108,6 +1085,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1166,44 +1181,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
-                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
-                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1215,6 +1192,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -1239,12 +1227,23 @@
         </li>
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">24</span>
                 </span>
             </a>
         </li>
@@ -1354,7 +1353,7 @@
                     <span class="level-item">三月 2017</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -1481,6 +1480,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/java面试/">
                         <span class="tag">java面试</span>
                         <span class="tag is-grey">1</span>
@@ -1490,7 +1496,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">13</span>
                     </a>
                 </div>
                 
@@ -1525,7 +1531,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
                         <span class="tag">leetcode LinkedList</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1533,6 +1539,13 @@
                     <a class="tags has-addons" href="/tags/leetcode-Stack/">
                         <span class="tag">leetcode Stack</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack-Queue/">
+                        <span class="tag">leetcode Stack Queue</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1652,6 +1665,44 @@
         
         <article class="media">
             
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/09/01/leetcode-35-search-insert-position/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-35-search-insert-position">
@@ -1707,44 +1758,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
-                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
-                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1756,6 +1769,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -1780,12 +1804,23 @@
         </li>
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">24</span>
                 </span>
             </a>
         </li>
@@ -1895,7 +1930,7 @@
                     <span class="level-item">三月 2017</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -2022,6 +2057,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/java面试/">
                         <span class="tag">java面试</span>
                         <span class="tag is-grey">1</span>
@@ -2031,7 +2073,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">13</span>
                     </a>
                 </div>
                 
@@ -2066,7 +2108,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
                         <span class="tag">leetcode LinkedList</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -2074,6 +2116,13 @@
                     <a class="tags has-addons" href="/tags/leetcode-Stack/">
                         <span class="tag">leetcode Stack</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack-Queue/">
+                        <span class="tag">leetcode Stack Queue</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -2189,7 +2238,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 auhanjie&nbsp;
+                &copy; 2020 auhanjie&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 

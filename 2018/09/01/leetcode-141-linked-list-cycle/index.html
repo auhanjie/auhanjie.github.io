@@ -8,7 +8,7 @@
 
 
     <meta name="description" content="DescriptionGiven a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list whe">
-<meta name="keywords" content="leetcode">
+<meta name="keywords" content="leetcode LinkedList">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode-141-linked-list-cycle">
 <meta property="og:url" content="http://auhanjie.github.io/2018/09/01/leetcode-141-linked-list-cycle/index.html">
@@ -16,7 +16,7 @@
 <meta property="og:description" content="DescriptionGiven a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list whe">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-30T02:49:03.383Z">
+<meta property="og:updated_time" content="2019-09-01T08:39:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode-141-linked-list-cycle">
 <meta name="twitter:description" content="DescriptionGiven a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list whe">
@@ -162,7 +162,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分鐘 閱讀文 (大約 208 個字)
+                    4 分鐘 閱讀文 (大約 599 個字)
                 </span>
                 
                 
@@ -186,11 +186,14 @@
 <p><strong>Example 3:</strong></p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [1], pos = -1</span><br><span class="line">Output: false</span><br><span class="line">Explanation: There is no cycle in the linked list.</span><br></pre></td></tr></table></figure>
 <p><img src="https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist_test3.png" alt="img"></p>
-<p><strong>Follow up:</strong></p>
-<p>Can you solve it using <em>O(1)</em> (i.e. constant) memory?</p>
 <a id="more"></a>
-<p>#### </p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="hljs-comment"> * class ListNode &#123;</span></span><br><span class="line"><span class="hljs-comment"> *     int val;</span></span><br><span class="line"><span class="hljs-comment"> *     ListNode next;</span></span><br><span class="line"><span class="hljs-comment"> *     ListNode(int x) &#123;</span></span><br><span class="line"><span class="hljs-comment"> *         val = x;</span></span><br><span class="line"><span class="hljs-comment"> *         next = null;</span></span><br><span class="line"><span class="hljs-comment"> *     &#125;</span></span><br><span class="line"><span class="hljs-comment"> * &#125;</span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">hasCycle</span><span class="hljs-params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(head==<span class="hljs-keyword">null</span>)</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span><br><span class="line">        ListNode fast=head;</span><br><span class="line">        ListNode slow=head;</span><br><span class="line">        <span class="hljs-keyword">while</span>(fast!=<span class="hljs-keyword">null</span>&amp;&amp;fast.next!=<span class="hljs-keyword">null</span>)&#123;</span><br><span class="line">            fast=fast.next.next;</span><br><span class="line">            slow=slow.next;</span><br><span class="line">            <span class="hljs-keyword">if</span>(fast==slow)</span><br><span class="line">                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="思路0"><a href="#思路0" class="headerlink" title="思路0"></a>思路0</h4><p>給一個足夠大的數，如果還沒走出鏈錶很大概率有環。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">hasCycle</span><span class="hljs-params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(head == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span><br><span class="line">        <span class="hljs-keyword">while</span>(head.next != <span class="hljs-keyword">null</span> &amp;&amp; head.next.val != Integer.MIN_VALUE)&#123;</span><br><span class="line">            head.val = Integer.MIN_VALUE; <span class="hljs-comment">// 将已遍历的元素作标记</span></span><br><span class="line">            head = head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span>(head.next == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>####思路1</p>
+<p>題意可知這是判斷鏈錶是否是環形鏈表，那麼可以使用雙指針，通過使用通過使用具有不同速度的快、慢兩個指針遍歷鏈表，空間復雜度可以被降低至 O(1)O(1)。慢指針每次移動一步，而快指針每次移動兩步。如果列表中不存在環，最終快指針將會最先到達尾部，此時我們可以返回 false。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="hljs-comment"> * class ListNode &#123;</span></span><br><span class="line"><span class="hljs-comment"> *     int val;</span></span><br><span class="line"><span class="hljs-comment"> *     ListNode next;</span></span><br><span class="line"><span class="hljs-comment"> *     ListNode(int x) &#123;</span></span><br><span class="line"><span class="hljs-comment"> *         val = x;</span></span><br><span class="line"><span class="hljs-comment"> *         next = null;</span></span><br><span class="line"><span class="hljs-comment"> *     &#125;</span></span><br><span class="line"><span class="hljs-comment"> * &#125;</span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;</span><br><span class="line">      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">hasCycle</span><span class="hljs-params">(ListNode head)</span> </span>&#123;</span><br><span class="line">      <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span> || head.next == <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">          <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      ListNode slow = head;</span><br><span class="line">      ListNode fast = head.next;</span><br><span class="line">      <span class="hljs-keyword">while</span> (slow != fast) &#123;</span><br><span class="line">          <span class="hljs-keyword">if</span> (fast == <span class="hljs-keyword">null</span> || fast.next == <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">              <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          slow = slow.next;</span><br><span class="line">          fast = fast.next.next;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="思路2"><a href="#思路2" class="headerlink" title="思路2"></a>思路2</h4><p>我們可以通過檢查壹個結點此前是否被訪問過來判斷鏈表是否為環形鏈表。常用的方法是使用哈希表。我們遍歷所有結點並在哈希表中存儲每個結點的引用（或內存地址）。如果當前結點為空結點 null（即已檢測到鏈表尾部的下壹個結點），那麽我們已經遍歷完整個鏈表，並且該鏈表不是環形鏈表。如果當前結點的引用已經存在於哈希表中，那麽返回 true（即該鏈表為環形鏈表）。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">hasCycle</span><span class="hljs-params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    Set&lt;ListNode&gt; nodesSeen = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">    <span class="hljs-keyword">while</span> (head != <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (nodesSeen.contains(head)) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            nodesSeen.add(head);</span><br><span class="line">        &#125;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
         
@@ -198,7 +201,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/leetcode/">leetcode</a>
+                    <a class="has-link-grey -link" href="/tags/leetcode-LinkedList/">leetcode LinkedList</a>
                 </div>
             </div>
         </div>
@@ -269,16 +272,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/09/01/leetcode-21-merge-two-sorted-lists/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/09/01/leetcode-206-reverse-linked-list/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">leetcode-21-merge-two-sorted-lists</span>
+                <span class="level-item">leetcode-206-reverse-linked-list</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/09/01/leetcode-19-remove-nth-node-from-end-of-list/">
-                <span class="level-item">leetcode-19-remove-nth-node-from-end-of-list.md</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/09/01/leetcode-21-merge-two-sorted-lists/">
+                <span class="level-item">leetcode-21-merge-two-sorted-lists</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -330,7 +333,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        456
+                        463
                     </p>
                 </div>
             </div>
@@ -340,7 +343,7 @@
                         分類
                     </p>
                     <p class="title has-text-weight-normal">
-                        19
+                        20
                     </p>
                 </div>
             </div>
@@ -350,7 +353,7 @@
                         標籤
                     </p>
                     <p class="title has-text-weight-normal">
-                        27
+                        29
                     </p>
                 </div>
             </div>
@@ -493,6 +496,14 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/java/">
+            <span class="level-start">
+                <span class="level-item">java</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/java面试/">
             <span class="level-start">
                 <span class="level-item">java面试</span>
@@ -506,7 +517,7 @@
                 <span class="level-item">leetcode</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">23</span>
+                <span class="level-item tag">28</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/markdown/">
@@ -616,7 +627,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 13.33px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 10px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 16.67px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.33px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java/" style="font-size: 11.43px;">java</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14.29px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 12.86px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-Stack-Queue/" style="font-size: 11.43px;">leetcode Stack Queue</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.43px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15.71px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 17.14px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.57px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -630,6 +641,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -688,44 +737,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
-                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
-                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -737,6 +748,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -761,12 +783,23 @@
         </li>
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">24</span>
                 </span>
             </a>
         </li>
@@ -876,7 +909,7 @@
                     <span class="level-item">三月 2017</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -1003,6 +1036,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/java面试/">
                         <span class="tag">java面试</span>
                         <span class="tag is-grey">1</span>
@@ -1012,7 +1052,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">13</span>
                     </a>
                 </div>
                 
@@ -1047,7 +1087,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
                         <span class="tag">leetcode LinkedList</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1055,6 +1095,13 @@
                     <a class="tags has-addons" href="/tags/leetcode-Stack/">
                         <span class="tag">leetcode Stack</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack-Queue/">
+                        <span class="tag">leetcode Stack Queue</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1174,6 +1221,44 @@
         
         <article class="media">
             
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/09/01/leetcode-35-search-insert-position/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-35-search-insert-position">
@@ -1229,44 +1314,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-26-remove-duplicates-from-sorted-array">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:37:00.000Z">2019-09-01</time></div>
-                    <a href="/2019/09/01/leetcode-26-remove-duplicates-from-sorted-array/" class="has-link-black-ter is-size-6">leetcode-26-remove-duplicates-from-sorted-array</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/26/leetcode-15-three-sum/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-15-three-sum">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-26T01:26:00.000Z">2019-08-26</time></div>
-                    <a href="/2019/08/26/leetcode-15-three-sum/" class="has-link-black-ter is-size-6">leetcode-15-three-sum</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1278,6 +1325,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -1302,12 +1360,23 @@
         </li>
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">24</span>
                 </span>
             </a>
         </li>
@@ -1417,7 +1486,7 @@
                     <span class="level-item">三月 2017</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -1544,6 +1613,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/java面试/">
                         <span class="tag">java面试</span>
                         <span class="tag is-grey">1</span>
@@ -1553,7 +1629,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode/">
                         <span class="tag">leetcode</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">13</span>
                     </a>
                 </div>
                 
@@ -1588,7 +1664,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/leetcode-LinkedList/">
                         <span class="tag">leetcode LinkedList</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1596,6 +1672,13 @@
                     <a class="tags has-addons" href="/tags/leetcode-Stack/">
                         <span class="tag">leetcode Stack</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/leetcode-Stack-Queue/">
+                        <span class="tag">leetcode Stack Queue</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1711,7 +1794,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 auhanjie&nbsp;
+                &copy; 2020 auhanjie&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
