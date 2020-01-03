@@ -628,7 +628,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分鐘 閱讀文 (大約 752 個字)
+                    4 分鐘 閱讀文 (大約 607 個字)
                 </span>
                 
                 
@@ -637,26 +637,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-36/">7-36 社交网络图中结点的“重要性”计算 (30 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-34/">7-34 任务调度的合理性 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-36-社交网络图中结点的“重要性”计算-30-分"><a href="#7-36-社交网络图中结点的“重要性”计算-30-分" class="headerlink" title="7-36 社交网络图中结点的“重要性”计算 (30 分)"></a>7-36 社交网络图中结点的“重要性”计算 (30 分)</h4><p>在社交网络中，个人或单位（结点）之间通过某些关系（边）联系起来。他们受到这些关系的影响，这种影响可以理解为网络中相互连接的结点之间蔓延的一种相互作用，可以增强也可以减弱。而结点根据其所处的位置不同，其在网络中体现的重要性也不尽相同。</p>
-<p>“紧密度中心性”是用来衡量一个结点到达其它结点的“快慢”的指标，即一个有较高中心性的结点比有较低中心性的结点能够更快地（平均意义下）到达网络中的其它结点，因而在该网络的传播过程中有更重要的价值。在有$N$个结点的网络中，结点$v_i$的“紧密度中心性”$C_c(v_i)$数学上定义为$v_i$到其余所有结点$v_j$ ($j ≠ i$) 的最短距离$d$($v_i$,$v_j$)的平均值的倒数：</p>
-<p><img src="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/54" alt=""></p>
-<p>对于非连通图，所有结点的紧密度中心性都是0。</p>
-<p>给定一个无权的无向图以及其中的一组结点，计算这组结点中每个结点的紧密度中心性。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出两个正整数$N$和$M$，其中$N$（≤104）是图中结点个数，顺便假设结点从1到$N$编号；$M$（≤105）是边的条数。随后的$M$行中，每行给出一条边的信息，即该边连接的两个结点编号，中间用空格分隔。最后一行给出需要计算紧密度中心性的这组结点的个数$K$（≤100）以及$K$个结点编号，用空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照<code>Cc(i)=x.xx</code>的格式输出$K$个给定结点的紧密度中心性，每个输出占一行，结果保留到小数点后2位。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">9 14</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br><span class="line">1 4</span><br><span class="line">2 3</span><br><span class="line">3 4</span><br><span class="line">4 5</span><br><span class="line">4 6</span><br><span class="line">5 6</span><br><span class="line">5 7</span><br><span class="line">5 8</span><br><span class="line">6 7</span><br><span class="line">6 8</span><br><span class="line">7 8</span><br><span class="line">7 9</span><br><span class="line">3 3 4 9</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Cc(3)=0.47</span><br><span class="line">Cc(4)=0.62</span><br><span class="line">Cc(9)=0.35</span><br></pre></td></tr></table></figure>
+            <h4 id="7-34-任务调度的合理性-25-分"><a href="#7-34-任务调度的合理性-25-分" class="headerlink" title="7-34 任务调度的合理性 (25 分)"></a>7-34 任务调度的合理性 (25 分)</h4><p>假定一个工程项目由一组子任务构成，子任务之间有的可以并行执行，有的必须在完成了其它一些子任务后才能执行。“任务调度”包括一组子任务、以及每个子任务可以执行所依赖的子任务集。</p>
+<p>比如完成一个专业的所有课程学习和毕业设计可以看成一个本科生要完成的一项工程，各门课程可以看成是子任务。有些课程可以同时开设，比如英语和C程序设计，它们没有必须先修哪门的约束；有些课程则不可以同时开设，因为它们有先后的依赖关系，比如C程序设计和数据结构两门课，必须先学习前者。</p>
+<p>但是需要注意的是，对一组子任务，并不是任意的任务调度都是一个可行的方案。比如方案中存在“子任务A依赖于子任务B，子任务B依赖于子任务C，子任务C又依赖于子任务A”，那么这三个任务哪个都不能先执行，这就是一个不可行的方案。你现在的工作是写程序判定任何一个给定的任务调度是否可行。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入说明：输入第一行给出子任务数$N$（≤100），子任务按1~$N$编号。随后$N$行，每行给出一个子任务的依赖集合：首先给出依赖集合中的子任务数$K$，随后给出$K$个子任务编号，整数之间都用空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>如果方案可行，则输出1，否则输出0。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">12</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">2 1 2</span><br><span class="line">0</span><br><span class="line">1 4</span><br><span class="line">1 5</span><br><span class="line">2 3 6</span><br><span class="line">1 3</span><br><span class="line">2 7 8</span><br><span class="line">1 7</span><br><span class="line">1 10</span><br><span class="line">1 7</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 4</span><br><span class="line">2 1 4</span><br><span class="line">2 2 5</span><br><span class="line">1 3</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-36/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-34/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -688,7 +688,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分鐘 閱讀文 (大約 607 個字)
+                    5 分鐘 閱讀文 (大約 752 個字)
                 </span>
                 
                 
@@ -697,26 +697,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-34/">7-34 任务调度的合理性 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-36/">7-36 社交网络图中结点的“重要性”计算 (30 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-34-任务调度的合理性-25-分"><a href="#7-34-任务调度的合理性-25-分" class="headerlink" title="7-34 任务调度的合理性 (25 分)"></a>7-34 任务调度的合理性 (25 分)</h4><p>假定一个工程项目由一组子任务构成，子任务之间有的可以并行执行，有的必须在完成了其它一些子任务后才能执行。“任务调度”包括一组子任务、以及每个子任务可以执行所依赖的子任务集。</p>
-<p>比如完成一个专业的所有课程学习和毕业设计可以看成一个本科生要完成的一项工程，各门课程可以看成是子任务。有些课程可以同时开设，比如英语和C程序设计，它们没有必须先修哪门的约束；有些课程则不可以同时开设，因为它们有先后的依赖关系，比如C程序设计和数据结构两门课，必须先学习前者。</p>
-<p>但是需要注意的是，对一组子任务，并不是任意的任务调度都是一个可行的方案。比如方案中存在“子任务A依赖于子任务B，子任务B依赖于子任务C，子任务C又依赖于子任务A”，那么这三个任务哪个都不能先执行，这就是一个不可行的方案。你现在的工作是写程序判定任何一个给定的任务调度是否可行。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入说明：输入第一行给出子任务数$N$（≤100），子任务按1~$N$编号。随后$N$行，每行给出一个子任务的依赖集合：首先给出依赖集合中的子任务数$K$，随后给出$K$个子任务编号，整数之间都用空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>如果方案可行，则输出1，否则输出0。</p>
-<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">12</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">2 1 2</span><br><span class="line">0</span><br><span class="line">1 4</span><br><span class="line">1 5</span><br><span class="line">2 3 6</span><br><span class="line">1 3</span><br><span class="line">2 7 8</span><br><span class="line">1 7</span><br><span class="line">1 10</span><br><span class="line">1 7</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 4</span><br><span class="line">2 1 4</span><br><span class="line">2 2 5</span><br><span class="line">1 3</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+            <h4 id="7-36-社交网络图中结点的“重要性”计算-30-分"><a href="#7-36-社交网络图中结点的“重要性”计算-30-分" class="headerlink" title="7-36 社交网络图中结点的“重要性”计算 (30 分)"></a>7-36 社交网络图中结点的“重要性”计算 (30 分)</h4><p>在社交网络中，个人或单位（结点）之间通过某些关系（边）联系起来。他们受到这些关系的影响，这种影响可以理解为网络中相互连接的结点之间蔓延的一种相互作用，可以增强也可以减弱。而结点根据其所处的位置不同，其在网络中体现的重要性也不尽相同。</p>
+<p>“紧密度中心性”是用来衡量一个结点到达其它结点的“快慢”的指标，即一个有较高中心性的结点比有较低中心性的结点能够更快地（平均意义下）到达网络中的其它结点，因而在该网络的传播过程中有更重要的价值。在有$N$个结点的网络中，结点$v_i$的“紧密度中心性”$C_c(v_i)$数学上定义为$v_i$到其余所有结点$v_j$ ($j ≠ i$) 的最短距离$d$($v_i$,$v_j$)的平均值的倒数：</p>
+<p><img src="https://raw.githubusercontent.com/auhanjie/Figurebed/master/img/54" alt=""></p>
+<p>对于非连通图，所有结点的紧密度中心性都是0。</p>
+<p>给定一个无权的无向图以及其中的一组结点，计算这组结点中每个结点的紧密度中心性。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出两个正整数$N$和$M$，其中$N$（≤104）是图中结点个数，顺便假设结点从1到$N$编号；$M$（≤105）是边的条数。随后的$M$行中，每行给出一条边的信息，即该边连接的两个结点编号，中间用空格分隔。最后一行给出需要计算紧密度中心性的这组结点的个数$K$（≤100）以及$K$个结点编号，用空格分隔。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照<code>Cc(i)=x.xx</code>的格式输出$K$个给定结点的紧密度中心性，每个输出占一行，结果保留到小数点后2位。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">9 14</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br><span class="line">1 4</span><br><span class="line">2 3</span><br><span class="line">3 4</span><br><span class="line">4 5</span><br><span class="line">4 6</span><br><span class="line">5 6</span><br><span class="line">5 7</span><br><span class="line">5 8</span><br><span class="line">6 7</span><br><span class="line">6 8</span><br><span class="line">7 8</span><br><span class="line">7 9</span><br><span class="line">3 3 4 9</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Cc(3)=0.47</span><br><span class="line">Cc(4)=0.62</span><br><span class="line">Cc(9)=0.35</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-34/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-36/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -1111,25 +1111,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
@@ -1140,6 +1121,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -1688,25 +1688,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
@@ -1717,6 +1698,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>

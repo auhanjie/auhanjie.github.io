@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="JPA高級動態查詢1234567891011121314  @Overridepublic List&amp;lt;String&amp;gt; findAllByUserAndStatusAndDepartmentIn(User user, String key, Department department) &amp;#123;    CriteriaBuilder criteriaBuilder = entityM">
+    <meta name="description" content="1234567891011121314  @Overridepublic List&amp;lt;String&amp;gt; findAllByUserAndStatusAndDepartmentIn(User user, String key, Department department) &amp;#123;    CriteriaBuilder criteriaBuilder = entityManager.ge">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JPA高級動態查詢">
 <meta property="og:url" content="http://auhanjie.github.io/2020/01/03/jpa-criteraBuilder/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
-<meta property="og:description" content="JPA高級動態查詢1234567891011121314  @Overridepublic List&amp;lt;String&amp;gt; findAllByUserAndStatusAndDepartmentIn(User user, String key, Department department) &amp;#123;    CriteriaBuilder criteriaBuilder = entityM">
+<meta property="og:description" content="1234567891011121314  @Overridepublic List&amp;lt;String&amp;gt; findAllByUserAndStatusAndDepartmentIn(User user, String key, Department department) &amp;#123;    CriteriaBuilder criteriaBuilder = entityManager.ge">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2020-01-03T11:12:51.616Z">
+<meta property="og:updated_time" content="2020-01-03T11:41:31.151Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JPA高級動態查詢">
-<meta name="twitter:description" content="JPA高級動態查詢1234567891011121314  @Overridepublic List&amp;lt;String&amp;gt; findAllByUserAndStatusAndDepartmentIn(User user, String key, Department department) &amp;#123;    CriteriaBuilder criteriaBuilder = entityM">
+<meta name="twitter:description" content="1234567891011121314  @Overridepublic List&amp;lt;String&amp;gt; findAllByUserAndStatusAndDepartmentIn(User user, String key, Department department) &amp;#123;    CriteriaBuilder criteriaBuilder = entityManager.ge">
 <meta name="twitter:image" content="http://auhanjie.github.io/images/og_image.png">
 
 
@@ -162,7 +162,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    幾秒 閱讀文 (大約 77 個字)
+                    幾秒 閱讀文 (大約 70 個字)
                 </span>
                 
                 
@@ -175,7 +175,7 @@
             
         </h1>
         <div class="content">
-            <h1 id="JPA高級動態查詢"><a href="#JPA高級動態查詢" class="headerlink" title="JPA高級動態查詢"></a>JPA高級動態查詢</h1><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="hljs-meta">@Override</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">findAllByUserAndStatusAndDepartmentIn</span><span class="hljs-params">(User user, String key, Department department)</span> </span>&#123;</span><br><span class="line">    CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();</span><br><span class="line">    CriteriaQuery&lt;String&gt; query = criteriaBuilder.createQuery(String.class);</span><br><span class="line">    Root&lt;User&gt; root = query.from(User.class);</span><br><span class="line">    query.select(root.get(<span class="hljs-string">"id"</span>));</span><br><span class="line">    Join&lt;User,Department&gt; join = root.join(<span class="hljs-string">"departments"</span>, JoinType.LEFT);</span><br><span class="line">    query.orderBy(criteriaBuilder.desc(root.get(<span class="hljs-string">"createdDate"</span>)));</span><br><span class="line">    Predicate restrictions = criteriaBuilder.conjunction();</span><br><span class="line">    restrictions = criteriaBuilder.and(join.get(<span class="hljs-string">"id"</span>).in(department.getId()));</span><br><span class="line">    query.where(restrictions);</span><br><span class="line">    List&lt;String&gt; result = entityManager.createQuery(query).getResultList();</span><br><span class="line">    <span class="hljs-keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="hljs-meta">@Override</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">findAllByUserAndStatusAndDepartmentIn</span><span class="hljs-params">(User user, String key, Department department)</span> </span>&#123;</span><br><span class="line">    CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();</span><br><span class="line">    CriteriaQuery&lt;String&gt; query = criteriaBuilder.createQuery(String.class);</span><br><span class="line">    Root&lt;User&gt; root = query.from(User.class);</span><br><span class="line">    query.select(root.get(<span class="hljs-string">"id"</span>));</span><br><span class="line">    Join&lt;User,Department&gt; join = root.join(<span class="hljs-string">"departments"</span>, JoinType.LEFT);</span><br><span class="line">    query.orderBy(criteriaBuilder.desc(root.get(<span class="hljs-string">"createdDate"</span>)));</span><br><span class="line">    Predicate restrictions = criteriaBuilder.conjunction();</span><br><span class="line">    restrictions = criteriaBuilder.and(join.get(<span class="hljs-string">"id"</span>).in(department.getId()));</span><br><span class="line">    query.where(restrictions);</span><br><span class="line">    List&lt;String&gt; result = entityManager.createQuery(query).getResultList();</span><br><span class="line">    <span class="hljs-keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
         
@@ -253,10 +253,17 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/01/03/how-to-order-by-field-value-in-mongodb/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">How to ORDER BY FIELD VALUE in MongoDB</span>
+            </a>
+        </div>
+        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/01/03/how-to-order-by-field-value-in-mongodb/">
-                <span class="level-item">How to ORDER BY FIELD VALUE in MongoDB</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/01/leetcode-35-search-insert-position/">
+                <span class="level-item">leetcode-35-search-insert-position</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -619,25 +626,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
@@ -648,6 +636,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -1196,25 +1203,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
@@ -1225,6 +1213,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
