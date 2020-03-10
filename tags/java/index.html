@@ -161,6 +161,75 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-10T05:40:07.000Z">2020-03-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java/">java</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    22 分鐘 閱讀文 (大約 3240 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/10/refactoring-java/">java代碼重構的經驗總結分享</a>
+            
+        </h1>
+        <div class="content">
+            <p>轉載： <a href="http://www.cnblogs.com/jun-ma/p/4967839.html" target="_blank" rel="noopener">http://www.cnblogs.com/jun-ma/p/4967839.html</a><br>相關文章： <a href="https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/</a><br>java代碼重構的經驗總結分享<br>java代碼重構的經驗總結分享</p>
+<p>幾天前的壹次上線，腦殘手抖不小心寫了bug，雖然組裏的老大沒有說什麽，但心裏面很是難過。同事說我之所以寫蟲子是因為我討厭if/else，這個習慣不好。的確，if/else可以幫助我們很方便的寫出流程控制代碼，簡潔明了，這個條件做什麽，那個條件做什麽，說得很清楚。說真的，我從來不反對if/else，從經驗上看，越復雜的業務場景下，代碼寫的越簡單單壹，通常越不容易出錯。以結果為導向的現代項目管理方式，這是壹種很有效實踐經驗。</p>
+<p>同事說的沒錯，我的確很討厭if/else。這個習慣很大程度是受Thoughtworks壹位咨詢師朋友影響，他經常在我耳邊嶗刀，寫代碼要幹凈，要簡潔，要靈活多變，不要固守城規，不要動不動就if/else，switch/case。初入it領域，我壹直把這句話奉為經典。在以後的學習工作中也時刻提醒自己要讓自己的代碼盡可能的看起來簡潔，不失靈活。不喜歡if/else並不意味著拒絕它，該使用的時候必要使用，比如函數接口入參check，處理異常分支邏輯流程等。通常能不用分支語句，我盡量不會使用，因為我覺得if/else很醜，每每看到if/else代碼，總會以挑剔的眼光看待它，想想能不能重構的更好。大多數時候，關於什麽好的代碼，大家的意見往往分歧很大，每個人都有各自的想法，審查妳代碼的人可能會選擇另壹種實現方式，這並不能說明誰對誰錯。</p>
+<p>OO設計遵循SOLID(單壹功能、開閉原則、裏氏替換、接口隔離以及依賴反轉)原則，使用這個原則去審視if/else，可能會發現很多問題，比如不符合單壹原則，它本身就像壹團漿糊，融合了各種作料，黏糊糊的很不幹凈；比如不符合開閉原則，每新增壹種場景，就需要修改源文件增加壹條分支語句，業務邏輯復雜些若有1000種場景就得有1000個分支流，這種情況下代碼不僅僅惡心問題了，效率上也存在很大問題。由此可見，if/else雖然簡單方便，但不恰當的使用會給編碼代碼帶來非常痛苦的體驗。針對這種惡心的if/else分支，我們當然首先想到的去重構它–在不改變代碼外部功能特征的前提下對代碼內部邏輯進行調整和優化，但，如何做呢？前段時間在項目中正好遇到壹個惡心的if/else例子，想在這篇博客裏和大家分享壹下去除if/else重構的歷程。</p>
+<p>java代碼重構的經驗總結分享</p>
+<p>if/else的惡瘤</p>
+<p>有句話說的好–好文章是改出來，同樣，好的代碼也肯定是重構出來的，因為沒有哪個軟件工程師能夠拍著胸脯保證在項目之初代碼設計這塊，就考慮到了所有需求變化可能性的擴展。隨著項目的不斷成長，業務邏輯變的越來越復雜，代碼也開始變的越來越多，原有的設計可能不再滿足需求，那麽此時必須要重構。就系統整體架構而言，重構可能需要很大的改動，可能在架構流程上需要評審；就功能內代碼層次而言，這種重構在我們編碼過程中隨時可以進行，類似於if/else，swicth/case這種代碼的重構也屬於這種類型。今天我們要重構的if/else源碼如下所示，針對不同的status code，CountRecoder對象會執行不同的set方法，為不同內部屬性賦值。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> CountRecoder <span class="hljs-title">getCountRecoder</span><span class="hljs-params">(List countEntries)</span> </span>&#123;</span><br><span class="line">    CountRecoder countRecoder = <span class="hljs-keyword">new</span> CountRecoder();</span><br><span class="line">    <span class="hljs-keyword">for</span> (CountEntry countEntry : countEntries) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> == countEntry.getCode()) &#123;</span><br><span class="line">            countRecoder.setCountOfFirstStage(countEntry.getCount());</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">2</span> == countEntry.getCode()) &#123;</span><br><span class="line">            countRecoder.setCountOfSecondStage(countEntry.getCount());</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">3</span> == countEntry.getCode()) &#123;</span><br><span class="line">            countRecoder.setCountOfThirdtage(countEntry.getCount());</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">4</span> == countEntry.getCode()) &#123;</span><br><span class="line">            countRecoder.setCountOfForthtage(countEntry.getCount());</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">5</span> == countEntry.getCode()) &#123;</span><br><span class="line">            countRecoder.setCountOfFirthStage(countEntry.getCount());</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">6</span> == countEntry.getCode()) &#123;</span><br><span class="line">            countRecoder.setCountOfSixthStage(countEntry.getCount());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> countRecoder;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>CountRecoder對象是壹個簡單的Java Bean，用於保存壹天之中六種狀態分別對應的數據條目，提供了get和set方法。CountEntry是對應數據庫中每種狀態的數據條目記錄，包含狀態code和以及count兩個字段, 我們可以使用mybatis實現數據庫記錄和java對象之間的轉換。上面getCountRecoder的方法實現了將list轉換為CountRecoder的功能。</p>
+<p>看到這段代碼，想必已經有很多人要呵呵了，像壹坨啥啥啥，長得這麽醜，真不知道它”爸媽”怎麽想的，怎麽敢”生”出來。啥都不說了，直接回爐重構吧。重構是門藝術，Martin flow曾寫過壹本書《重構改變代碼之道》，裏面詳細的記錄了重構的方法論，感興趣的朋友可以閱讀壹下。說到重構，通常我們在重構中會遇到壹個問題，那就是如何能夠保證重構的代碼不改變原有的外部功能特征 ？經過TDD訓練的朋友應該知道答案，那就是單元測試，重構之前要寫單元測試，準確的來說應該是補單元測試，畢竟TDD的核心理念是測試驅動開發。對於今天博客中分享的例子，因為代碼邏輯比較簡單，所以偷了懶，省卻了單元測試的歷程。</p>
+<p>重構初體驗–反射</p>
+<p>要重構上面的代碼，對設計模式精通的人可以立馬可以看出來這是使用策略模式/狀態模式的絕佳場景，將策略模式稍微變換，工廠模式應該也是ok的，當然也有些人會選擇使用反射。對於這些方法，這裏不壹壹列出，主要想講壹下使用反射和工廠模式如何解決消除if/else問題，那先說反射吧，代碼如下所示：<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Map methodsMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">static</span> &#123;</span><br><span class="line">    methodsMap.put(<span class="hljs-number">1</span>, <span class="hljs-string">"setCountOfFirstStage"</span>);</span><br><span class="line">    methodsMap.put(<span class="hljs-number">2</span>, <span class="hljs-string">"setCountOfSecondStage"</span>);</span><br><span class="line">    methodsMap.put(<span class="hljs-number">3</span>, <span class="hljs-string">"setCountOfThirdtage"</span>);</span><br><span class="line">    methodsMap.put(<span class="hljs-number">4</span>, <span class="hljs-string">"setCountOfForthtage"</span>);</span><br><span class="line">    methodsMap.put(<span class="hljs-number">5</span>, <span class="hljs-string">"setCountOfFirthStage"</span>);</span><br><span class="line">    methodsMap.put(<span class="hljs-number">6</span>, <span class="hljs-string">"setCountOfSixthStage"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> CountRecoder <span class="hljs-title">getCountRecoderByReflect</span><span class="hljs-params">(List countEntries)</span> </span>&#123;</span><br><span class="line">    CountRecoder countRecoder = <span class="hljs-keyword">new</span> CountRecoder();</span><br><span class="line">    countEntries.stream().forEach(countEntry -&gt; fillCount(countRecoder, countEntry));</span><br><span class="line">    <span class="hljs-keyword">return</span> countRecoder;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder shippingOrderCountDto, CountEntry countEntry)</span> </span>&#123;</span><br><span class="line">    String name = methodsMap.get(countEntry.getCode());</span><br><span class="line">    <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">        Method declaredMethod = CountRecoder.class.getMethod(name, Integer.class);</span><br><span class="line">        declaredMethod.invoke(shippingOrderCountDto, countEntry.getCount());</span><br><span class="line">    &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        System.out.println(e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>重構初體驗–所謂模式</p>
+<p>使用反射去掉if/else的原理很簡單，使用HashMap建立狀態碼和需要調用的方法的方法名之間的映射關系，對於每個CountEntry，首先取出狀態碼，然後根據狀態碼獲得相應的要調用方法的方法名，然後使用java的反射機制就可以實現對應方法的調用了。本例中使用反射的確可以幫助我們完美的去掉if/else的身影，但是，眾所周知，反射效率很低，在高並發的條件下，反射絕對不是壹個良好的選擇。除去反射這種方法，能想到的就剩下使用策略模式或者與其類似的狀態模式，以及工廠模式了，我們以工廠模式為例，經典的架構UML架構圖通常由三個組成要素：</p>
+<p>抽象產品角色：通常是壹個抽象類或者接口，裏面定義了抽象方法<br>具體產品角色：具體產品的實現類，繼承或是實現抽象策略類，通常由壹個或多個組成類組成。<br>工廠角色：持有抽象產品類的引用，負責動態運行時產品的選擇和構建<br>策略模式的架構圖和工廠模式非常類似，不過在策略模式裏執行的對象不叫產品，叫策略。在本例中，這裏的產品是虛擬產品，它是服務類性質的接口或者實現。Ok，按照工廠模式的思路重構我們的代碼，我們首先定義壹個抽象產品接口FillCountService，裏面定義產品的行為方法fillCount，代碼如下所示：<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">FillCountService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder countRecoder, <span class="hljs-keyword">int</span> count)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>接著我們需要分別實現這六種服務類型的產品，在每種產品中封裝不同的服務算法，具體的代碼如下所示：<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FirstStageService</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">FillCountService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder countRecoder, <span class="hljs-keyword">int</span> count)</span> </span>&#123;</span><br><span class="line">        countRecoder.setCountOfFirstStage(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecondStageService</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">FillCountService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder countRecoder, <span class="hljs-keyword">int</span> count)</span> </span>&#123;</span><br><span class="line">        countRecoder.setCountOfSecondStage(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ThirdStageService</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">FillCountService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder countRecoder, <span class="hljs-keyword">int</span> count)</span> </span>&#123;</span><br><span class="line">        countRecoder.setCountOfThirdtage(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ForthStageService</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">FillCountService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder countRecoder, <span class="hljs-keyword">int</span> count)</span> </span>&#123;</span><br><span class="line">        countRecoder.setCountOfForthtage(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FirthStageService</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">FillCountService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder countRecoder, <span class="hljs-keyword">int</span> count)</span> </span>&#123;</span><br><span class="line">        countRecoder.setCountOfFirthStage(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SixthStageService</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">FillCountService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder countRecoder, <span class="hljs-keyword">int</span> count)</span> </span>&#123;</span><br><span class="line">        countRecoder.setCountOfSixthStage(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>緊接著，我們需要是實現工廠角色，在工廠內需要實現產品的動態選擇算法，使用HashMap維護狀態code和具體產品的對象之間的映射關系，<br>就可以非常容易的實現這壹點，具體代碼如下所示：<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class FillCountServieFactory &#123;</span><br><span class="line"></span><br><span class="line">    private static Map fillCountServiceMap = new HashMap&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    static &#123;</span><br><span class="line">        fillCountServiceMap.put(1, new FirstStageService());</span><br><span class="line">        fillCountServiceMap.put(2, new SecondStageService());</span><br><span class="line">        fillCountServiceMap.put(3, new ThirdStageService());</span><br><span class="line">        fillCountServiceMap.put(4, new ForthStageService());</span><br><span class="line">        fillCountServiceMap.put(5, new FirthStageService());</span><br><span class="line">        fillCountServiceMap.put(6, new SixthStageService());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static FillCountService getFillCountStrategy(int statusCode) &#123;</span><br><span class="line">        return fillCountServiceMap.get(statusCode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>客戶端在具體使用的時候就變的很簡單，那getCountRecoder方法就可以用下面的代碼實現:<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> CountRecoder <span class="hljs-title">getCountRecoder</span><span class="hljs-params">(List countEntries)</span> </span>&#123;</span><br><span class="line">    CountRecoder countRecoder = <span class="hljs-keyword">new</span> CountRecoder();</span><br><span class="line">    countEntries.stream().forEach(countEntry -&gt; </span><br><span class="line">            FillCountServieFactory.getFillCountStrategy(countEntry.getCode())</span><br><span class="line">                    .fillCount(countRecoder, countEntry.getCount()));</span><br><span class="line">    <span class="hljs-keyword">return</span> countRecoder;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>重構初體驗–Java8對模式設計的精簡</p>
+<p>和反射壹樣使用設計模式也同樣完美的去除了if/else，但是不得不引入大量的具體服務實現類，同時程序中出現大量的模板代碼，使得我們程序看起來很不幹凈，幸好Java 8之後引入了Functional Interface，我們可以使用lambda表達式來去除這些模板代碼。將壹個接口變為Functional interface，可以通過在接口上添加FunctionalInterface註解實現，代碼如下所示：<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@FunctionalInterface</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">FillCountService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fillCount</span><span class="hljs-params">(CountRecoder countRecoder, <span class="hljs-keyword">int</span> count)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>那麽具體的服務實現類就可以使用壹個簡單的lambda表達式代替，原先的FirstStageService類對象就可以使用下面的表達式代替：</p>
+<p>(countRecoder, count) -&gt; countRecoder.setCountOfFirstStage(count)<br>那麽工廠類中的代碼就可以變為：<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">`<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FillCountServieFactory</span> </span>&#123;`</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Map&lt;Integer, FillCountService&gt; fillCountServiceMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">static</span> &#123;</span><br><span class="line">        fillCountServiceMap.put(<span class="hljs-number">1</span>, (countRecoder, count) -&gt; countRecoder.setCountOfFirstStage(count));</span><br><span class="line">        fillCountServiceMap.put(<span class="hljs-number">2</span>, (countRecoder, count) -&gt; countRecoder.setCountOfSecondStage(count));</span><br><span class="line">        fillCountServiceMap.put(<span class="hljs-number">3</span>, (countRecoder, count) -&gt; countRecoder.setCountOfThirdtage(count));</span><br><span class="line">        fillCountServiceMap.put(<span class="hljs-number">4</span>, (countRecoder, count) -&gt; countRecoder.setCountOfForthtage(count));</span><br><span class="line">        fillCountServiceMap.put(<span class="hljs-number">5</span>, (countRecoder, count) -&gt; countRecoder.setCountOfFirthStage(count));</span><br><span class="line">        fillCountServiceMap.put(<span class="hljs-number">6</span>, (countRecoder, count) -&gt; countRecoder.setCountOfSixthStage(count));</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> FillCountService <span class="hljs-title">getFillCountStrategy</span><span class="hljs-params">(<span class="hljs-keyword">int</span> statusCode)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> fillCountServiceMap.get(statusCode);</span><br><span class="line">    &#125;</span><br><span class="line">`&#125;`</span><br></pre></td></tr></table></figure></p>
+<p>這樣我們的代碼就重構完畢了，當然了還是有些不完美，程序中的魔法數字不利於閱讀理解，可以使用易讀的常量標識它們，在這裏就不做過多說明了。</p>
+<p>總結</p>
+<p>Craig Larman曾經說過軟件開發最重要的設計工具不是什麽技術，而是壹顆在設計原則方面訓練有素的頭腦。重構的最終結果不壹定會讓代碼變少，相反還有可能增加程序的復雜度和抽象性，就本例中的if/else而言，確實如此。我非常贊同我的壹位朋友說的話，做技術要有追求，沒錯if/else可以在代碼中工作的挺好，也可以很容易的被接替者所理解，但是我們可以有更好的選擇，因為簡單的代碼也可以變得很精彩。多勤多思，也許有壹天真的就可以達到Craig所說的在設計原則方面擁有訓練有素的頭腦，誰說不是這樣呢？加油吧。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time>
                 
                 <div class="level-item">
@@ -289,7 +358,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        463
+                        464
                     </p>
                 </div>
             </div>
@@ -457,7 +526,7 @@
                 <span class="level-item">java</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/java面试/">
@@ -583,7 +652,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java/" style="font-size: 11.43px;">java</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 14.29px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 12.86px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-Stack-Queue/" style="font-size: 11.43px;">leetcode Stack Queue</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.43px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 15.71px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 17.14px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.57px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
+        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/findbugs/" style="font-size: 10px;">findbugs</a> <a href="/tags/java/" style="font-size: 12.5px;">java</a> <a href="/tags/java面试/" style="font-size: 10px;">java面试</a> <a href="/tags/leetcode/" style="font-size: 15px;">leetcode</a> <a href="/tags/leetcode-Array-BinarySearch/" style="font-size: 10px;">leetcode Array BinarySearch</a> <a href="/tags/leetcode-Array-TwoPointers/" style="font-size: 10px;">leetcode Array TwoPointers</a> <a href="/tags/leetcode-Easy-Array-HashTable/" style="font-size: 10px;">leetcode Easy Array HashTable</a> <a href="/tags/leetcode-Easy-Math/" style="font-size: 10px;">leetcode Easy Math</a> <a href="/tags/leetcode-LinkedList/" style="font-size: 13.75px;">leetcode LinkedList</a> <a href="/tags/leetcode-Stack/" style="font-size: 10px;">leetcode Stack</a> <a href="/tags/leetcode-Stack-Queue/" style="font-size: 11.25px;">leetcode Stack Queue</a> <a href="/tags/leetcode-TwoPointers/" style="font-size: 10px;">leetcode TwoPointers</a> <a href="/tags/leetcode-TwoPointers-String/" style="font-size: 10px;">leetcode TwoPointers String</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/oracle/" style="font-size: 11.25px;">oracle</a> <a href="/tags/个人简历/" style="font-size: 10px;">个人简历</a> <a href="/tags/个人观点/" style="font-size: 10px;">个人观点</a> <a href="/tags/基础编程题目集/" style="font-size: 16.25px;">基础编程题目集</a> <a href="/tags/数据结构与算法题目集（中文）/" style="font-size: 17.5px;">数据结构与算法题目集（中文）</a> <a href="/tags/浙大版《C语言程序设计实验与习题指导（第3版）》题目集/" style="font-size: 20px;">浙大版《C语言程序设计实验与习题指导（第3版）》题目集</a> <a href="/tags/浙大版《C语言程序设计（第3版）》题目集/" style="font-size: 18.75px;">浙大版《C语言程序设计（第3版）》题目集</a> <a href="/tags/簡歷/" style="font-size: 10px;">簡歷</a> <a href="/tags/編譯原理/" style="font-size: 10px;">編譯原理</a>
     </div>
 </div>
 
@@ -600,16 +669,16 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+            <a href="/2020/03/10/refactoring-java/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java代碼重構的經驗總結分享">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-10T05:40:07.000Z">2020-03-10</time></div>
+                    <a href="/2020/03/10/refactoring-java/" class="has-link-black-ter is-size-6">java代碼重構的經驗總結分享</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -629,6 +698,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -674,25 +762,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/09/01/leetcode-27-remove-element/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-27-remove-element">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:38:00.000Z">2019-09-01</time></div>
-                    <a href="/2019/09/01/leetcode-27-remove-element/" class="has-link-black-ter is-size-6">leetcode-27-remove-element</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -704,6 +773,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/01/">
@@ -994,7 +1074,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/java/">
                         <span class="tag">java</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1177,16 +1257,16 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+            <a href="/2020/03/10/refactoring-java/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java代碼重構的經驗總結分享">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-10T05:40:07.000Z">2020-03-10</time></div>
+                    <a href="/2020/03/10/refactoring-java/" class="has-link-black-ter is-size-6">java代碼重構的經驗總結分享</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -1206,6 +1286,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -1251,25 +1350,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/09/01/leetcode-27-remove-element/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="leetcode-27-remove-element">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-01T01:38:00.000Z">2019-09-01</time></div>
-                    <a href="/2019/09/01/leetcode-27-remove-element/" class="has-link-black-ter is-size-6">leetcode-27-remove-element</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1281,6 +1361,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/01/">
@@ -1571,7 +1662,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/java/">
                         <span class="tag">java</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
