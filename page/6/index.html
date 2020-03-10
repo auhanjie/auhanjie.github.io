@@ -217,7 +217,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分鐘 閱讀文 (大約 741 個字)
+                    3 分鐘 閱讀文 (大約 420 個字)
                 </span>
                 
                 
@@ -226,23 +226,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-35/">7-35 城市间紧急救援 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-37/">7-37 模拟EXCEL排序 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-35-城市间紧急救援-25-分"><a href="#7-35-城市间紧急救援-25-分" class="headerlink" title="7-35 城市间紧急救援 (25 分)"></a>7-35 城市间紧急救援 (25 分)</h4><p>作为一个城市的应急救援队伍的负责人，你有一张特殊的全国地图。在地图上显示有多个分散的城市和一些连接城市的快速道路。每个城市的救援队数量和每一条连接两个城市的快速道路长度都标在地图上。当其他城市有紧急求助电话给你的时候，你的任务是带领你的救援队尽快赶往事发地，同时，一路上召集尽可能多的救援队。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出4个正整数$N$、$M$、$S$、$D$，其中$N$（2≤$N$≤500）是城市的个数，顺便假设城市的编号为0 ~ ($N$−1)；$M$是快速道路的条数；$S$是出发地的城市编号；$D$是目的地的城市编号。</p>
-<p>第二行给出$N$个正整数，其中第$i$个数是第$i$个城市的救援队的数目，数字间以空格分隔。随后的$M$行中，每行给出一条快速道路的信息，分别是：城市1、城市2、快速道路的长度，中间用空格分开，数字均为整数且不超过500。输入保证救援可行且最优解唯一。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>第一行输出最短路径的条数和能够召集的最多的救援队数量。第二行输出从$S$到$D$的路径中经过的城市编号。数字间以空格分隔，输出结尾不能有多余空格。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">4 5 0 3</span><br><span class="line">20 30 40 10</span><br><span class="line">0 1 1</span><br><span class="line">1 3 2</span><br><span class="line">0 3 3</span><br><span class="line">0 2 2</span><br><span class="line">2 3 2</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 60</span><br><span class="line">0 1 3</span><br></pre></td></tr></table></figure>
+            <h4 id="7-37-模拟EXCEL排序-25-分"><a href="#7-37-模拟EXCEL排序-25-分" class="headerlink" title="7-37 模拟EXCEL排序 (25 分)"></a>7-37 模拟EXCEL排序 (25 分)</h4><p>Excel可以对一组纪录按任意指定列排序。现请编写程序实现类似功能。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行包含两个正整数<em>N</em>(≤105) 和<em>C</em>，其中<em>N</em>是纪录的条数，<em>C</em>是指定排序的列号。之后有 <em>N</em>行，每行包含一条学生纪录。每条学生纪录由学号（6位数字，保证没有重复的学号）、姓名（不超过8位且不包含空格的字符串）、成绩（[0, 100]内的整数）组成，相邻属性用1个空格隔开。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在<em>N</em>行中输出按要求排序后的结果，即：当<em>C</em>=1时，按学号递增排序；当<em>C</em>=2时，按姓名的非递减字典序排序；当<em>C</em>=3时，按成绩的非递减排序。当若干学生具有相同姓名或者相同成绩时，则按他们的学号递增排序。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 1</span><br><span class="line">000007 James 85</span><br><span class="line">000010 Amy 90</span><br><span class="line">000001 Zoe 60</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">000001 Zoe 60</span><br><span class="line">000007 James 85</span><br><span class="line">000010 Amy 90</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-35/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-37/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -274,7 +273,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 420 個字)
+                    5 分鐘 閱讀文 (大約 741 個字)
                 </span>
                 
                 
@@ -283,22 +282,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-37/">7-37 模拟EXCEL排序 (25 分)</a>
+                <a class="has-link-black-ter" href="/2018/05/06/shujiujiegou7-35/">7-35 城市间紧急救援 (25 分)</a>
             
         </h1>
         <div class="content">
-            <h4 id="7-37-模拟EXCEL排序-25-分"><a href="#7-37-模拟EXCEL排序-25-分" class="headerlink" title="7-37 模拟EXCEL排序 (25 分)"></a>7-37 模拟EXCEL排序 (25 分)</h4><p>Excel可以对一组纪录按任意指定列排序。现请编写程序实现类似功能。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入的第一行包含两个正整数<em>N</em>(≤105) 和<em>C</em>，其中<em>N</em>是纪录的条数，<em>C</em>是指定排序的列号。之后有 <em>N</em>行，每行包含一条学生纪录。每条学生纪录由学号（6位数字，保证没有重复的学号）、姓名（不超过8位且不包含空格的字符串）、成绩（[0, 100]内的整数）组成，相邻属性用1个空格隔开。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在<em>N</em>行中输出按要求排序后的结果，即：当<em>C</em>=1时，按学号递增排序；当<em>C</em>=2时，按姓名的非递减字典序排序；当<em>C</em>=3时，按成绩的非递减排序。当若干学生具有相同姓名或者相同成绩时，则按他们的学号递增排序。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 1</span><br><span class="line">000007 James 85</span><br><span class="line">000010 Amy 90</span><br><span class="line">000001 Zoe 60</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">000001 Zoe 60</span><br><span class="line">000007 James 85</span><br><span class="line">000010 Amy 90</span><br></pre></td></tr></table></figure>
+            <h4 id="7-35-城市间紧急救援-25-分"><a href="#7-35-城市间紧急救援-25-分" class="headerlink" title="7-35 城市间紧急救援 (25 分)"></a>7-35 城市间紧急救援 (25 分)</h4><p>作为一个城市的应急救援队伍的负责人，你有一张特殊的全国地图。在地图上显示有多个分散的城市和一些连接城市的快速道路。每个城市的救援队数量和每一条连接两个城市的快速道路长度都标在地图上。当其他城市有紧急求助电话给你的时候，你的任务是带领你的救援队尽快赶往事发地，同时，一路上召集尽可能多的救援队。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行给出4个正整数$N$、$M$、$S$、$D$，其中$N$（2≤$N$≤500）是城市的个数，顺便假设城市的编号为0 ~ ($N$−1)；$M$是快速道路的条数；$S$是出发地的城市编号；$D$是目的地的城市编号。</p>
+<p>第二行给出$N$个正整数，其中第$i$个数是第$i$个城市的救援队的数目，数字间以空格分隔。随后的$M$行中，每行给出一条快速道路的信息，分别是：城市1、城市2、快速道路的长度，中间用空格分开，数字均为整数且不超过500。输入保证救援可行且最优解唯一。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>第一行输出最短路径的条数和能够召集的最多的救援队数量。第二行输出从$S$到$D$的路径中经过的城市编号。数字间以空格分隔，输出结尾不能有多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">4 5 0 3</span><br><span class="line">20 30 40 10</span><br><span class="line">0 1 1</span><br><span class="line">1 3 2</span><br><span class="line">0 3 3</span><br><span class="line">0 2 2</span><br><span class="line">2 3 2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 60</span><br><span class="line">0 1 3</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-37/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2018/05/06/shujiujiegou7-35/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -1139,25 +1139,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
@@ -1168,6 +1149,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -1727,25 +1727,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
@@ -1756,6 +1737,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
