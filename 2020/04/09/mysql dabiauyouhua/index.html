@@ -2,7 +2,7 @@
 <html  lang="zh">
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>refactoring-java.md - auhanjie&#39;s Blog</title>
+<title>MySQL数据库优化 - auhanjie&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
@@ -10,15 +10,15 @@
     <meta name="description" content="作者：码农 原文链接：https://segmentfault.com/a/1190000006158186#comment-areajava 当MySQL单表记录数过大时，增删改查性能都会急剧下降，可以参考以下步骤来优化：  单表优化除非单表数据未来会一直不断上涨，否则不要一开始就考虑拆分，拆分会带来逻辑、部署、运维的各种复杂度，一般以整型值为主的表在千万级以下，字符串为主的表在五百万以下是没有">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="refactoring-java.md">
+<meta property="og:title" content="MySQL数据库优化">
 <meta property="og:url" content="http://auhanjie.github.io/2020/04/09/mysql dabiauyouhua/index.html">
 <meta property="og:site_name" content="auhanjie&#39;s Blog">
 <meta property="og:description" content="作者：码农 原文链接：https://segmentfault.com/a/1190000006158186#comment-areajava 当MySQL单表记录数过大时，增删改查性能都会急剧下降，可以参考以下步骤来优化：  单表优化除非单表数据未来会一直不断上涨，否则不要一开始就考虑拆分，拆分会带来逻辑、部署、运维的各种复杂度，一般以整型值为主的表在千万级以下，字符串为主的表在五百万以下是没有">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="http://auhanjie.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2020-04-09T02:06:39.258Z">
+<meta property="og:updated_time" content="2020-04-18T06:38:30.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="refactoring-java.md">
+<meta name="twitter:title" content="MySQL数据库优化">
 <meta name="twitter:description" content="作者：码农 原文链接：https://segmentfault.com/a/1190000006158186#comment-areajava 当MySQL单表记录数过大时，增删改查性能都会急剧下降，可以参考以下步骤来优化：  单表优化除非单表数据未来会一直不断上涨，否则不要一开始就考虑拆分，拆分会带来逻辑、部署、运维的各种复杂度，一般以整型值为主的表在千万级以下，字符串为主的表在五百万以下是没有">
 <meta name="twitter:image" content="http://auhanjie.github.io/images/og_image.png">
 
@@ -26,7 +26,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="refactoring-java.md" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="MySQL数据库优化" type="application/atom+xml">
 
 
 
@@ -96,7 +96,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="refactoring-java.md" height="28">
+                <img src="/images/logo.png" alt="MySQL数据库优化" height="28">
             
             </a>
         </div>
@@ -171,7 +171,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                refactoring-java.md
+                MySQL数据库优化
             
         </h1>
         <div class="content">
@@ -838,14 +838,14 @@
             
             <a href="/2020/04/09/mysql dabiauyouhua/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="refactoring-java.md">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="MySQL数据库优化">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-09T05:40:07.000Z">2020-04-09</time></div>
-                    <a href="/2020/04/09/mysql dabiauyouhua/" class="has-link-black-ter is-size-6">refactoring-java.md</a>
+                    <a href="/2020/04/09/mysql dabiauyouhua/" class="has-link-black-ter is-size-6">MySQL数据库优化</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/mysql/">mysql</a>
                     </p>
@@ -874,25 +874,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
@@ -903,6 +884,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -1444,14 +1444,14 @@
             
             <a href="/2020/04/09/mysql dabiauyouhua/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="refactoring-java.md">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="MySQL数据库优化">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-09T05:40:07.000Z">2020-04-09</time></div>
-                    <a href="/2020/04/09/mysql dabiauyouhua/" class="has-link-black-ter is-size-6">refactoring-java.md</a>
+                    <a href="/2020/04/09/mysql dabiauyouhua/" class="has-link-black-ter is-size-6">MySQL数据库优化</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/mysql/">mysql</a>
                     </p>
@@ -1480,25 +1480,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
-                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="How to ORDER BY FIELD VALUE in MongoDB">
@@ -1509,6 +1490,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
                     <a href="/2020/01/03/how-to-order-by-field-value-in-mongodb/" class="has-link-black-ter is-size-6">How to ORDER BY FIELD VALUE in MongoDB</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/01/03/jpa-criteraBuilder/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="JPA高級動態查詢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-03T05:40:07.000Z">2020-01-03</time></div>
+                    <a href="/2020/01/03/jpa-criteraBuilder/" class="has-link-black-ter is-size-6">JPA高級動態查詢</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -2040,7 +2040,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="refactoring-java.md" height="28">
+                    <img src="/images/logo.png" alt="MySQL数据库优化" height="28">
                 
                 </a>
                 <p class="is-size-7">
